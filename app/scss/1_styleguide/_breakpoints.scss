@@ -1,0 +1,36 @@
+/////////////////////////
+///Media QUERIES
+//
+/////////////////////////
+
+$bp-mobile1-1: 0;
+$bp-mobile1-2: 20rem; //320px
+$bp-mobile1-3: 25rem; //400px
+
+$bp-mobile2-1: 30rem; //480px
+$bp-mobile2-2: 35rem; //560px
+$bp-mobile2-2-608: 38rem;  //608
+$bp-mobile2-3: 40rem; //640px
+$bp-mobile2-4: 45rem; //720px
+
+$bp-tablet-1-1: 47.9375rem; //767px
+$bp-tablet-1: 48rem;  //768px
+$bp-tablet-2: 55rem;  //880px
+$bp-tablet-3: 58rem; 
+
+$bp-desktop1-1: 60rem; //960 
+$bp-desktop1-2: 65rem; //1040
+$bp-desktop1-3: 70rem; //1120
+$bp-desktop1-4: 75rem; //1200
+
+$bp-desktop2-1: 78rem; //1248
+$bp-desktop2-2: 85rem; //1360
+$bp-desktop2-3: 90rem; //1440
+$bp-desktop2-4: 95rem; //1520
+$bp-desktop2-5: 100rem; //1600
+$bp-desktop2-6: 110rem; //1760
+$bp-desktop2-7: 120rem; //1920
+$bp-desktop2-8: 130rem; //2080
+
+//$breakpoint-no-query-fallbacks: true;
+$no-queries: 1024px, 'no-query' true;

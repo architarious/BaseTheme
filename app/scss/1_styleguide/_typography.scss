@@ -1,0 +1,97 @@
+@import 'https://fonts.googleapis.com/css?family=Crete+Round|Open+Sans';
+
+
+////////////////////////////
+///BaseLine
+//
+///////////////////////////
+$base-font-size: 16px;
+$base-line-height: 20.022px;
+$default-rhythm-border-style: solid;
+$relative-font-sizing: true;
+$round-to-nearest-half-line: true;
+$min-line-padding: 2px;
+
+////////////////////////
+//Font Sizes
+//
+////////////////////////
+$root-font-size: 16;
+$root-line-height: 20;
+$gRatio: 1.618;
+$modRatio: 0.618;
+
+$font-size-small : ms(-2);
+$font-size-small-2 : ms(-1);
+$font-size-med : ms(0);
+$font-size-med-2: ms(1);
+$font-size-large : ms(2);
+$font-size-large-2 : ms(3);
+$font-size-xlarge: ms(4);
+$font-size-xlarge-2: ms(5);
+$font-size-xxlarge: ms(6);
+$font-size-xxlarge-2: ms(7);
+$font-size-xxxlarge: ms(8);
+$font-size-xxxlarge-2: ms(9);
+
+////////////////////////
+//Line-height Sizes
+//
+////////////////////////
+
+$lh-size-small : ms(0);
+$lh-size-small-2 : ms(1);
+$lh-size-med : ms(2);
+$lh-size-med-2: ms(3);
+$lh-size-large : ms(4);
+$lh-size-large-2 : ms(5);
+$lh-size-xlarge: ms(6);
+$lh-size-xlarge-2: ms(7);
+$lh-size-xxlarge: ms(8);
+$lh-size-xxlarge-2: ms(9);
+$lh-size-xxxlarge: ms(10);
+$lh-size-xxxlarge-2: ms(11);
+
+/////////////////////////
+///Space and padding defaults
+//
+////////////////////////
+$space : 1em;
+$pad : 1.618em;
+
+
+$space-quarter: $space*0.25;
+$space-half: $space*0.5;
+//$space : 1em;
+$space-and-half : $space*1.5;
+$space-double : $space*2;
+$space-quad : $space*4;
+$space-half : $space/2;
+
+$pad-quarter: $pad*0.25;
+$pad-half:$pad*0.5;
+//$pad : 1.618rem;
+$pad-and-half : $pad*1.5;
+$pad-double : $pad*2;
+$pad-half : $pad/2;
+$pad-quarter :$pad/4;
+
+
+
+h1, h2, h3, h4, h5, h6, .heading{
+  font-family: 'Crete Round', serif;
+  font-weight: normal;
+  color: $primary;
+}
+body, p, li, a{
+  font-family: 'Open Sans', sans-serif;
+  color:$black;
+}
+p{
+  line-height:1.618em;
+  font-size:1.25em;
+}
+a{
+  color:$tertiary;
+  &:hover{ color:lighten($tertiary, 10);}
+}

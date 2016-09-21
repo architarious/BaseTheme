@@ -1,0 +1,35 @@
+///////////////////////////////////
+//Singularity Grid Mixin
+//
+//
+//USAGE: @include grid-mobile-1(); immediately after opening breakpoint
+//Dependencies: compass and singularity
+///////////////////////////////////
+
+@mixin grid-mobile1{
+  @include add-grid(4);
+  @include add-gutter(1/4);
+  @include sgs-change('output', 'isolation');
+}
+
+@mixin grid-mobile2{
+  @include add-grid(6);
+  @include add-gutter(1/4);
+  @include sgs-change('output', 'isolation');
+}
+
+@mixin grid-tablet{
+  @include add-grid(8);
+  @include sgs-change('output', 'isolation');
+}
+
+@mixin grid-desktop1{
+  @include add-grid(12);
+  @include sgs-change('output', 'isolation');
+}
+
+@mixin grid-desktop2{
+  @include add-grid(16);
+  @include add-gutter(1/3);
+  @include sgs-change('output', 'isolation');
+}

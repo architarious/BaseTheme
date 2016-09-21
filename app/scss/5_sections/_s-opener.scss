@@ -1,0 +1,41 @@
+.s-opener{
+  width:100%;
+  float:left;
+  padding: 3em 0;  
+  background: linear-gradient(90deg, $primary, mix($primary, $secondary, 60%));
+  background-size: 400% 400%;
+  animation: open 40s ease infinite;
+  @keyframes open { 
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+  }//end keyframes
+}//end s-opener
+.s-opener__kicker{
+  width:48%;
+  float:left;
+  margin-right:2%;  
+  h1{
+    color:$white;
+    font-size: 3.272em;
+  }
+}//end s-opener__kicker
+.s-opener__cta{
+  width:48%;
+  float:left;
+  margin-left:2%;
+}//end s-opener__cta
+
+@include breakpoint($bp-mobile1-1 $bp-desktop1-1){
+  .s-opener__kicker{ 
+    width:100%; float:left; 
+    margin:0;
+    @include rhythm(0.618, 0, 0, 0.618, 16px);
+  }//end s-opener__kicker
+  .s-opener__cta{
+    width:100%; float:left;
+    margin:0;
+    @include rhythm(0.618, 0, 0, 0.618, 16px);
+  }//end s-opener__cta
+}//end mobile to tablet bp
+

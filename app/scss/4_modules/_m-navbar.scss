@@ -1,0 +1,8 @@
+.m-navbar{
+  width:100%; float:left;
+  @include rhythm(0, $ms-1, $ms-1, 0, $font-size-med);
+  //position:fixed; top:0;
+  .b-siteName{ float:left; }
+  .b-primaryNav{ float:right; }
+}//end m-navbar
+

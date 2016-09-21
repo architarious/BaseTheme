@@ -1,0 +1,31 @@
+$white: #fffefb;
+$black: #2c2a29;
+$primary: #f26157;   //Sunset Orange
+$secondary: #f1a66a; //Sandy Brown
+$tertiary: #f7db0c;  //Sizzling Sunrise
+$quadrary: #0033a0;
+
+//@include cs-test(cs-primary() cs-secondary() cs-tertiary() cs-quadrary());
+
+//@include cs-test($primary $secondary $tertiary $quadrary);
+
+
+$primary--shadow: darken($primary, 4);
+$primary--light: tint($primary, 5);
+  
+$secondary--shadow: shade($secondary, 5);
+$secondary--light: tint($secondary, 10);
+
+$tertiary--shadow: darken($tertiary, 7);
+$tertiary--light: tint($tertiary, 10);
+
+$quadrary--shadow: darken($quadrary, 7);
+$quadrary--light: tint($quadrary, 10);
+
+$lbg: $white;
+$lbg--shadow: shade($lbg, 6);
+$lbg--light: tint($lbg, 10);
+
+$dbg: $black;
+$dbg--shadow: darken($dbg, 3);
+$dbg--light: tint($dbg, 4);

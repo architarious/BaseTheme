@@ -1,0 +1,46 @@
+.b-ctaCard{
+  width:100%; float:left;
+}//end b-ctaCard
+.b-ctaCard__imgWrapper{
+  width:100%; float:left;
+  padding:0; margin:0;
+  position:relative;
+}//end b-ctaCard__imgWrapper
+.b-ctaCard__img{
+  width:100%; height:auto; padding:0; margin:0; float:left;
+  border-top-left-radius:0.382em;
+  border-top-right-radius:0.382em;
+}//end b-ctaCard__img
+.b-ctaCard__caption{
+  //display:none;
+  position:absolute; bottom:0;
+  width:97%; float:left; 
+  background-color:transparentize($black, 0.4);
+  color:$white;
+  padding:0.618em 1.5%; margin:0;
+  p{
+    color:$white;
+    font-size:1em;
+    line-height:1.618em;
+    padding:0; margin:0;
+  }
+  
+}//end b-ctaCard__caption
+.b-ctaCard__cta{
+  //display:none;
+  width:97%; float:left;
+  background-color: $primary; 
+  height:3em;
+  padding: 0.618em 1.5%;
+  border-bottom-left-radius:0.382em;
+  border-bottom-right-radius:0.382em;
+  
+  .btn{
+    @include btn($primary, $white, $primary); 
+    float:left;
+  }//end btn
+  .btn--donate{
+    @include btn--outline($primary, $white);
+    float:left; margin-left: 1em;
+  }//end btn--donate
+}//end b-ctaCard__cta

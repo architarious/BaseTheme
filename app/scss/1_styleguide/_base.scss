@@ -1,0 +1,16 @@
+@import "breakpoints";
+@import "colors";
+@import "eq";
+@import "grids";
+@import "modularScale";
+@import "typography";
+
+body{
+  background-color:$white;
+  font-size:16px;
+}
+section{
+  width:100%;
+  float:left;
+  padding:6em 0;
+}
