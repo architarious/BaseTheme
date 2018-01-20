@@ -1,6 +1,5 @@
 .s-header{
 
-
 @include breakpoint($bp-mobile1-1, $bp-tablet-1){
   .b-siteName{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; }
   .b-primaryNav{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; }
