@@ -1,6 +1,6 @@
 {
   "name": "jcs-basetheme",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple workflow with gulp, sass, browsersync and bower",
   "dependencies": {
     "gulp": "^3.9.1"
@@ -10,8 +10,12 @@
     "browser-sync": "^2.16.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-imagemin": "^2.3.0",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "imagemin-pngquant": "^4.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
