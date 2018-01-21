@@ -1,0 +1,50 @@
+@mixin hamburger(
+  $bgColor: $lbg,
+  $ctaColor: $primary,
+  $activeColor: $secondary,
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+){
+    .hamburger{
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        float:left;
+        &:hover{ cursor: pointer; }
+        &:before{
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            width: 70px;
+            height: 70px;
+            border: 5px solid transparent;
+            top: calc(50% - 35px);
+            left: calc(50% - 35px);
+            border-radius: 100%;
+            transition: all 0.3s ease-in-out;
+        }//end before
+    }//end .hamburger
+    .hamburger__line{
+        width: 50px;
+        height: 5px;
+        background-color: $ctaColor;
+        display: block;
+        margin: 8px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }//end .hamburger__line
+
+    .hamburger.active{
+        transform: rotate(45deg);
+        &:before{
+            border: 5px solid $ctaColor;
+        }
+
+        .hamburger__line{
+            width: 35px;
+            &:nth-child(1){ transform: translateY(13px); }
+            &:nth-child(2){ opacity: 0; }
+            &:nth-child(3){ transform: translateY(-13px) rotate(90deg); }
+        }//end hamburger__line
+    }//end .hamburger.active
+}

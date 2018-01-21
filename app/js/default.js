@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  
   //EQ.JS defaults  
   var block = document.querySelector('.eq-block');
   eqjs.definePts(block, {
@@ -17,5 +18,6 @@ $(document).ready(function(){
     xLarge: 650,
     xxLarge: 800
   }); 
-  
+
+ 
 });
