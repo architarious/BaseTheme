@@ -1,4 +1,51 @@
+@mixin b-primaryNav(
+  $bgColor: $lbg,
+  $txtColor: $primary,
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+){
+  
 .b-primaryNav{
-  padding: 2.5em 0;
-  .navList{ float:right;}
- }
+  padding: 2.5em 0;  
+  display: block;
+ }//end b-primaryNav
+
+ .b-primaryNav__list{
+   @include navList($bgColor, $txtColor, $shadow, $light);
+ }//end b-primaryNav__list
+
+  .b-primaryNav__trigger{ 
+    padding: 3em 1em;
+    
+   }//end b-primaryNav__trigger
+
+   .b-primaryNav__triggerIcon{
+      display: block;
+      width:100px;
+      height:10px;
+      background:$txtColor; 
+      position:relative;
+      animation-duration: 280ms;
+      animation-timing-function: ease-out;
+      
+      &:before, &:after{
+        content:"";
+        display:block;
+        background:inherit;
+        position:absolute;
+        height:inherit;
+        width:inherit;
+        left: 0;
+        animation-duration: 300ms;
+        animation-timing-function: ease-out;
+      }//end before and after
+      &:before{ top:200%; }
+      &:after{ bottom: 400%; }
+    }//end .b-primaryNav__triggerIcon
+
+    .b-primaryNav__triggerText{
+      position: absolute;
+      left: -99999999px;
+    }//end b-primaryNav__triggerText
+
+}@include b-primaryNav();

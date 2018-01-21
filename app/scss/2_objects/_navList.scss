@@ -1,6 +1,6 @@
 @mixin navList(
   $bgColor: $lbg,
-  $txtColor: $black,
+  $txtColor: $tertiary,
   $light: $lbg--light,
   $shadow: $lbg--shadow
   ){
@@ -10,19 +10,17 @@ list-style:none;
     
     li{ display:inline-block; 
         padding: 0 1em; margin:0; 
-        float:left;
         border-right: 1px solid $shadow;
         box-shadow: 0 1px 0x 0 $light;
         &:last-child{ box-shadow:none; border-right:0;} 
       a{ 
         font-size: 1.2em; 
-        color:$primary; 
+        color:$txtColor; 
         text-decoration:none;
         text-transform:uppercase;
-        &:hover{color:lighten($primary, 6); text-decoration:underline;}
+        &:hover{color:lighten($txtColor, 6); text-decoration:underline;}
       }//end a
     }//end li
   }//end mixin navList
 
-.navList{@include navList();}
 
