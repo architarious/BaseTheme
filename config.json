@@ -1,0 +1,46 @@
+{
+    "name": "JCS-BaseTheme",
+    "description": "A responsive and modular base theme",
+    "proxy": "localhost/BaseTheme/views",
+    "bowerDir": "./bower_components",
+    "templates": "./views",
+    "css":{
+        "file" : "styles",
+        "src" : [
+            "./app/scss/**/*.scss"
+        ],
+        "dest" : "./stylesheets",
+        "includePaths": [
+            "./bower_components/compass-mixins/",
+            "./bower_components/modular-scale/stylesheets",
+            "./bower_components/breakpoint-sass/stylesheets",
+            "./bower_components/singularity/stylesheets",
+            "./bower_components/color-schemer/stylesheets",
+            "./bower_components/normalize-scss/sass",
+            "./bower_components/Scut/dist",
+            "./bower_components/eq.js/sass",
+            "./bower_components/font-awesome/scss",            
+            "./bower_components/bootstrap-sass/assets/stylesheets"
+        ]
+    },
+    "img" : {
+        "src" : [
+            "./app/img/*.*"
+        ],
+        "dest" : "./images"
+    },
+    "js" : {
+        "src" : [
+            "./app/js/*.js"
+        ],
+        "dest" : "./javascripts"
+    },
+    "fonts" : {
+        "src" : [
+            "./bower_components/font-awesome/fonts/**.*"
+        ],
+        "dest" : "./fonts"
+    }
+    
+
+}

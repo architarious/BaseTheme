@@ -1,12 +1,33 @@
 $bowerPath: '../../bower_components/';
 
+// Compass mixins
+// -----------------------------------------------------------------------------
+@import "lib/_compass";
+@import "lib/_lemonade";
 
-@import "../../bower_components/compass-mixins/lib/_compass";
-@import "../../bower_components/compass-mixins/lib/_lemonade";
-@import "../../bower_components/breakpoint-sass/stylesheets/breakpoint";
-@import '../../bower_components/modular-scale/stylesheets/modular-scale';
-@import '../../bower_components/singularity/stylesheets/singularitygs';
-@import '../../bower_components/color-schemer/stylesheets/color-schemer';  // make sure to comment out @import blendmodes in this file when first setting up
-@import '../../bower_components/normalize-scss/sass/normalize';
-@import '../../bower_components/Scut/dist/scut';
-@import '../../bower_components/eq.js/sass/eq';
+// Compass reliant tools
+// -----------------------------------------------------------------------------
+@import "breakpoint";
+@import "modular-scale";
+@import "singularitygs";
+@import "color-schemer";  // make sure to comment out @import blendmodes in this file when first setting up
+
+// Normalize 
+// -----------------------------------------------------------------------------
+@import "normalize";
+
+// SCUT: Common sass utilities ( https://davidtheclark.github.io/scut/ )
+// ----------------------------------------------------------------------------- 
+@import "scut";
+
+// Element Queries
+// -----------------------------------------------------------------------------
+@import "eq";
+
+// FontAwesome
+// -----------------------------------------------------------------------------
+@import "font-awesome";
+
+// Bootstrap 
+// -----------------------------------------------------------------------------
+@import "bootstrap-config";

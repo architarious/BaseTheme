@@ -24,7 +24,9 @@
     "color-schemer": "^0.2.8",
     "normalize-scss": "normalize.scss#^5.0.3",
     "Scut": "scut#^1.4.0",
-    "eq.js": "^1.9.0"
+    "eq.js": "^1.9.0",
+    "font-awesome": "^4.7.0",
+    "bootstrap-sass": "^3.3.7"
   },
   "devDependencies": {}
 }
