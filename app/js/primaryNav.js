@@ -10,6 +10,6 @@ $(document).ready(function() {
     return false;
   });
 
-  alert("js works");
+
  
 });

@@ -1,0 +1,59 @@
+@mixin m-accordian(
+  $bgColor: $lbg,
+  $txtColor: $lbg,
+  $ctaColor: $primary,
+  $activeColor: $primary--light,
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+){
+    .m-accordian{
+        background:$bgColor;
+        margin: ms(0) 0;
+        width:100%;
+        display:inline-block;
+    }//end m-accordian
+    .m-accordian__title{
+        width:100%;     
+        background:$ctaColor;         
+        border: 1px solid darken($ctaColor, 3);
+        border-top-color: tint($ctaColor, 10);
+        box-shadow: inset 0 -3px 0px -2px darken($ctaColor, 3), 0 3px 2px -1px $shadow;
+        transition: all 0.5s linear;
+        @include adjust-font-size-to($font-size-med-2);
+        &.active, &:hover{
+            background-color:$activeColor;
+            border: 1px solid darken($activeColor, 3);
+            border-top-color: tint($activeColor, 10);
+            box-shadow: inset 0 -3px 0px -2px darken($activeColor, 3), 0 3px 2px -1px $shadow;
+        }
+        a, .m-accordian__trigger{
+            padding:ms(-2);
+            color:$txtColor;
+            font-weight: bold;
+            display:block;
+            width:100%;
+            text-decoration: none;             
+        }//end a, m-accordian__trigger
+
+        &:first-of-type{
+            border-top-left-radius: 0.2em;
+            border-top-right-radius: 0.2em;
+        }
+
+        &:last-of-type{
+            border-bottom-left-radius: 0.2em;
+            border-bottom-right-radius: 0.2em;
+        }
+        
+    }//end m-accordian__title
+    
+    .m-accordian__copy{
+        width:100%;
+        padding-left:ms(-2);
+        margin-left:0;
+        &:last-of-type{
+            position:relative;
+            top:-1px;
+        }//end last-of-type
+    }//end m-accordian__copy
+}@include m-accordian();
