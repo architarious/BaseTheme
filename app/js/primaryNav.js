@@ -11,7 +11,11 @@ $(document).ready(function() {
     return false;
   });
 
+<<<<<<< HEAD
   alert("js works still");
+=======
+
+>>>>>>> 81e8655153cb32868520bd17776adee77fca406b
  
 });
 
