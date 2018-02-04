@@ -1,3 +1,4 @@
+/**
 $(document).ready(function() {
 
   //$('body').addClass('js');
@@ -10,6 +11,8 @@ $(document).ready(function() {
     return false;
   });
 
-  alert("js works");
+  alert("js works still");
  
 });
+
+*/

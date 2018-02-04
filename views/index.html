@@ -9,15 +9,10 @@
   <header class="s-header">
     <div class="container">
       <h1 class="b-siteName eq-block--detail" >Name of Site</h1>
-      <div class="m-navbar">
-       <nav class="b-primaryNav eq-block" role="navigation" id="primaryNav">
-          <a href="#primaryNav" class="b-primaryNav__trigger">
-            <span class="hamburger">
-              <span class="hamburger__line" ></span>
-              <span class="hamburger__line" ></span>
-              <span class="hamburger__line" ></span>
-            </span>
-          </a>
+      <div class="m-navbar" id="nav-container">
+        <div class="m-navbar__overlay" id="nav-overlay"></div>
+       <nav class="b-primaryNav m-navbar__fullscreen " role="navigation" id="primaryNav nav-fullscreen">
+          
           <ul class="navList b-primaryNav__list">
              <li><a href="#">Services</a></li>
              <li><a href="#">Products</a></li>
@@ -25,6 +20,13 @@
              <li><a href="#">Contact</a></li>
           </ul>
         </nav>
+        <a href="#primaryNav" class="b-primaryNav__trigger m-navbar__trigger" id="nav-toggle">
+            <span class="hamburger">
+              <span class="hamburger__line" ></span>
+              <span class="hamburger__line" ></span>
+              <span class="hamburger__line" ></span>
+            </span>
+          </a>
       </div>
     </div><!--end container-->
   </header>

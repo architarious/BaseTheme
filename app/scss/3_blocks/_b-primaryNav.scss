@@ -39,6 +39,7 @@
     left: -99999999px;
 }//end b-primaryNav__triggerText
 
+/**
 @include breakpoint($bp-mobile1-1 $bp-tablet-1){
   .b-primaryNav__list{ max-height:0;}
   .b-primaryNav__list li{
@@ -47,7 +48,7 @@
     display:block;
     width:100%; float:left;
     padding: ms(-3);
-    border-bottom: 1px solid $shadow; 
+    border-bottom: 1px solid $shadow;  
     box-shadow: 0 1px 0 -3px $light;
       
     &:last-child{ border-bottom:0; box-shadow: none;}
@@ -76,5 +77,6 @@
     }//end li
   }//end .b-primaryNav__list.active
 }//end mobile bps
+*/
 
 }@include b-primaryNav();
