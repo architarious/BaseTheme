@@ -1,3 +1,4 @@
+
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var config = require('./config.json');
@@ -26,7 +27,6 @@ var js_in = config.js.src;
 var js_out = config.js.dest; 
 var fonts_in = config.fonts.src;
 var fonts_out = config.fonts.dest;
-
 
 
 
@@ -84,7 +84,7 @@ gulp.task('uglify', function() {
 });
 
 /*
-* Move fonts into a central directory
+* Move font-awesome fonts into a central directory
 */
 gulp.task('fonts', function() {
   return gulp.src(fonts_in)
