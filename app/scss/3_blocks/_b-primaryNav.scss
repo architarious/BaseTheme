@@ -6,9 +6,8 @@
   $light: $lbg--light
 ){
   
-.b-primaryNav{
-  padding: 2.5em 0;  
-  display: block;  
+.b-primaryNav{ 
+  display: block;
  }//end b-primaryNav
 
 .b-primaryNav__list{
@@ -32,6 +31,8 @@
 
 .b-primaryNav__trigger{ 
   @include hamburger($bgColor, $txtColor, $activeColor, $shadow, $light);
+  //background:black; width:40px; height:40px; 
+  display:none;
 }//end b-primaryNav__trigger
 
 .b-primaryNav__triggerText{
@@ -39,19 +40,37 @@
     left: -99999999px;
 }//end b-primaryNav__triggerText
 
+
+
 @include breakpoint($bp-mobile1-1 $bp-tablet-1){
-  .b-primaryNav__list{ max-height:0;}
+  .b-primaryNav__list{ 
+    //max-height:0;
+    display:none;
+    &.active{
+      display:block;
+    }
+  }
   .b-primaryNav__list li{
-    transition: all 0.5s linear;
-    box-sizing: border-box;
+    
     display:block;
     width:100%; float:left;
     padding: ms(-3);
-    border-bottom: 1px solid $shadow; 
+    border-bottom: 1px solid $shadow;  
     box-shadow: 0 1px 0 -3px $light;
       
     &:last-child{ border-bottom:0; box-shadow: none;}
+  }
 
+  .b-primaryNav__trigger{ 
+    display:block;
+  }
+
+  /**ANIMATION STYLES
+  *************************************
+
+  .b-primaryNav__list li{
+    transition: all 0.5s linear;
+    box-sizing: border-box;
     &:nth-child(odd){
       transform: skew(30deg,0deg) scale(1,0);
       transform-origin: 100px 0px; 
@@ -75,6 +94,12 @@
       }//end nth-child(odd)
     }//end li
   }//end .b-primaryNav__list.active
+ 
+  **************************************/
+  
+  
+  
 }//end mobile bps
+
 
 }@include b-primaryNav();

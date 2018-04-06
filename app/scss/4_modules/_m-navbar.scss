@@ -1,8 +1,32 @@
 .m-navbar{
   width:100%; float:left;
-  @include rhythm(0, $ms-1, $ms-1, 0, $font-size-med);
-  //position:fixed; top:0;
-  .b-siteName{ float:left; }
-  .b-primaryNav{ float:right; }
+	@include rhythm(0, $ms-1, $ms-1, 0, $font-size-med);
+	display:flex;
+	flex-flow:row nowrap;
+  .b-siteName{ 
+		display:flex;
+		order:1;
+		flex-grow:1;
+	}//end b-siteName
+  .b-primaryNav{ 	
+		display:flex;
+		order:3;
+		flex-grow:2;
+		align-items:center;
+		justify-content: flex-end;
+	}//end b-primaryNav
+	.m-navbar__trigger{
+		//display:flex;
+		order:2;
+		//flex-grow:1;
+	}//end m-navbar__trigger 
+
+	@include breakpoint($bp-mobile1-1 $bp-tablet-1){
+		flex-flow: row wrap;
+		.b-siteName{ min-width:60%;}
+		.b-primaryNav{ width:100%;}
+		.m-navbar__trigger{}//end m-navbar__trigger
+
+	}//end mobile breakpoint
 }//end m-navbar
 

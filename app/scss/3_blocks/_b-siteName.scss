@@ -1,11 +1,11 @@
 .b-siteName{
-  width:50%; float:left;
+  float:left;
   @extend h1;
   font-size: 2em;
-  padding:1em 0;
+  //padding:1em 0;
   margin:0;
-  @include adjust-font-size-to(30px);
-  @include rhythm(1.618, 0, 0, 0.618, 30px);
+  @include adjust-font-size-to($font-size-large-2);
+  //@include rhythm(1.618, 0, 0, 0.618, 30px);
 
   //@include eq(xSmall){border:$secondary 1px solid;}
   //@include eq(Medium){border:$primary 1px solid;}

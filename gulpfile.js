@@ -102,8 +102,11 @@ gulp.task('init', ['sass', 'imagemin', 'uglify', 'fonts', 'minify-css']);
 gulp.task('watch', function() {
 	// BrowserSync settings
 	browserSync.init({
-	  //server:{baseDir: "./"}
-	  proxy: proxy
+	  server:{
+		  baseDir: "./",
+		  index: "views/index.html"
+		}
+	  //proxy: proxy
     });
 
     
