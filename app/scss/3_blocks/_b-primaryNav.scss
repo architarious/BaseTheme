@@ -55,10 +55,9 @@
     display:block;
     width:100%; float:left;
     padding: ms(-3);
-    border-bottom: 1px solid $shadow;  
-    box-shadow: 0 1px 0 -3px $light;
+    border-right: 0 !important;
       
-    &:last-child{ border-bottom:0; box-shadow: none;}
+    
   }
 
   .b-primaryNav__trigger{ 

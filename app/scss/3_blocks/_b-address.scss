@@ -1,0 +1,24 @@
+@mixin b-address(
+  $bgColor: $dbg,
+  $textColor: $white,
+  $ctaColor: $tertiary,
+  $shadow: $dbg--shadow,
+  $light: $dbg--light
+){
+  .b-address{  
+    color: $textColor;    
+    width:100%;
+    float:left;
+    @include adjust-font-size-to($font-size-med);
+    a{ 
+        color: $ctaColor;
+        &:hover, &:focus{ color: lighten($ctaColor, 10); }
+        &:active{ color: lighten($ctaColor, 15); } 
+    }//end a
+
+  
+    
+    
+    }//end b-address
+}@include b-address();
+

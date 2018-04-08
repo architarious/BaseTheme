@@ -1,23 +1,32 @@
-.s-header{  
-  background: black;
-@include breakpoint($bp-mobile1-1, $bp-tablet-1){
-  .b-siteName{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; }
-  .b-primaryNav{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; }
-}
-@include breakpoint($bp-tablet-1, $bp-desktop1-1){
-  @include grid-tablet;
-  .b-siteName{ padding:0;  @include grid-span(3,1); }
-  .b-primaryNav{ padding:0; @include grid-span(5,4);}
-}
-@include breakpoint($bp-desktop1-1, $bp-desktop2-1){
-  @include grid-desktop1;
-  .b-siteName{ padding:0;  @include grid-span(3,1); }
-  .b-primaryNav{ padding:0; @include grid-span(9,4);}
-}
-@include breakpoint($bp-desktop2-1){
-  @include grid-desktop2;
-  .b-siteName{ padding:0;  @include grid-span(4,1); }
-  .b-primaryNav{ padding:0; @include grid-span(12,5);}
-}
+@mixin s-header(
+  $backround: $lbg,
+  $text: $black,
+  $cta: $tertiary,
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+){
+  .s-header{  
+  
+    @include breakpoint($bp-mobile1-1, $bp-tablet-1){
+      //.b-siteName{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; }
+      //.b-primaryNav{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; }
+    }
+    @include breakpoint($bp-tablet-1, $bp-desktop1-1){
+      //@include grid-tablet;
+      //.b-siteName{ padding:0;  @include grid-span(3,1); }
+      //.b-primaryNav{ padding:0; @include grid-span(5,4);}
+    }
+    @include breakpoint($bp-desktop1-1, $bp-desktop2-1){
+      //@include grid-desktop1;
+      //.b-siteName{ padding:0;  @include grid-span(3,1); }
+      //.b-primaryNav{ padding:0; @include grid-span(9,4);}
+    }
+    @include breakpoint($bp-desktop2-1){
+      //@include grid-desktop2;
+      //.b-siteName{ padding:0;  @include grid-span(4,1); }
+      //.b-primaryNav{ padding:0; @include grid-span(12,5);}
+    }
+    
+    }//end s-header
+}@include s-header();
 
-}//end s-header
