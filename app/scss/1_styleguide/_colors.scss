@@ -1,14 +1,10 @@
-$white: #fffefb;
-$black: #2c2a29;
+//////////////////////////////////////
+//Branding Colors 
+/////////////////////////////////////
 $primary: #f26157;   //Sunset Orange
 $secondary: #f1a66a; //Sandy Brown
 $tertiary: #f7db0c;  //Sizzling Sunrise
-$quadrary: #0033a0;
-
-//@include cs-test(cs-primary() cs-secondary() cs-tertiary() cs-quadrary());
-
-//@include cs-test($primary $secondary $tertiary $quadrary);
-
+$quadrary: #0033a0;  //Sunset blue
 
 $primary--shadow: darken($primary, 4);
 $primary--light: tint($primary, 5);
@@ -22,10 +18,133 @@ $tertiary--light: tint($tertiary, 10);
 $quadrary--shadow: darken($quadrary, 7);
 $quadrary--light: tint($quadrary, 10);
 
+//USE SCSS Color Schemer to preview colors
+//@include cs-test(cs-primary() cs-secondary() cs-tertiary() cs-quadrary());
+//@include cs-test($primary $secondary $tertiary $quadrary);
+
+//////////////////////////////////////
+//Mono Colors 
+/////////////////////////////////////
+
+$black:        #2c2a29;
+$black-bis:    tint($black, 2.5);
+$black-ter:    tint($black, 5);
+
+$white:        #fffefb;
+$white-bis:    shade($white, 2.5);
+$white-ter:    shade($white, 5);
+
+$grey:         mix($white, $black, 50);
+$grey-darker:  shade($grey, 20);
+$grey-dark:    shade($grey, 10);
+$grey-light:   tint($grey, 10);
+$grey-lighter: tint($grey, 20);
+
+
+
+//////////////////////////////////////
+//Misc Colors - BULMA
+/////////////////////////////////////
+
+$orange:       hsl(14,  100%, 53%) !default;
+$yellow:       hsl(48,  100%, 67%) !default;
+$green:        hsl(141, 71%,  48%) !default;
+$turquoise:    hsl(171, 100%, 41%) !default;
+$cyan:         hsl(204, 86%,  53%) !default;
+$blue:         hsl(217, 71%,  53%) !default;
+$purple:       hsl(271, 100%, 71%) !default;
+$red:          hsl(348, 100%, 61%) !default;
+
+//////////////////////////////////////
+//Utilitiy Colors 
+/////////////////////////////////////
+$info: $cyan !default;
+$success: $green !default;
+$warning: $yellow !default;
+$danger: $red !default;
+
+$light: $white-ter !default;
+$dark: $grey-darker !default;
+
+//////////////////////////////////////
+//Invert Colors - BULMA
+/////////////////////////////////////
+$orange-invert: findColorInvert($orange) !default;
+$yellow-invert: findColorInvert($yellow) !default;
+$green-invert: findColorInvert($green) !default;
+$turquoise-invert: findColorInvert($turquoise) !default;
+$cyan-invert: findColorInvert($cyan) !default;
+$blue-invert: findColorInvert($blue) !default;
+$purple-invert: findColorInvert($purple) !default;
+$red-invert: findColorInvert($red) !default;
+
+$primary-invert: findColorInvert($primary);
+$secondary-invert: findColorInvert($secondary);
+$tertiary-invert: findColorInvert($tertiary);
+$quadrary-invert: findColorInvert($quadrary);
+$info-invert: findColorInvert($info);
+$success-invert: findColorInvert($success);
+$warning-invert: findColorInvert($warning);
+$danger-invert: findColorInvert($danger);
+$light-invert: findColorInvert($light);
+$dark-invert: findColorInvert($dark);
+
+//////////////////////////////////////
+//General Colors
+/////////////////////////////////////
+//LightBackground Color
 $lbg: $white;
 $lbg--shadow: shade($lbg, 6);
 $lbg--light: tint($lbg, 10);
-
+//DarkBackground Color
 $dbg: $black;
 $dbg--shadow: darken($dbg, 3);
 $dbg--light: tint($dbg, 4);
+//Default background color
+$background: $lbg;
+
+$border: $grey-lighter !default;
+$border-hover: $grey-light !default;
+
+//////////////////////////////////////
+//Text Colors
+/////////////////////////////////////
+$text: $grey-dark !default;
+$text-invert: findColorInvert($text) !default;
+$text-light: $grey !default;
+$text-strong: $grey-darker !default;
+
+//////////////////////////////////////
+//Code Colors
+/////////////////////////////////////
+$code: $red !default;
+$code-background: $background !default;
+
+$pre: $text !default;
+$pre-background: $background !default;
+
+//////////////////////////////////////
+//Link Colors
+/////////////////////////////////////
+$link: $quadrary !default;
+$link-invert: $quadrary-invert;
+$link-visited: darken($quadrary, 10);
+
+$link-hover: lighten($quadrary, 5);
+$link-hover-border: lighten($quadrary, 15);
+
+$link-focus: darken($quadrary, 5);
+$link-focus-border: $quadrary;
+
+$link-active: shade($quadrary, 15);
+$link-active-border: shade($quadrary, 10);
+
+
+
+
+
+
+
+
+
+

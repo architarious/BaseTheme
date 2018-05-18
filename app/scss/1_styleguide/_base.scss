@@ -7,8 +7,19 @@
 @import "fonts";
 @import "typography";
 
+/////////////////////////
+//Radius Variables - BULMA
+//
+/////////////////////////
+$radius-small: 2px;
+$radius: 4px;
+$radius-large: 6px;
+$radius-rounded: 290486px;
+
+
+
 body{
-  background-color:$white;
+  background-color:$background;
   //font-size:16px;
 }
 section{

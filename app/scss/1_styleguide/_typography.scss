@@ -71,16 +71,40 @@ $pad-double : $pad*2;
 $pad-half : $pad/2;
 $pad-quarter :$pad/4;
 
+////////////////////////
+//Font sizes via BULMA
+//
+////////////////////////
+$size-1: $font-size-xlarge-2;
+$size-2: $font-size-xlarge;
+$size-3: $font-size-large-2;
+$size-4: $font-size-large;
+$size-5: $font-size-med-2;
+$size-6: $font-size-med;
+$size-7: $font-size-small-2;
+
+////////////////////////
+//Font Weights 
+//
+////////////////////////
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+$weight-heavy: 800;
+$weight-black: 900;
+
 
 
 h1, h2, h3, h4, h5, h6, .heading{
-  font-family: 'Crete Round', serif;
+  font-family: $family-serif;
   font-weight: normal;
   color: $primary;
   max-width: 30em;
 }
 body, p, li, a{
-  font-family: 'Open Sans', sans-serif;
+  font-family: $family-sans-serif;
   color:$black;
 }
 p, li{
