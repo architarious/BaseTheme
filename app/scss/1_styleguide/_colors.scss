@@ -34,11 +34,11 @@ $white:        #fffefb;
 $white-bis:    shade($white, 2.5);
 $white-ter:    shade($white, 5);
 
-$grey:         mix($white, $black, 50);
-$grey-darker:  shade($grey, 20);
-$grey-dark:    shade($grey, 10);
-$grey-light:   tint($grey, 10);
-$grey-lighter: tint($grey, 20);
+$grey:         mix($white, $black, 45);
+$grey-darker:  darken($grey, 10);
+$grey-dark:    darken($grey, 5);
+$grey-light:   lighten($grey, 5);
+$grey-lighter: lighten($grey, 10);
 
 
 
@@ -138,6 +138,38 @@ $link-focus-border: $quadrary;
 
 $link-active: shade($quadrary, 15);
 $link-active-border: shade($quadrary, 10);
+
+//////////////////////////////////////
+//Colors SASS maps - BULMA
+/////////////////////////////////////
+/**
+$colors: mergeColorMaps(
+    (
+        "white": ($white, $black), 
+        "black": ($black, $white), 
+        "light": ($light, $light-invert), 
+        "dark": ($dark, $dark-invert), 
+        "primary": ($primary, $primary-invert), 
+        "link": ($link, $link-invert), 
+        "info": ($info, $info-invert), 
+        "success": ($success, $success-invert), 
+        "warning": ($warning, $warning-invert), 
+        "danger": ($danger, $danger-invert)), 
+    $custom-colors) !default;
+
+$shades: mergeColorMaps(
+    (
+        "black-bis": $black-bis, 
+        "black-ter": $black-ter, 
+        "grey-darker": $grey-darker, 
+        "grey-dark": $grey-dark, 
+        "grey": $grey, 
+        "grey-light": $grey-light, 
+        "grey-lighter": $grey-lighter, 
+        "white-ter": $white-ter, 
+        "white-bis": $white-bis), 
+    $custom-shades) !default;
+*/
 
 
 

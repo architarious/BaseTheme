@@ -117,7 +117,7 @@ gulp.task('watch', function() {
     	});
 
 	//Watch for other file changes and then reload browsersync
-	gulp.watch(css_out+'/'+css_fileName+'.css', ['minify-css']);
+	gulp.watch(css_out+'/'+css_fileName+'.css');
 	gulp.watch(img_in, ['imagemin']);
 	gulp.watch(img_out+"/**/*.*").on('change', browserSync.reload);
 	gulp.watch(js_in, ['uglify']).on('change', browserSync.reload);

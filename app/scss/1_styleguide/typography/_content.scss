@@ -1,0 +1,23 @@
+
+$content-heading-color: $primary;
+$content-heading-weight: $weight-normal;
+$content-heading-line-height: ms(2);
+
+$content-blockquote-background-color: $white-ter;
+$content-blockquote-border-left: ms(-4) solid $border;
+$content-blockquote-padding: ms(1) ms(2);
+
+$content-pre-padding: ms(1) ms(2);
+
+$content-table-cell-border: 1px solid $border;
+$content-table-cell-border-width: 0 0 1px;
+$content-table-cell-padding: ms(-3) ms(-1);
+$content-table-cell-heading-color: $text-strong;
+$content-table-head-cell-border-width: 0 0 2px;
+$content-table-head-cell-color: $text-strong;
+$content-table-foot-cell-border-width: 2px 0 0;
+$content-table-foot-cell-color: $text-strong;
+
+@import "./bower_components/bulma/sass/elements/content.sass";
+
+.content{}

@@ -1,5 +1,20 @@
-@import "breakpoints";
+/*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
+//@import "./bower_components/bulma/sass/utilities/_all";
+@import "./bower_components/bulma/sass/utilities/initial-variables.sass";
+@import "./bower_components/bulma/sass/utilities/functions.sass";
+@import "./bower_components/bulma/sass/utilities/animations.sass";
+//@import "./bower_components/bulma/sass/base/_all";
+@import "./bower_components/bulma/sass/base/minireset.sass";
+
 @import "colors";
+
+@import "./bower_components/bulma/sass/utilities/derived-variables.sass";
+@import "./bower_components/bulma/sass/utilities/mixins.sass";
+@import "./bower_components/bulma/sass/utilities/controls.sass";
+@import "./bower_components/bulma/sass/base/generic.sass";
+@import "./bower_components/bulma/sass/base/helpers.sass";
+
+@import "breakpoints";
 @import "eq";
 @import "animation";
 @import "grids";
@@ -16,7 +31,7 @@ $radius: 4px;
 $radius-large: 6px;
 $radius-rounded: 290486px;
 
-
+.b-siteName{background: $primary; color: $primary-invert; @extend .has-background-primary;}
 
 body{
   background-color:$background;

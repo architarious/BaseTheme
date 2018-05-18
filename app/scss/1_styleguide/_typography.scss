@@ -1,3 +1,6 @@
+//@import "./bower_components/bulma/sass/elements/content.sass";
+//@import "./bower_components/bulma/sass/elements/title.sass";  
+
 ////////////////////////////
 ///BaseLine
 //
@@ -69,7 +72,7 @@ $pad-half:$pad*0.5;
 $pad-and-half : $pad*1.5;
 $pad-double : $pad*2;
 $pad-half : $pad/2;
-$pad-quarter :$pad/4;
+$pad-quarter :$pad/4; 
 
 ////////////////////////
 //Font sizes via BULMA
@@ -78,7 +81,7 @@ $pad-quarter :$pad/4;
 $size-1: $font-size-xlarge-2;
 $size-2: $font-size-xlarge;
 $size-3: $font-size-large-2;
-$size-4: $font-size-large;
+$size-4: $font-size-large; 
 $size-5: $font-size-med-2;
 $size-6: $font-size-med;
 $size-7: $font-size-small-2;
@@ -95,7 +98,7 @@ $weight-bold: 700;
 $weight-heavy: 800;
 $weight-black: 900;
 
-
+@import "typography/content";
 
 h1, h2, h3, h4, h5, h6, .heading{
   font-family: $family-serif;
@@ -103,16 +106,16 @@ h1, h2, h3, h4, h5, h6, .heading{
   color: $primary;
   max-width: 30em;
 }
-body, p, li, a{
+body, p, li, a{ 
   font-family: $family-sans-serif;
   color:$black;
 }
-p, li{
+p, li{ 
   max-width: 40em;
 }
 a{
-  color:$tertiary;
-  &:hover{ color:lighten($tertiary, 10);}
+  color:$link;
+  &:hover{ color:lighten($link, 10);}
 }
 
 //Responsive configuration map for Typi
@@ -122,18 +125,18 @@ $typi:(
   base:(
     null: (16px, 1.25),
     mobile1: (14px, 1.25),
-    mobile2: (16px, 1.25),
+    mobile2: (16px, 1.25), 
     tablet: (16px, 1.25),
     desktop1: (16px, 1.25),
     desktop2: (18px, 1.25),
-    desktop3: (20px, 1.25)
-  ),
+    desktop3: (20px, 1.25) 
+  ), 
   h1:(
     null: ( $font-size-xlarge, 0.9),
     mobile1: ($font-size-large-2),
     mobile2: ($font-size-large-2),
     tablet: ($font-size-xlarge),
-    desktop1: ($font-size-xlarge),
+    desktop1: ($font-size-xlarge), 
     desktop2: ($font-size-xlarge),
     desktop3: ($font-size-xlarge-2)
   ),
