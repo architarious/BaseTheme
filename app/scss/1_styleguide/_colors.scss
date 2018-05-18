@@ -103,8 +103,8 @@ $dbg--light: tint($dbg, 4);
 //Default background color
 $background: $lbg;
 
-$border: $grey-lighter !default;
-$border-hover: $grey-light !default;
+$border: $lbg--shadow;
+$border-hover: tint($lbg--shadow, 5);
 
 //////////////////////////////////////
 //Text Colors
@@ -138,6 +138,8 @@ $link-focus-border: $quadrary;
 
 $link-active: shade($quadrary, 15);
 $link-active-border: shade($quadrary, 10);
+
+
 
 
 
