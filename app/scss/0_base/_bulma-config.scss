@@ -1,10 +1,21 @@
-///////////////////////////////////////////////////////
-// BULMA elements
-// https://bulma.io/documentation/elements/ 
-//////////////////////////////////////////////////////
+/*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
+//@import "./bower_components/bulma/sass/utilities/_all";
+@import "./bower_components/bulma/sass/utilities/initial-variables.sass";
+@import "./bower_components/bulma/sass/utilities/functions.sass";
+@import "./bower_components/bulma/sass/utilities/derived-variables.sass";
+@import "./bower_components/bulma/sass/utilities/animations.sass";
+@import "./bower_components/bulma/sass/utilities/mixins.sass";
+@import "./bower_components/bulma/sass/utilities/controls.sass";
+
+//@import "./bower_components/bulma/sass/base/_all";
+@import "./bower_components/bulma/sass/base/minireset.sass";
+@import "./bower_components/bulma/sass/base/generic.sass";
+@import "./bower_components/bulma/sass/base/helpers.sass";
+
 //@import "./bower_components/bulma/sass/elements/_all";
 @import "./bower_components/bulma/sass/elements/box.sass";
 @import "./bower_components/bulma/sass/elements/button.sass";
+@import "./bower_components/bulma/sass/elements/container.sass";
 @import "./bower_components/bulma/sass/elements/content.sass";
 @import "./bower_components/bulma/sass/elements/form.sass";
 @import "./bower_components/bulma/sass/elements/icon.sass";
@@ -16,14 +27,12 @@
 @import "./bower_components/bulma/sass/elements/title.sass";
 @import "./bower_components/bulma/sass/elements/other.sass";
 
-///////////////////////////////////////////////////////
-// BULMA components
-// https://bulma.io/documentation/components/ 
-//////////////////////////////////////////////////////
 //@import "./bower_components/bulma/sass/components/_all";
 @import "./bower_components/bulma/sass/components/breadcrumb.sass";
 @import "./bower_components/bulma/sass/components/card.sass";
 @import "./bower_components/bulma/sass/components/dropdown.sass";
+@import "./bower_components/bulma/sass/components/level.sass";
+@import "./bower_components/bulma/sass/components/media.sass";
 @import "./bower_components/bulma/sass/components/menu.sass";
 @import "./bower_components/bulma/sass/components/message.sass";
 @import "./bower_components/bulma/sass/components/modal.sass";
@@ -32,23 +41,14 @@
 @import "./bower_components/bulma/sass/components/panel.sass";
 @import "./bower_components/bulma/sass/components/tabs.sass";
 
-///////////////////////////////////////////////////////
-// BULMA layout tools
-// https://bulma.io/documentation/layout/
-//////////////////////////////////////////////////////
+//@import "./bower_components/bulma/sass/grid/_all";
+@import "./bower_components/bulma/sass/grid/columns.sass";
+@import "./bower_components/bulma/sass/grid/tiles.sass";
+
 //@import "./bower_components/bulma/sass/layout/_all";
-//@import "./bower_components/bulma/sass/elements/container.sass";
-@import "./bower_components/bulma/sass/components/level.sass";
-@import "./bower_components/bulma/sass/components/media.sass";
 @import "./bower_components/bulma/sass/layout/hero.sass";
 @import "./bower_components/bulma/sass/layout/section.sass";
 @import "./bower_components/bulma/sass/layout/footer.sass";
-@import "./bower_components/bulma/sass/grid/tiles.sass";
-@import "./bower_components/bulma/sass/grid/columns.sass";
 
 
-@import "btn";
-@import "navList";
-@import "container";
-@import "hamburger";
-@import "icons";    
+
