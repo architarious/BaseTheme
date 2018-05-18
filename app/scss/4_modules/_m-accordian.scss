@@ -19,7 +19,7 @@
         border-top-color: tint($ctaColor, 10);
         box-shadow: inset 0 -3px 0px -2px darken($ctaColor, 3), 0 3px 2px -1px $shadow;
         transition: all 0.5s linear;
-        @include adjust-font-size-to($font-size-med-2);
+        font-size: $font-size-med-2;
         &.active, &:hover{
             background-color:$activeColor;
             border: 1px solid darken($activeColor, 3);

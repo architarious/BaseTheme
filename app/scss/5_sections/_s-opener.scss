@@ -17,7 +17,7 @@
   margin-right:2%;  
   h1{
     color:$white;
-    font-size: 3.272em;
+    font-size: $font-size-xlarge-2;
   }
 }//end s-opener__kicker
 .s-opener__cta{
@@ -30,12 +30,12 @@
   .s-opener__kicker{ 
     width:100%; float:left; 
     margin:0;
-    @include rhythm(0.618, 0, 0, 0.618, 16px);
+    //@include rhythm(0.618, 0, 0, 0.618, 16px);
   }//end s-opener__kicker
   .s-opener__cta{
     width:100%; float:left;
     margin:0;
-    @include rhythm(0.618, 0, 0, 0.618, 16px);
+    //@include rhythm(0.618, 0, 0, 0.618, 16px);
   }//end s-opener__cta
 }//end mobile to tablet bp
 

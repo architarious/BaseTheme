@@ -12,8 +12,10 @@
         list-style:none;
         display:flex;
         flex-flow: row nowrap;
-        @include adjust-font-size-to($font-size-med-2);
-        @include rhythm(0, $ms-1, $ms-1, 0, $font-size-med);
+        font-size:$font-size-med;
+        padding: vr(1) 0;
+        //@include adjust-font-size-to($font-size-med-2);
+        //@include rhythm(0, $ms-1, $ms-1, 0, $font-size-med);
          
         li{
             

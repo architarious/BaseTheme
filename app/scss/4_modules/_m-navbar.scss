@@ -1,6 +1,5 @@
 .m-navbar{
-  width:100%; float:left;
-	@include rhythm(0, $ms-1, $ms-1, 0, $font-size-med);
+	width:100%; float:left;	
 	display:flex;
 	flex-flow:row nowrap;
   .b-siteName{ 
@@ -16,13 +15,12 @@
 		justify-content: flex-end;
 	}//end b-primaryNav
 	.m-navbar__trigger{
-		//display:flex;
 		order:2;
-		//flex-grow:1;
 	}//end m-navbar__trigger 
 
 	@include breakpoint($bp-mobile1-1 $bp-tablet-1){
 		flex-flow: row wrap;
+		padding: vr(1) 0;
 		.b-siteName{ min-width:60%;}
 		.b-primaryNav{ width:100%;}
 		.m-navbar__trigger{}//end m-navbar__trigger

@@ -29,8 +29,25 @@ $bp-desktop2-3: 90rem; //1440
 $bp-desktop2-4: 95rem; //1520
 $bp-desktop2-5: 100rem; //1600
 $bp-desktop2-6: 110rem; //1760
-$bp-desktop2-7: 120rem; //1920
-$bp-desktop2-8: 130rem; //2080
+
+$bp-desktop3-1: 120rem; //1920
+$bp-desktop3-2: 130rem; //2080
+$bp-desktop3-3: 140rem; //2240
+$bp-desktop3-4: 150rem; //2400
+
 
 //$breakpoint-no-query-fallbacks: true;
 $no-queries: 1024px, 'no-query' true;
+
+
+//breakpoints map for Typi
+//------------------------------------------
+$typi-breakpoint: breakpoint;
+$breakpoints:(
+    mobile1: 0px,
+    mobile2: 480px,
+    tablet: 767px,
+    desktop1: 960px,
+    desktop2: 1248px,
+    desktop3: 1920px
+);

@@ -11,7 +11,7 @@
         ],
         "dest" : "./stylesheets",
         "includePaths": [
-            "./bower_components/compass-mixins/",
+            "./bower_components/typi/scss",
             "./bower_components/modular-scale/stylesheets",
             "./bower_components/breakpoint-sass/stylesheets",
             "./bower_components/singularity/stylesheets",
@@ -20,7 +20,7 @@
             "./bower_components/Scut/dist",
             "./bower_components/eq.js/sass",
             "./bower_components/font-awesome/scss",            
-            "./bower_components/bootstrap-sass/assets/stylesheets"
+            "./bower_components/bootstrap/scss"
         ]
     },
     "img" : {

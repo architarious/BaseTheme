@@ -1,4 +1,9 @@
 .container{
   width:87.66%;
-  margin:0 auto;  
-}
+  margin:0 auto;
+  @include breakpoint($bp-desktop2-5){ width: 80%; }  
+  @include breakpoint($bp-desktop3-1){ width: 75%; }
+  @include breakpoint($bp-desktop3-3){ width: 70%; }
+  @include breakpoint($bp-desktop3-4){ width: 65%; }     
+
+}//end container

@@ -18,15 +18,17 @@
   "dependencies": {
     "jquery": "^3.1.0",
     "compass-mixins": "^1.0.2",
-    "breakpoint-sass": "^2.7.0",
-    "modular-scale": "^2.1.3",
-    "singularity": "^1.7.0",
+    "breakpoint-sass": "^2.7.1",
+    "singularity": "^1.8.0",
     "color-schemer": "^0.2.8",
     "normalize-scss": "normalize.scss#^5.0.3",
     "Scut": "scut#^1.4.0",
     "eq.js": "^1.9.0",
     "font-awesome": "^4.7.0",
-    "bootstrap-sass": "^3.3.7"
+    "typi": "^3.2.0",
+    "modular-scale": "^3.0.5",
+    "bootstrap": "^4.1.1",
+    "animatewithsass": "^3.2.2"
   },
   "devDependencies": {}
 }

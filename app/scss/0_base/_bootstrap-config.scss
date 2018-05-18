@@ -1,60 +1,59 @@
 // Bootstrap (the whole she-bang) 
 // -----------------------------------------------------------------------------
 //@import "bootstrap";  
+//@import "bootstrap-reboot";  
 
 // Bootstrap global partials.
 // -----------------------------------------------------------------------------
-//@import "bootstrap/variables";
-//@import "bootstrap/mixins";
+@import "./bower_components/bootstrap/scss/functions";
+@import "./bower_components/bootstrap/scss/variables";
+@import "./bower_components/bootstrap/scss/mixins";
+//@import "./bower_components/bootstrap/scss/root";
+@import "./bower_components/bootstrap/scss/reboot";
 
 // Bootstrap reset and dependencies
 // -----------------------------------------------------------------------------
-@import "bootstrap/normalize";
-@import "bootstrap/print";
-//@import "bootstrap/glyphicons";
+
 
 // Bootstrap core
 // -----------------------------------------------------------------------------
-//@import "bootstrap/scaffolding";
-//@import "bootstrap/type";
-//@import "bootstrap/code";
-//@import "bootstrap/grid";
-//@import "bootstrap/tables";
-//@import "bootstrap/forms";
-//@import "bootstrap/buttons";
+//@import "./bower_components/bootstrap/scss/type";
+//@import "./bower_components/bootstrap/scss/images";
+//@import "./bower_components/bootstrap/scss/code";
+//@import "./bower_components/bootstrap/scss/grid";
+//@import "./bower_components/bootstrap/scss/tables";
+//@import "./bower_components/bootstrap/scss/forms";
 
 // Bootstrap components
 // -----------------------------------------------------------------------------
-//@import "bootstrap/component-animations";
-//@import "bootstrap/dropdowns";
-//@import "bootstrap/button-groups";
-//@import "bootstrap/input-groups";
-//@import "bootstrap/navs";
-//@import "bootstrap/navbar";
-//@import "bootstrap/breadcrumbs";
-//@import "bootstrap/pagination";
-//@import "bootstrap/pager";
-//@import "bootstrap/labels";
-//@import "bootstrap/badges";
-//@import "bootstrap/jumbotron";
-//@import "bootstrap/thumbnails";
-//@import "bootstrap/alerts";
-//@import "bootstrap/progress-bars";
-//@import "bootstrap/media";
-//@import "bootstrap/list-group";
-//@import "bootstrap/panels";
-//@import "bootstrap/responsive-embed";
-//@import "bootstrap/wells";
-//@import "bootstrap/close";
+//@import "./bower_components/bootstrap/scss/buttons";
+//@import "./bower_components/bootstrap/scss/transitions";
+//@import "./bower_components/bootstrap/scss/dropdown";
+//@import "./bower_components/bootstrap/scss/button-group";
+//@import "./bower_components/bootstrap/scss/input-group";
+//@import "./bower_components/bootstrap/scss/custom-forms";
+//@import "./bower_components/bootstrap/scss/nav";
+//@import "./bower_components/bootstrap/scss/navbar";
+//@import "./bower_components/bootstrap/scss/card";
+//@import "./bower_components/bootstrap/scss/breadcrumb";
+//@import "./bower_components/bootstrap/scss/pagination";
+//@import "./bower_components/bootstrap/scss/badge";
+//@import "./bower_components/bootstrap/scss/jumbotron";
+//@import "./bower_components/bootstrap/scss/alert";
+//@import "./bower_components/bootstrap/scss/progress";
+//@import "./bower_components/bootstrap/scss/media";
+//@import "./bower_components/bootstrap/scss/list-group";
+//@import "./bower_components/bootstrap/scss/close";
 
 // Bootstrap components w/ JavaScript
 // -----------------------------------------------------------------------------
-//@import "bootstrap/modals";
-//@import "bootstrap/tooltip";
-//@import "bootstrap/popovers";
-//@import "bootstrap/carousel";
+//@import "./bower_components/bootstrap/scss/modal";
+//@import "./bower_components/bootstrap/scss/tooltip";
+//@import "./bower_components/bootstrap/scss/popover";
+//@import "./bower_components/bootstrap/scss/carousel";
 
 // Bootstrap utility classes
 // -----------------------------------------------------------------------------
-//@import "bootstrap/utilities";
-//@import "bootstrap/responsive-utilities";
+//@import "./bower_components/bootstrap/scss/utilities";
+
+@import "./bower_components/bootstrap/scss/print";

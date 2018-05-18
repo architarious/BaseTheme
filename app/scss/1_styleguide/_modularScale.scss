@@ -31,11 +31,10 @@
  ms(20) = 122.9918779328em
 *//////////////////////////
 
-
-$ms-base: 16px 20px;
-$ms-ratio: $golden;
-//@debug ms-list( -4 , 3, $ms-base, $ms-ratio);
-$rhythm-unit: "rem";
+$modularscale:(
+  base: 1em 1.25em,
+  ratio: $golden
+);
 
  $ms-11n: 0.07;
  $ms-10n: 0.09;
@@ -69,3 +68,4 @@ $rhythm-unit: "rem";
  $ms-18: 76.0131603741; 
  $ms-19: 95.0164504677; 
  $ms-20: 122.9918779328;
+

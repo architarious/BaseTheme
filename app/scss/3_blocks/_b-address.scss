@@ -9,7 +9,6 @@
     color: $textColor;    
     width:100%;
     float:left;
-    @include adjust-font-size-to($font-size-med);
     a{ 
         color: $ctaColor;
         &:hover, &:focus{ color: lighten($ctaColor, 10); }

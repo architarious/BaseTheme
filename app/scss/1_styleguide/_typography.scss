@@ -14,10 +14,7 @@ $rhythm-unit: "rem";
 //Font Sizes
 //
 ////////////////////////
-$root-font-size: 16;
-$root-line-height: 20;
-$gRatio: 1.618;
-$modRatio: 0.618;
+
 
 $font-size-small : ms(-2);
 $font-size-small-2 : ms(-1);
@@ -54,8 +51,8 @@ $lh-size-xxxlarge-2: ms(11);
 ///Space and padding defaults
 //
 ////////////////////////
-$space : 1em;
-$pad : 1.618em;
+$space : ms(0);
+$pad : ms(1);
 
 
 $space-quarter: $space*0.25;
@@ -80,16 +77,83 @@ h1, h2, h3, h4, h5, h6, .heading{
   font-family: 'Crete Round', serif;
   font-weight: normal;
   color: $primary;
+  max-width: 30em;
 }
 body, p, li, a{
   font-family: 'Open Sans', sans-serif;
   color:$black;
 }
-p{
-  line-height:1.618em;
-  font-size:1.25em;
+p, li{
+  max-width: 40em;
 }
 a{
   color:$tertiary;
   &:hover{ color:lighten($tertiary, 10);}
+}
+
+//Responsive configuration map for Typi
+//------------------------------------------
+
+$typi:(
+  base:(
+    null: (16px, 1.25),
+    mobile1: (14px, 1.25),
+    mobile2: (16px, 1.25),
+    tablet: (16px, 1.25),
+    desktop1: (16px, 1.25),
+    desktop2: (18px, 1.25),
+    desktop3: (20px, 1.25)
+  ),
+  h1:(
+    null: ( $font-size-xlarge, 0.9),
+    mobile1: ($font-size-large-2),
+    mobile2: ($font-size-large-2),
+    tablet: ($font-size-xlarge),
+    desktop1: ($font-size-xlarge),
+    desktop2: ($font-size-xlarge),
+    desktop3: ($font-size-xlarge-2)
+  ),
+  h2:(
+    null: ( $font-size-large-2, 1),
+    mobile1: ($font-size-large),
+    mobile2: ($font-size-large),
+    tablet: ($font-size-large-2),
+    desktop1: ($font-size-large-2),
+    desktop2: ($font-size-large-2),
+    desktop3: ($font-size-xlarge)
+  ),
+  h3:(
+    null: ( $font-size-large, 1.2),
+    mobile1: ($font-size-med-2),
+    mobile2: ($font-size-med-2),
+    tablet: ($font-size-large),
+    desktop1: ($font-size-large),
+    desktop2: ($font-size-large),
+    desktop3: ($font-size-large-2)
+  ),
+  p:(
+    null: ( $font-size-med, 1.618),
+    mobile1: ($font-size-small-2),
+    mobile2: ($font-size-small-2),
+    tablet: ($font-size-med),
+    desktop1: ($font-size-med),
+    desktop2: ($font-size-med),
+    desktop3: ($font-size-med-2)
+  )
+);
+@include typi-init;
+h1{
+  @include typi('h1');
+  margin: vr(3) 0;
+}
+h2{
+  @include typi('h2');
+  margin: vr(2) 0;
+}
+h3, h4, h5{
+  @include typi('h3');
+  margin: vr(2) 0;
+}
+p, li{
+  @include typi('p');
 }

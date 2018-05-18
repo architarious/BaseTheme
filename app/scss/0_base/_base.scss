@@ -2,13 +2,14 @@ $bowerPath: '../../bower_components/';
 
 // Compass mixins
 // -----------------------------------------------------------------------------
-@import "lib/_compass";
-@import "lib/_lemonade";
+//@import "lib/_compass";
+//@import "lib/_lemonade";
 
 // Compass reliant tools
 // -----------------------------------------------------------------------------
+@import "typi"; 
 @import "breakpoint";
-@import "modular-scale";
+@import "modularscale";
 @import "singularitygs";
 @import "color-schemer";  // make sure to comment out @import blendmodes in this file when first setting up
 
