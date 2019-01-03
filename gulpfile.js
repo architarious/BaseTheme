@@ -1,4 +1,4 @@
-
+// this gulpfile was inspired by jeromecoupe's gist: https://gist.github.com/jeromecoupe/0b807b0c1050647eb340360902c3203a 
 const gulp = require('gulp');
 const browsersync = require('browser-sync').create();
 const config = require('./config.json');
@@ -38,7 +38,6 @@ const fonts_out = config.fonts.dest;
 /**************************************************************
  * BrowserSync Tasks
  */
-// BrowserSync
 function browserSync(done) {
 	browsersync.init({
 	  server: {
@@ -62,7 +61,6 @@ function browserSyncReload(done) {
 /**************************************************************
  * Optimize images
  */
-// Optimize Images
 function images() {
 	return gulp
 	  .src(img_in)
@@ -90,6 +88,8 @@ function images() {
 /**************************************************************
  * CSS tasks
  */
+// dart-sass is included within package.json and here for easier debugging 
+//sass.compiler = require('dart-sass');
 function css() {
 	return gulp
 	  .src(css_in)
