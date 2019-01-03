@@ -3,7 +3,10 @@
     "description": "A responsive and modular base theme",
     "proxy": "localhost/BaseTheme/views",
     "bowerDir": "./bower_components",
-    "templates": "./views",
+    "templates":{
+        "dir": "./views",
+        "html": "./views/**.*.html" 
+    },
     "css":{
         "file" : "styles",
         "src" : [

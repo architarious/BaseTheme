@@ -7,20 +7,16 @@ $bowerPath: '../../bower_components/';
 
 // Compass reliant tools
 // -----------------------------------------------------------------------------
-@import "typi"; 
+@import "typi";  
 @import "breakpoint";
 @import "modularscale";
 @import "singularitygs";
 @import "color-schemer";  // make sure to comment out @import blendmodes in this file when first setting up
 
-// Normalize 
-// -----------------------------------------------------------------------------
-@import "normalize";
-
 // SCUT: Common sass utilities ( https://davidtheclark.github.io/scut/ )
 // ----------------------------------------------------------------------------- 
 @import "scut";
-
+ 
 // Element Queries
 // -----------------------------------------------------------------------------
 @import "eq";
@@ -32,3 +28,4 @@ $bowerPath: '../../bower_components/';
 // Bootstrap 
 // -----------------------------------------------------------------------------
 @import "bootstrap-config";
+

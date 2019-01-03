@@ -6,7 +6,7 @@
   $light: $lbg--light
 ){
   .s-header{  
-  
+  /*
     @include breakpoint($bp-mobile1-1, $bp-tablet-1){
       //.b-siteName{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; }
       //.b-primaryNav{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; }
@@ -26,7 +26,7 @@
       //.b-siteName{ padding:0;  @include grid-span(4,1); }
       //.b-primaryNav{ padding:0; @include grid-span(12,5);}
     }
-    
+  */   
     }//end s-header
-}@include s-header();
+}//@include s-header();
 

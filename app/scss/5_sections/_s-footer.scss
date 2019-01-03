@@ -20,26 +20,27 @@
       .s-footer__cta{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; 
         align-items: flex-start; 
         .b-primaryNav{ float:left;}
-        .b-primaryNav__list{ display:block;}
-        .b-social{float:left; }
-      }//end s-footer__cta
-    }
+        .b-primaryNav__list{ display:block;} 
+        .b-social{float:left; }   
+      }//end s-footer__cta 
+    }   
     @include breakpoint($bp-tablet-1 $bp-desktop1-1){
       @include grid-tablet;
-      .s-footer__contact{ padding:0;  @include grid-span(3,1); }
-      .s-footer__cta{ padding:0; @include grid-span(5,4);}
+      .s-footer__contact{ padding:0;  @include grid-span(3,1); } 
+      .s-footer__cta{ padding:0; @include grid-span(5,4);} 
     } 
     @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
       @include grid-desktop1;
       .s-footer__contact{ padding:0;  @include grid-span(3,1); }
       .s-footer__cta{ padding:0; @include grid-span(9,4);}
-    }
-    @include breakpoint($bp-desktop2-1){
-      @include grid-desktop2;
-      .s-footer__contact{ padding:0;  @include grid-span(4,1); }
+    }    
+    @include breakpoint($bp-desktop2-1){ 
+      @include grid-desktop2;  
+      .s-footer__contact{ padding:0;  @include grid-span(4,1); }  
       .s-footer__cta{ padding:0; @include grid-span(12,5); }
-    }
-    
+    }    
+     
+  
   }//end s-footer
   .s-footer__contact{}//end s-footer__contact
   .s-footer__cta{
@@ -58,3 +59,4 @@
   }//end s-footer__cta 
 } @include s-footer();
 
+  
