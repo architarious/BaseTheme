@@ -26,16 +26,16 @@
   margin-left:2%;
 }//end s-opener__cta
 
-//@include breakpoint($bp-mobile1-1 $bp-desktop1-1){
-//  .s-opener__kicker{ 
-//    width:100%; float:left; 
-//    margin:0;
-//    //@include rhythm(0.618, 0, 0, 0.618, 16px);
-//  }//end s-opener__kicker
-//  .s-opener__cta{
-//    width:100%; float:left;
-//    margin:0;
-//    //@include rhythm(0.618, 0, 0, 0.618, 16px);
-//  }//end s-opener__cta
-//}//end mobile to tablet bp
+@include breakpoint($bp-mobile1-1 $bp-desktop1-1){
+  .s-opener__kicker{ 
+    width:100%; float:left; 
+    margin:0;
+    //@include rhythm(0.618, 0, 0, 0.618, 16px);
+  }//end s-opener__kicker
+  .s-opener__cta{
+    width:100%; float:left;
+    margin:0;
+    //@include rhythm(0.618, 0, 0, 0.618, 16px);
+  }//end s-opener__cta
+}//end mobile to tablet bp
 

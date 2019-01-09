@@ -14,6 +14,7 @@
     "autoprefixer": "^9.4.4",
     "browser-sync": "^2.26.3",
     "cssnano": "^4.1.8",
+    "dart-sass": "^1.15.2",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-eslint": "^5.0.0",
