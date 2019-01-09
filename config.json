@@ -5,7 +5,7 @@
     "bowerDir": "./bower_components",
     "templates":{
         "dir": "./views",
-        "html": "./views/**.*.html" 
+        "html": "./views/**.*" 
     },
     "css":{
         "file" : "styles",
