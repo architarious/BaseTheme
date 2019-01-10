@@ -1,0 +1,47 @@
+@mixin t-styleguide(
+    $bgColor: $lbg,
+    $textColor: $black,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+  .t-styleguide__colors{
+      width: 100%; 
+      display:flex;
+      flex-flow: row wrap;  
+      & > div{ 
+          position:relative; 
+          height: 6.18em; 
+          width:10em; 
+          padding: 1.61em; 
+          margin-top: 2.618em;
+          margin-right: 0.618em;
+          box-shadow: 0 2px 4px -1px $lbg--shadow;
+          &:before{ position: absolute; top:-1.618em; font-weight: bold;} }
+      &--primary{  background: $primary; &:before{ content: "$primary: #{$primary}";}}
+      &--secondary{  background: $secondary; &:before{ content: "$secondary: #{$secondary}";}}
+      &--tertiary{  background: $tertiary; &:before{ content: "$tertiary: #{$tertiary}";}}
+      &--quaternary{  background: $quaternary; &:before{ content: "$quaternary: #{$quaternary}";}}
+      &--quinary{  background: $quinary; &:before{ content: "$quinary: #{$quinary}"; }}
+
+      &--white{  background: $white; &:before{ content: "$white: #{$white}";}}
+      &--gray-light-1{  background: $gray-light-1; &:before{ content: "$gray-light-1: #{$gray-light-1}";}}
+      &--gray-light-2{  background: $gray-light-2; &:before{ content: "$gray-light-2: #{$gray-light-2}";}}
+      &--gray-light-3{  background: $gray-light-3; &:before{ content: "$gray-light-3: #{$gray-light-3}";}}
+      &--gray-light-4{  background: $gray-light-4; &:before{ content: "$gray-light-4: #{$gray-light-4}";}}
+      &--gray-light-5{  background: $gray-light-5; &:before{ content: "$gray-light-5: #{$gray-light-5}";}}
+      &--gray{  background: $gray; &:before{ content: "$gray: #{$gray}";}}
+      &--gray-dark-1{  background: $gray-dark-1; &:before{ content: "$gray-dark-1: #{$gray-dark-1}";}}
+      &--gray-dark-2{  background: $gray-dark-2; &:before{ content: "$gray-dark-2: #{$gray-dark-2}";}}
+      &--gray-dark-3{  background: $gray-dark-3; &:before{ content: "$gray-dark-3: #{$gray-dark-3}";}}
+      &--gray-dark-4{  background: $gray-dark-4; &:before{ content: "$gray-dark-4: #{$gray-dark-4}";}}
+      &--gray-dark-5{  background: $gray-dark-5; &:before{ content: "$gray-dark-5: #{$gray-dark-5}";}}
+      &--black{  background: $black; &:before{ content: "$black: #{$black}";}
+    }//end & > div
+     
+  }//end .t-styleguide__colors
+  .t-styleguide__typography{}//end t-styleguide__typography
+
+
+
+}.t-styleguide{ @include t-styleguide();}

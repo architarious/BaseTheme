@@ -5,27 +5,32 @@ $bowerPath: '../../bower_components/';
 //@import "lib/_compass";
 //@import "lib/_lemonade";
 
-// Compass reliant tools
+// Breakpoint and grid utilities
 // -----------------------------------------------------------------------------
-@import "typi";  
-@import "breakpoint"; 
-@import "modularscale";
-@import "singularitygs";
-//@import "color-schemer";  // make sure to comment out @import blendmodes in this file when first setting up
+@import "vendor/breakpoint/breakpoint"; 
+@import "vendor/singularity/singularitygs";
+
+// Typography tools
+// -----------------------------------------------------------------------------
+@import "vendor/typi/typi";  
+
+@import "vendor/modular-scale/modularscale"; 
+
+@import "vendor/color-schemer/color-schemer";
 
 // SCUT: Common sass utilities ( https://davidtheclark.github.io/scut/ )
 // ----------------------------------------------------------------------------- 
-@import "scut";
+//@import "scut";
  
 // Element Queries
 // -----------------------------------------------------------------------------
-@import "eq";
+//@import "vendor/element-queries/eq";
 
 // FontAwesome
 // -----------------------------------------------------------------------------
-@import "font-awesome";
+//@import "font-awesome";
 
 // Bootstrap 
 // -----------------------------------------------------------------------------
-@import "bootstrap-config";
+//@import "bootstrap-config";
 

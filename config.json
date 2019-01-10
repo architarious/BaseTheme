@@ -34,7 +34,7 @@
     },
     "js" : {
         "src" : [
-            "./app/js/*.js"
+            "./app/js/**/*.js"
         ],
         "dest" : "./javascripts"
     },

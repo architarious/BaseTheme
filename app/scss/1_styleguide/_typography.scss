@@ -74,21 +74,70 @@ $pad-quarter :$pad/4;
 
 
 h1, h2, h3, h4, h5, h6, .heading{
-  font-family: 'Crete Round', serif;
+  font-family: 'Crete Round', Georgia, 'Times New Roman', Times, serif;
   font-weight: normal;
   color: $primary;
   max-width: 30em;
 }
-body, p, li, a{
-  font-family: 'Open Sans', sans-serif;
+body, p, li{
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   color:$black;
+}
+code, pre{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+  color: $black;
+  background: shade($white, 5);
+}
+pre { 
+  border: 1px solid shade($white, 10);
+  border-left: 0.618em solid $primary;
+  page-break-inside: avoid;
+  font-size: 15px;
+  line-height: 1.618;
+  margin-bottom: 1.618em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.618em;
+  display: block;
+  word-wrap: break-word;
 }
 p, li{
   max-width: 40em;
 }
 a{
-  color:$tertiary;
+  color:$tertiary; 
+  text-decoration: underline;
   &:hover{ color:lighten($tertiary, 10);}
+}
+
+.headline{
+  font-size: $font-size-xxlarge-2;
+  font-family: 'Crete Round', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 900;
+  line-height: 0.99em;
+  width:100%;
+  display:block;
+  max-width: 100%;
+  padding:0; margin:0;
+}
+.subHeadline{
+  font-size: $font-size-large-2;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  line-height: 1.168em;
+  width:100%;
+  display:block;
+  max-width: 100%;
+  padding:0; margin:0;
+}
+.caption{
+  background: $gray-light-2;
+  display:block;
+  //max-width:100%;
+  font-size: $font-size-small-2;
+  padding: 0.618em;
+  font-style: italic;
 }
 
 //Responsive configuration map for Typi
@@ -131,6 +180,24 @@ $typi:(
     desktop2: ($font-size-large),
     desktop3: ($font-size-large-2)
   ),
+  h4:(
+    null: ( $font-size-med-2, 1.2),
+    mobile1: ($font-size-med),
+    mobile2: ($font-size-med),
+    tablet: ($font-size-med-2),
+    desktop1: ($font-size-med-2),
+    desktop2: ($font-size-med-2),
+    desktop3: ($font-size-large)
+  ),
+  h5:(
+    null: ( $font-size-med, 1.2),
+    mobile1: ($font-size-small-2),
+    mobile2: ($font-size-small-2),
+    tablet: ($font-size-med),
+    desktop1: ($font-size-med),
+    desktop2: ($font-size-med),
+    desktop3: ($font-size-med-2)
+  ),
   p:(
     null: ( $font-size-med, 1.618),
     mobile1: ($font-size-small-2),
@@ -139,6 +206,24 @@ $typi:(
     desktop1: ($font-size-med),
     desktop2: ($font-size-med),
     desktop3: ($font-size-med-2)
+  ),
+  headline:(
+    null: ( $font-size-xxlarge-2, 1),
+    mobile1: ($font-size-xxlarge),
+    mobile2: ($font-size-xxlarge),
+    tablet: ($font-size-xxlarge-2),
+    desktop1: ($font-size-xxlarge-2),
+    desktop2: ($font-size-xxxlarge),
+    desktop3: ($font-size-xxxlarge-2)
+  ),
+  subHeadline:(
+    null: ( $font-size-large-2, 1.168),
+    mobile1: ($font-size-large),
+    mobile2: ($font-size-large),
+    tablet: ($font-size-large-2),
+    desktop1: ($font-size-large-2),
+    desktop2: ($font-size-xlarge),
+    desktop3: ($font-size-xlarge-2)
   )
 );
 @include typi-init;
@@ -150,10 +235,26 @@ h2{
   @include typi('h2');
   margin: vr(2) 0;
 }
-h3, h4, h5{
+h3{
   @include typi('h3');
+  margin: vr(2) 0;
+}
+h4{ 
+  @include typi('h4');
+  margin: vr(2) 0;
+}
+h5, h6{
+  @include typi('h5');
   margin: vr(2) 0;
 }
 p, li{
   @include typi('p');
+}
+.headline{
+  @include typi('headline');
+  padding-top: vr(1.618);
+}
+.subHeadline{
+  @include typi('subHeadline');
+  padding-bottom: vr(1.618);
 }

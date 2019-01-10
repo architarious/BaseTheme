@@ -98,8 +98,8 @@ function css() {
 	  .pipe(sourcemaps.init())
 	  .pipe(sass({ 
 		  outputStyle: "expanded",
-		  errLogToConsole: true,
-		  includePaths: css_libraries
+		  errLogToConsole: true
+		  //includePaths: css_libraries
 		}).on('error', sass.logError))
 	  .pipe(sourcemaps.write())
 	  .pipe(gulp.dest(css_out))

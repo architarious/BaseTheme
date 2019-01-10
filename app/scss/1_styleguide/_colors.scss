@@ -1,9 +1,12 @@
 $white: #fffefb;
-$black: #2c2a29;
+$black: #27273a; 
 $primary: #f26157;   //Sunset Orange
 $secondary: #f1a66a; //Sandy Brown
-$tertiary: #f7db0c;  //Sizzling Sunrise
-$quadrary: #0033a0;
+$tertiary: darken($primary, 20);  
+$quaternary: #f7db0c;  //Sizzling Sunrise
+$quinary: #0033a0;
+
+
 
 $primary--shadow: darken($primary, 4);
 $primary--light: lighten($primary, 5);
@@ -14,8 +17,8 @@ $secondary--light: lighten($secondary, 10);
 $tertiary--shadow: darken($tertiary, 7);
 $tertiary--light: lighten($tertiary, 10);
 
-$quadrary--shadow: darken($quadrary, 7);
-$quadrary--light: lighten($quadrary, 10);
+$quaternary--shadow: darken($quaternary, 7);
+$quaternary--light: lighten($quaternary, 10);
 
 $lbg: $white;
 $lbg--shadow: shade($lbg, 6);
@@ -24,3 +27,17 @@ $lbg--light: lighten($lbg, 10);
 $dbg: $black;
 $dbg--shadow: darken($dbg, 3);
 $dbg--light: lighten($dbg, 4);
+
+$gray: mix($lbg,$dbg, 50%);
+$gray-light-1: mix($lbg,$dbg, 98.5%);
+//$gray-light-1: tint($black, 99%);
+$gray-light-2: mix($lbg,$dbg, 96%);
+$gray-light-3: mix($lbg,$dbg, 94%);
+$gray-light-4: mix($lbg,$dbg, 92%);
+$gray-light-5: mix($lbg,$dbg, 90%);
+
+$gray-dark-1: mix($lbg,$dbg, 5%);
+$gray-dark-2: mix($lbg,$dbg, 10%);
+$gray-dark-3: mix($lbg,$dbg, 16.5%);
+$gray-dark-4: mix($lbg,$dbg, 25%);
+$gray-dark-5: mix($lbg,$dbg, 30%);
