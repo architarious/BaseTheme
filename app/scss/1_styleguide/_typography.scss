@@ -52,55 +52,78 @@ $lh-size-xxxlarge-2: ms(11);
 //
 ////////////////////////
 $space : ms(0);
-$pad : ms(1);
 
 
 $space-quarter: $space*0.25;
 $space-half: $space*0.5;
-//$space : 1em;
+$space : 1em;
 $space-and-half : $space*1.5;
 $space-double : $space*2;
 $space-quad : $space*4;
 $space-half : $space/2;
 
-$pad-quarter: $pad*0.25;
-$pad-half:$pad*0.5;
-//$pad : 1.618rem;
-$pad-and-half : $pad*1.5;
-$pad-double : $pad*2;
-$pad-half : $pad/2;
-$pad-quarter :$pad/4;
+$pad-quarter: vr(0.25);
+$pad-half: vr(0.5);
+$pad: vr(1);
+$pad-and-half: vr(1.5);
+$pad-double: vr(2);
+$pad-triple: vr(3);
+$pad-quadruple: vr(4);
 
 
+
+/////////////////////////
+///Typography Styles
+//
+////////////////////////
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+// Headlines and body text
+//------------------------------------------
 
 h1, h2, h3, h4, h5, h6, .heading{
-  font-family: 'Crete Round', Georgia, 'Times New Roman', Times, serif;
+  font-family: $font-serif;
   font-weight: normal;
   color: $primary;
   max-width: 30em;
 }
+//h2{ color: mix($primary, $black, 20);}
+h3{ color: mix($primary, $black, 70);} 
+h4{ color: mix($primary, $black, 60);}  
+h5{ color: mix($primary, $black, 50);}
+h6{ color: tint(mix($primary, $black, 40), 40);}
 body, p, li{
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: $font-sans;
   color:$black;
 }
 code, pre{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: $font-mono;
   font-weight: normal;
-  color: $black;
-  background: shade($white, 5);
+  color: $black; 
+  background: $gray-light-2;
 }
 pre { 
-  border: 1px solid shade($white, 10);
+  border: 1px solid $gray-light-3;
   border-left: 0.618em solid $primary;
   page-break-inside: avoid;
   font-size: 15px;
-  line-height: 1.618;
+  line-height: 1.618; 
   margin-bottom: 1.618em;
   max-width: 100%;
   overflow: auto;
   padding: 1em 1.618em;
   display: block;
   word-wrap: break-word;
+  border-top-right-radius: ms(-4);
+  border-bottom-right-radius: ms(-4);
 }
 p, li{
   max-width: 40em;
@@ -113,7 +136,7 @@ a{
 
 .headline{
   font-size: $font-size-xxlarge-2;
-  font-family: 'Crete Round', Georgia, 'Times New Roman', Times, serif;
+  font-family: $font-serif;
   font-weight: 900;
   line-height: 0.99em;
   width:100%;
@@ -123,7 +146,7 @@ a{
 }
 .subHeadline{
   font-size: $font-size-large-2;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: $font-serif;
   font-weight: 100;
   line-height: 1.168em;
   width:100%;
@@ -134,11 +157,145 @@ a{
 .caption{
   background: $gray-light-2;
   display:block;
-  //max-width:100%;
   font-size: $font-size-small-2;
-  padding: 0.618em;
+  padding: $pad-half;
   font-style: italic;
 }
+
+blockquote{
+  margin:0;
+  border-left: $pad-quarter solid $primary;
+  padding: $pad $pad-quarter $pad $pad-and-half;
+  font-style: italic;
+  font-family: $font-serif;
+  color: $gray-dark-4;
+  font-weight: 100;
+}
+
+hr{
+  border:0;
+  border-bottom: 3px solid $gray-light-2;
+  box-shadow: 0 2px 2px -1 $lbg--shadow;
+  margin: $pad-triple 0; 
+}
+
+.box{
+  border-radius: ms(-4);
+  border: solid 1px $lbg--shadow;
+  padding: vr(1);
+  margin: vr(2) 0;
+  p{margin-bottom:0; max-width: 100%;}
+}
+
+// Lists
+//------------------------------------------
+
+ul, ol{
+  padding: 0 1em;
+  & > ul, & > ol{ padding: $pad-half 1em;}
+  li{line-height: $pad-and-half;}
+}
+ol {
+  & > ol{ list-style-type: upper-alpha;}
+  & > ol > ol{ list-style-type: upper-roman;}
+}
+ul.alt{
+  list-style:none !important;
+  padding:0;
+  li{
+    padding: $pad-half 0;
+    border-bottom: 1px solid $lbg--shadow;
+    box-shadow: 0 1px 1px -1px $lbg--light; 
+  }
+}//end ul.alt
+dl{
+  dt{
+    font-weight: 900;
+    font-family: $font-sans;
+    background: $gray-light-2;
+    padding: $pad-half;
+  }
+  dd{
+    padding-left: 3vw;
+    margin:0;
+    font-family: $font-serif;
+    p{max-width:100%;}
+  }
+}//end dl
+
+
+// Tables
+//------------------------------------------
+.table-wrapper{
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+@mixin table(
+  $bgColor: $lbg,
+  $textColor: $gray-dark-3,
+  $titleColor: $black,
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+){
+  margin: 0 0 $pad 0;
+  width:100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  caption{
+    padding: vr(2) 0;
+    color: set-alpha($textColor, 0.85);
+    font-family: $font-serif;
+    font-size: $font-size-large;
+  }//end caption
+  thead{
+    border-bottom: solid 2px $shadow;
+    th{
+      color: $titleColor;
+      font-size: ms(-1);
+      font-weight: 600;
+      padding: 0 vr(0.5) vr(0.5) vr(0.5);
+      text-align: left;
+    }
+  }//end thead
+  tbody{
+    tr{
+      border: solid 1px $shadow;      
+      border-left:0; border-right: 0;
+      &:nth-child(2n+1){ background-color: set-alpha($shadow, 0.25);}
+    }    
+  }//end tbody
+  td{
+    padding: vr(0.5) vr(0.5);
+    color: $textColor;
+  }
+}
+table{ 
+  @include table();
+}//end table
+@mixin table--alt(
+  $shadow: $lbg--shadow
+){
+  border-collapse: separate;
+  thead{
+    border-bottom:0;  
+  }
+  tbody tr{
+    border:0;
+    &:first-child td{
+      border-top-width: 1px;
+    }    
+    td{
+      border: solid 1px $lbg--shadow; 
+      border-left-width:0;
+      border-top-width:0;
+      &:first-child{ border-left-width:1px;}
+    }//end td
+  }//end tbody tr
+}
+table.alt{
+  @include table--alt();
+}//end table.alt
+
 
 //Responsive configuration map for Typi
 //------------------------------------------
@@ -229,11 +386,11 @@ $typi:(
 @include typi-init;
 h1{
   @include typi('h1');
-  margin: vr(3) 0;
+  margin: vr(4) 0;
 }
 h2{
   @include typi('h2');
-  margin: vr(2) 0;
+  margin: vr(3) 0;
 }
 h3{
   @include typi('h3');
@@ -241,16 +398,17 @@ h3{
 }
 h4{ 
   @include typi('h4');
-  margin: vr(2) 0;
+  margin: vr(1) 0;
 }
 h5, h6{
   @include typi('h5');
-  margin: vr(2) 0;
+  margin: vr(0.75) 0;
 }
+h6{ margin:vr(0.25) 0;}
 p, li{
   @include typi('p');
 }
-.headline{
+.headline{ 
   @include typi('headline');
   padding-top: vr(1.618);
 }

@@ -1,0 +1,17 @@
+@mixin b-title(
+    $txtColor1: $primary,
+    $txtColor2: $gray-dark-3
+){
+  width:100%;
+  float:left;
+  padding: $pad-triple 0;  
+  .b-title__title{
+      color: $txtColor1;
+    }//end b-title__title
+  .b-title__subtitle{
+      color: $txtColor2;
+      padding-top: $pad-half;
+    }//end b-title__subtitle
+}
+
+.b-title{ @include b-title(); }
