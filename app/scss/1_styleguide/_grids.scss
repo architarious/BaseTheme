@@ -35,49 +35,45 @@
 }
 
 .row{
-  display:flex;
-  flex-flow: row wrap;  
-  @include breakpoint($bp-mobile1-1 $bp-tablet-1){
-    flex-flow: column wrap;
-    .col--half, .col--third, .col--fourth{
-      width: 100% !important; 
-      margin-right: 0 !important;
+  @include grid-container;
+  @include add-grid(12);
+  @include add-gutter(1);
+
+  .col--half, .col--third, .col--fourth{
+    @include css-grid-span(12);    
+  }
+  @include breakpoint($bp-mobile2-3){
+    .col--half{
+      @include css-grid-span(6);    
     }
-  }//end mobile bp's   
-}//end row
+    .col--third{
+      @include css-grid-span(4);      
+    }
+    .col--quarter{
+      @include css-grid-span(3);
+    }
+    .col--full{
+      @include css-grid-span(12);
+    }  
+  }
 
-.col--half{
-  width:48%;
-  padding-right: 1%;
-  margin-right: 1%;
-  &:last-child{margin-right:0; padding-right:0;}
+  //styles for IE/non-grid compliancy
+  float:left;
+  clear:both;
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .col--half{
+      &:nth-child(2n){margin-right:0;}
+    }
+    .col--third{
+      &:nth-child(3n){margin-right:0;}
+    }
+    .col--quarter{
+      &:nth-child(4n){margin-right:0;}
+    }
+  }
+  
 }
 
-.col--third{
-  width:31.333%;
-  padding-right: 1%;
-  margin-right: 1%;
-  &:last-child{margin-right:0; padding-right:0;}
-}
-
-.col--two-thirds{
-  width:62.666%;
-  padding-right: 2%;
-  margin-right: 2%;
-}
-
-.col--fourth{
-  width:23%;
-  padding-right: 1%;
-  margin-right: 1%;
-  &:last-child{margin-right:0; padding-right: 0;}
-}
-
-.col--three-fourths{
-  width: 70%;
-  padding-right: 2.5%;
-  margin-right: 2.5%;
-}
 @mixin col-lines(
   $light: $lbg--light,
   $shadow: $lbg--shadow

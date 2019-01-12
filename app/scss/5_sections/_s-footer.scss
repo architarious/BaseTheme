@@ -14,7 +14,7 @@
     padding: vr(2) 0;
 
                       
-  /*
+  
     @include breakpoint($bp-mobile1-1 $bp-tablet-1){
       .s-footer__contact{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; }
       .s-footer__cta{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; 
@@ -39,8 +39,7 @@
       .s-footer__contact{ padding:0;  @include grid-span(4,1); }  
       .s-footer__cta{ padding:0; @include grid-span(12,5); }
     }    
-  */   
-  
+     
   }//end s-footer
   .s-footer__contact{}//end s-footer__contact
   .s-footer__cta{

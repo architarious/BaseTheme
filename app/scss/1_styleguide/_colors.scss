@@ -30,7 +30,6 @@ $dbg--light: lighten($dbg, 4);
 
 $gray: mix($lbg,$dbg, 50%);
 $gray-light-1: mix($lbg,$dbg, 98.5%);
-//$gray-light-1: tint($black, 99%);
 $gray-light-2: mix($lbg,$dbg, 96%);
 $gray-light-3: mix($lbg,$dbg, 94%);
 $gray-light-4: mix($lbg,$dbg, 92%);

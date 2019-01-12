@@ -1,0 +1,76 @@
+@mixin button(
+  $bgColor: $lbg,
+  $buttonColor: $tertiary,
+  $txtColor: $lbg,
+  $light: lighten($bgColor, 10),
+  $shadow: shade($bgColor, 10)
+){
+  
+  padding:0.618em;
+  background-color: $buttonColor;
+  color:$txtColor;  
+  font-family: $font-sans;
+  font-size: ms(-1);
+  font-weight:bold;
+  text-decoration:none;
+  border:2px solid $buttonColor;  
+  border-radius:ms(-5);
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+  height: 3.75em;
+  letter-spacing: 0.1em;
+  line-height: 3.75em;
+  padding:0 2.25em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+    &:hover, &:focus{
+      background-color:lighten($buttonColor, 10);
+      border-color:lighten($buttonColor, 10);
+      color:lighten($txtColor,5);   
+    }//end hover
+    &:active{
+      background-color: darken($buttonColor, 10);
+      border-color: darken($buttonColor, 10);
+      color: darken($txtColor, 5);
+    }//end active
+    &.icon{
+      &:before{ 
+        color: set-alpha($txtColor, 0.75);
+        margin-right: 0.5em;
+      }
+      &:hover:before, &:focus:before{
+        color:lighten($txtColor,5);  
+      }
+    }//end icon
+}//end mixin button
+
+@mixin button--outline(
+  $bgColor: $lbg,
+  $buttonColor: $tertiary,
+  $txtColor: $black,
+  $light: lighten($bgColor, 10),
+  $shadow: shade($bgColor, 10)
+){
+  @include button($bgColor, $buttonColor, $buttonColor, $light, $shadow);
+    background-color: $bgColor;
+    &:hover, &:focus, &:active, &:visited{ 
+      background-color:$bgColor;
+    }
+  }//end button--outline mixin
+
+
+  
+input[type="submit"], input[type="reset"], input[type="button"], button, .button{ 
+  @include button--outline();
+  
+  &.primary{ @include button(); }
+  &.large{ font-size: ms(0); }
+  &.small{ font-size: ms(-2); }
+  &.fit{ width:100%; }
+  &.disabled{ opacity:0.25; }
+}
+

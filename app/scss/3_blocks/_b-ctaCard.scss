@@ -36,12 +36,12 @@
   border-bottom-left-radius:0.382em;
   border-bottom-right-radius:0.382em;
   
-  .btn{
-    @include btn($primary, $white, $primary); 
+  .button{
+    @include button($primary, $white, $primary); 
     float:left;
-  }//end btn
-  .btn--donate{
-    @include btn--outline($primary, $white);
+  }//end button
+  .button--donate{
+    @include button--outline($primary, $white);
     float:left; margin-left: 1em;
-  }//end btn--donate
+  }//end button--donate
 }//end b-ctaCard__cta

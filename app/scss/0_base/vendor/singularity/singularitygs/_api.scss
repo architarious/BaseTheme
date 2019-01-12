@@ -56,11 +56,11 @@
     $Right: ();
 
     @if $Direction == 'both' or $From == 'left' or ($Direction == 'rtl' and $From == 'opposite') {
-      $Left: call('output-#{$output-style}', map-merge($Span-Map, ('direction': left)));
+      $Left: call(get-function('output-#{$output-style}'), map-merge($Span-Map, ('direction': left)));
     }
 
     @if $Direction == 'both' or $From == 'right' or ($Direction == 'ltr' and $From == 'opposite') {
-      $Right: call('output-#{$output-style}', map-merge($Span-Map, ('direction': right)));
+      $Right: call(get-function('output-#{$output-style}'), map-merge($Span-Map, ('direction': right)));
     }
 
     $Left-Keys: map-keys($Left);

@@ -42,7 +42,7 @@
   <main class="s-main s-main--styleguide">
     <div class="container">
         <article>
-        <!-- Content -->
+            <!-- Content -->
             <h2>Colors</h2>            
             <h3>Primary colors</h3>    
             <div class="t-styleguide__colors">            
@@ -74,9 +74,10 @@
                 <span class="subHeadline">This text would frequently be used as a subheadline.</span>           
                 <p>This is body copy. Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac. Semper adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
                 <p class="caption">This is caption text. Semper adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+                <p style="padding-top:1em;"><strong>Headlines: <code>class="headline"</code></strong> | <strong>Subheadlines: <code>class="subHeadline"</code></strong></p>
             </div>
             <h2 id="content">Sample Content</h2>
-            <p>Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam veroeros adipiscing.</p>
+            <p>Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam veroeros adipiscing.</p>            
             <div class="row">
                 <div class="col col--half"> 
                     <h3>Sem turpis amet semper</h3>
@@ -89,7 +90,7 @@
             </div>
             <div class="row">
                 <!-- Break -->
-                <div class="col col--third">
+                <div class="col col--third bounceIn">
                     <h3>Interdum sapien gravida</h3>
                     <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
                 </div>
@@ -102,17 +103,16 @@
                     <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
                 </div>
             </div>
-            <hr/>
-
-            <h2 id="elements">Text elements</h2>
+            <hr/>            
 
             <!-- Text stuff -->
-            <h3>Text</h3>
+            <h3>Text elements</h3>
             <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
             This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
             This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>.
             Finally, this is a <a href="#">link</a>.</p>
             <hr />
+            <h3>Headings</h3>
             <h2>Heading Level 2</h2>
             <h3>Heading Level 3</h3>
             <h4>Heading Level 4</h4>
@@ -140,6 +140,7 @@
                         <li>Felis dolore viverra.</li>
                     </ul>
                     <h4>Alternate</h4>
+                    <code>class="alt"</code>
                     <ul class="alt">
                         <li>Dolor etiam magna etiam.</li>
                         <li>Sagittis lorem eleifend.</li>
@@ -242,6 +243,7 @@
                 </table>
             </div>
             <h4>Alternate</h4>
+            <code>class="alt"</code>
             <div class="table-wrapper">
                 <table class="alt">
                     <caption>Caption for alternate table</caption>
@@ -292,6 +294,7 @@
 
             <!-- Box -->
             <h3>Box</h3>
+            <code>class="box"</code>
             <div class="box">
                 <p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum.</p>
             </div>
@@ -312,142 +315,260 @@ print 'It took ' + i + ' iterations to sort the deck.';
             </code></pre>
             
             <hr/>
-            <!-- Image -->
-            <h3>Image</h3>
-            <h4>Fit</h4>
-            <span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
-            <div class="box alt">
-                <div class="row gtr-50 gtr-uniform">
-                    <div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-                    <!-- Break -->
-                    <div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-                    <!-- Break -->
-                    <div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+            <!-- Grid -->
+            <h2>Grids</h2>
+            <p>Basetheme uses <a href="https://github.com/at-import/Singularity">Singularity</a> for rapid development of responsive grids that use CSS Grid, but still work in IE and other browsers that don't yet support css-grid. All grids snap back to single column on viewports below 640px.</p>
+            <h3>Two columns</h3>
+            <div class="row">
+                <div class="col col--half"> 
+                    <h4>Sem turpis amet semper</h4>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac. Semper adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+                </div>
+                <div class="col col--half">
+                    <h4>Magna odio tempus commodo</h4>
+                    <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper orci eget. Faucibus commodo adipiscing mi eu nullam accumsan morbi arcu ornare odio mi adipiscing nascetur lacus ac interdum morbi accumsan vis mi accumsan.</p>
+                </div>
+            </div> 
+            <pre><code>
+div class="row"
+    div class="col col--half"
+        CONTENT GOES HERE
+    /div
+    div class="col col--half"
+        CONTENT GOES HERE
+    /div
+/div
+            </code></pre>
+            
+            <h3>Three columns</h3>
+            <div class="row">
+                <div class="col col--third bounceIn">
+                    <h4>Interdum sapien gravida</h4>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
+                </div>
+                <div class="col col--third">
+                    <h4>Faucibus consequat lorem</h4>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
+                </div>
+                <div class="col col--third">
+                    <h4>Accumsan montes viverra</h4>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
                 </div>
             </div>
+            <pre><code>
+div class="row"
+    div class="col col--third"
+        CONTENT GOES HERE
+    /div
+    div class="col col--third"
+        CONTENT GOES HERE
+    /div
+    div class="col col--third"
+        CONTENT GOES HERE
+    /div
+/div
+            </code></pre>                    
+            <h3>Four columns</h3>
+            <div class="row">                    
+                <div class="col col--quarter">
+                    <h4>Cum sociis natoque</h4>                                    
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
+                </div>
+                <div class="col col--quarter">
+                    <h4>Nascetur ridiculus</h4>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
+                </div>
+                <div class="col col--quarter">
+                    <h4>et magnis disparturien</h4>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
+                </div>
+                <div class="col col--quarter">
+                    <h4>Interdum adipiscing</h4>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
+                </div>
+            </div>
+            <pre><code>
+div class="row"
+    div class="col col--fourth"
+        CONTENT GOES HERE
+    /div
+    div class="col col--fourth"
+        CONTENT GOES HERE
+    /div
+    div class="col col--fourth"
+        CONTENT GOES HERE
+    /div
+    div class="col col--fourth"
+        CONTENT GOES HERE
+    /div
+/div
+            </code></pre> 
+            <!-- Image -->
+            <h2>Image</h2> 
+            <h3>Fit</h3>
+            <span class="image fit"><img src="https://picsum.photos/1280/420/?random" alt="" /></span>
+            <p style="max-width: 100%;"><strong>Fitted Image:</strong> <code>span class="image fit"</code></p>
+            <div class="box alt">
+                <div class="row">
+                    <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/abstract/" alt="" /></span></div>
+                    <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/city/" alt="" /></span></div>
+                    <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/people/" alt="" /></span></div>
+                    <!-- Break -->
+                    <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/transport/" alt="" /></span></div>
+                    <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/animals/" alt="" /></span></div>
+                    <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/food/" alt="" /></span></div>
+                    <!-- Break -->
+                    <div class="col col--third"><span class="image fit" style="margin-bottom:0;"><img src="http://lorempixel.com/416/257/nature/" alt="" /></span></div>
+                    <div class="col col--third"><span class="image fit" style="margin-bottom:0;"><img src="http://lorempixel.com/416/257/business/" alt="" /></span></div>
+                    <div class="col col--third"><span class="image fit" style="margin-bottom:0;"><img src="http://lorempixel.com/416/257/nightlife/" alt="" /></span></div>
+                </div>
+            </div>
+            <pre><code>
+div class="box alt"
+  div class="row"
+    div class="col col--third"
+      span class="image fit"
+        img #1
+      /span
+    /div
+    div class="col col--third"
+      span class="image fit"
+        img #2
+      /span
+    /div
+    div class="col col--third"
+      span class="image fit"
+        img #3
+      /span
+    /div
+/div
+            </code></pre> 
             <h4>Left &amp; Right</h4>
-            <p><span class="image left"><img src="images/pic01.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-            <p><span class="image right"><img src="images/pic02.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+            <p><span class="image left"><img src="http://lorempixel.com/416/257/nightlife" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+            <p><span class="image right"><img src="http://lorempixel.com/416/257/cats" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+            <p style="max-width:100%"><strong>Left or Right Images:</strong> <code>class="image left"</code> or <code>class="image right"</code></p>
 
             <hr/>
 
+            <!-- Buttons -->
+            <h2>Buttons</h2>
+            <ul class="actions">
+                <li><a href="#" class="button primary">Primary</a></li>
+                <li><a href="#" class="button">Default</a></li>                
+                <li><a href="#" class="button large">Large</a></li>
+                <li><a href="#" class="button small">Small</a></li>
+            </ul>
+            <p style="max-width:100%"><strong>Primary:</strong> <code>class="button primary"</code> | <strong>Default:</strong> <code>class="button"</code> | <strong>Large:</strong> <code>class="button large"</code> | <strong>Small:</strong> <code>class="button small"</code></p>
+            <ul class="actions">
+                <li><a href="#" class="button primary icon fa-search">Icon</a></li>
+                <li><a href="#" class="button icon fa-download">Icon</a></li>                
+                <li><span class="button primary disabled">Disabled</span></li>
+                <li><span class="button disabled">Disabled</span></li>
+            </ul>
+            <p style="max-width:100%"><strong>Primary Icon:</strong> <code>class="button primary icon fa-search"</code> | <strong>Default Icon:</strong> <code>class="button icon fa-download"</code> | <strong>Primary Disabled:</strong> <code>class="button primary disabled"</code> | <strong>Default Disabled:</strong> <code>class="button disabled"</code></p>
+            <ul class="actions fit">
+                <li><a href="#" class="button primary fit">Fit</a></li>
+                <li><a href="#" class="button fit">Fit</a></li>
+                <li><a href="#" class="button fit icon fa-external-link">Fit</a></li>
+            </ul>
+            <ul class="actions fit small">
+                <li><a href="#" class="button primary fit small">Fit + Small</a></li>
+                <li><a href="#" class="button fit small">Fit + Small</a></li>
+                <li><a href="#" class="button fit small icon fa-rss">Fit + Small</a></li>
+            </ul>
+            <pre><code>
+ul class="actions fit small"
+  li a class="button primary fit" /li
+  li a class="button fit" /li
+  li a class="button icon fa-external-link" /li 
+/ul 
+            </code></pre>
 
-            <div class="t-styleguide__elements">
-                <h4>Pagination</h4>
-                    <ul class="pagination">
-                        <li><span class="button disabled">Prev</span></li>
-                        <li><a href="#" class="page active">1</a></li>
-                        <li><a href="#" class="page">2</a></li>
-                        <li><a href="#" class="page">3</a></li>
-                        <li><span>&hellip;</span></li>
-                        <li><a href="#" class="page">8</a></li>
-                        <li><a href="#" class="page">9</a></li>
-                        <li><a href="#" class="page">10</a></li>
-                        <li><a href="#" class="button">Next</a></li>
-                    </ul>
-                <div class="col-6 col-12-medium">
+            <h4>Pagination</h4>
+            <ul class="pagination">
+                <li><span class="button disabled">Prev</span></li>
+                <li><a href="#" class="page active">1</a></li>
+                <li><a href="#" class="page">2</a></li>
+                <li><a href="#" class="page">3</a></li>
+                <li><span>&hellip;</span></li>
+                <li><a href="#" class="page">8</a></li>
+                <li><a href="#" class="page">9</a></li>
+                <li><a href="#" class="page">10</a></li>
+                <li><a href="#" class="button">Next</a></li>
+            </ul>
+            <pre><code>
+ul class="pagination"
+  li a class="button" Prev /a /li
+  li a class="page" 1 /a /li
+  li a class="page" 2 /a /li
+  li a class="page" 3 /a /li
+  li ... /li
+  li a class="page" 8 /a /li
+  li a class="page" 9 /a /li
+  li a class="page" 10 /a /li
+  li a class="button" Next /a /li 
+/ul 
+            </code></pre>
 
-                    <!-- Buttons -->
-                        <h3>Buttons</h3>
+            <hr/>
+
+            <h2>Forms</h2>
+
+            <form method="post" action="#">
+                <div class="row">
+                    <div class="col col--half">
+                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                    </div>
+                    <div class="col col--half">
+                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                    </div>
+                    <!-- Break -->
+                    <div class="col col--full">
+                        <select name="demo-category" id="demo-category">
+                            <option value="">- Category -</option>
+                            <option value="1">Manufacturing</option>
+                            <option value="1">Shipping</option>
+                            <option value="1">Administration</option>
+                            <option value="1">Human Resources</option>
+                        </select>
+                    </div>
+                    <!-- Break -->
+                    <div class="col col--third">
+                        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                        <label for="demo-priority-low">Low</label>
+                    </div>
+                    <div class="col col--third">
+                        <input type="radio" id="demo-priority-normal" name="demo-priority">
+                        <label for="demo-priority-normal">Normal</label>
+                    </div>
+                    <div class="col col--third">
+                        <input type="radio" id="demo-priority-high" name="demo-priority">
+                        <label for="demo-priority-high">High</label>
+                    </div>
+                    <!-- Break -->
+                    <div class="col col--half">
+                        <input type="checkbox" id="demo-copy" name="demo-copy">
+                        <label for="demo-copy">Email me a copy</label>
+                    </div>
+                    <div class="col col--half">
+                        <input type="checkbox" id="demo-human" name="demo-human" checked>
+                        <label for="demo-human">I am a human</label>
+                    </div>
+                    <!-- Break -->
+                    <div class="col col--full">
+                        <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                    </div>
+                    <!-- Break -->
+                    <div class="col col--full">
                         <ul class="actions">
-                            <li><a href="#" class="button primary">Primary</a></li>
-                            <li><a href="#" class="button">Default</a></li>
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
                         </ul>
-                        <ul class="actions">
-                            <li><a href="#" class="button large">Large</a></li>
-                            <li><a href="#" class="button">Default</a></li>
-                            <li><a href="#" class="button small">Small</a></li>
-                        </ul>
-                        <ul class="actions">
-                            <li><a href="#" class="button primary large">Large</a></li>
-                            <li><a href="#" class="button primary">Default</a></li>
-                            <li><a href="#" class="button primary small">Small</a></li>
-                        </ul>
-                        <ul class="actions fit">
-                            <li><a href="#" class="button primary fit">Fit</a></li>
-                            <li><a href="#" class="button fit">Fit</a></li>
-                        </ul>
-                        <ul class="actions fit small">
-                            <li><a href="#" class="button primary fit small">Fit + Small</a></li>
-                            <li><a href="#" class="button fit small">Fit + Small</a></li>
-                        </ul>
-                        <ul class="actions">
-                            <li><a href="#" class="button primary icon fa-search">Icon</a></li>
-                            <li><a href="#" class="button icon fa-download">Icon</a></li>
-                        </ul>
-                        <ul class="actions">
-                            <li><span class="button primary disabled">Primary</span></li>
-                            <li><span class="button disabled">Default</span></li>
-                        </ul>
-
-                    <!-- Form -->
-                        <h3>Form</h3>
-
-                        <form method="post" action="#">
-                            <div class="row gtr-uniform">
-                                <div class="col-6 col-12-xsmall">
-                                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-                                </div>
-                                <div class="col-6 col-12-xsmall">
-                                    <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-                                </div>
-                                <!-- Break -->
-                                <div class="col-12">
-                                    <select name="demo-category" id="demo-category">
-                                        <option value="">- Category -</option>
-                                        <option value="1">Manufacturing</option>
-                                        <option value="1">Shipping</option>
-                                        <option value="1">Administration</option>
-                                        <option value="1">Human Resources</option>
-                                    </select>
-                                </div>
-                                <!-- Break -->
-                                <div class="col-4 col-12-small">
-                                    <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                                    <label for="demo-priority-low">Low</label>
-                                </div>
-                                <div class="col-4 col-12-small">
-                                    <input type="radio" id="demo-priority-normal" name="demo-priority">
-                                    <label for="demo-priority-normal">Normal</label>
-                                </div>
-                                <div class="col-4 col-12-small">
-                                    <input type="radio" id="demo-priority-high" name="demo-priority">
-                                    <label for="demo-priority-high">High</label>
-                                </div>
-                                <!-- Break -->
-                                <div class="col-6 col-12-small">
-                                    <input type="checkbox" id="demo-copy" name="demo-copy">
-                                    <label for="demo-copy">Email me a copy</label>
-                                </div>
-                                <div class="col-6 col-12-small">
-                                    <input type="checkbox" id="demo-human" name="demo-human" checked>
-                                    <label for="demo-human">I am a human</label>
-                                </div>
-                                <!-- Break -->
-                                <div class="col-12">
-                                    <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-                                </div>
-                                <!-- Break -->
-                                <div class="col-12">
-                                    <ul class="actions">
-                                        <li><input type="submit" value="Send Message" class="primary" /></li>
-                                        <li><input type="reset" value="Reset" /></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </form>
-
-                    
-                    
-
+                    </div>
                 </div>
-            </div>
+            </form>
+
+            
         </article>        
     </div><!--end container-->
   </main>
@@ -471,14 +592,14 @@ print 'It took ' + i + ' iterations to sort the deck.';
           </ul>
         </nav>
         <ul class="b-social">
-          <li><a target="_blank" href="http://facebook.com" class="icon-facebook2">facebook</a></li>
-          <li><a target="_blank" href="http://github.com" class="icon-github">github</a></li>
-          <li><a target="_blank" href="http://twitter.com" class="icon-twitter">twitter</a></li>
-          <li><a target="_blank" href="http://linkedin.com" class="icon-linkedin">linkedin</a></li>
-          <li><a target="_blank" href="http://stackoverflow.com" class="icon-stackoverflow">stackoverflow</a></li>
-          <li><a target="_blank" href="http://behance.com" class="icon-behance">behance</a></li>
-          <li><a target="_blank" href="http://deviantart.com" class="icon-deviantart">deviantart</a></li>
-          <li><a target="_blank" href="http://youtube.com" class="icon-youtube">youtube</a></li>
+          <li><a target="_blank" href="http://facebook.com" class="icon fa-facebook">facebook</a></li>
+          <li><a target="_blank" href="http://github.com" class="icon fa-github">github</a></li>
+          <li><a target="_blank" href="http://twitter.com" class="icon fa-twitter">twitter</a></li>
+          <li><a target="_blank" href="http://linkedin.com" class="icon fa-linkedin">linkedin</a></li>
+          <li><a target="_blank" href="http://stackoverflow.com" class="icon fa-stack-overflow">stackoverflow</a></li>
+          <li><a target="_blank" href="http://behance.com" class="icon fa-behance">behance</a></li>
+          <li><a target="_blank" href="http://deviantart.com" class="icon fa-deviantart">deviantart</a></li>
+          <li><a target="_blank" href="http://youtube.com" class="icon fa-youtube">youtube</a></li>
         </ul>
       </div><!--end s-footer__cta-->
     </div><!--end container-->

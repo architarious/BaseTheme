@@ -9,6 +9,7 @@ $bowerPath: '../../bower_components/';
 // -----------------------------------------------------------------------------
 @import "vendor/breakpoint/breakpoint"; 
 @import "vendor/singularity/singularitygs";
+@import "vendor/singularity/singularitygs/css-grid";
 
 // Typography tools
 // -----------------------------------------------------------------------------
@@ -17,6 +18,10 @@ $bowerPath: '../../bower_components/';
 @import "vendor/modular-scale/modularscale"; 
 
 @import "vendor/color-schemer/color-schemer";
+
+// Animation mixins
+// -----------------------------------------------------------------------------
+@import "vendor/animate-with-sass/animate";
 
 // SCUT: Common sass utilities ( https://davidtheclark.github.io/scut/ )
 // ----------------------------------------------------------------------------- 
@@ -28,7 +33,7 @@ $bowerPath: '../../bower_components/';
 
 // FontAwesome
 // -----------------------------------------------------------------------------
-//@import "font-awesome";
+@import "vendor/font-awesome/font-awesome";
 
 // Bootstrap 
 // -----------------------------------------------------------------------------

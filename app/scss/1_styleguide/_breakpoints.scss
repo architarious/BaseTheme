@@ -44,10 +44,10 @@ $no-queries: 1024px, 'no-query' true;
 //------------------------------------------
 $typi-breakpoint: breakpoint;
 $breakpoints:(
-    mobile1: 0px,
-    mobile2: 480px,
-    tablet: 767px,
-    desktop1: 960px,
-    desktop2: 1248px,
-    desktop3: 1920px
+    mobile1: 0,
+    mobile2: 30rem,
+    tablet: 47.9375rem,
+    desktop1: 60rem,
+    desktop2: 78rem,
+    desktop3: 120rem
 );

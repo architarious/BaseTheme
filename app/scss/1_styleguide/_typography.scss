@@ -133,6 +133,20 @@ a{
   text-decoration: underline;
   &:hover{ color:lighten($tertiary, 10);}
 }
+b,strong,.bold{
+  font-weight:bold;
+}
+i, em, .italic{
+  font-style: italic;
+}
+sup{
+  vertical-align: super;
+  font-size: smaller;
+}
+sub{
+  vertical-align: sub;
+  font-size: smaller;
+}
 
 .headline{
   font-size: $font-size-xxlarge-2;
@@ -185,29 +199,26 @@ hr{
   padding: vr(1);
   margin: vr(2) 0;
   p{margin-bottom:0; max-width: 100%;}
+  &.alt{
+    padding:0;
+    border:0; 
+  }
 }
 
 // Lists
 //------------------------------------------
 
 ul, ol{
-  padding: 0 1em;
-  & > ul, & > ol{ padding: $pad-half 1em;}
-  li{line-height: $pad-and-half;}
+  padding: 0 1em vr(2) 1em;
+  & > ul, & > ol{ 
+    padding: 0.1rem 1em;
+  }
+  li{line-height: 1rem; margin: vr(0.5) 0;}
 }
 ol {
   & > ol{ list-style-type: upper-alpha;}
   & > ol > ol{ list-style-type: upper-roman;}
 }
-ul.alt{
-  list-style:none !important;
-  padding:0;
-  li{
-    padding: $pad-half 0;
-    border-bottom: 1px solid $lbg--shadow;
-    box-shadow: 0 1px 1px -1px $lbg--light; 
-  }
-}//end ul.alt
 dl{
   dt{
     font-weight: 900;
@@ -222,7 +233,53 @@ dl{
     p{max-width:100%;}
   }
 }//end dl
+@mixin ul-alt(
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+){
+  list-style:none !important;
+  padding:0;
+  li{
+    padding: $pad-half 0;
+    border-bottom: 1px solid $shadow;
+    box-shadow: 0 1px 1px -1px $light; 
+    &:last-child{ border-bottom:0; box-shadow: none;}
+  }
+}
+ul.alt{
+  @include ul-alt();
+}//end ul.alt
 
+ul.actions{
+  display: flex;
+  cursor: default;
+  list-style: none;
+  margin-left: -1em;
+  padding:0;
+  margin-bottom: vr(1);
+  li{
+    display:flex;
+    padding: 0 0 0 1em;
+    vertical-align: middle;
+  }
+
+  &.fit{
+    width:calc(100% + 1em);
+    li{
+      -moz-flex-grow: 1;
+			-webkit-flex-grow: 1;
+			-ms-flex-grow: 1;
+			flex-grow: 1;
+			-moz-flex-shrink: 1;
+			-webkit-flex-shrink: 1;
+			-ms-flex-shrink: 1;
+			flex-shrink: 1;
+			width: 100%;
+      & > * { width:100%;}
+    }//end li
+
+  }
+}//end ul.actions
 
 // Tables
 //------------------------------------------
@@ -407,6 +464,7 @@ h5, h6{
 h6{ margin:vr(0.25) 0;}
 p, li{
   @include typi('p');
+  margin: vr(1) 0;
 }
 .headline{ 
   @include typi('headline');

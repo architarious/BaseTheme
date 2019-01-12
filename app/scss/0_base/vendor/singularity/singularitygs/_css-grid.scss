@@ -1,4 +1,4 @@
-@import 'breakpoint';
+//@import 'breakpoint';
 
 @function _css-gridtemplate-conversion($grid) {
   @if type-of($grid) == 'number' or length($grid) == 1 {
@@ -60,6 +60,8 @@
 
   @supports (display: grid) {
     display: grid;
+    float:initial;
+    clear:initial;
 
     // Build Column Templates
     @each $mq, $grid in $grids {
@@ -132,10 +134,12 @@
 
   @supports (display: grid) {
     @if $Location {
-      grid-columns: $Location / span $Span;
+      grid-column: $Location / span $Span;
+      width:auto;
     }
     @else {
-      grid-columns: span $Span;
+      grid-column: span $Span;
+      width:auto;
     }
   }
 }

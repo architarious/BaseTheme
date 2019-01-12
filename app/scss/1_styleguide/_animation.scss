@@ -2,22 +2,6 @@
 //This is a port of Dan Eden's Animate.css for SASS.
 //http://daneden.github.io/animate.css/
 
-// Always required
-@import "./bower_components/animatewithsass/properties";
-
-// Import the animations
-@import 
-  "./bower_components/animatewithsass/_attention-seekers/attention-seekers.scss", // This will not import
-  "./bower_components/animatewithsass/_bouncing-entrances/bouncing-entrances.scss",
-  "./bower_components/animatewithsass/_bouncing-exits/bouncing-exits.scss",
-  "./bower_components/animatewithsass/_fading-entrances/fading-entrances.scss",
-  "./bower_components/animatewithsass/_fading-exits/fading-exits.scss",
-  "./bower_components/animatewithsass/_flippers/flippers.scss", 
-  "./bower_components/animatewithsass/_lightspeed/lightspeed.scss",
-  "./bower_components/animatewithsass/_rotating-entrances/rotating-entrances.scss",
-  "./bower_components/animatewithsass/_rotating-exits/rotating-exits.scss",
-  "./bower_components/animatewithsass/_specials/specials.scss";
- 
 /*USAGE
 
   Once your files have been added to your project and you've customized your @imports, you can start including the animations directly to your classes.

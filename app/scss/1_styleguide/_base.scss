@@ -1,11 +1,15 @@
 @import "breakpoints";
 @import "colors";
 //@import "eq";
+@import "icons";
 @import "animation";
 @import "grids";
 @import "modularScale";
 @import "fonts";
 @import "typography";
+@import "images"; 
+@import "buttons";
+@import "forms";
 
 body{
   background-color:$white;

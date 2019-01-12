@@ -1,0 +1,48 @@
+@mixin pagination(
+  $bgColor: $lbg,
+  $txtColor: $gray-dark-3,
+  $ctaColor: $tertiary,
+  $light: $lbg--light,
+  $shadow: $lbg--shadow
+){
+  cursor: default;
+	list-style: none;
+  padding-left: 0;
+  
+  li{
+    display: inline-block;
+		padding-left: 0;
+    vertical-align: middle;
+    color: $txtColor;
+    
+    & > .page{
+      -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			border-bottom: 0;
+			border-radius: ms(-5);
+			display: inline-block;
+			height: vr(1);
+			line-height: vr(1);
+			margin: 0 ms(-8);
+			min-width: vr(1);
+			padding: vr(0.25);
+      text-align: center;
+      &:hover, &:focus{
+        background-color: set-alpha($ctaColor, 0.15);
+      }
+      &.active{
+        background-color: $ctaColor;
+        color: $bgColor;
+      }
+    }//end & > .page
+
+    &:first-child{ padding-right: 0.75em;}
+    &:last-child{ padding-left: 0.75em;}
+  }//end li
+}
+
+ul.pagination{
+ @include pagination();
+}//end pagination
