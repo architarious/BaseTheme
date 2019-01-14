@@ -1,0 +1,16 @@
+@mixin s-main(
+  $bgColor: $dbg,
+  $text: $black,
+  $cta: $tertiary,
+  $shadow: $dbg--shadow,
+  $light: $dbg--light
+){
+  width:100%;
+  float:left;
+
+  .container{ 
+      padding-top: vr(1);
+      padding-bottom: vr(2);
+   }
+}
+.s-main{@include s-main();}

@@ -1,0 +1,176 @@
+@mixin spotlight(
+  $bgColor: $lbg,
+  $textColor: $gray-dark-4,
+  $titleColor: $primary,
+  $ctaColor: $tertiary
+){
+    display:flex;
+    flex-flow: column nowrap;
+    max-width: 420px;
+    background: $lbg;
+    .spotlight__image{
+        order: 1;
+        width:100%;
+        img{
+            border-top-left-radius: ms(-5);
+            border-top-right-radius: ms(-5);
+        }
+    }//end spotlight__image
+    .spotlight__body{
+        order:2;
+        flex-grow:1;
+        .spotlight__title{
+            color: $titleColor;
+            margin: $pad 0 0 0;
+        }//end spotlight__title
+        .spotlight__copy{
+            color: $textColor;
+            font-size: $font-size-small-2;
+            line-height: vr(1);
+            padding: vr(1) 0 0 0;
+            p{
+                color: $textColor;  
+                line-height: vr(1);
+                margin:0;
+            }//end p
+        }//end spotlight__copy
+    }//end spotlight__body
+    .spotlight__cta{
+        order: 3;
+        font-size: $font-size-small-2;
+        margin: $pad-half 0;
+        .button{
+            padding: 0 1.618em;
+            line-height: 3em;
+            height: 3em;
+            margin: $pad-quarter $pad-quarter 0 0;
+        }
+    }//end spotlight__cta
+}//end spotlight mixin
+.spotlight, %spotlight{@include spotlight();}
+
+
+@mixin card(
+  $bgColor: $lbg,  
+  $titleColor: $gray-dark-3,
+  $textColor: $gray-dark-5,
+  $ctaColor: $tertiary,
+  $borderColor: $gray-light-1,
+  $hoverColor: $tertiary,
+  $shadow: $lbg--shadow
+){
+  max-width: 420px;
+  background: $bgColor;
+  box-shadow: 0 ms(-4) ms(-8) (ms(-6)*-1) $shadow;
+  border: 1px solid $shadow;
+  display:flex;
+  flex-flow: column nowrap;
+  border-radius: ms(-5);
+  .card__body{
+      padding: $pad-half;
+      display:flex;
+      flex-flow: row nowrap;
+      order:2;
+      justify-content: space-between;
+     
+      .card__copy{
+          width:80%;          
+          display:flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+      }
+      .card__thumb{
+        @extend %thumbnail--50;
+        align-self: flex-end;
+        img{ 
+            border-radius: 100%; }
+        &:hover,&:focus{
+            opacity:0.80;
+        }
+          
+      }
+      .card__title{
+          margin:0; padding:0;
+          @include typi(h5);
+          color: $titleColor;
+      }
+      .card__subtitle{
+          text-transform: uppercase;
+          font-size: $font-size-small-2;
+          letter-spacing: 0.15em;
+          color: $textColor;
+      }
+  }//end card__body
+  .card__image{
+      order:1;
+      img{
+          width:100%;
+          height:auto;
+          border-top-left-radius: ms(-5);
+          border-top-right-radius: ms(-5);
+      }
+  }//end card__image
+
+  &:hover, &:focus{
+      .card__image{
+          opacity: 0.8;
+      }
+      .card__body .card__title{
+        color:$tertiary;
+      }
+  }
+}
+.card, %card{ @include card();}
+
+
+@mixin miniCard(
+  $bgColor: $lbg,
+  $textColor: $gray-dark-4,
+  $titleColor: $gray-dark-2,
+  $ctaColor: $tertiary
+){
+    width:100%;
+    max-width: 420px;
+    display:flex;
+    flex-flow: row nowrap; 
+    text-decoration: none;
+    .miniCard__body{
+        order: 2;
+        display:flex;
+        flex-flow: column nowrap;
+    }
+    .miniCard__thumb{
+        @extend %thumbnail;
+        margin-right: $pad-half;
+        max-width: 35%;
+        float:left; 
+        overflow: hidden;
+        img{
+            border-radius: 0;
+            width:100%;
+            height: auto;
+        }
+    }
+    .miniCard__title{
+        text-decoration: none;
+        margin:0;
+        @include typi(h4);
+        font-family: $font-sans;
+        color: $titleColor;
+        font-weight: bold;
+    }
+    .miniCard__subtitle{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: $font-size-small-2;
+        letter-spacing: 0.15em;
+        color: $textColor;
+        margin-top: $pad-quarter;
+    }
+
+    &:hover, &:focus{
+        .miniCard__title{ color: $ctaColor;}
+        .miniCard__thumb img{ opacity: 0.8; }
+    }
+
+}.miniCard, %miniCard{ @include miniCard();}

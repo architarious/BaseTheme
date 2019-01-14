@@ -39,7 +39,7 @@
   @include add-grid(12);
   @include add-gutter(1);
 
-  .col--half, .col--third, .col--fourth{
+  .col--half, .col--third, .col--quarter{
     @include css-grid-span(12);    
   }
   @include breakpoint($bp-mobile2-3){
@@ -57,6 +57,7 @@
     }  
   }
 
+
   //styles for IE/non-grid compliancy
   float:left;
   clear:both;
@@ -72,6 +73,11 @@
     }
   }
   
+}
+
+ul.row{
+  padding:0; 
+  li{ list-style:none;}  
 }
 
 @mixin col-lines(

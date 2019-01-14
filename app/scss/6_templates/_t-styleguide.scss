@@ -1,5 +1,8 @@
 @mixin t-styleguide(
     $bgColor: $lbg,
+    $titleColor: $gray-dark-3,
+    $subtitleColor: $gray-dark-4,
+    $accentColor: $primary,
     $textColor: $black,
     $ctaColor: $tertiary,
     $shadow: $lbg--shadow,
@@ -17,7 +20,8 @@
           margin-top: 2.618em;
           margin-right: 0.618em;
           box-shadow: 0 2px 4px -1px $lbg--shadow;
-          &:before{ position: absolute; top:-1.618em; font-weight: bold;} }
+          &:before{ position: absolute; top:-1.618em; font-weight: bold;} 
+      }
       &--primary{  background: $primary; &:before{ content: "$primary: #{$primary}";}}
       &--secondary{  background: $secondary; &:before{ content: "$secondary: #{$secondary}";}}
       &--tertiary{  background: $tertiary; &:before{ content: "$tertiary: #{$tertiary}";}}
@@ -36,11 +40,36 @@
       &--gray-dark-3{  background: $gray-dark-3; &:before{ content: "$gray-dark-3: #{$gray-dark-3}";}}
       &--gray-dark-4{  background: $gray-dark-4; &:before{ content: "$gray-dark-4: #{$gray-dark-4}";}}
       &--gray-dark-5{  background: $gray-dark-5; &:before{ content: "$gray-dark-5: #{$gray-dark-5}";}}
-      &--black{  background: $black; &:before{ content: "$black: #{$black}";}
-    }//end & > div
+      &--black{  background: $black; &:before{ content: "$black: #{$black}";}}
+      &--black-dark-1{  background: $black-dark-1; &:before{ content: "$black-dark-1: #{$black-dark-1}";}}
+      &--black-dark-2{  background: $black-dark-2; &:before{ content: "$black-dark-2: #{$black-dark-2}";}}
+      &--black-dark-3{  background: $black-dark-3; &:before{ content: "$black-dark-3: #{$black-dark-3}";}}
+  
      
   }//end .t-styleguide__colors
   .t-styleguide__typography{}//end t-styleguide__typography
+  .t-styleguide__title{
+    margin: vr(6) 0 vr(3) 0;
+    padding-bottom: vr(1);
+    border-bottom: solid 0.2em $accentColor;
+    @include typi(h1);
+    font-weight: 900;
+    max-width:100%;
+    color: $gray-dark-3;
+    letter-spacing: 0.15em;
+    display:block;
+    &:first-child{margin-top:0;}
+}//end t-styleguide__title
+.t-styleguide__subtitle{
+    margin: vr(6) 0 vr(2) 0;
+    padding-bottom: vr(0.25);
+    border-bottom: solid 0.1em $shadow;
+    letter-spacing: 0.1em;
+    max-width:100%;
+    color: $subtitleColor;
+    display:block;
+    &:first-child{ margin-top:0;}
+}//end t-styleguide__subtitle
 
 
 

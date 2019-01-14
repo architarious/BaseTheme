@@ -35,16 +35,15 @@
 	  <div class="container">
       <div class="b-title">
         <h1 class="headline b-title__title">Styleguide</h1>
-        <p class="subHeadline b-title__subtitle">An overview of different themes and options</p>
+        <p class="subHeadline b-title__subtitle">The heart and soul of the theme</p>
       </div>
     </div>
   </section> 
   <main class="s-main s-main--styleguide">
     <div class="container">
-        <article>
-            <!-- Content -->
-            <h2>Colors</h2>            
-            <h3>Primary colors</h3>    
+        <article>            
+            <h2 class="t-styleguide__title">Colors</h2>            
+            <h3 class="t-styleguide__subtitle">Primary colors</h3>    
             <div class="t-styleguide__colors">            
                 <div class="t-styleguide__colors--primary"></div>
                 <div class="t-styleguide__colors--secondary"></div>
@@ -52,7 +51,7 @@
                 <div class="t-styleguide__colors--quaternary"></div>
                 <div class="t-styleguide__colors--quinary"></div>                
             </div>
-            <h3>Mono colors</h3>
+            <h3 class="t-styleguide__subtitle">Mono colors</h3>
             <div class="t-styleguide__colors">            
                     <div class="t-styleguide__colors--white"></div>
                     <div class="t-styleguide__colors--gray-light-1"></div>
@@ -67,17 +66,23 @@
                     <div class="t-styleguide__colors--gray-dark-2"></div>
                     <div class="t-styleguide__colors--gray-dark-1"></div>        
                     <div class="t-styleguide__colors--black"></div>                
+                    <div class="t-styleguide__colors--black-dark-1"></div>  
+                    <div class="t-styleguide__colors--black-dark-2"></div>  
+                    <div class="t-styleguide__colors--black-dark-3"></div>   
                 </div>
-            <h2>Typography</h2>
+            <h2 id="typography" class="t-styleguide__title">Typography</h2>
             <div class="t-styleguide__typography">
                 <span class="headline">This is a headline</span>
-                <span class="subHeadline">This text would frequently be used as a subheadline.</span>           
+                <span class="subHeadline">This text would frequently be used as a subheadline.</span>
+                <p><span class="lede">Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper orci eget.</span></p>           
                 <p>This is body copy. Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac. Semper adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
                 <p class="caption">This is caption text. Semper adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-                <p style="padding-top:1em;"><strong>Headlines: <code>class="headline"</code></strong> | <strong>Subheadlines: <code>class="subHeadline"</code></strong></p>
+                <p style="padding-top:1em; max-width:100%;"><strong>Headlines: <code>class="headline"</code></strong> | <strong>Subheadlines: <code>class="subHeadline"</code></strong> | <strong>Lede text: </strong><code>span class="lede"</code></p>
             </div>
+            <h3 id="type_sampleContent" class="t-styleguide__subtitle">Sample Content</h3>
             <h2 id="content">Sample Content</h2>
-            <p>Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam veroeros adipiscing.</p>            
+            <p><span class="lede">Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc.</span></p>
+            <p>Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam veroeros adipiscing.</p>            
             <div class="row">
                 <div class="col col--half"> 
                     <h3>Sem turpis amet semper</h3>
@@ -89,7 +94,7 @@
                 </div>
             </div>
             <div class="row">
-                <!-- Break -->
+                
                 <div class="col col--third bounceIn">
                     <h3>Interdum sapien gravida</h3>
                     <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
@@ -103,25 +108,27 @@
                     <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
                 </div>
             </div>
-            <hr/>            
+                        
 
-            <!-- Text stuff -->
-            <h3>Text elements</h3>
+            
+            <h3 id="type_textElements" class="t-styleguide__subtitle">Text elements</h3>
             <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
             This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-            This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>.
+            This is <u>underlined</u>, this is <cite>cite</cite> and this is code: <code>for (;;) { ... }</code>.
             Finally, this is a <a href="#">link</a>.</p>
-            <hr />
-            <h3>Headings</h3>
+            
+
+
+            <h3 id="type_headings" class="t-styleguide__subtitle">Headings</h3>
             <h2>Heading Level 2</h2>
             <h3>Heading Level 3</h3>
             <h4>Heading Level 4</h4>
             <h5>Heading Level 5</h5>
-            <h6>Heading Level 6</h6>
-            <hr />
+            <h6>Heading Level 6</h6>  
             
-            <!-- Lists -->
-            <h3>Lists</h3>
+
+
+            <h3 id="type_lists" class="t-styleguide__subtitle">Lists</h3>
             <div class="row col--lines">
                 <div class="col col--third">
                     <h4>Unordered</h4>
@@ -186,16 +193,41 @@
                 </div>
             </div>      
 
-            <hr/>
+            
 
-            <!-- Blockquote -->
-            <h3>Blockquote</h3>
+            
+            <h3 id="type_blockquote" class="t-styleguide__subtitle">Blockquote</h3>
             <blockquote>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.</blockquote>
+
+            <h3 id="type_figure" class="t-styleguide__subtitle">Figures</h3>
+            <h4>Figure image</h4>
+            <figure>
+                <img src="http://lorempixel.com/1620/600/nightlife" alt=""/>
+                <figcaption>Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.</figcaption>
+            </figure>
             
-            <hr/>
+            <h4>Figure blockquote</h4>
+            <figure>
+                <blockquote>
+                    Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor.
+                </blockquote>
+                <figcaption>
+                    Vestibulum Ante, in <cite>Ante psum primis in faucibus vestibulum</cite>, eu felis <cite>Volutpat ac Adipiscing</cite>, adipiscing accumsan eu integer.
+                 </figcaption>
+            </figure>
+
+            <h4>Figure list</h4>
+            <figure>
+                <figcaption class="figureTitle">Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</figcaption>
+                <ol>
+                    <li>Dolor etiam magna etiam.</li>
+                    <li>Etiam vel lorem sed viverra.</li>
+                    <li>Felis dolore viverra.</li>
+                </ol>                
+            </figure>
             
-            <!-- Table -->
-            <h3>Table</h3>
+           
+            <h3 id="type_table" class="t-styleguide__subtitle">Table</h3>
             <h4>Default</h4>
             <div class="table-wrapper">
                 <table>
@@ -242,6 +274,7 @@
                     </tfoot>
                 </table>
             </div>
+
             <h4>Alternate</h4>
             <code>class="alt"</code>
             <div class="table-wrapper">
@@ -290,19 +323,19 @@
                 </table>
             </div>
 
-            <hr/>
+            
 
-            <!-- Box -->
-            <h3>Box</h3>
+            
+            <h3 id="type_box" class="t-styleguide__subtitle">Box</h3>
             <code>class="box"</code>
             <div class="box">
                 <p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum.</p>
             </div>
 
-            <hr/>
+            
 
-            <!-- Preformatted Code -->
-            <h3>Preformatted</h3>
+            
+            <h3 id="type_preformatted" class="t-styleguide__subtitle">Preformatted</h3>
             <pre><code>i = 0;
                             
 while (!deck.isInOrder()) {
@@ -314,11 +347,11 @@ i++;
 print 'It took ' + i + ' iterations to sort the deck.';
             </code></pre>
             
-            <hr/>
-            <!-- Grid -->
-            <h2>Grids</h2>
+            
+            
+            <h2 id="grids" class="t-styleguide__title">Grids</h2>
             <p>Basetheme uses <a href="https://github.com/at-import/Singularity">Singularity</a> for rapid development of responsive grids that use CSS Grid, but still work in IE and other browsers that don't yet support css-grid. All grids snap back to single column on viewports below 640px.</p>
-            <h3>Two columns</h3>
+            <h3 id="grids_twoColumns" class="t-styleguide__subtitle">Two columns</h3>
             <div class="row">
                 <div class="col col--half"> 
                     <h4>Sem turpis amet semper</h4>
@@ -340,7 +373,7 @@ div class="row"
 /div
             </code></pre>
             
-            <h3>Three columns</h3>
+            <h3 id="grids_threeColumns" class="t-styleguide__subtitle">Three columns</h3>
             <div class="row">
                 <div class="col col--third bounceIn">
                     <h4>Interdum sapien gravida</h4>
@@ -368,7 +401,7 @@ div class="row"
     /div
 /div
             </code></pre>                    
-            <h3>Four columns</h3>
+            <h3 id="grids_fourColumns" class="t-styleguide__subtitle">Four columns</h3>
             <div class="row">                    
                 <div class="col col--quarter">
                     <h4>Cum sociis natoque</h4>                                    
@@ -403,9 +436,11 @@ div class="row"
     /div
 /div
             </code></pre> 
-            <!-- Image -->
-            <h2>Image</h2> 
-            <h3>Fit</h3>
+           
+
+
+            <h2 id="images" class="t-styleguide__title">Image</h2> 
+            <h3 id="images_fit" class="t-styleguide__subtitle">Fit</h3>
             <span class="image fit"><img src="https://picsum.photos/1280/420/?random" alt="" /></span>
             <p style="max-width: 100%;"><strong>Fitted Image:</strong> <code>span class="image fit"</code></p>
             <div class="box alt">
@@ -413,11 +448,11 @@ div class="row"
                     <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/abstract/" alt="" /></span></div>
                     <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/city/" alt="" /></span></div>
                     <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/people/" alt="" /></span></div>
-                    <!-- Break -->
+                    
                     <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/transport/" alt="" /></span></div>
                     <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/animals/" alt="" /></span></div>
                     <div class="col col--third"><span class="image fit"><img src="http://lorempixel.com/416/257/food/" alt="" /></span></div>
-                    <!-- Break -->
+                    
                     <div class="col col--third"><span class="image fit" style="margin-bottom:0;"><img src="http://lorempixel.com/416/257/nature/" alt="" /></span></div>
                     <div class="col col--third"><span class="image fit" style="margin-bottom:0;"><img src="http://lorempixel.com/416/257/business/" alt="" /></span></div>
                     <div class="col col--third"><span class="image fit" style="margin-bottom:0;"><img src="http://lorempixel.com/416/257/nightlife/" alt="" /></span></div>
@@ -443,15 +478,17 @@ div class="box alt"
     /div
 /div
             </code></pre> 
-            <h4>Left &amp; Right</h4>
+
+
+            <h3 id="images_leftright" class="t-styleguide__subtitle">Left &amp; right in-paragraph images</h3>
             <p><span class="image left"><img src="http://lorempixel.com/416/257/nightlife" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
             <p><span class="image right"><img src="http://lorempixel.com/416/257/cats" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-            <p style="max-width:100%"><strong>Left or Right Images:</strong> <code>class="image left"</code> or <code>class="image right"</code></p>
+            <p style="max-width:100%"><strong>Left or right Images:</strong> <code>class="image left"</code> or <code>class="image right"</code></p>
 
-            <hr/>
+            
 
-            <!-- Buttons -->
-            <h2>Buttons</h2>
+            
+            <h2 id="buttons" class="t-styleguide__title">Buttons</h2>
             <ul class="actions">
                 <li><a href="#" class="button primary">Primary</a></li>
                 <li><a href="#" class="button">Default</a></li>                
@@ -471,20 +508,22 @@ div class="box alt"
                 <li><a href="#" class="button fit">Fit</a></li>
                 <li><a href="#" class="button fit icon fa-external-link">Fit</a></li>
             </ul>
-            <ul class="actions fit small">
+            <ul class="actions fit">
                 <li><a href="#" class="button primary fit small">Fit + Small</a></li>
                 <li><a href="#" class="button fit small">Fit + Small</a></li>
                 <li><a href="#" class="button fit small icon fa-rss">Fit + Small</a></li>
             </ul>
             <pre><code>
-ul class="actions fit small"
+ul class="actions fit"
   li a class="button primary fit" /li
   li a class="button fit" /li
   li a class="button icon fa-external-link" /li 
 /ul 
             </code></pre>
 
-            <h4>Pagination</h4>
+
+
+            <h3 id="buttons_pagination" class="t-styleguide__subtitle">Pagination</h3>
             <ul class="pagination">
                 <li><span class="button disabled">Prev</span></li>
                 <li><a href="#" class="page active">1</a></li>
@@ -510,9 +549,9 @@ ul class="pagination"
 /ul 
             </code></pre>
 
-            <hr/>
+            
 
-            <h2>Forms</h2>
+            <h2 id="forms" class="t-styleguide__title">Forms</h2>
 
             <form method="post" action="#">
                 <div class="row">
@@ -522,7 +561,7 @@ ul class="pagination"
                     <div class="col col--half">
                         <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
                     </div>
-                    <!-- Break -->
+                    
                     <div class="col col--full">
                         <select name="demo-category" id="demo-category">
                             <option value="">- Category -</option>
@@ -532,7 +571,7 @@ ul class="pagination"
                             <option value="1">Human Resources</option>
                         </select>
                     </div>
-                    <!-- Break -->
+                    
                     <div class="col col--third">
                         <input type="radio" id="demo-priority-low" name="demo-priority" checked>
                         <label for="demo-priority-low">Low</label>
@@ -545,7 +584,7 @@ ul class="pagination"
                         <input type="radio" id="demo-priority-high" name="demo-priority">
                         <label for="demo-priority-high">High</label>
                     </div>
-                    <!-- Break -->
+                    
                     <div class="col col--half">
                         <input type="checkbox" id="demo-copy" name="demo-copy">
                         <label for="demo-copy">Email me a copy</label>
@@ -554,11 +593,11 @@ ul class="pagination"
                         <input type="checkbox" id="demo-human" name="demo-human" checked>
                         <label for="demo-human">I am a human</label>
                     </div>
-                    <!-- Break -->
+                    
                     <div class="col col--full">
                         <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
                     </div>
-                    <!-- Break -->
+                    
                     <div class="col col--full">
                         <ul class="actions">
                             <li><input type="submit" value="Send Message" class="primary" /></li>

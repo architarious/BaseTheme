@@ -64,7 +64,7 @@
 
 
   
-input[type="submit"], input[type="reset"], input[type="button"], button, .button{ 
+input[type="submit"], input[type="reset"], input[type="button"], button, .button, %button{ 
   @include button--outline();
   
   &.primary{ @include button(); }

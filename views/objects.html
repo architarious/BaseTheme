@@ -1,0 +1,292 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/styles.css" >
+    <script src="../bower_components/eq.js/dist/eq.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../javascripts/main.js"></script>
+    <title>Basetheme: Styleguide</title>
+</head>
+<body class="t-styleguide">
+  <header class="s-header">
+    <div class="container">
+      
+      <div class="m-navbar" id="nav-container">
+       <h1 class="b-siteName eq-block--detail" >Name of Site</h1>
+       <nav class="b-primaryNav m-navbar__fullscreen " role="navigation" id="primaryNav nav-fullscreen">
+          
+          <ul class="navList b-primaryNav__list">
+             <li><a href="#">Services</a></li>
+             <li><a href="#">Products</a></li>
+             <li><a href="#">About</a></li>
+             <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="#primaryNav" class="b-primaryNav__trigger m-navbar__trigger" id="nav-toggle">
+            <span class="hamburger">
+              <span class="hamburger__line" ></span>
+              <span class="hamburger__line" ></span>
+              <span class="hamburger__line" ></span>
+            </span>
+          </a>
+      </div>
+    </div><!--end container-->
+  </header>
+  <section class="s-pageTitle">
+	  <div class="container">
+      <div class="b-title">
+        <h1 class="headline b-title__title">Objects</h1>
+        <p class="subHeadline b-title__subtitle">Theme elements that can be manipulated to support a variety of different content usages.</p>
+      </div>
+    </div>
+  </section> 
+  <main class="s-main s-main--styleguide">
+    <div class="container">
+        <article>            
+            <h2 id="alerts" class="t-styleguide__title">Alerts</h2>   
+            <div class="alert">
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+            </div>  
+            <p><strong>Default Alert: </strong><code>class="alert"</code></p>
+            <div class="alert--warning">
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+            </div>
+            <p><strong>Warning Alert: </strong><code>class="alert--warning"</code></p>  
+            <div class="alert--success">
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+            </div>
+            <p><strong>Success Alert: </strong><code>class="alert--success"</code></p>  
+            <div class="alert--info">
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+            </div> 
+            <p><strong>Info Alert: </strong><code>class="alert--info"</code></p>     
+            <div class="alert--notice">
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+            </div>
+            <p><strong>Notice Alert: </strong><code>class="alert--notice"</code></p>         
+            
+
+            <h2 id="mediaObjects" class="t-styleguide__title">Media Objects</h2>
+            <p><span class="lede">Media objects are frequently used to link to blog posts or other items elsewhere in the site</span></p>
+            <h3 id="media_spotlight" class="t-styleguide__subtitle">Spotlights</h3>
+            <ul class="row">
+                <li class="col col--third spotlight"> 
+                    <div class="spotlight__body">
+                        <h4 class="spotlight__title">Interdum adipiscing gravida</h4>
+                        <div class="spotlight__copy">
+                            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.</p>
+                        </div>                        
+                    </div>                 
+                    <div class="spotlight__image">
+                        <img src="http://lorempixel.com/350/175/nature" alt=""/>
+                    </div>                                  
+                    <div class="spotlight__cta">
+                        <a href="#" class="button primary">Primary Link</a>
+                        <a href="#" class="button">Secondary Link</a>
+                    </div>
+                </li>
+                <li class="col col--third spotlight">                
+                    <div class="spotlight__body">
+                        <h4 class="spotlight__title">Sed mattis nunc id</h4>
+                        <div class="spotlight__copy">
+                            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Vivamus porttitor magna enim, ac accumsan tortor cursus at.</p>
+                        </div>                        
+                    </div> 
+                    <div class="spotlight__image">
+                        <img src="http://lorempixel.com/350/175/transport" alt=""/>
+                    </div>                                   
+                    <div class="spotlight__cta">
+                        <a href="#" class="button primary">Primary Link</a>
+                        <a href="#" class="button">Secondary Link</a>
+                    </div>
+                </li>
+                <li class="col col--third spotlight"> 
+                    <div class="spotlight__body">
+                        <h4 class="spotlight__title">Vivamus porttitor magna enim</h4>
+                        <div class="spotlight__copy">
+                            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. </p>
+                        </div>                        
+                    </div>               
+                    <div class="spotlight__image">
+                        <img src="http://lorempixel.com/350/175/nightlife" alt=""/>
+                    </div>        
+                    <div class="spotlight__cta">
+                        <a href="#" class="button primary">Primary Link</a>
+                        <a href="#" class="button">Secondary Link</a>
+                    </div>   
+                </li>
+            </ul>
+            <pre><code>                            
+div class="spotlight"
+  div class="spotlight__body"
+    h3 class="spotlight__title" HEADER TEXT HERE /h3
+    div class="spotlight__copy" BODY COPY GOES HERE /div
+  /div 
+  div class="spotlight__image"
+    INSERT IMAGE HERE
+  /div  
+  div class="spotlight__cta"
+    a class="button primary" PRIMARY BUTTON TEXT /a
+    a class="button" SECONDARY BUTTON TEXT /a
+  /div
+/div
+            </code></pre>
+
+            <h3 id="media_card" class="t-styleguide__subtitle">Cards</h3>
+            <ul class="row">
+                <li class="col col--quarter">
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h4 class="card__title">Phasellus sed ultricies</h4>
+                            <time class="card__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/1" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/nature" alt=""/>
+                        </a>
+                    </div>
+                </li>
+                <li class="col col--quarter">
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h4 class="card__title">Phasellus sed ultricies</h4>
+                            <time class="card__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/2" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/food" alt=""/>
+                        </a>
+                    </div>
+                </li>
+                <li class="col col--quarter">
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h4 class="card__title">Phasellus sed ultricies</h4>
+                            <time class="card__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/cats" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/business" alt=""/>
+                        </a>
+                    </div>
+                </li>
+                <li class="col col--quarter">
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h4 class="card__title">Phasellus sed ultricies</h4>
+                            <time class="card__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/3" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/sports" alt=""/>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <pre><code>                            
+div class="card"
+  div class="card__body"
+    div class="card__copy"
+      span class="card__title"  INSERT TITLE HERE /span
+      span class="card__subtitle"  INSERT SUBTITLE HERE /span
+    /div
+    a class="card__thumb"
+      INSERT THUMBNAIL IMAGE HEAR 
+    /a
+  /div
+  a class="card__image"
+    INSERT IMAGE HERE
+  /a 
+/div
+            </code></pre>
+            
+            <h3 id="media_miniCard" class="t-styleguide__subtitle">Mini-Cards</h3>
+            <ul class="row">
+                <li class="col col--third">
+                    <a href="#" class="miniCard">
+                        <div class="miniCard__body">
+                            <h4 class="miniCard__title">Fermentum ut nisl vitae, convallis maximus</h4>
+                            <time class="miniCard__subtitle" datetime="2019-10-23">October 23, 2019</span>
+                        </div>
+                        <div class="miniCard__thumb">
+                            <img src="http://lorempixel.com/100/100/nature/3" alt=""/>
+                        </div>
+                    </a>
+                </li>
+                <li class="col col--third">
+                    <a href="#" class="miniCard">
+                        <div class="miniCard__body">
+                            <h4 class="miniCard__title">Fermentum ut nisl vitae, convallis maximus</h4>
+                            <time class="miniCard__subtitle" datetime="2019-10-23">October 23, 2019</span>
+                        </div>
+                        <div class="miniCard__thumb">
+                            <img src="http://lorempixel.com/100/100/nature/3" alt=""/>
+                        </div>
+                    </a>
+                </li>
+                <li class="col col--third">
+                    <a href="#" class="miniCard">
+                        <div class="miniCard__body">
+                            <h4 class="miniCard__title">Fermentum ut nisl vitae, convallis maximus</h4>
+                            <time class="miniCard__subtitle" datetime="2019-10-23">October 23, 2019</span>
+                        </div>
+                        <div class="miniCard__thumb">
+                            <img src="http://lorempixel.com/100/100/nature/3" alt=""/>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            
+        </article>        
+    </div><!--end container-->
+  </main>
+  <footer class="s-footer">
+    <div class="container">
+      <div class="s-footer__contact">
+        <address class="b-address">    
+          123 SomethingLane, <br/>
+          Morgantown, WV 26501 <br/>
+          <a href="tel:1-888-888-8888" class="b-address__tel"> 1-888-888-8888</a><br/>
+          <a href="mailto:#" class="b-address__email">something@somewhere.com</a><br/>
+        </address>
+      </div><!--end s-footer__contact-->
+      <div class="s-footer__cta">
+        <nav class="b-primaryNav">
+          <ul class="b-primaryNav__list">
+           <li><a href="#">Services</a></li>
+           <li><a href="#">Products</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <ul class="b-social">
+          <li><a target="_blank" href="http://facebook.com" class="icon fa-facebook">facebook</a></li>
+          <li><a target="_blank" href="http://github.com" class="icon fa-github">github</a></li>
+          <li><a target="_blank" href="http://twitter.com" class="icon fa-twitter">twitter</a></li>
+          <li><a target="_blank" href="http://linkedin.com" class="icon fa-linkedin">linkedin</a></li>
+          <li><a target="_blank" href="http://stackoverflow.com" class="icon fa-stack-overflow">stackoverflow</a></li>
+          <li><a target="_blank" href="http://behance.com" class="icon fa-behance">behance</a></li>
+          <li><a target="_blank" href="http://deviantart.com" class="icon fa-deviantart">deviantart</a></li>
+          <li><a target="_blank" href="http://youtube.com" class="icon fa-youtube">youtube</a></li>
+        </ul>
+      </div><!--end s-footer__cta-->
+    </div><!--end container-->
+  </footer>
+
+</body>
+</html>

@@ -2,13 +2,13 @@
 /* See 0_base/vendor/font-awesome/icons for a  full listing of available icons!
 */
 
-.icon {
+.icon, %icon {
   text-decoration: none;
   border-bottom: none;
   position: relative;
-}
 
-  .icon:before {
+
+  &:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: FontAwesome;
@@ -17,8 +17,8 @@
     text-transform: none !important;
   }
 
-  .icon > .label {
+  & > .label {
     display: none;
   }
 
-
+}

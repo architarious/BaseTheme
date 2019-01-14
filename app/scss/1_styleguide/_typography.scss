@@ -147,6 +147,14 @@ sub{
   vertical-align: sub;
   font-size: smaller;
 }
+cite, .citation{
+  font-style: italic;
+  color: $gray-dark-3;
+}
+u, .underline{
+  text-decoration:underline;
+  text-decoration-style: double;
+}
 
 .headline{
   font-size: $font-size-xxlarge-2;
@@ -176,6 +184,13 @@ sub{
   font-style: italic;
 }
 
+.lede{
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 100;
+  color: $gray-dark-5;
+}
+
 blockquote{
   margin:0;
   border-left: $pad-quarter solid $primary;
@@ -184,6 +199,25 @@ blockquote{
   font-family: $font-serif;
   color: $gray-dark-4;
   font-weight: 100;
+  line-height: 1.618em;
+}
+
+figure{
+  margin: vr(1) 0 vr(2) 0;
+  figcaption{
+    font-size: ms(-1);
+    padding: vr(0.5) 0;
+    font-family: $font-sans;
+    color: $gray-dark-4;
+  }
+  .figureTitle{
+    font-size: ms(0);
+    font-weight: bold;
+    font-family: $font-serif;
+  }
+  blockquote{
+    padding-left:$pad;
+  }
 }
 
 hr{

@@ -4,7 +4,7 @@ img{
     width: 100%; 
     height:auto;
 }
-.image{
+.image, %image{
     border-radius: ms(-5);
     border: 0;
     display: inline-block;
@@ -32,5 +32,41 @@ img{
         top: 0.25em;
     }
 }//end .image
+
+.thumbnail, %thumbnail{
+    @extend %image;
+    border-radius: 0; 
+    width:100px; 
+    height:100px;
+    img{
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    &--50{
+        @extend %thumbnail; 
+        width:50px;
+        height:50px;
+    } 
+    
+    &--75{
+        @extend %thumbnail; 
+        width:75px;
+        height:75px;
+    }
+
+    &--125{
+        @extend %thumbnail; 
+        width:50px;
+        height:50px;
+    } 
+    
+    &--150{
+        @extend %thumbnail; 
+        width:75px;
+        height:75px;
+    }
+}
 
 
