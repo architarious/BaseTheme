@@ -129,32 +129,36 @@
   $titleColor: $gray-dark-2,
   $ctaColor: $tertiary
 ){
-    width:100%;
-    max-width: 420px;
+    
     display:flex;
     flex-flow: row nowrap; 
     text-decoration: none;
-    .miniCard__body{
-        order: 2;
-        display:flex;
-        flex-flow: column nowrap;
-    }
     .miniCard__thumb{
         @extend %thumbnail;
         margin-right: $pad-half;
-        max-width: 35%;
-        float:left; 
-        overflow: hidden;
+        max-width: 100px;
+        width: 100px;
+        height:auto;
         img{
+            display:block;
             border-radius: 0;
             width:100%;
             height: auto;
         }
     }
+    .miniCard__body{
+        order: 2;
+        display:flex;
+        flex-grow:1;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    
     .miniCard__title{
         text-decoration: none;
         margin:0;
-        @include typi(h4);
+        padding:0;
+        font-size: 1rem;
         font-family: $font-sans;
         color: $titleColor;
         font-weight: bold;
@@ -162,7 +166,7 @@
     .miniCard__subtitle{
         text-decoration: none;
         text-transform: uppercase;
-        font-size: $font-size-small-2;
+        font-size: 0.8rem;
         letter-spacing: 0.15em;
         color: $textColor;
         margin-top: $pad-quarter;
@@ -174,3 +178,44 @@
     }
 
 }.miniCard, %miniCard{ @include miniCard();}
+
+@mixin blurb(
+  $bgColor: $lbg,
+  $textColor: $gray-dark-4,
+  $titleColor: $gray-dark-2,
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+){
+    display:flex;
+    flex-flow:column nowrap;
+    border-top: 1px solid $shadow;
+    border-bottom: 1px solid $shadow;
+    padding: vr(2) 0;
+    margin: vr(2) 0;
+    box-shadow: 0 1px 1px 0 $light, inset 0 1px 1px 0 $light;
+
+    .blurb__title{
+        font-size: ms(1);
+        font-family: $font-sans;
+        text-transform: uppercase;
+        font-weight: bold;        
+        margin: 0 0 vr(1) 0;
+        padding:0;
+        color: $titleColor;
+    }
+    .blurb__body{
+        font-size: ms(-1);
+        color: $textColor;
+        margin: 0 0 vr(1) 0;
+        padding:0;
+        font-family: $font-sans;
+        max-width: 40em;
+    }
+    .blurb__cta{
+        font-size: $font-size-small-2;
+        display: flex;
+        flex-flow: row wrap;
+        .button{ margin-right: ms(-6); margin-top: 0.2em; &:last-child{margin-right:0;} }
+    }
+
+}.blurb{@include blurb();} 

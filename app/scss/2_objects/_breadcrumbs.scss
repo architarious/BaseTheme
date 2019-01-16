@@ -1,0 +1,30 @@
+@mixin breadcrumbs(
+  $bgColor: $lbg,
+  $textColor: $gray-dark-4,
+  $ctaColor: $tertiary,
+){
+   margin: 0;
+   padding:0;
+   li{
+      list-style: none;
+      display:inline-block;
+      padding: $pad 0 $pad $pad-half;
+      color: $textColor;
+      @extend %icon;      
+      font-size: ms(-1);
+      &:first-child{
+        padding-left:0;
+        &:before{ content: none;  }
+      }
+      &:before{ 
+          content: $fa-var-angle-double-right; color: $textColor;
+          position:absolute;
+          left:0;
+        }
+
+      a{ 
+        color:$tertiary; 
+        &:hover, &:focus{ color: mix($bgColor, $ctaColor, 30);}
+          }
+   }//end li
+}.breadcrumbs{@include breadcrumbs();}

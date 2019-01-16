@@ -1,8 +1,8 @@
 @mixin navList(
   $bgColor: $lbg,
-  $txtColor: $tertiary,
-  $light: $lbg--light,
-  $shadow: $lbg--shadow
+  $txtColor: $tertiary,  
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
   ){
 
 padding: 0; margin:0; 
@@ -12,28 +12,119 @@ list-style:none;
         padding: 0 1em; margin:0; 
         border-right: 1px solid $shadow;
         box-shadow: 0 1px 0x 0 $light;
-        &:last-child{ box-shadow:none !important; border-right:0 !important;}
+        &:first-child{padding-left: 0;}
+        &:last-child{ box-shadow:none !important; border-right:0 !important; padding-right: 0;}
         @include breakpoint($bp-mobile1-1 $bp-tablet-1){
+          width:100%; display:block;
+          padding: vr(1) 0;
           border-bottom: 1px solid $shadow;  
           box-shadow: 0 1px 0 -3px $light;
+          border-right: 0;
           &:last-child{ border-bottom:0; box-shadow: none;}
         }//end mobile breakpoints 
       a{ 
-        
+        line-height: 1em;
+        font-family: $font-sans;
         color:$txtColor; 
         text-decoration:none;
         text-transform:uppercase;
         &:hover, &:focus, &:active{color:lighten($txtColor, 6); text-decoration:underline;}
+        &.active{ 
+          font-weight: bold; 
+          border-bottom: $txtColor 2px solid; 
+          padding-bottom: 0.1em;
+          &:hover, &:focus, &:active{ text-decoration: none;}
+        }
       }//end a
     }//end li
-  }//end mixin navList
+}//end mixin navList
+
+.navList, %navList{ @include navList(); }
+
+@mixin navList--vertical(
+  $bgColor: $lbg,
+  $titleColor: $gray-dark-2,
+  $txtColor: $tertiary,  
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+  ){
+    margin:0; 
+    padding:0;
+    list-style:none; 
+    .navList__title{      
+      font-size: ms(1);
+      font-family: $font-sans;
+      text-transform: uppercase;
+      font-weight: bold;        
+      margin: 0 0 vr(1) 0;
+      padding:0;
+      color: $titleColor;
+    }
+    .navList{
+      display:block;    
+      
+      li{
+        width:100%; display:block;
+        padding: vr(1) 0;
+        border-bottom: 1px solid $shadow;  
+        box-shadow: 0 1px 0 -3px $light;
+        border-right: 0;
+        &:last-child{ border-bottom:0; box-shadow: none;}
+
+        a{
+          text-transform: initial;
+          @include typi(p);
+          @extend %icon;
+          &.active:before{
+            content: $fa-var-caret-right; 
+            margin-left: -0.5em;
+            padding-right: 0.25em;
+          }
+          &.open:before{
+            content: $fa-var-caret-down;
+            margin-left: -0.75em;
+            padding-right: 0.25em;
+          }
+        }
+      }//end li
+
+      ul{ 
+        padding: vr(0.25) 0 vr(0.25) vr(0.5);
+        font-size: 0.9em;
+        li{
+          border-bottom: 0; box-shadow: 0; padding: vr(0.5) 0;
+          a{ 
+            color: mix($bgColor, $txtColor, 15);                        
+          }
+          &:last-child{padding-bottom:0;}
+        }         
+      }//end ul
+      
+    }//end .navList
+
+}//end navlist mixin 
+  
+.navList--vertical, %navList--vertical{ 
+  @include navList--vertical();  
+}
+
+.navList--simple, %navList--simple{
+  @extend %navList--vertical;
+  .navList li{ 
+      padding: vr(0.25) 0; 
+      border-bottom:0;
+      box-shadow: none;
+      ul li{  padding: vr(0.25) 0;}
+  }//end .navList li  
+}
+
 @mixin navList--recolor(
   $txtColor: $tertiary,
   $light: $dbg--light,
   $shadow: $dbg--shadow
 ){
   li{
-    border-right: 1px solid $shadow;
+    border-right-color: $shadow;
     box-shadow: 0 1px 0x 0 $light;
     a{
       color: $txtColor;
@@ -41,10 +132,9 @@ list-style:none;
     }//end a
 
     @include breakpoint($bp-mobile1-1 $bp-tablet-1){
-      border-bottom: 1px solid $shadow;  
+      border-bottom-color: $shadow;  
       box-shadow: 0 1px 0 -3px $light;
       &:last-child{ border-bottom:0; box-shadow: none;}
     }
   }//end li
 }
-
