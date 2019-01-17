@@ -1,18 +1,1 @@
-
-$(document).ready(function() {
-
-  //$('body').addClass('js');
-  var $menu = $('.b-primaryNav__list'),
-      $trigger = $('.hamburger');  
-   
-  $trigger.click(function() {
-    $trigger.toggleClass('active');
-    $menu.toggleClass('active');
-    return false;
-  });
-
-  
-
- 
-});
-
+$(document).ready(function(){var a=$(".b-primaryNav__list"),t=$(".hamburger");t.click(function(){return t.toggleClass("active"),a.toggleClass("active"),!1})});

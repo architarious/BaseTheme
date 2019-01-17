@@ -17,6 +17,7 @@
     "dart-sass": "^1.15.2",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-eslint": "^5.0.0",
     "gulp-imagemin": "^5.0.3",
     "gulp-newer": "^1.4.0",
@@ -25,7 +26,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglifyjs": "^0.6.2",
+    "gulp-uglify": "^3.0.1",
     "postcss-normalize": "^7.0.1"
   },
   "scripts": {

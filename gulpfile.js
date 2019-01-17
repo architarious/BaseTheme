@@ -6,6 +6,7 @@ const config = require('./config.json');
 
 const autoprefixer = require('autoprefixer');
 const cssnano = require("cssnano");
+const concat = require('gulp-concat');
 const del = require("del");
 const eslint = require("gulp-eslint");
 const imagemin = require('gulp-imagemin');
@@ -16,6 +17,7 @@ const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify');
 
 /**************************************************************
 * IO paths - stored in config.json
@@ -55,6 +57,11 @@ function browserSync(done) {
 // BrowserSync Reload
 function browserSyncReload(done) {
 	browsersync.reload();
+	done();
+}
+// BrowserSync Reload
+function browserSyncStream(done) {
+	browsersync.stream();
 	done();
 }
 
@@ -102,15 +109,16 @@ function css() {
 		  //includePaths: css_libraries
 		}).on('error', sass.logError))
 	  .pipe(sourcemaps.write())
-	  .pipe(gulp.dest(css_out))
+		.pipe(gulp.dest(css_out))
+		.pipe(browsersync.stream())
 	  .pipe(rename({ suffix: ".min" }))
 	  .pipe(postcss([
 		  autoprefixer(), 
 		  cssnano(), 
 		  normalize()
 	    ]))
-	  .pipe(gulp.dest(css_out))
-	  .pipe(browsersync.stream());
+		.pipe(gulp.dest(css_out))
+		.pipe(browsersync.stream())
   }
   
 
@@ -134,6 +142,8 @@ function scripts() {
 	  gulp
 		.src(js_in)
 		.pipe(plumber())
+		.pipe(concat('main.min.js'))
+		.pipe(uglify())
 		.pipe(gulp.dest(js_out))
 		.pipe(browsersync.stream())
 	);
@@ -146,10 +156,10 @@ function scripts() {
  */    
 function watchFiles() {
 	gulp.watch(css_in, css);
-	gulp.watch(css_in, gulp.series(scriptsLint, scripts));
+	gulp.watch(js_in, scripts);
 	gulp.watch(html_in, browserSyncReload);
 	gulp.watch(img_in, images);
-}
+} 
   
 
 
@@ -166,7 +176,7 @@ const watch = gulp.parallel(watchFiles, browserSync);
 /**************************************************************
  * EXPORT TASKS
  */
-exports.js = js;
+exports.js = scripts;
 exports.images = images;
 exports.css = css;
 exports.build = build;

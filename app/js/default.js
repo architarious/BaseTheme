@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  
+  /*
   //EQ.JS defaults  
   var block = document.querySelector('.eq-block');
   eqjs.definePts(block, {
@@ -18,6 +18,16 @@ $(document).ready(function(){
     xLarge: 650,
     xxLarge: 800
   }); 
+ */
+  
+  $('.slider').slick({
+    dots: true, 
+    infinite: true,
+    speed: 300,    
+    slidesToShow: 3,
+    slidesToScroll: 3 
+    
+  });   
 
  
 });
