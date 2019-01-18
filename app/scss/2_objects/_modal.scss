@@ -1,0 +1,39 @@
+@mixin modal(
+  $bgColor: $lbg,
+  $bgColor-dark: $black-dark-1,
+  $txtColor: $gray-dark-3,
+  $ctaColor: $tertiary,
+  $light: $lbg--light,
+  $shadow: $lbg--shadow
+){
+    display: none;  //hidden by default
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: set-alpha($bgColor-dark, 0.4);
+
+    .modal__content{
+        background-color: $bgColor;
+        margin: 15% auto; //15% from the top and centered
+        padding: 20px;
+        broder: 1px solid $shadow;
+        width: 80%;
+    }
+    .close{
+        color: $txtColor;
+        float: right;
+        font-size: $font-size-large;
+        font-weight: bold;
+
+        &:hover, &:focus{
+            color: $ctaColor;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }    
+    
+}.modal, %modal{ @include modal();}
