@@ -13,8 +13,7 @@
     font-size: $font-size-med;
     line-height: 1.618em;
     border-radius: 0.2em;
-    display:flex;
-    flex-flow: row nowrap;
+    max-width:100%;
     a{
         color: $textColor;
         &:hover, &:focus{

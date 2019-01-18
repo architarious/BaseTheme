@@ -1,5 +1,10 @@
-@mixin slick(){
-    /* Base slider configurationslider */
+/********************************************************
+/* Base slick-slider configuration
+/* Credit to Ken Wheeler for developing Slick Slider
+/* View documentation here: https://kenwheeler.github.io/slick/
+/********************************************************/
+
+@mixin slick(){  
 
 .slick-slider {
     position: relative;
@@ -102,13 +107,14 @@
 }
 
 }@include slick();
- 
-$slick-font-path: "./fonts/" !default;
-$slick-font-family: "FontAwesome";//"slick" !default;
-$slick-loader-path: "./" !default;
 
 
 
+/********************************************************
+/* Slick-slider theme configuration
+/* Credit to Ken Wheeler for developing Slick Slider
+/* View documentation here: https://kenwheeler.github.io/slick/
+/********************************************************/
 
 
 @mixin slickSlider(
@@ -116,14 +122,15 @@ $slick-loader-path: "./" !default;
     $ctaColor: $tertiary,
     $accentColor: $secondary
 ){
+    $slick-font-family: "FontAwesome";
+    $slick-arrow-color: $ctaColor !default;
+    $slick-prev-character: $fa-var-chevron-left !default;
+    $slick-next-character: $fa-var-chevron-right !default;
 
-    $slick-arrow-color: $ctaColor;//white !default;
-    $slick-dot-color: $accentColor; //black !default;
-    $slick-dot-color-active: $ctaColor; //$slick-dot-color !default;
-    $slick-prev-character: $fa-var-chevron-left;//"\2190" !default;
-    $slick-next-character: $fa-var-chevron-right;//"\2192" !default;
-    $slick-dot-character: $fa-var-dot-circle-o;//"\2022" !default;
-    $slick-dot-size: 6px !default;
+    $slick-dot-color: $accentColor !default; 
+    $slick-dot-color-active: $ctaColor !default;    
+    $slick-dot-character: $fa-var-dot-circle-o !default;
+    $slick-dot-size: 6px !default;    
 
     $slick-opacity-default: 0.75 !default;
     $slick-opacity-on-hover: 1 !default;
@@ -160,6 +167,7 @@ $slick-loader-path: "./" !default;
     transform: translate(0, -50%);
     padding:0;
     outline: none;
+    z-index:100;
     &:hover, &:focus {
         outline: none;
         background: transparent;
@@ -180,7 +188,7 @@ $slick-loader-path: "./" !default;
         display:block;
         background: $bgColor;
         padding: $pad-quarter;
-        border: 1px solid $ctaColor;
+        border: 1px solid $slick-arrow-color;
         border-radius: 100%;
         color: $slick-arrow-color;
         opacity: $slick-opacity-default;
@@ -283,8 +291,53 @@ $slick-loader-path: "./" !default;
 }
 
 
-}.slider{@include slickSlider();}
+}.slider, %slider{@include slickSlider();}
 
+
+
+/********************************************************
+/* Slick-slider declaration
+/* Use the following mixin to create variations of the slider, with duplicating lots of code
+/* View documentation here: https://kenwheeler.github.io/slick/
+/********************************************************/
+
+@mixin slider--custom(
+    $bgColor: $lbg,
+    $ctaColor: $tertiary,
+    $accentColor: $secondary, 
+    $slidePadding: $pad-quarter
+){
+    @extend %slider;
+    .slick-prev, .slick-next {
+        &:before{ 
+            border: 1px solid $ctaColor;
+            color: $ctaColor;
+            background: $bgColor;
+        }//end &:before
+    }
+    .slick-dots li{
+        button{
+            &:before{
+                color: $accentColor;
+            }//end before  
+        }      
+        &.slick-active button:before{
+            color: lighten($accentColor, 10);
+        }
+    }
+    .slick-slide{
+        padding: 0 $slidePadding; 
+        //&:first-child{ padding-left:0; }
+        //&:last-child{ padding-right: 0; }
+    }
+}
+
+
+/********************************************************
+/* Auto-slider
+/* A simple CSS slider that rotates images in a set.
+/* NOT AFFILIATED WITH SLICK SLIDER
+/********************************************************/
 
 @mixin autoSlider(
   $delay: 30s,
@@ -308,6 +361,7 @@ $slick-loader-path: "./" !default;
         position: relative;
         width:$numOfSlides*100%;
         margin:0;
+        padding:0;
         left:0;
         text-align:left;
         font-size:0;
@@ -318,12 +372,12 @@ $slick-loader-path: "./" !default;
             width: 20%; 
             float:left;
             max-width:initial;
+            list-style:none;
             img{border-radius: 0;}
         }
 
 
     }//end ul
-
 
 
 }.autoSlider{ @include autoSlider();}

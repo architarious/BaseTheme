@@ -39,6 +39,10 @@
   @include add-grid(12);
   @include add-gutter(1);
 
+  .col{
+    max-width:100%;
+  }
+
   .col--half, .col--third, .col--quarter{
     @include css-grid-span(12);    
   }

@@ -72,5 +72,8 @@
 }//end t-styleguide__subtitle
 
 
+.slider--test1{ @include slider--custom($lbg, $quinary, $gray, $pad-quarter);}
+
+
 
 }.t-styleguide{ @include t-styleguide();}

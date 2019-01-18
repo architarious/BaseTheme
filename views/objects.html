@@ -44,23 +44,23 @@
         <article>            
             <h2 id="alerts" class="t-styleguide__title">Alerts</h2>   
             <div class="alert">
-                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio <a href="#">porttitor</a> sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
             </div>  
             <p><strong>Default Alert: </strong><code>class="alert"</code></p>
             <div class="alert--warning">
-                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio <a href="#">porttitor</a> sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
             </div>
             <p><strong>Warning Alert: </strong><code>class="alert--warning"</code></p>  
             <div class="alert--success">
-                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio <a href="#">porttitor</a> sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
             </div>
             <p><strong>Success Alert: </strong><code>class="alert--success"</code></p>  
             <div class="alert--info">
-                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio <a href="#">porttitor</a> sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
             </div> 
             <p><strong>Info Alert: </strong><code>class="alert--info"</code></p>     
             <div class="alert--notice">
-                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+                    Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio <a href="#">porttitor</a> sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
             </div>
             <p><strong>Notice Alert: </strong><code>class="alert--notice"</code></p>         
             
@@ -381,8 +381,229 @@ ul class="breadcrumbs"
 /ul
             </code></pre>
 
-            <h2 id="slider" class="t-styleguide__title">Image Slider</h2>
+            <h2 id="slider" class="t-styleguide__title">Image Sliders</h2>
+            
+
+            <h3 id="slider__slick" class="t-styleguide__subtitle" >Slick Slider</h3>
+            <p>Slick-Slider is an accessible and responsive slider developed by <a href="https://kenwheeler.github.io/">Ken Wheeler</a>. It has multiple different variations and is very easy to both implement and customize. For more details about slick slider, go to <a href="https://kenwheeler.github.io/slick/">https://kenwheeler.github.io/slick/</a></p>
+            <h4 style="margin-top: 1.618em;">Normal carousel</h4>
+            <div class="slider">
+                <div ><img src="http://lorempixel.com/1280/300/nightlife/1" alt="" /></div>
+                <div ><img src="http://lorempixel.com/1280/300/nightlife/2" alt="" /></div>
+                <div ><img src="http://lorempixel.com/1280/300/nightlife/3" alt="" /></div>
+                <div ><img src="http://lorempixel.com/1280/300/nightlife/4" alt="" /></div>
+                <div ><img src="http://lorempixel.com/1280/300/nightlife/5" alt="" /></div>
+            </div>            
+
+            <h4 style="margin-top: 1.618em;">Easily customizable buttons and formats</h4>
+            <p style="max-width:100%;">Use the <code><strong>slider--custom</strong>($backgroundColor, $linkColor, $accentColor, $slidePadding) </code>mixin to effortlessly style multiple variations of this slider.</p>
+            <div class="slider--test1">
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Cricket at Dawn</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/1" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/sports/1" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Surfs Up!</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/2" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/sports/2" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Fella on A Bike</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/3" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/sports/3" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Hello Buuuuuuudy!</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/4" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/animals/5" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Motocross Excitement</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 25, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/5" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/sports/5" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Soccer Eclipse</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 27, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/6" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/sports/6" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Take The Plunge</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 27, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/7" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/sports/7" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Martial Arts</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 28, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/8" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/sports/8" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Rhino Family Dynamics</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 28, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/1" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/animals/1" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Deep Thoughts</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 29, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/3" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/animals/2" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Take A Break</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 29, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/7" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/animals/3" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card__body">
+                          <div class="card__copy">
+                            <h5 class="card__title">Ham It Up!</h5>
+                            <time class="card__subtitle" datetime="2019-10-23">October 30, 2019</time>
+                          </div>
+                          <a href="#" class="card__thumb">
+                            <img src="http://lorempixel.com/100/100/people/9" alt=""/>
+                          </a>
+                        </div>
+                        <a class="card__image" href="#">
+                            <img src="http://lorempixel.com/420/259/animals/6" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <pre style="margin-top:2em;"><code>                
+div class="slider"
+  div  IMAGE #1 /div 
+  div  IMAGE #2 /div 
+  div  IMAGE #3 /div 
+  div  IMAGE #4 /div 
+  div  IMAGE #5 /div 
+/div               
+            </code></pre>
+            <p class="alert--notice">In order to use slickslider, make sure to read the documentation and to include <a href="https://kenwheeler.github.io/slick/#demos">the javascript</a> that enables it. You can find a local example at the bottom of this page's view-source.</p>
+
             <h3 id="slider__auto" class="t-styleguide__subtitle">Auto Slider</h3>
+            <p>Auto-slider is a simple CSS image slider that rotates images. It's mixin allows you to customize the delay and number of slides that it switches. It isn't a part of slick-slider.</p>
             <div class="autoSlider">
                 <ul class="autoSlider__list">
                     <li><img src="http://lorempixel.com/1280/300/nature/1" alt="" /></li>
@@ -392,21 +613,26 @@ ul class="breadcrumbs"
                     <li><img src="http://lorempixel.com/1280/300/nature/5" alt="" /></li>
                 </ul>
             </div>
-
-            <h3 id="slider__slick" class="t-styleguide__subtitle" >Slick Slider</h3>
-            <p>For more details about slick slider, go to <a href="https://kenwheeler.github.io/slick/">https://kenwheeler.github.io/slick/</a></p>
-            <div class="slider">
-                <div ><img src="http://lorempixel.com/1280/640/nightlife/1" alt="" /></div>
-                <div ><img src="http://lorempixel.com/1280/640/nightlife/2" alt="" /></div>
-                <div ><img src="http://lorempixel.com/1280/640/nightlife/3" alt="" /></div>
-                <div ><img src="http://lorempixel.com/1280/640/nightlife/4" alt="" /></div>
-                <div ><img src="http://lorempixel.com/1280/640/nightlife/5" alt="" /></div>
-                <div ><img src="http://lorempixel.com/1280/640/abstract/2" alt="" /></div>
-                <div ><img src="http://lorempixel.com/1280/640/abstract/3" alt="" /></div>
-                <div ><img src="http://lorempixel.com/1280/640/abstract/4" alt="" /></div> 
-                <div ><img src="http://lorempixel.com/1280/640/abstract/5" alt="" /></div>
-            </div>
+            <pre><code>                
+div class="autoSlider"
+  div class="autoSlider__list"
+    div  IMAGE #1 /div 
+    div  IMAGE #2 /div 
+    div  IMAGE #3 /div 
+    div  IMAGE #4 /div 
+    div  IMAGE #5 /div 
+  /div
+/div               
+            </code></pre>
             
+            <h2 id="modal" class="t-styleguide__title">Modal</h2>
+            <button id="modalButton">Open Modal</button>
+            <div id="modal-1" class="modal">
+                <div class="modal__content">
+                    <span class="close">&times;</span>
+                    <p>This text is included in the modal</p>
+                </div>
+            </div>
         </article>        
     </div><!--end container-->
   </main>
@@ -448,6 +674,32 @@ ul class="breadcrumbs"
     <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
     <script src="../javascripts/vendor/slick.min.js"></script>
     <script src="../javascripts/main.min.js"></script>
+    <script>
+              
+              $('.slider').slick({
+                dots: true, 
+                infinite: true,
+                speed: 300,    
+                slidesToShow: 1,
+                slidesToScroll: 1 
+
+              });   
+          
+
+            $(document).ready(function(){
+              $('.slider--test1').slick({
+                infinite: true,
+                dots: true,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                autoplay: true,
+                autoplaySpeed: 6000,
+                adaptiveHeight: false
+                });
+            });                
+        </script>
+
+        
 </body>
 
 </html>
