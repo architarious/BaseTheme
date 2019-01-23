@@ -1,0 +1,105 @@
+@mixin accordian(
+  $bgColor: $lbg,
+  $txtColor: $lbg,
+  $ctaColor: $primary,
+  $activeColor: $primary--light,
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+){
+    background:$bgColor;
+    margin: ms(0) 0;
+    width:100%;
+    display:inline-block;
+    border-radius: 0.2em;
+    .accordian__title{        
+        padding: ms(-2);
+        width: auto;     
+        background:$ctaColor;         
+        border: 1px solid darken($ctaColor, 3);
+        border-top-color: tint($ctaColor, 10);
+        box-shadow: inset 0 -3px 0px -2px darken($ctaColor, 3), 0 3px 2px -1px $shadow;
+        transition: all 0.5s linear;
+        font-size: $font-size-med-2;
+        letter-spacing: 0.12em;
+        &.active, &:hover{
+            background-color:$activeColor;
+            border: 1px solid darken($activeColor, 3);
+            border-top-color: tint($activeColor, 10);
+            box-shadow: inset 0 -3px 0px -2px darken($activeColor, 3), 0 3px 2px -1px $shadow;
+        }
+        & > a, .accordian__trigger{
+            color:$txtColor;
+            font-weight: bold;
+            display:block;
+            width:100%;
+            text-decoration: none;             
+        }//end a, accordian__trigger
+
+        &:first-of-type{
+            border-top-left-radius: 0.2em;
+            border-top-right-radius: 0.2em;
+        }
+
+        &:last-of-type{
+            border-bottom-left-radius: 0.2em;
+            border-bottom-right-radius: 0.2em;
+        }
+        
+    }//end accordian__title
+    
+    .accordian__copy{
+        width:auto;
+        padding:0 ms(-2);
+        margin-left:0;
+        &:last-of-type{
+            position:relative;
+            top:-1px;
+        }//end last-of-type
+    }//end accordian__copy
+}
+.accordian, %accordian{
+    @include accordian();
+}//end accordian
+
+@mixin accordian--custom(
+    $bgColor: $black-dark-1,
+    $txtColor: $secondary,
+    $copyColor: $lbg,
+    $ctaColor: $dbg,
+    $activeColor: lighten($ctaColor, 5),
+    $shadow: darken($bgColor, 10),
+    $light: $lbg--light,
+    $fontSize: $font-size-med,
+    $uppercase: 'true'
+){    
+    background:$bgColor;
+    .accordian__title{
+        background:$ctaColor;  
+        border-color: darken($ctaColor, 3);  
+        border-top-color: tint($ctaColor, 10);
+        box-shadow: inset 0 -3px 0px -2px darken($ctaColor, 3), 0 3px 2px -1px $shadow;
+        font-size: $fontSize;
+        &.active, &:hover{
+            background-color:$activeColor;
+            border-color: darken($activeColor, 3);
+            border-top-color: tint($activeColor, 10);
+            box-shadow: inset 0 -3px 0px -2px darken($activeColor, 3), 0 3px 2px -1px $shadow;
+        }
+        & > a, .accordian__trigger{
+            color:$txtColor;
+        }//end a, accordian__trigger
+    }//end accordian_title
+
+    .accordian__copy, .accordian__copy > *{
+        color: $copyColor;
+    }//end .accordian__copy
+
+    @if($uppercase == 'true' or $uppercase == 'uppercase'){
+        .accordian__title{
+            & > a, .accordian__trigger{ text-transform: uppercase; }
+        }
+    }
+}
+.accordian--dark, %accordian--dark{
+    @include accordian--custom();
+}

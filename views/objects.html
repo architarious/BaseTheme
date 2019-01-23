@@ -15,10 +15,9 @@
        <nav class="b-primaryNav m-navbar__fullscreen " role="navigation" id="primaryNav nav-fullscreen">
           
           <ul class="navList b-primaryNav__list">
-             <li><a href="#">Services</a></li>
-             <li><a href="#">Products</a></li>
-             <li><a href="#">About</a></li>
-             <li><a href="#">Contact</a></li>
+            <li><a href="/views/index.html">Home</a></li>
+            <li><a href="/views/styleguide.html">Styleguide</a></li>
+            <li><a href="/views/objects.html">Objects</a></li>
           </ul>
         </nav>
         <a href="#primaryNav" class="b-primaryNav__trigger m-navbar__trigger" id="nav-toggle">
@@ -626,13 +625,231 @@ div class="autoSlider"
             </code></pre>
             
             <h2 id="modal" class="t-styleguide__title">Modal</h2>
-            <button id="modalButton">Open Modal</button>
+            <button id="modal-1_btn" class="modal_btn">Open Modal</button>
             <div id="modal-1" class="modal">
                 <div class="modal__content">
                     <span class="close">&times;</span>
                     <p>This text is included in the modal</p>
                 </div>
             </div>
+            <button id="modal-2_btn" class="modal_btn">Open Modal (complex example)</button>
+            <div id="modal-2" class="modal">
+                <div class="modal__content">
+                    <span class="close">&times;</span>
+                    <h2>Here's a more complex example</h2>
+                    <p>You can place practically anything within this modal.</p>   
+                    <ul class="row">
+                        <li class="col col--third">
+                            <a href="#" class="miniCard">
+                                <div class="miniCard__body">
+                                    <h4 class="miniCard__title">Fermentum ut nisl vitae, convallis maximus</h4>
+                                    <time class="miniCard__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                                </div>
+                                <div class="miniCard__thumb">
+                                    <img src="http://lorempixel.com/100/100/nature/1" alt=""/>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="col col--third">
+                            <a href="#" class="miniCard">
+                                <div class="miniCard__body">
+                                    <h4 class="miniCard__title">Fermentum ut nisl vitae, convallis maximus</h4>
+                                    <time class="miniCard__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                                </div>
+                                <div class="miniCard__thumb">
+                                    <img src="http://lorempixel.com/100/100/nature/2" alt=""/>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="col col--third">
+                            <a href="#" class="miniCard">
+                                <div class="miniCard__body">
+                                    <h4 class="miniCard__title">Fermentum ut nisl vitae, convallis maximus</h4>
+                                    <time class="miniCard__subtitle" datetime="2019-10-23">October 23, 2019</time>
+                                </div>
+                                <div class="miniCard__thumb">
+                                    <img src="http://lorempixel.com/100/100/nature/3" alt=""/>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>                 
+                </div>
+            </div>
+            <pre style="margin-top: 2em;"><code>
+::HTML::
+button id="modal-1_btn"  Open Modal Button Text  /button
+div id="modal-1" class="modal"
+  div class="modal__content"
+    span class="close"  &times;  /span
+    INSERT MODAL CONTENT HERE. IT DOESN'T HAVE TO BE PARAGRAPHS
+  /div
+/div
+
+::JAVASCRIPT::
+modal("#modal-1_btn", "#modal-1");
+            </code></pre>
+            
+            <h2 id="accordian" class="t-styleguide__title">Accordian</h2>
+            <h3 id="accordian__default" class="t-styleguide__subtitle">Default Accordian</h3>
+            <dl class="accordian" id="accordian-1">
+              <dt class="accordian__title"><a href="" class="accordian__trigger">Title 1</a></dt>
+              <dd class="accordian__copy">
+                  <p>Uh, is the puppy mechanical in any way? Is the Space Pope reptilian!? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! I never loved you. Michelle, I don't regret this, but I both rue and lament it.</p>
+                  <p>I am the man with no name, Zapp Brannigan! Are you crazy? I can't swallow that. <strong> I found what I need.</strong> <em> And it's not friends, it's things.</em> Oh yeah, good luck with that.</p>
+              </dd>
+              <dt class="accordian__title"><a href="" class="accordian__trigger">Title 2</a></dt>
+              <dd class="accordian__copy">
+                  <p>Uh, is the puppy mechanical in any way? Is the Space Pope reptilian!? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! I never loved you. Michelle, I don't regret this, but I both rue and lament it.</p>
+                  <p>I am the man with no name, Zapp Brannigan! Are you crazy? I can't swallow that. <strong> I found what I need.</strong> <em> And it's not friends, it's things.</em> Oh yeah, good luck with that.</p>
+              </dd>
+              <dt class="accordian__title"><a href="" class="accordian__trigger">Title 3</a></dt>
+              <dd class="accordian__copy">
+                  <p>Uh, is the puppy mechanical in any way? Is the Space Pope reptilian!? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! I never loved you. Michelle, I don't regret this, but I both rue and lament it.</p>
+                  <p>I am the man with no name, Zapp Brannigan! Are you crazy? I can't swallow that. <strong> I found what I need.</strong> <em> And it's not friends, it's things.</em> Oh yeah, good luck with that.</p>
+              </dd>
+              <dt class="accordian__title"><a href="" class="accordian__trigger">Title 4</a></dt>
+              <dd class="accordian__copy">
+                  <p>Uh, is the puppy mechanical in any way? Is the Space Pope reptilian!? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! I never loved you. Michelle, I don't regret this, but I both rue and lament it.</p>
+                  <p>I am the man with no name, Zapp Brannigan! Are you crazy? I can't swallow that. <strong> I found what I need.</strong> <em> And it's not friends, it's things.</em> Oh yeah, good luck with that.</p>
+              </dd>
+              <dt class="accordian__title"><a href="" class="accordian__trigger">Title 5</a></dt>
+              <dd class="accordian__copy">
+                  <p>Uh, is the puppy mechanical in any way? Is the Space Pope reptilian!? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! I never loved you. Michelle, I don't regret this, but I both rue and lament it.</p>
+                  <p>I am the man with no name, Zapp Brannigan! Are you crazy? I can't swallow that. <strong> I found what I need.</strong> <em> And it's not friends, it's things.</em> Oh yeah, good luck with that.</p>
+              </dd>
+            </dl>
+            <pre><code>
+::HTML::
+dl id="accordian-1" class="accordian"
+  dt class="accordian__title"
+    a class="accordian__trigger"
+      TITLE NAME #1 GOES HERE
+    /a
+  /dt
+  dd class="accordian__copy"
+    INSERT COPY #1 HERE
+  /dd
+  .
+  .
+  .
+  dt class="accordian__title"
+    a class="accordian__trigger"
+      TITLE NAME #5 GOES HERE
+    /a
+  /dt
+  dd class="accordian__copy"
+    INSERT COPY #5 HERE
+  /dd
+/dl
+
+::JAVASCRIPT::
+accordian("#accordian-1");
+            </code></pre>
+
+            <h3 id="accordian__default" class="t-styleguide__subtitle">Accordian: Dark Variant</h3>
+            <dl class="accordian accordian--dark" id="accordian-2">
+              <dt class="accordian__title"><a href="" class="accordian__trigger">Title 1</a></dt>
+              <dd class="accordian__copy">
+                  <p>Uh, is the puppy mechanical in any way? Is the Space Pope reptilian!? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! I never loved you. Michelle, I don't regret this, but I both rue and lament it.</p>
+                  <p>I am the man with no name, Zapp Brannigan! Are you crazy? I can't swallow that. <strong> I found what I need.</strong> <em> And it's not friends, it's things.</em> Oh yeah, good luck with that.</p>
+              </dd>
+              <dt class="accordian__title"><a href="" class="accordian__trigger">Title 2</a></dt>
+              <dd class="accordian__copy">
+                  <p>Uh, is the puppy mechanical in any way? Is the Space Pope reptilian!? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! I never loved you. Michelle, I don't regret this, but I both rue and lament it.</p>
+                  <p>I am the man with no name, Zapp Brannigan! Are you crazy? I can't swallow that. <strong> I found what I need.</strong> <em> And it's not friends, it's things.</em> Oh yeah, good luck with that.</p>
+              </dd>
+              <dt class="accordian__title"><a href="" class="accordian__trigger">Title 3</a></dt>
+              <dd class="accordian__copy">
+                  <p>Uh, is the puppy mechanical in any way? Is the Space Pope reptilian!? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! I never loved you. Michelle, I don't regret this, but I both rue and lament it.</p>
+                  <p>I am the man with no name, Zapp Brannigan! Are you crazy? I can't swallow that. <strong> I found what I need.</strong> <em> And it's not friends, it's things.</em> Oh yeah, good luck with that.</p>
+              </dd>
+              <dt class="accordian__title"><a href="" class="accordian__trigger">Title 4</a></dt>
+              <dd class="accordian__copy">
+                  <p>Uh, is the puppy mechanical in any way? Is the Space Pope reptilian!? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! I never loved you. Michelle, I don't regret this, but I both rue and lament it.</p>
+                  <p>I am the man with no name, Zapp Brannigan! Are you crazy? I can't swallow that. <strong> I found what I need.</strong> <em> And it's not friends, it's things.</em> Oh yeah, good luck with that.</p>
+              </dd>
+              <dt class="accordian__title"><a href="" class="accordian__trigger">Title 5</a></dt>
+              <dd class="accordian__copy">
+                  <p>Uh, is the puppy mechanical in any way? Is the Space Pope reptilian!? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! I never loved you. Michelle, I don't regret this, but I both rue and lament it.</p>
+                  <p>I am the man with no name, Zapp Brannigan! Are you crazy? I can't swallow that. <strong> I found what I need.</strong> <em> And it's not friends, it's things.</em> Oh yeah, good luck with that.</p>
+              </dd>
+            </dl>
+            <p style="max-width: 100%;">To implement the dark variant simply add accordian--dark after accordian within the first elements class attribute.</p>
+            <p style="max-width: 100%;">To style different variations of the accordian, use the <code>accordian--custom(<strong>$background-color, $text-color, $copy-color, $cta-color, $active-color, $shadow, $light, $font-size, $uppercase</strong>)</code> mixin</p>
+
+            <h2 id="tabs" class="t-styleguide__title">Tabs</h2>
+            <div id="tabNav-1" class="tabNav">
+                <ul class="tabNav__tabs">
+                    <li><a href="panel-1">Panel #1</a></li>
+                    <li><a href="panel-2">Panel #2</a></li>
+                    <li><a href="panel-3">Panel #3</a></li>
+                </ul>
+                <div  class="tabNav__panel">
+                    <h3>Panel #1</h3>
+                    <p>Tempus ipsum ac egestas sodales enim non parturient eu vel. Pretium himenaeos dui mus magna est pellentesque purus. Dolor, vel aliquam per aenean. Penatibus lectus nulla at non maecenas taciti metus. Sociosqu est nisi condimentum pulvinar velit accumsan sagittis, dapibus fames. Vitae consequat curabitur orci justo. Ut diam gravida cubilia curae; hac.</p>
+                    <p>Tristique eget laoreet lectus nascetur vivamus conubia! Nisi adipiscing viverra rhoncus velit mi? Dapibus hac ad penatibus vivamus. Justo vestibulum, rutrum duis feugiat porttitor quam. Inceptos orci, habitasse velit. Montes id et donec! Venenatis ornare in sed, sapien elit class risus. Vivamus blandit libero turpis mus netus cum ultrices etiam lorem ultricies sollicitudin. Nunc pulvinar posuere cras risus cras parturient scelerisque duis nibh nec. Lacus, sagittis lectus aenean dignissim. Malesuada urna tincidunt velit sit rhoncus elit luctus vitae dui curabitur varius! Diam feugiat mollis metus blandit. Justo taciti fames.</p>
+                    <p>Velit consequat torquent taciti ridiculus orci, morbi curabitur ornare nisl nunc taciti! Et class a iaculis eleifend arcu elementum. Habitant scelerisque et elementum. Vehicula, etiam lorem semper. Sem conubia hac suscipit natoque conubia lectus et magnis montes proin elit luctus. Id ullamcorper dictum, vulputate potenti tempus. Elit massa varius proin at. Bibendum, est sit a sollicitudin platea dictum. Elit montes pharetra, ultricies odio tristique.</p>                            
+                </div>
+                <div  class="tabNav__panel">
+                    <h3>Panel #2</h3>
+                    <p>Velit consequat torquent taciti ridiculus orci, morbi curabitur ornare nisl nunc taciti! Et class a iaculis eleifend arcu elementum. Habitant scelerisque et elementum. Vehicula, etiam lorem semper. Sem conubia hac suscipit natoque conubia lectus et magnis montes proin elit luctus. Id ullamcorper dictum, vulputate potenti tempus. Elit massa varius proin at. Bibendum, est sit a sollicitudin platea dictum. Elit montes pharetra, ultricies odio tristique.</p>                            
+                    <p>Tempus ipsum ac egestas sodales enim non parturient eu vel. Pretium himenaeos dui mus magna est pellentesque purus. Dolor, vel aliquam per aenean. Penatibus lectus nulla at non maecenas taciti metus. Sociosqu est nisi condimentum pulvinar velit accumsan sagittis, dapibus fames. Vitae consequat curabitur orci justo. Ut diam gravida cubilia curae; hac.</p>
+                    <p>Tristique eget laoreet lectus nascetur vivamus conubia! Nisi adipiscing viverra rhoncus velit mi? Dapibus hac ad penatibus vivamus. Justo vestibulum, rutrum duis feugiat porttitor quam. Inceptos orci, habitasse velit. Montes id et donec! Venenatis ornare in sed, sapien elit class risus. Vivamus blandit libero turpis mus netus cum ultrices etiam lorem ultricies sollicitudin. Nunc pulvinar posuere cras risus cras parturient scelerisque duis nibh nec. Lacus, sagittis lectus aenean dignissim. Malesuada urna tincidunt velit sit rhoncus elit luctus vitae dui curabitur varius! Diam feugiat mollis metus blandit. Justo taciti fames.</p>
+                </div>
+                <div  class="tabNav__panel">
+                    <h3>Panel #3</h3>
+                    <p>Tristique eget laoreet lectus nascetur vivamus conubia! Nisi adipiscing viverra rhoncus velit mi? Dapibus hac ad penatibus vivamus. Justo vestibulum, rutrum duis feugiat porttitor quam. Inceptos orci, habitasse velit. Montes id et donec! Venenatis ornare in sed, sapien elit class risus. Vivamus blandit libero turpis mus netus cum ultrices etiam lorem ultricies sollicitudin. Nunc pulvinar posuere cras risus cras parturient scelerisque duis nibh nec. Lacus, sagittis lectus aenean dignissim. Malesuada urna tincidunt velit sit rhoncus elit luctus vitae dui curabitur varius! Diam feugiat mollis metus blandit. Justo taciti fames.</p>
+                    <p>Velit consequat torquent taciti ridiculus orci, morbi curabitur ornare nisl nunc taciti! Et class a iaculis eleifend arcu elementum. Habitant scelerisque et elementum. Vehicula, etiam lorem semper. Sem conubia hac suscipit natoque conubia lectus et magnis montes proin elit luctus. Id ullamcorper dictum, vulputate potenti tempus. Elit massa varius proin at. Bibendum, est sit a sollicitudin platea dictum. Elit montes pharetra, ultricies odio tristique.</p>                            
+                    <p>Tempus ipsum ac egestas sodales enim non parturient eu vel. Pretium himenaeos dui mus magna est pellentesque purus. Dolor, vel aliquam per aenean. Penatibus lectus nulla at non maecenas taciti metus. Sociosqu est nisi condimentum pulvinar velit accumsan sagittis, dapibus fames. Vitae consequat curabitur orci justo. Ut diam gravida cubilia curae; hac.</p>
+                </div>
+            </div>
+            <pre><code>
+::HTML::
+div id="tabNav-1" class="tabNav"
+  ul
+    li  a href="panel-1"  PANEL #1  /a  /li
+    li  a href="panel-2"  PANEL #2  /a  /li 
+    li  a href="panel-3"  PANEL #3  /a  /li  
+  /ul
+  div 
+    CONTENT FOR PANEL #1 GOES HERE
+  /div
+  div 
+    CONTENT FOR PANEL #2 GOES HERE
+  /div
+  div 
+    CONTENT FOR PANEL #3 GOES HERE
+  /div
+/div
+::JAVASCRIPT::
+tabNav("#tabNav-1");
+            </code></pre>
+            
+            <h2 id="pagination" class="t-styleguide__title">Pagination</h2>
+            <ul class="pagination">
+                <li><span class="button disabled">Prev</span></li>
+                <li><a href="#" class="page active">1</a></li>
+                <li><a href="#" class="page">2</a></li>
+                <li><a href="#" class="page">3</a></li>
+                <li><span>&hellip;</span></li>
+                <li><a href="#" class="page">8</a></li>
+                <li><a href="#" class="page">9</a></li>
+                <li><a href="#" class="page">10</a></li>
+                <li><a href="#" class="button">Next</a></li>
+            </ul>
+            <pre><code>
+ul class="pagination"
+  li a class="button" Prev /a /li
+  li a class="page" 1 /a /li
+  li a class="page" 2 /a /li
+  li a class="page" 3 /a /li
+  li ... /li
+  li a class="page" 8 /a /li
+  li a class="page" 9 /a /li
+  li a class="page" 10 /a /li
+  li a class="button" Next /a /li 
+/ul 
+            </code></pre>
         </article>        
     </div><!--end container-->
   </main>
@@ -675,30 +892,37 @@ div class="autoSlider"
     <script src="../javascripts/vendor/slick.min.js"></script>
     <script src="../javascripts/main.min.js"></script>
     <script>
-              
-              $('.slider').slick({
-                dots: true, 
-                infinite: true,
-                speed: 300,    
-                slidesToShow: 1,
-                slidesToScroll: 1 
-              });   
-          
-
-            $(document).ready(function(){
-              $('.slider--test1').slick({
-                infinite: true,
-                dots: true,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                autoplay: true,
-                autoplaySpeed: 6000,
-                adaptiveHeight: false
-                });
-            });                
-        </script>
-
-        
+    $(document).ready(function(){
+      $('.slider').slick({
+        dots: true, 
+        infinite: true,
+        speed: 300,    
+        slidesToShow: 1,
+        slidesToScroll: 1 
+      });  
+      $('.slider--modal').slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1
+      });
+      $('.slider--test1').slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        adaptiveHeight: false
+      });                
+      modal("#modal-1_btn", "#modal-1");
+      modal("#modal-2_btn", "#modal-2");      
+      accordian("#accordian-1");   
+      accordian("#accordian-2");   
+      tabNav("#tabNav-1");
+    });
+    </script>        
 </body>
 
 </html>

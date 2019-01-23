@@ -50,7 +50,7 @@
         float:right;
     }//end b-primaryNav
     .b-primaryNav__list{
-        @include navList--recolor($cta, $light, $shadow);        
+        @include navList--recolor($cta, $light, $shadow);    
     }//end b-primaryNav__list
     .b-social{
       float:right;

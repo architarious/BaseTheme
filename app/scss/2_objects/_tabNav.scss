@@ -1,0 +1,22 @@
+@mixin tabNav(
+  $ctaColor: $tertiary,
+  $light: $lbg--light,
+  $shadow: $lbg--shadow
+){  
+    .tabNav__tabs{
+        @extend %navList;
+        @include navList--recolor($ctaColor, $light, $shadow);
+        border-bottom: 1px solid $shadow;
+        & > li{
+            padding-top: $pad-half;
+            padding-bottom: $pad-half;
+            &.active{
+                border-bottom: solid 1px $ctaColor;
+                a{ font-weight: bold; }
+            }
+        }//end li
+    }//end tabNav__tabs
+    .tabNav__panel{
+        //&.active{ @include fadeIn(1,0.25s, 0.05s);}
+    }//end tabNav__panel
+}.tabNav, %tabNav{ @include tabNav();}

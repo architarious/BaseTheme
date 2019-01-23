@@ -9,11 +9,13 @@
     border: 1px solid $shadow;
     margin: vr(2) 0;
     padding: $pad;
+    padding-left: 3rem;
     color: $textColor;
     font-size: $font-size-med;
     line-height: 1.618em;
     border-radius: 0.2em;
     max-width:100%;
+    position: relative;
     a{
         color: $textColor;
         &:hover, &:focus{
@@ -24,9 +26,11 @@
         }
     }//end
     &:before{ 
+        position: absolute;
+        margin-left: -2rem;
         content: $fa-var-star-o;
         font-size: 1.618em;
-        padding: $pad-half $pad $pad-half $pad-quarter;
+        //padding: $pad-half $pad-half $pad-half 0;
     }//end before
 }
 

@@ -11,7 +11,7 @@ list-style:none;
     li{ display:inline-block; 
         padding: 0 1em; margin:0; 
         border-right: 1px solid $shadow;
-        box-shadow: 0 1px 0x 0 $light;
+        box-shadow: 1px 0 0px 0 $light;
         &:first-child{padding-left: 0;}
         &:last-child{ box-shadow:none !important; border-right:0 !important; padding-right: 0;}
         @include breakpoint($bp-mobile1-1 $bp-tablet-1){
@@ -125,7 +125,7 @@ list-style:none;
 ){
   li{
     border-right-color: $shadow;
-    box-shadow: 0 1px 0x 0 $light;
+    box-shadow: 1px 0 0px 0 $light;
     a{
       color: $txtColor;
       &:hover, &:focus, &:active{color:lighten($txtColor, 6); }
