@@ -118,10 +118,20 @@ list-style:none;
   }//end .navList li  
 }
 
+.navList--condensed, %navList--condensed{
+  @extend %navList--simple;
+  .navList li{ 
+    padding: vr(0.05) 0; 
+    border-bottom:0;
+    box-shadow: none;
+    ul li{  padding: vr(0.05) 0;}
+}//end .navList li  
+}//end navList--condensed
+
 @mixin navList--recolor(
   $txtColor: $tertiary,
-  $light: $dbg--light,
-  $shadow: $dbg--shadow
+  $shadow: $dbg--shadow,  
+  $light: $dbg--light
 ){
   li{
     border-right-color: $shadow;

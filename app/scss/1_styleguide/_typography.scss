@@ -64,6 +64,7 @@ $space-half : $space/2;
 
 $pad-quarter: vr(0.25);
 $pad-half: vr(0.5);
+$pad-threeQuarter: vr(0.75);
 $pad: vr(1);
 $pad-and-half: vr(1.5);
 $pad-double: vr(2);
@@ -156,7 +157,7 @@ u, .underline{
   text-decoration-style: double;
 }
 
-.headline{
+.headline, %headline{
   font-size: $font-size-xxlarge-2;
   font-family: $font-serif;
   font-weight: 900;
@@ -166,7 +167,7 @@ u, .underline{
   max-width: 100%;
   padding:0; margin:0;
 }
-.subHeadline{
+.subHeadline, %subHeadline{
   font-size: $font-size-large-2;
   font-family: $font-serif;
   font-weight: 100;
@@ -176,7 +177,7 @@ u, .underline{
   max-width: 100%;
   padding:0; margin:0;
 }
-.caption{
+.caption, %caption{
   background: $gray-light-2;
   display:block;
   font-size: $font-size-small-2;
@@ -184,7 +185,7 @@ u, .underline{
   font-style: italic;
 }
 
-.lede{
+.lede, %lede{
   font-size: 1.2em;
   line-height: 1.5em;
   font-weight: 100;
@@ -227,7 +228,7 @@ hr{
   margin: $pad-triple 0; 
 }
 
-.box{
+.box, %box{
   border-radius: ms(-4);
   border: solid 1px $lbg--shadow;
   padding: vr(1);

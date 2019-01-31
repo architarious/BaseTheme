@@ -34,7 +34,7 @@
 	  <div class="container">
       <div class="b-title">
         <h1 class="headline b-title__title">Objects</h1>
-        <p class="subHeadline b-title__subtitle">Theme elements that can be manipulated to support a variety of different content usages.</p>
+        <p class="subHeadline b-title__subtitle">Generic components that can be manipulated to support a variety of different content usages.</p>
       </div>
     </div>
   </section> 
@@ -61,8 +61,139 @@
             <div class="alert--notice">
                     Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio <a href="#">porttitor</a> sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
             </div>
-            <p><strong>Notice Alert: </strong><code>class="alert--notice"</code></p>         
+            <p><strong>Notice Alert: </strong><code>class="alert--notice"</code></p>     
             
+            
+            <h2 id="chip" class="t-styleguide__title">Chips</h2>
+            <p>A chip is a simple snippet of component typically consisting of a title, a short message and an avatar. It's frequently wrapped in a link, but not always.</p>
+            <div class="t-styleguide__chips">
+                <ul class="t-styleguide__chips_normal">
+                    <h3 class="t-styleguide__subtitle">Normal Chips</h3> 
+                    <li><a href="#" class="chip">
+                        <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/3" alt=""></div></div>
+                        <div class="chip__copy">
+                            <h3 class="chip__title">Bobby Fastquick</h3>                    
+                        </div>
+                    </a></li>
+                    <li><a href="#" class="chip">
+                            <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/6" alt=""></div></div>
+                            <div class="chip__copy">
+                                <h3 class="chip__title">Debra Kidshpeck</h3>     
+                                <p class="chip__body">Integer placerat et turpis mi</p>               
+                            </div>
+                        </a></li>
+                    <li><a href="#" class="chip">
+                            <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/7" alt=""></div></div>
+                            <div class="chip__copy">
+                                <h3 class="chip__title">Susan Bluth</h3>
+                                <div class="chip__body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. </p></div>
+                            </div>
+                        </a></li>
+                    <li><a href="#" class="chip">
+                            <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/8" alt=""></div></div>
+                            <div class="chip__copy">                        
+                                <div class="chip__body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. </p></div>
+                            </div>
+                        </a></li>
+                    <pre><code>
+.chip 
+  .chip__image  .circular  INSERT IMAGE HERE /.circular /.chip__image
+  .chip__copy 
+    .chip__title INSERT TITLE HERE /.chip__title
+    .chip__body INSERT BODY TEXT HERE /.chip__body
+  /.chip__copy
+/.chip  
+                    </code></pre>
+                </ul>
+                <ul class="t-styleguide__chips_alt">
+                    <h3 class="t-styleguide__subtitle">Alt Chips</h3>                   
+                    <li><a href="#" class="chip--alt">
+                        <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/3" alt=""></div></div>
+                        <div class="chip__copy">
+                            <h3 class="chip__title">Bobby Fastquick</h3>                    
+                        </div>
+                    </a></li>
+                    <li><a href="#" class="chip--alt">
+                            <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/6" alt=""></div></div>
+                            <div class="chip__copy">
+                                <h3 class="chip__title">Debra Kidshpeck</h3>     
+                                <p class="chip__body">Integer placerat et turpis mi</p>               
+                            </div>
+                        </a></li>
+                    <li><a href="#" class="chip--alt">
+                            <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/7" alt=""></div></div>
+                            <div class="chip__copy">
+                                <h3 class="chip__title">Susan Bluth</h3>
+                                <div class="chip__body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. </p></div>
+                            </div>
+                        </a></li>
+                    <li><a href="#" class="chip--alt">
+                            <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/8" alt=""></div></div>
+                            <div class="chip__copy">                        
+                                <div class="chip__body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. </p></div>
+                            </div>
+                        </a></li>
+                    
+                    <pre><code>
+.chip--alt 
+  .chip__image  .circular  INSERT IMAGE HERE /.circular /.chip__image
+  .chip__copy 
+    .chip__title INSERT TITLE HERE /.chip__title
+    .chip__body INSERT BODY TEXT HERE /.chip__body
+  /.chip__copy
+/.chip  
+                    </code></pre>
+                </ul>
+                <ul class="t-styleguide__chips_vert">
+                    <h3 class="t-styleguide__subtitle">Vertical Chips</h3>                   
+                    <li><a href="#" class="chip--vert">
+                        <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/150/150/people/3" alt=""></div></div>
+                        <div class="chip__copy">
+                            <h3 class="chip__title">Bobby Fastquick</h3>                    
+                        </div>
+                    </a></li>
+                    <li><a href="#" class="chip--vert">
+                            <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/150/150/people/6" alt=""></div></div>
+                            <div class="chip__copy">
+                                <h3 class="chip__title">Debra Kidshpeck</h3>     
+                                <p class="chip__body">Integer placerat et turpis mi</p>               
+                            </div>
+                        </a></li>
+                    <li><div href="#" class="chip--vert">
+                            <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/150/150/people/7" alt=""></div></div>
+                            <div class="chip__copy">
+                                <h3 class="chip__title">Susan Bluth</h3>
+                                <div class="chip__body">
+                                    <ul class="b-contactDetails">
+                                        <li class="b-contactDetails__item"><a class="icon fa-phone" href="@tel:#">555-555-5555</a><br/></li>
+                                        <li class="b-contactDetails__item"><a class="icon fa-envelope" href="@mail:#">SuBluh@emailaddress.com</a><br/>                                        </li>
+                                        <li class="b-contactDetails__item"><span class="icon fa-map-marker">123 Sublu Street, WV 12345</span><br/></li>
+                                        <li class="b-contactDetails__item"><a class="icon fa-twitter" href="@twitter:#">@SuBlu555</a><br/></li>
+                                        <li class="b-contactDetails__item"><a class="icon fa-link" href="#">SuBlusWebsite.com</a><br/></li>
+                                        <li class="b-contactDetails__item"><a class="icon fa-file-pdf-o" href="#">Download Susans CV</a><br/></li>
+                                    </ul>                                    
+                                </div>
+                            </div>
+                        </div></li>
+                    <li><a href="#" class="chip--vert">
+                            <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/150/150/people/8" alt=""></div></div>
+                            <div class="chip__copy">                        
+                                <div class="chip__body"><p class="lede">Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. </p></div>
+                            </div>
+                        </a></li>
+                    
+                    <pre style="width:100%;"><code>
+    .chip--vert 
+      .chip__image  .circular  INSERT IMAGE HERE /.circular /.chip__image
+      .chip__copy 
+        .chip__title INSERT TITLE HERE /.chip__title
+        .chip__body INSERT BODY TEXT HERE /.chip__body
+      /.chip__copy
+    /.chip  
+                    </code></pre>
+                </ul>
+            </div>
+
 
             <h2 id="mediaObjects" class="t-styleguide__title">Media Objects</h2>
             <p><span class="lede">Media objects are frequently used to link to blog posts or other items elsewhere in the site</span></p>
@@ -281,7 +412,10 @@ div class="blurb"
 /div
             </code></pre>
 
+  
+
             <h2 id="navList" class="t-styleguide__title">Navigation Lists</h2>
+            <p>Four different variations of navigational lists exist for a variety of different purposes. In order to recolor them use the <code>navList--recolor($textColor, $shadowColor, $lightColor)</code> mixin within the UL styles of your navList.</p>
             <h3 id="navList__horizontal" class="t-styleguide__subtitle">Nav. List: Horizontal</h3>
             <ul class="navList">
                 <li><a href="#">First Link</a></li>
@@ -349,6 +483,40 @@ div class="navList--vertical"
             </div>
             <pre style="margin-top:1em;"><code>
 div class="navList--simple"
+  span class="navList__title" TITLE GOES HERE /span                            
+  ul class="navlist"
+    li a LINK ITEM 1 /a /li
+    li a LINK ITEM 2 /a /li
+    li a class="open" LIST ITEM 3 /a 
+      li a LINK ITEM 3.1 /a /li
+      li a LINK ITEM 3.2 /a /li
+      li a class="open" LIST ITEM 3.3 /a /li
+      li a LINK ITEM 3.4 /a /li
+    /li
+    li a LINK ITEM 4 /a /li
+  /ul
+/div
+            </code></pre>
+
+            <h3 id="navList__condensed" class="t-styleguide__subtitle">Nav. List: Condensed</h3>
+            <div class="navList--condensed">
+                <h4 class="navList__title">Title for navlist</h4>
+                <ul class="navList">
+                    <li><a href="#">First Link</a></li>
+                    <li><a href="#">Second Link</a></li>
+                    <li><a href="#" class="open">Third Link (.open)</a>
+                        <ul>
+                            <li><a href="#">First Link</a></li>
+                            <li><a href="#">Second Link</a></li>
+                            <li><a href="#" class="active">Third Link (.active)</a></li>
+                            <li><a href="#">Fourth Link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Fourth Link</a></li>
+                </ul>
+            </div>
+            <pre style="margin-top:1em;"><code>
+div class="navList--condensed"
   span class="navList__title" TITLE GOES HERE /span                            
   ul class="navlist"
     li a LINK ITEM 1 /a /li

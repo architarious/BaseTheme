@@ -1,0 +1,107 @@
+@mixin chip(
+  $textColor: $gray-dark-4,
+  $titleColor: $gray-dark-2,
+  $ctaColor: $tertiary
+){
+    color: $textColor;
+    display:flex;
+    flex-flow: row nowrap;
+    padding:0; 
+    margin:$pad-quarter;  
+    text-decoration: none;
+
+    &:hover, &:active, &:focus{
+        color: $ctaColor;
+        text-decoration: none;
+        & *, & * *, & > * * *{
+            color: $ctaColor;
+            text-decoration: none;
+            .chip__body p{
+                color: tint($textColor, 10);
+            }
+        }
+        .chip__image{
+            opacity: 0.9;
+        }
+        .chip__copy, .chip__title, .chip__body, .chip__title *{
+            color: $ctaColor;
+            text-decoration: none;
+        }
+    }
+    .chip__image{
+       display: flex;
+       align-items: flex-start;
+       justify-content: flex-start;
+       padding-right: $pad-half;
+    }//end chip__image
+    
+    .chip__copy{
+        display: flex; flex-flow: column nowrap;
+        justify-content: center;
+
+    }
+    .chip__title, .chip__title *{
+        margin: 0; padding:0; border:0;
+        font-size: $font-size-med-2;
+        font-family: $font-sans;
+        font-weight: bold;
+        color: $titleColor;
+    }//end chip__title
+    .chip__body, .chip__body *{ 
+        margin: 0; padding:0; border:0;
+        font-size: $font-size-small-2;
+        color:$textColor;
+        & > p, & > ul li{ 
+            font-size: $font-size-med;
+            &:first-child{margin-top: 0; padding:0;} 
+        }
+        & > .lede{
+            @extend %lede;
+        }
+    }//end chip__body
+}
+.chip, %chip{
+    @include chip();
+}
+
+.chip--alt, %chip--alt{
+    @extend %chip;
+    .chip__image{ order: 2; padding-right: 0; padding-left: $pad-half;}
+    .chip__copy{ order: 1;}
+}
+.chip--vert, %chip--vert{
+    @extend %chip;
+    flex-flow: column;    
+    max-width: 25em;
+    .chip__image{ 
+        order: 1; 
+        padding: 0 0 $pad-half 0;
+        justify-content: center;
+    }
+    .chip__copy{ order: 2;}
+
+    .chip__body p{ font-size: inherit;}
+}
+
+@mixin chip--recolor(
+  $textColor: $gray-dark-4,
+  $titleColor: $gray-dark-2,
+  $ctaColor: $tertiary
+){
+    color:$textColor;
+    &:hover, &:active, &:focus{
+        color: $ctaColor;
+        & *, & * *, & > * * *{
+            color: $ctaColor;
+            .chip__body p{
+                color: tint($textColor, 10);
+            }
+        }
+        .chip__copy, .chip__title, .chip__body,
+        .chip__copy *, .chip__title *, .chip__body *{
+            color: $ctaColor;
+        }
+    }
+    .chip__title, .chip__title *{ color:$titleColor }
+    .chip__body, .chip__body *{ color: $textColor; }
+}
