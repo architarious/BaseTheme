@@ -6,7 +6,7 @@
     
     
 </head>
-<body class="t-styleguide">
+<body class="l-styleguide t-objects">
   <header class="s-header">
     <div class="container">
       
@@ -18,6 +18,7 @@
             <li><a href="/views/index.html">Home</a></li>
             <li><a href="/views/styleguide.html">Styleguide</a></li>
             <li><a href="/views/objects.html">Objects</a></li>
+            <li><a href="/views/blocks.html">Blocks</a></li>
           </ul>
         </nav>
         <a href="#primaryNav" class="b-primaryNav__trigger m-navbar__trigger" id="nav-toggle">
@@ -38,10 +39,10 @@
       </div>
     </div>
   </section> 
-  <main class="s-main s-main--styleguide">
+  <main class="s-main">
     <div class="container">
         <article>            
-            <h2 id="alerts" class="t-styleguide__title">Alerts</h2>   
+            <h2 id="alerts" class="l-styleguide__title">Alerts</h2>   
             <div class="alert">
                     Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio <a href="#">porttitor</a> sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
             </div>  
@@ -64,11 +65,11 @@
             <p><strong>Notice Alert: </strong><code>class="alert--notice"</code></p>     
             
             
-            <h2 id="chip" class="t-styleguide__title">Chips</h2>
+            <h2 id="chip" class="l-styleguide__title">Chips</h2>
             <p>A chip is a simple snippet of component typically consisting of a title, a short message and an avatar. It's frequently wrapped in a link, but not always.</p>
-            <div class="t-styleguide__chips">
-                <ul class="t-styleguide__chips_normal">
-                    <h3 class="t-styleguide__subtitle">Normal Chips</h3> 
+            <div class="t-objects__chips">
+                <ul class="t-objects__chips_normal">
+                    <h3 class="l-styleguide__subtitle">Normal Chips</h3> 
                     <li><a href="#" class="chip">
                         <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/3" alt=""></div></div>
                         <div class="chip__copy">
@@ -105,8 +106,8 @@
 /.chip  
                     </code></pre>
                 </ul>
-                <ul class="t-styleguide__chips_alt">
-                    <h3 class="t-styleguide__subtitle">Alt Chips</h3>                   
+                <ul class="t-objects__chips_alt">
+                    <h3 class="l-styleguide__subtitle">Alt Chips</h3>                   
                     <li><a href="#" class="chip--alt">
                         <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/3" alt=""></div></div>
                         <div class="chip__copy">
@@ -144,8 +145,8 @@
 /.chip  
                     </code></pre>
                 </ul>
-                <ul class="t-styleguide__chips_vert">
-                    <h3 class="t-styleguide__subtitle">Vertical Chips</h3>                   
+                <ul class="t-objects__chips_vert">
+                    <h3 class="l-styleguide__subtitle">Vertical Chips</h3>                   
                     <li><a href="#" class="chip--vert">
                         <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/150/150/people/3" alt=""></div></div>
                         <div class="chip__copy">
@@ -183,21 +184,21 @@
                         </a></li>
                     
                     <pre style="width:100%;"><code>
-    .chip--vert 
-      .chip__image  .circular  INSERT IMAGE HERE /.circular /.chip__image
-      .chip__copy 
-        .chip__title INSERT TITLE HERE /.chip__title
-        .chip__body INSERT BODY TEXT HERE /.chip__body
-      /.chip__copy
-    /.chip  
+.chip--vert 
+  .chip__image  .circular  INSERT IMAGE HERE /.circular /.chip__image
+  .chip__copy 
+    .chip__title INSERT TITLE HERE /.chip__title
+    .chip__body INSERT BODY TEXT HERE /.chip__body
+  /.chip__copy
+/.chip  
                     </code></pre>
                 </ul>
             </div>
 
 
-            <h2 id="mediaObjects" class="t-styleguide__title">Media Objects</h2>
+            <h2 id="mediaObjects" class="l-styleguide__title">Media Objects</h2>
             <p><span class="lede">Media objects are frequently used to link to blog posts or other items elsewhere in the site</span></p>
-            <h3 id="media_spotlight" class="t-styleguide__subtitle">Spotlights</h3>
+            <h3 id="media_spotlight" class="l-styleguide__subtitle">Spotlights</h3>
             <ul class="row">
                 <li class="col col--third spotlight"> 
                     <div class="spotlight__body">
@@ -261,7 +262,7 @@ div class="spotlight"
 /div
             </code></pre>
 
-            <h3 id="media_card" class="t-styleguide__subtitle">Cards</h3>
+            <h3 id="media_card" class="l-styleguide__subtitle">Cards</h3>
             <ul class="row">
                 <li class="col col--quarter">
                     <div class="card">
@@ -345,7 +346,7 @@ div class="card"
 /div
             </code></pre>
             
-            <h3 id="media_miniCard" class="t-styleguide__subtitle">Mini-Cards</h3>
+            <h3 id="media_miniCard" class="l-styleguide__subtitle">Mini-Cards</h3>
             <ul class="row">
                 <li class="col col--third">
                     <a href="#" class="miniCard">
@@ -392,7 +393,7 @@ a class="miniCard"
   /div
 /a
             </code></pre>
-            <h3 id="media_blurb" class="t-styleguide__subtitle">Blurb</h3>
+            <h3 id="media_blurb" class="l-styleguide__subtitle">Blurb</h3>
             <div class="blurb">
                 <h4 class="blurb__title">About this blurb</h4>
                 <p class="blurb__body">A blurb is just a short paragraph of content that is frequently located within a sidebar or footer. Sometimes it ends with a link to read more and sometimes it has specific links at the bottom. Aenean eu massa quam. Fusce ut dui at elit ornare ultrices. Nunc non convallis velit. Morbi luctus viverra nunc. Morbi blandit blandit eleifend. Curabitur egestas ullamcorper laoreet. <a href="#" class="blurb__readMore">Read more...</a></a></p>
@@ -414,9 +415,9 @@ div class="blurb"
 
   
 
-            <h2 id="navList" class="t-styleguide__title">Navigation Lists</h2>
+            <h2 id="navList" class="l-styleguide__title">Navigation Lists</h2>
             <p>Four different variations of navigational lists exist for a variety of different purposes. In order to recolor them use the <code>navList--recolor($textColor, $shadowColor, $lightColor)</code> mixin within the UL styles of your navList.</p>
-            <h3 id="navList__horizontal" class="t-styleguide__subtitle">Nav. List: Horizontal</h3>
+            <h3 id="navList__horizontal" class="l-styleguide__subtitle">Nav. List: Horizontal</h3>
             <ul class="navList">
                 <li><a href="#">First Link</a></li>
                 <li><a href="#">Second Link</a></li>
@@ -431,7 +432,7 @@ ul class="navlist"
   li a LINK ITEM 4 /a /li
 /ul
             </code></pre>
-            <h3 id="navList__vertical" class="t-styleguide__subtitle">Nav. List: Vertical</h3>
+            <h3 id="navList__vertical" class="l-styleguide__subtitle">Nav. List: Vertical</h3>
             <div class="navList--vertical">
                 <h4 class="navList__title">Title for navlist</h4>
                 <ul class="navList">
@@ -464,7 +465,7 @@ div class="navList--vertical"
   /ul
 /div
             </code></pre>
-            <h3 id="navList__simple" class="t-styleguide__subtitle">Nav. List: Simple</h3>
+            <h3 id="navList__simple" class="l-styleguide__subtitle">Nav. List: Simple</h3>
             <div class="navList--simple">
                 <h4 class="navList__title">Title for navlist</h4>
                 <ul class="navList">
@@ -498,7 +499,7 @@ div class="navList--simple"
 /div
             </code></pre>
 
-            <h3 id="navList__condensed" class="t-styleguide__subtitle">Nav. List: Condensed</h3>
+            <h3 id="navList__condensed" class="l-styleguide__subtitle">Nav. List: Condensed</h3>
             <div class="navList--condensed">
                 <h4 class="navList__title">Title for navlist</h4>
                 <ul class="navList">
@@ -532,7 +533,7 @@ div class="navList--condensed"
 /div
             </code></pre>
 
-            <h2 id="breadcrumbs" class="t-styleguide__title">Breadcrumbs</h2>
+            <h2 id="breadcrumbs" class="l-styleguide__title">Breadcrumbs</h2>
             <ul class="breadcrumbs">
               <li><a href="#">Home</a></li>
               <li><a href="#">Pictures</a></li>
@@ -548,10 +549,10 @@ ul class="breadcrumbs"
 /ul
             </code></pre>
 
-            <h2 id="slider" class="t-styleguide__title">Image Sliders</h2>
+            <h2 id="slider" class="l-styleguide__title">Image Sliders</h2>
             
 
-            <h3 id="slider__slick" class="t-styleguide__subtitle" >Slick Slider</h3>
+            <h3 id="slider__slick" class="l-styleguide__subtitle" >Slick Slider</h3>
             <p>Slick-Slider is an accessible and responsive slider developed by <a href="https://kenwheeler.github.io/">Ken Wheeler</a>. It has multiple different variations and is very easy to both implement and customize. For more details about slick slider, go to <a href="https://kenwheeler.github.io/slick/">https://kenwheeler.github.io/slick/</a></p>
             <h4 style="margin-top: 1.618em;">Normal carousel</h4>
             <div class="slider">
@@ -769,7 +770,7 @@ div class="slider"
             </code></pre>
             <p class="alert--notice">In order to use slickslider, make sure to read the documentation and to include <a href="https://kenwheeler.github.io/slick/#demos">the javascript</a> that enables it. You can find a local example at the bottom of this page's view-source.</p>
 
-            <h3 id="slider__auto" class="t-styleguide__subtitle">Auto Slider</h3>
+            <h3 id="slider__auto" class="l-styleguide__subtitle">Auto Slider</h3>
             <p>Auto-slider is a simple CSS image slider that rotates images. It's mixin allows you to customize the delay and number of slides that it switches. It isn't a part of slick-slider.</p>
             <div class="autoSlider">
                 <ul class="autoSlider__list">
@@ -792,7 +793,7 @@ div class="autoSlider"
 /div               
             </code></pre>
             
-            <h2 id="modal" class="t-styleguide__title">Modal</h2>
+            <h2 id="modal" class="l-styleguide__title">Modal</h2>
             <button id="modal-1_btn" class="modal_btn">Open Modal</button>
             <div id="modal-1" class="modal">
                 <div class="modal__content">
@@ -857,8 +858,8 @@ div id="modal-1" class="modal"
 modal("#modal-1_btn", "#modal-1");
             </code></pre>
             
-            <h2 id="accordian" class="t-styleguide__title">Accordian</h2>
-            <h3 id="accordian__default" class="t-styleguide__subtitle">Default Accordian</h3>
+            <h2 id="accordian" class="l-styleguide__title">Accordian</h2>
+            <h3 id="accordian__default" class="l-styleguide__subtitle">Default Accordian</h3>
             <dl class="accordian" id="accordian-1">
               <dt class="accordian__title"><a href="" class="accordian__trigger">Title 1</a></dt>
               <dd class="accordian__copy">
@@ -914,7 +915,7 @@ dl id="accordian-1" class="accordian"
 accordian("#accordian-1");
             </code></pre>
 
-            <h3 id="accordian__default" class="t-styleguide__subtitle">Accordian: Dark Variant</h3>
+            <h3 id="accordian__default" class="l-styleguide__subtitle">Accordian: Dark Variant</h3>
             <dl class="accordian accordian--dark" id="accordian-2">
               <dt class="accordian__title"><a href="" class="accordian__trigger">Title 1</a></dt>
               <dd class="accordian__copy">
@@ -945,7 +946,7 @@ accordian("#accordian-1");
             <p style="max-width: 100%;">To implement the dark variant simply add accordian--dark after accordian within the first elements class attribute.</p>
             <p style="max-width: 100%;">To style different variations of the accordian, use the <code>accordian--custom(<strong>$background-color, $text-color, $copy-color, $cta-color, $active-color, $shadow, $light, $font-size, $uppercase</strong>)</code> mixin</p>
 
-            <h2 id="tabs" class="t-styleguide__title">Tabs</h2>
+            <h2 id="tabs" class="l-styleguide__title">Tabs</h2>
             <div id="tabNav-1" class="tabNav">
                 <ul class="tabNav__tabs">
                     <li><a href="panel-1">Panel #1</a></li>
@@ -993,7 +994,7 @@ div id="tabNav-1" class="tabNav"
 tabNav("#tabNav-1");
             </code></pre>
             
-            <h2 id="pagination" class="t-styleguide__title">Pagination</h2>
+            <h2 id="pagination" class="l-styleguide__title">Pagination</h2>
             <ul class="pagination">
                 <li><span class="button disabled">Prev</span></li>
                 <li><a href="#" class="page active">1</a></li>

@@ -34,16 +34,17 @@
   @include sgs-change('output', 'isolation');
 }
 
-.row{
+.row, %row{
   @include grid-container;
   @include add-grid(12);
   @include add-gutter(1);
 
-  .col{
+  .col, %col{
     max-width:100%;
   }
 
   .col--half, .col--third, .col--quarter{
+    @extend %col;
     @include css-grid-span(12);    
   }
   @include breakpoint($bp-mobile2-3){
@@ -88,7 +89,7 @@ ul.row{
   $light: $lbg--light,
   $shadow: $lbg--shadow
 ){
-  .col{ 
+  .col, .col--full, .col--half, .col--third, .col--quarter{ 
     border-right: 1px solid $lbg--shadow;
     box-shadow: 1px 0 1px 0 $lbg--light;
     &:last-child{border-right: 0; box-shadow: none;}

@@ -99,50 +99,7 @@
         &:nth-child(3):after{ content: '.circular--portrait'; }
     }
   }//end t-styleguide__circular
-  .t-styleguide__title{
-    margin: vr(6) 0 vr(3) 0;
-    padding-bottom: vr(1);
-    border-bottom: solid 0.2em $accentColor;
-    @include typi(h1);
-    font-weight: 900;
-    max-width:100%;
-    color: $gray-dark-3;
-    letter-spacing: 0.15em;
-    display:block;
-    &:first-child{margin-top:0;}
-}//end t-styleguide__title
-.t-styleguide__subtitle{
-    margin: vr(6) 0 vr(2) 0;
-    padding-bottom: vr(0.25);
-    border-bottom: solid 0.1em $shadow;
-    letter-spacing: 0.1em;
-    max-width:100%;
-    color: $subtitleColor;
-    display:block;
-    &:first-child{ margin-top:0;}
-}//end t-styleguide__subtitle
 
-.t-styleguide__chips{
-    display:flex; flex-flow: row wrap;
-    &_normal, &_alt, &_vert{
-        & > .t-styleguide__subtitle{ width:100%; margin-bottom: $pad-half;}
-        width:48%;
-        padding-right: 2%;
-        @extend %navList--vertical;
-        display:flex; flex-flow: row wrap;
-        max-width:100%;
-        & > li{ margin: $pad $pad-and-half 0 0;}
-        @include breakpoint($bp-mobile1-1 $bp-tablet-1){
-            width:100%;
-            padding-right:0;
-        }
-    }
-    &_alt{ padding-right: 0;}
-    &_vert{ width:100%; padding-right: 0;}
-}
-
-
-.slider--test1{ @include slider--custom($lbg, $quinary, $gray, $pad-quarter);}
 
 
 

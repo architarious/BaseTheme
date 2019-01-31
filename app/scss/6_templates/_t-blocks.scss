@@ -1,0 +1,34 @@
+@mixin t-blocks(
+    $bgColor: $lbg,
+    $titleColor: $gray-dark-3,
+    $subtitleColor: $gray-dark-4,
+    $accentColor: $primary,
+    $textColor: $black,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    
+.t-blocks__chips{
+    display:flex; flex-flow: row wrap;
+    &_normal, &_alt, &_vert{
+        & > .l-styleguide__subtitle{ width:100%; margin-bottom: $pad-half;}
+        width:48%;
+        padding-right: 2%;
+        @extend %navList--vertical;
+        display:flex; flex-flow: row wrap;
+        max-width:100%;
+        & > li{ margin: $pad $pad-and-half 0 0;}
+        @include breakpoint($bp-mobile1-1 $bp-tablet-1){
+            width:100%;
+            padding-right:0;
+        }
+    }
+    &_alt{ padding-right: 0;}
+    &_vert{ width:100%; padding-right: 0;}
+}
+
+
+.slider--test1{ @include slider--custom($lbg, $quinary, $gray, $pad-quarter);}
+
+}.t-blocks{ @include t-blocks();}

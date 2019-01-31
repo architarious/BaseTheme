@@ -1,0 +1,36 @@
+@mixin l-styleguide(
+    $bgColor: $lbg,
+    $titleColor: $gray-dark-3,
+    $subtitleColor: $gray-dark-4,
+    $accentColor: $primary,
+    $textColor: $black,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+
+.l-styleguide__title{
+    margin: vr(6) 0 vr(3) 0;
+    padding-bottom: vr(1);
+    border-bottom: solid 0.2em $accentColor;
+    @include typi(h1);
+    font-weight: 900;
+    max-width:100%;
+    color: $gray-dark-3;
+    letter-spacing: 0.15em;
+    display:block;
+    &:first-child{margin-top:0;}
+}//end l-styleguide__title
+.l-styleguide__subtitle{
+    margin: vr(6) 0 vr(2) 0;
+    padding-bottom: vr(0.25);
+    border-bottom: solid 0.1em $shadow;
+    letter-spacing: 0.1em;
+    max-width:100%;
+    color: $subtitleColor;
+    display:block;
+    &:first-child{ margin-top:0;}
+}//end l-styleguide__subtitle
+
+
+}.l-styleguide{ @include l-styleguide();}

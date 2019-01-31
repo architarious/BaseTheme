@@ -1,0 +1,127 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/styles.css" >
+    
+    <title>Basetheme: Styleguide</title>
+    
+    
+</head>
+<body class="l-styleguide t-blocks">
+  <header class="s-header">
+    <div class="container">
+      
+      <div class="m-navbar" id="nav-container">
+       <h1 class="b-siteName eq-block--detail" >Name of Site</h1>
+       <nav class="b-primaryNav m-navbar__fullscreen " role="navigation" id="primaryNav nav-fullscreen">
+          
+          <ul class="navList b-primaryNav__list">
+            <li><a href="/views/index.html">Home</a></li>
+            <li><a href="/views/styleguide.html">Styleguide</a></li>
+            <li><a href="/views/objects.html">Objects</a></li>
+            <li><a href="/views/blocks.html">Blocks</a></li>
+          </ul>
+        </nav>
+        <a href="#primaryNav" class="b-primaryNav__trigger m-navbar__trigger" id="nav-toggle">
+            <span class="hamburger">
+              <span class="hamburger__line" ></span>
+              <span class="hamburger__line" ></span>
+              <span class="hamburger__line" ></span>
+            </span>
+          </a>
+      </div>
+    </div><!--end container-->
+  </header>
+  <section class="s-pageTitle">
+	  <div class="container">
+      <div class="b-title">
+        <h1 class="headline b-title__title">Blocks</h1>
+        <p class="subHeadline b-title__subtitle">Blocks are individual components that are tailored to a specific type of content and generally make up the bulk of any theme. They frequently contain at least one object and aren't intended to be universal, however they can be tailored to different layouts.</p>
+      </div>
+    </div>
+  </section> 
+  <main class="s-main s-main--styleguide">
+    <div class="container">
+        <article>            
+           <h2 class="t-styleguide__title">Address</h2>
+           <address class="b-address">    
+              123 SomethingLane, <br/>
+              Morgantown, WV 26501 <br/>
+              <a href="tel:1-888-888-8888" class="b-address__tel"> 1-888-888-8888</a><br/>
+              <a href="mailto:#" class="b-address__email">something@somewhere.com</a><br/>
+            </address>
+        </article>        
+    </div><!--end container-->
+  </main>
+  <footer class="s-footer">
+    <div class="container">
+      <div class="s-footer__contact">
+        <address class="b-address">    
+          123 SomethingLane, <br/>
+          Morgantown, WV 26501 <br/>
+          <a href="tel:1-888-888-8888" class="b-address__tel"> 1-888-888-8888</a><br/>
+          <a href="mailto:#" class="b-address__email">something@somewhere.com</a><br/>
+        </address>
+      </div><!--end s-footer__contact-->
+      <div class="s-footer__cta">
+        <nav class="b-primaryNav">
+          <ul class="b-primaryNav__list">
+           <li><a href="#">Services</a></li>
+           <li><a href="#">Products</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <ul class="b-social">
+          <li><a target="_blank" href="http://facebook.com" class="icon fa-facebook">facebook</a></li>
+          <li><a target="_blank" href="http://github.com" class="icon fa-github">github</a></li>
+          <li><a target="_blank" href="http://twitter.com" class="icon fa-twitter">twitter</a></li>
+          <li><a target="_blank" href="http://linkedin.com" class="icon fa-linkedin">linkedin</a></li>
+          <li><a target="_blank" href="http://stackoverflow.com" class="icon fa-stack-overflow">stackoverflow</a></li>
+          <li><a target="_blank" href="http://behance.com" class="icon fa-behance">behance</a></li>
+          <li><a target="_blank" href="http://deviantart.com" class="icon fa-deviantart">deviantart</a></li>
+          <li><a target="_blank" href="http://youtube.com" class="icon fa-youtube">youtube</a></li>
+        </ul>
+      </div><!--end s-footer__cta-->
+    </div><!--end container-->
+  </footer>
+    <!--<script src="../bower_components/eq.js/dist/eq.min.js"></script>-->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <script src="../javascripts/vendor/slick.min.js"></script>
+    <script src="../javascripts/main.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        dots: true, 
+        infinite: true,
+        speed: 300,    
+        slidesToShow: 1,
+        slidesToScroll: 1 
+      });  
+      $('.slider--modal').slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1
+      });
+      $('.slider--test1').slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        adaptiveHeight: false
+      });                
+      modal("#modal-1_btn", "#modal-1");
+      modal("#modal-2_btn", "#modal-2");      
+      accordian("#accordian-1");   
+      accordian("#accordian-2");   
+      tabNav("#tabNav-1");
+    });
+    </script>        
+</body>
+
+</html>
