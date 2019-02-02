@@ -1,22 +1,59 @@
 @mixin b-siteName(
-  $bgColor: $lbg,
-  $text: $black,
-  $cta: $primary,
+  $textColor: $black,
+  $ctaColor: $primary,
+  $ctaColor--hover: $tertiary,
   $shadow: $lbg--shadow,
   $light: $lbg--light
 ){
 
-.b-siteName{
-  float:left;
-  @extend h1;
-  font-size: 2em;
-  margin:0;
+  display:block;
+  text-decoration: none;
+  position: relative;
   margin: vr(1) 0;
-  font-size: $font-size-large-2;
+  padding-left: ms(5);
+  color: $textColor;
+  transition: color 0.2s ease-in-out; 
+  @include typi(p);
+  
+  &:hover, &:focus, &:active{
+    color: $ctaColor--hover;
+    .b-siteName__title{ color: $ctaColor--hover; }
+    .b-siteName__logo path{ fill: $ctaColor--hover; }
+    .b-siteName__subtitle{ color: $textColor;}
+    
+  }
+
+  .b-siteName__title{   
+    transition: color 0.2s ease-in-out;   
+    @include typi(h2); 
+    color: $ctaColor;
+    margin:0; padding:0 0 0 $pad-quarter;
+    font-family: $font-serif;
+  }//end b-siteName__title
+  .b-siteName__subtitle{
+    @include typi(p);
+    line-height: ms(1);
+    color: $textColor;
+    margin:0; padding:0 0 0 $pad-quarter;
+    font-family: $font-sans;
+  }//end b-siteName__subtitle
+  .b-siteName__logo{
+    height: auto;
+    width: ms(5);
+    position: absolute;
+    left:0;
+    top:0;
+    path { 
+      fill: $ctaColor; 
+      transition: fill 0.2s ease-in-out;
+    }
+  }//end b-siteName__logo
+
+  
 
   //@include eq(xSmall){border:$secondary 1px solid;}
   //@include eq(Medium){border:$primary 1px solid;}
 
-}//end b-sitename
 
-}@include b-siteName();
+
+}.b-siteName, %b-siteName{ @include b-siteName(); }

@@ -43,7 +43,7 @@
     max-width:100%;
   }
 
-  .col--half, .col--third, .col--quarter{
+  .col--half, .col--third, .col--quarter, .col--full{
     @extend %col;
     @include css-grid-span(12);    
   }

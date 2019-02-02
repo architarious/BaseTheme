@@ -1,43 +1,73 @@
 @mixin b-social(
-    $bgColor: $dbg,
     $txtColor: $lbg,
-    $ctaColor: $tertiary,
-    $ctaColor--hover: $tertiary--light,
-    $ctaColor--active: $tertiary--shadow,
-    $shadow: $dbg--shadow,
-    $light: $dbg--light
+    $ctaColor: $tertiary,    
+    $shadow: $dbg--shadow
 ){
-    .b-social, ul.b-social{
-        color: $white; 
+    $ctaColor--hover: lighten($ctaColor, 10);
+    $ctaColor--active: darken($ctaColor, 10);
+    
+    color: $txtColor; 
+    list-style:none;
+    display:flex;
+    flex-flow: row nowrap;
+    font-size:$font-size-med;
+    padding: vr(1) 0;
+    margin:0;
+
+    ul{ 
+        padding:0; margin:0; 
         list-style:none;
         display:flex;
         flex-flow: row nowrap;
-        font-size:$font-size-med;
-        padding: vr(1) 0;
-        //@include adjust-font-size-to($font-size-med-2);
-        //@include rhythm(0, $ms-1, $ms-1, 0, $font-size-med);
-         
-        li{            
-            padding: 0 ms(-3);
-            a{
-                color: $ctaColor;
-                width: ms(1);
-                height: ms(0);
-                float:left;
-                text-indent: 99999em;
-                position:relative;
-                overflow:hidden;
-                text-shadow: 0 0.2em 0.2em $shadow; 
+    }
 
-                &:hover, &:focus{ color: $ctaColor--hover; }
-                &:active{ color: $ctaColor--active; }
-                
-                &:before{ 
-                    position:absolute; 
-                    top:0; left:0;
-                    text-indent:0;
-                }//end :before
-            }//end a
-        }//end li
-    }//end b-social
-}@include b-social();
+    .b-social__title{
+        font-size:$font-size-med;
+        margin-right: ms(-3);
+        color: $txtColor; 
+    }//end b-social__title
+     
+    li, .b-social__item{            
+        padding: 0 ms(-3);
+        margin:0;
+        a{
+            color: $ctaColor;
+            width: ms(1);
+            height: ms(0);
+            float:left;
+            line-height: 1em;
+            text-indent: 99999em;
+            position:relative;
+            overflow:hidden;
+            text-shadow: 0 0.2em 0.2em $shadow; 
+            &:hover, &:focus{ color: $ctaColor--hover; }
+            &:active{ color: $ctaColor--active; }
+            
+            &:before{ 
+                position:absolute; 
+                top:0; left:0;
+                text-indent:0;
+            }//end :before
+        }//end a
+    }//end li
+}
+.b-social, %b-social{ @include b-social(); }
+
+@mixin b-social--recolor(
+    $txtColor: $gray-dark-4,
+    $ctaColor: $tertiary,    
+    $shadow: $lbg--shadow
+){
+    $ctaColor--hover: lighten($ctaColor, 10);
+    $ctaColor--active: darken($ctaColor, 10); 
+    
+    color: $txtColor; 
+
+    .b-social__title{ color: $txtColor; }
+    li a, .b-social__item a{ 
+        color: $ctaColor;
+        text-shadow: 0 0.2em 0.2em $shadow; 
+        &:hover, &:focus{ color: $ctaColor--hover; }
+        &:active{ color: $ctaColor--active; }
+    }
+}//end b-social--recolor mixin

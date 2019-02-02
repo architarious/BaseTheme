@@ -473,6 +473,15 @@ $typi:(
     desktop1: ($font-size-large-2),
     desktop2: ($font-size-xlarge),
     desktop3: ($font-size-xlarge-2)
+  ),
+  meta:(
+    null: ( $font-size-small-2, 1.618),
+    mobile1: ($font-size-small),
+    mobile2: ($font-size-small),
+    tablet: ($font-size-small-2),
+    desktop1: ($font-size-small-2),
+    desktop2: ($font-size-small-2),
+    desktop3: ($font-size-med)
   )
 );
 @include typi-init;

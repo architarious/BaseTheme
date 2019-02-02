@@ -1,23 +1,60 @@
 @mixin b-address(
-  $bgColor: $dbg,
   $textColor: $white,
-  $ctaColor: $tertiary,
-  $shadow: $dbg--shadow,
-  $light: $dbg--light
+  $ctaColor: $tertiary
 ){
-  .b-address{  
+
     color: $textColor;    
+    font-size: $font-size-med;
+    line-height: ms(2);
     width:100%;
-    float:left;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
     a{ 
         color: $ctaColor;
         &:hover, &:focus{ color: lighten($ctaColor, 10); }
         &:active{ color: lighten($ctaColor, 15); } 
-    }//end a
+    }//end a  
 
+    .b-address__body{
+      color: $textColor;    
+      font-size: $font-size-med;
+      line-height: ms(2);
+    }//end b-address body
+    .b-address__title{
+      color: $textColor;
+      font-size: $font-size-large;
+      line-height: ms(1);
+      margin: 0; padding:0;
+    }//end b-address__title
+    .b-address__tel, .b-address__email{
+      @extend %icon;
+      padding-top: ($pad-quarter)/2;
+      width: 100%;
+      &:before{padding-right: $pad-quarter;}
+    }//end b-address__tel, .b-address__email
+    .b-address__tel{
+      @extend .fa-phone;
+    }//end b-address__tel
+    .b-address__email{
+      @extend .fa-envelope;
+    }//end b-address__tel     
+    
+}
+.b-address, %b-address{ @include b-address(); }
+
+@mixin b-address--recolor(
+  $textColor: $black,
+  $ctaColor: $tertiary
+){
+  color: $textColor;
   
-    
-    
-    }//end b-address
-}@include b-address();
+  a{ 
+    color: $ctaColor;
+    &:hover, &:focus{ color: lighten($ctaColor, 10); }
+    &:active{ color: lighten($ctaColor, 15); } 
+  }//end a  
+  .b-address__title{ color: $textColor; }
+  .b-address__body{ color: $textColor;}
+}
 

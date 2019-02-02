@@ -1,4 +1,4 @@
-@mixin breadcrumbs(
+@mixin b-breadcrumbs(
   $bgColor: $lbg,
   $textColor: $gray-dark-4,
   $ctaColor: $tertiary,
@@ -27,4 +27,4 @@
         &:hover, &:focus{ color: mix($bgColor, $ctaColor, 30);}
           }
    }//end li
-}.breadcrumbs{@include breadcrumbs();}
+}.b-breadcrumbs, %b-breadcrumbs{@include b-breadcrumbs();}

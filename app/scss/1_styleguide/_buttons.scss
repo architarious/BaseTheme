@@ -1,9 +1,7 @@
 @mixin button(
-  $bgColor: $lbg,
   $buttonColor: $tertiary,
   $txtColor: $lbg,
-  $light: lighten($bgColor, 10),
-  $shadow: shade($bgColor, 10)
+  $shadow: $lbg--shadow
 ){
   
   padding:0.618em;
@@ -49,19 +47,45 @@
 }//end mixin button
 
 @mixin button--outline(
-  $bgColor: $lbg,
   $buttonColor: $tertiary,
   $txtColor: $black,
-  $light: lighten($bgColor, 10),
-  $shadow: shade($bgColor, 10)
+  $shadow: $lbg--shadow
 ){
-  @include button($bgColor, $buttonColor, $buttonColor, $light, $shadow);
-    background-color: $bgColor;
+  @include button($buttonColor, $buttonColor, $shadow);
+    background-color: transparent;
     &:hover, &:focus, &:active, &:visited{ 
-      background-color:$bgColor;
+      background-color: transparent;
     }
   }//end button--outline mixin
 
+@mixin button--recolor(
+  $buttonColor: $tertiary,
+  $txtColor: $lbg,
+  $shadow: $lbg--shadow
+){
+  background-color: $buttonColor;
+  color:$txtColor;  
+  border-color: $buttonColor;
+
+  &:hover, &:focus{
+    background-color:lighten($buttonColor, 10);
+    border-color:lighten($buttonColor, 10);
+    color:lighten($txtColor,5);   
+  }//end hover
+  &:active{
+    background-color: darken($buttonColor, 10);
+    border-color: darken($buttonColor, 10);
+    color: darken($txtColor, 5);
+  }//end active
+  &.icon{
+    &:before{ 
+      color: set-alpha($txtColor, 0.75);
+    }
+    &:hover:before, &:focus:before{
+      color:lighten($txtColor,5);  
+    }
+  }//end icon
+}
 
   
 input[type="submit"], input[type="reset"], input[type="button"], button, .button, %button{ 

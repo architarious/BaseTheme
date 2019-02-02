@@ -1,0 +1,121 @@
+@mixin b-search(
+    $bgColor: $lbg,    
+    $txtColor: $black,
+    $ctaColor: $tertiary,
+    $boxColor: $gray-light-2,
+    $borderColor: $gray-light-3,
+    $shadow: $lbg--shadow
+){   
+    
+    .b-search__button {
+        @include button--recolor($ctaColor, $bgColor, $shadow);
+        border:0;
+        appearance: none;
+        cursor: pointer;
+    
+        &:focus,
+        &:hover {
+            outline: 0;
+        }
+    }
+    
+    .b-search__label {
+        display: block;
+        @include typi(h5);
+        margin-bottom: $pad-half;
+        color: $txtColor;
+    }
+    
+    .b-search__input {
+        display: block;
+        width: 100%;
+        -webkit-appearance: none;
+        padding: $pad $pad-half;
+        margin-bottom: vr(0.5);
+        box-sizing: border-box;
+        background-color: $boxColor;
+        border-color: $borderColor;
+        color: $txtColor;
+    
+        &:focus {
+            outline: 0;
+        }
+    }
+    
+    [aria-hidden="true"],
+    .hidden {
+        display: none;
+    }
+    
+    [aria-hidden="false"] {
+        display: block;
+    }
+    
+    [aria-invalid] {
+        border: 2px solid red;
+        outline: 0;
+    
+        &:focus,
+        &:hover {
+            outline: 0;
+            border-color: darken(red, 5%);
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.63);
+        }
+    }
+    
+    #error span {
+        display: block;
+        background-color: #cc3535;
+        background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/182774/error.svg");
+        background-repeat: no-repeat;
+        color: #fff;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 80%;
+        border-radius: 5px;
+        padding-left: 30px;
+        background-size: 20px 20px;
+        background-position: left 5px center;
+    }
+}//end b-search mixin
+.b-search, %b-search{ 
+    @include b-search();
+    max-width: 600px;
+    //margin-left: auto;
+    //margin-right: auto;
+    
+    form, .b-search__form{
+      @extend %box;
+      padding: $pad-double;
+    }
+}
+@mixin b-search--inline(
+    $bgColor: $lbg,    
+    $txtColor: $black,
+    $ctaColor: $tertiary,
+    $boxColor: $gray-light-2,
+    $borderColor: $gray-light-3,
+    $shadow: $lbg--shadow
+){  
+    @include b-search($bgColor, $txtColor, $ctaColor, $boxColor, $borderColor, $shadow);
+    form, .b-search__form, .b-search__body{
+        width:100%;
+        max-width: 40em;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .b-search__label{ position:absolute; top:-99999999em; }
+    .b-search__button{         
+        @extend %icon;
+        @extend .fa-search;
+        border: 1px solid $ctaColor;
+        height: 4.2em; 
+        line-height: 4.2em; 
+        &:before{
+          content: "\f002";
+          font-size: $font-size-large;
+          margin-right:0;
+        }
+    
+}
+}.b-search--inline, %b-search--inline{ @include b-search--inline() } 

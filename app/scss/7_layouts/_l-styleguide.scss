@@ -32,5 +32,9 @@
     &:first-child{ margin-top:0;}
 }//end l-styleguide__subtitle
 
+.l-styleguide__section{
+    margin-top: vr(3);
+}//endl-styleguide__section
+
 
 }.l-styleguide{ @include l-styleguide();}

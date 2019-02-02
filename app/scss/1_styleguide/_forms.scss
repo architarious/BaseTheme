@@ -1,11 +1,8 @@
 @mixin form(
-    $bgColor: $lbg,
     $txtColor: $black,
     $ctaColor: $tertiary,
     $boxColor: $gray-light-2,
-    $borderColor: $gray-light-3,
-    $light: $lbg--light,
-    $shadow: $lbg--shadow
+    $borderColor: $gray-light-3
 ){
     margin: 0 0 2em 0;
 
@@ -90,6 +87,8 @@
 		border: solid 2px $borderColor;
 		color: inherit;
 		display: block;
+		font-family: $font-sans;
+		font-size: $font-size-med;
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
@@ -234,3 +233,57 @@
 }
 
 form{ @include form(); }
+
+@mixin form--recolor(
+	$txtColor: $black,
+    $ctaColor: $tertiary,
+    $boxColor: $gray-light-2,
+    $borderColor: $gray-light-3
+){
+	label {
+		color: $txtColor;
+	}
+	
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="tel"],
+	select,
+	textarea {
+		background: $boxColor;
+		border-color: $borderColor;
+	}
+	
+	select option {
+		color: $txtColor;
+		background: $boxColor;
+	}
+	
+	input[type="checkbox"] + label,
+	input[type="radio"] + label {
+		color: $txtColor;
+	}
+	
+	input[type="checkbox"] + label:before,
+	input[type="radio"] + label:before {
+		background: $boxColor;
+		border-color: $borderColor;
+	}
+	
+	input[type="checkbox"]:checked + label:before,
+	input[type="radio"]:checked + label:before {
+		background: $boxColor;
+		border-color: $borderColor;
+		color: $txtColor;
+	}
+	
+	input[type="checkbox"]:focus + label:before,
+	input[type="radio"]:focus + label:before {
+		border-color: $ctaColor;
+	}
+	
+	::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+		color: $txtColor !important;
+	}
+	
+}

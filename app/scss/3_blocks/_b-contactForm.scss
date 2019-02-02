@@ -1,0 +1,56 @@
+@mixin b-contactForm(
+    $bgColor: $lbg,
+    $txtColor: $black,
+    $ctaColor: $tertiary,
+    $boxColor: $gray-light-2,
+    $borderColor: $gray-light-3,
+    $shadow: $lbg--shadow
+){
+    @include form--recolor($txtColor, $ctaColor, $boxColor, $borderColor);
+
+   &, form{
+       display:flex;
+       flex-flow: column nowrap;
+       max-width: 40em;
+   }//end form
+   .b-contactForm__details{}//end b-contactForm__details 
+   .b-contactForm__name{
+       width:100%;
+       display: flex;
+       flex-flow: row nowrap;
+       & *{margin-right: vr(1);}
+       &:last-child{ margin-right:0;} 
+       @include breakpoint($bp-mobile1-1 $bp-mobile2-1){
+           flex-flow: column nowrap;
+           & *{margin-right: 0; margin-top: vr(1);}
+       }
+   }//end b-contactForm__name
+   .b-contactForm__firstName{}//end b-contactForm__firstName
+   .b-contactForm__lastName{ margin-right: 0;}//end b-contactForm__lastName
+   .b-contactForm__contact{
+        margin-top: vr(1);
+        width:100%;
+   }//end b-contactForm__contact
+   .b-contactForm__email{}//end b-contactForm__email
+   .b-contactForm__message{
+        margin-top: vr(1);
+        width:100%;
+   }//end b-contactForm__message
+   .b-contactForm__cta{
+       margin-top: vr(1);
+       width:100%;        
+       
+       input{
+           @include button--recolor($ctaColor, $bgColor, $shadow);
+           &[type="submit"]{}//end input[type="submit"]
+           &[type="reset"]{
+            @include button--recolor($ctaColor, $ctaColor, $shadow); 
+            background-color: transparent;
+            &:hover, &:focus, &:active, &:visited{ 
+              background-color: transparent;
+            }
+           }//end input[type="reset"]
+       }//end input
+   }//end b-contactForm__cta    
+}
+.b-contactForm, %b-contactForm{@include b-contactForm();}

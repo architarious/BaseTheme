@@ -1,0 +1,24 @@
+@mixin b-secondaryNav(
+  $txtColor: $gray-dark-4, 
+  $ctaColor: $tertiary, 
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+  ){
+    @extend %navList--vertical;
+    @include navList--recolor($ctaColor, $shadow, $light);
+    max-width: 20em;
+    .navList{
+        li{
+            display: flex;
+            flex-flow: column nowrap;
+            a{}//end a
+            span{
+                width: 100%;
+                font-size: $font-size-small-2;
+                line-height: $font-size-med;
+                padding-top: $pad-quarter;                
+            }
+        }//end li
+    }///end navList
+    
+  }.b-secondaryNav, %b-secondaryNav{ @include b-secondaryNav(); }

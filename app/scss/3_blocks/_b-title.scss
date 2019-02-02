@@ -1,17 +1,63 @@
 @mixin b-title(
-    $txtColor1: $primary,
-    $txtColor2: $gray-dark-3
+    $titleColor: $primary,
+    $subColor: $gray-dark-3,
+    $metaColor: $gray    
 ){
-  width:100%;
-  float:left;
-  padding: $pad-triple 0;  
-  .b-title__title{
-      color: $txtColor1;
+    width:100%;
+    font-size: 1rem;
+    padding: $pad 0;  
+    display: flex;
+    flex-flow: column nowrap;
+ 
+    .b-title__title{
+      order: 2;
+      @extend %headline;
+      color: $titleColor;
     }//end b-title__title
-  .b-title__subtitle{
-      color: $txtColor2;
+    .b-title__subtitle{
+      order: 3;
+      @extend %subHeadline;
+      color: $subColor;
       padding-top: $pad-half;
     }//end b-title__subtitle
+    .b-title__meta{
+      @include typi(p);
+      padding-bottom: $pad-half;
+      order: 1;
+      text-transform: uppercase;
+      color: $metaColor
+    }//end b-title__meta
 }
 
-.b-title{ @include b-title(); }
+.b-title, %b-title{ @include b-title(); }
+
+@mixin b-title--recolor(
+    $titleColor: $primary,
+    $subColor: $gray-dark-3,
+    $metaColor: $gray    
+){
+    .b-title__title{color: $titleColor;}//end b-title__title
+    .b-title__subtitle{color: $subColor;}//end b-title__subtitle
+    .b-title__meta{color: $metaColor}//end b-title__meta
+}
+
+@mixin b-title--mini(
+    $titleColor: $primary,
+    $subColor: $gray-dark-3,
+    $metaColor: $gray    
+){
+    @extend %b-title;
+    .b-title__title{
+        color: $titleColor;
+        @include typi(h1);
+    }//end b-title__title
+    .b-title__subtitle{
+        @include typi(h4);
+        color: $subColor;
+    }//end b-title__subtitle
+    .b-title__meta{
+        @include typi(meta);
+        color: $metaColor;
+    }//end b-title__meta
+}
+.b-title--mini, %b-title--mini{ @include b-title--mini();}
