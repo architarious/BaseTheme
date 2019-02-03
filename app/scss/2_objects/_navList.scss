@@ -52,7 +52,7 @@ list-style:none;
     padding:0;
     list-style:none; 
     .navList__title{      
-      font-size: ms(1);
+      @include typi(h5);
       font-family: $font-sans;
       text-transform: uppercase;
       font-weight: bold;        

@@ -1,0 +1,39 @@
+@mixin tile(
+  $textColor: $lbg,
+  $bgColor: $tertiary
+){
+    max-width: 20em;
+    height: auto;
+    position: relative;
+    z-index: 0;
+    display:block;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 0.16em;
+    img, .tile__img{
+        width:100%;
+        height: auto;        
+    }//end .tile__img
+    span, .tile__title{
+        position: absolute;
+        z-index: 10;
+        bottom:0;
+        left:0;
+        width:100%;
+        height: auto;
+        box-sizing: border-box;        
+        padding: $pad-quarter;
+        font-size: $font-size-med-2;
+        text-transform: uppercase;
+        color: $textColor;
+        background-color: set-alpha($bgColor, 0.9);
+        font-weight: bold;
+        transition: background-color 0.2s ease-in-out;
+    }//end .tile__title
+
+    &:hover, &:focus, &:active{
+        span, .tile__title{ background-color: set-alpha(lighten($bgColor, 10), 0.9); }
+        img, .tile__img{ opacity: 0.9 }
+    }
+}
+.tile, %tile{ @include tile();}

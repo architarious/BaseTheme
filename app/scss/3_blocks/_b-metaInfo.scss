@@ -1,0 +1,51 @@
+@mixin b-metaInfo(
+    $textColor: $gray-dark-4,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow
+){
+    display: flex;
+    flex-flow: row nowrap;
+    color: $textColor;
+    @include typi(meta);
+
+    a{ 
+        color: $textColor; 
+        transition: all 0.2s ease-in-out;
+        text-decoration: none;
+        &:hover, &:focus, &:active{
+            color: $ctaColor;         
+        }
+    }//end a
+    
+    .b-metaInfo__tags, .b-metaInfo__likes{
+        border-right: 1px solid $shadow;
+        padding: 0 $pad-half;
+    }
+    .b-metaInfo__likes, .b-metaInfo__comments{        
+        @extend %icon;
+        &:before{ 
+            padding-right: $pad-quarter;
+            transition: all 0.2s ease-in-out; 
+        }        
+        &:hover:before, &:focus:before, &:active:before{ color: $ctaColor; }
+    }
+
+    .b-metaInfo__tags{
+        padding-left:0;       
+        a { 
+            text-transform: uppercase; 
+            margin-right: $pad-half;
+            border-bottom: 1px dotted $textColor;
+            //transition: border-bottom 0.2s ease-in-out;
+            &:last-of-type{ margin-right: 0;}
+            &:hover, &:focus{ border-bottom-color: transparent;}
+        }
+    }//end b-metaInfo__tags
+    .b-metaInfo__likes{
+        &:before{ content: $fa-var-heart-o; }
+    }//end b-metaInfo__likes
+    .b-metaInfo__comments{
+        padding-left: $pad-half;
+        &:before{ content: $fa-var-comment-o;}
+    }//end b-metaInfo__comments
+}.b-metaInfo, %b-metaInfo{ @include b-metaInfo}

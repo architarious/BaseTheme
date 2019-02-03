@@ -1,4 +1,4 @@
-@mixin pagination(
+@mixin b-pagination(
   $bgColor: $lbg,
   $txtColor: $gray-dark-3,
   $ctaColor: $tertiary,
@@ -38,11 +38,11 @@
       }
     }//end & > .page
 
-    &:first-child{ padding-right: 0.75em;}
-    &:last-child{ padding-left: 0.75em;}
+    &:first-child, .b-pagination__prev{ padding-right: 0.75em;}
+    &:last-child, .b-pagination__next{ padding-left: 0.75em;}
   }//end li
 }
 
-ul.pagination{
- @include pagination();
+.b-pagination, %b-pagination{
+ @include b-pagination();
 }//end pagination

@@ -1,0 +1,46 @@
+@mixin m-display(
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    display: flex;
+    flex-flow: column nowrap;    
+    .m-display__header{}//end m-display__header
+    .m-display__body{
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: $pad 0;
+    }//end m-display__body
+    .m-display__copy{
+        p, li{ max-width: 40em;}
+    }//end m-display__copy
+    .m-display__sidebar{
+        max-width: 33%;
+        min-width: 20%;
+        margin-left: $pad;
+        //justify-self: flex-end;
+    }//end m-display__sidebar
+    .m-display__footer{
+        border-top:1px solid $shadow;
+        box-shadow: inset 0 1px 0 0 $light;
+        padding: $pad 0;
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }//end m-display__footer
+
+    @include breakpoint($bp-mobile1-1 $bp-tablet-1){
+        .m-display__body, .m-display__footer{
+            flex-flow: column nowrap;
+        }
+        .m-display__sidebar{ 
+            max-width:100%; width: 100%; 
+            margin-left: 0;
+            margin-top: $pad;
+        }
+    }//end mobile styles
+}
+.m-display, %m-display{
+    @include m-display();
+}

@@ -22,6 +22,7 @@
             <li><a href="/views/styleguide.html">Styleguide</a></li>
             <li><a href="/views/objects.html">Objects</a></li>
             <li><a href="/views/blocks.html">Blocks</a></li>
+            <li><a href="/views/modules.html">Modules</a></li>
           </ul>
         </nav>
         <a href="#primaryNav" class="b-primaryNav__trigger m-navbar__trigger" id="nav-toggle">
@@ -196,7 +197,67 @@ ul class="breadcrumbs"
   li Osolo /li
 /ul
             </code></pre>
+            <h3 id="sitAware__pagination" class="l-styleguide__subtitle">b-pagination</h3>
+            <ul class="b-pagination">
+                <li><span class="button disabled">Prev</span></li>
+                <li><a href="#" class="page active">1</a></li>
+                <li><a href="#" class="page">2</a></li>
+                <li><a href="#" class="page">3</a></li>
+                <li><span>&hellip;</span></li>
+                <li><a href="#" class="page">8</a></li>
+                <li><a href="#" class="page">9</a></li>
+                <li><a href="#" class="page">10</a></li>
+                <li><a href="#" class="button">Next</a></li>
+            </ul>
+            <pre><code>
+ul class="b-pagination"
+  li a class="button" Prev /a /li
+  li a class="page" 1 /a /li
+  li a class="page" 2 /a /li
+  li a class="page" 3 /a /li
+  li ... /li
+  li a class="page" 8 /a /li
+  li a class="page" 9 /a /li
+  li a class="page" 10 /a /li
+  li a class="button" Next /a /li 
+/ul 
+            </code></pre>
+            <h3 class="l-styleguide__subtitle">.b-metaInfo</h3>
+            <div class="b-metaInfo">
+              <div class="b-metaInfo__tags">
+                <a href="#">#Tag1</a>
+                <a href="#">#Tag2</a>
+              </div>
+              <div class="b-metaInfo__likes"><a href="#">32</a></div>
+              <div class="b-metaInfo__comments"><a href="#">145</a></div>
+            </div>          
+          <pre style="margin-top: 1em;"><code>
+.b-metaInfo 
+  .b-metaInfo__tags 
+    a #TAG 1 /a 
+    a #TAG 2 /a 
+  //.b-metaInfo__tags
+  .b-metaInfo__likes 
+    a NumberOfLikes /a
+  //.b-metaInfo__likes
+  .b-metaInfo__comments 
+    a NumberOfcomments /a
+  //.b-metaInfo__comments
+//.b-metaInfo
+          </code></pre>
           </div>
+          <h3 class="l-styleguide__subtitle">.b-published</h3>
+          <div class="b-published">
+            <time class="b-published__date" datetime="2018-11-29">November 29, 2018</time>
+            <a class="chip b-published__author" href="#">
+              <div class="chip__image"><div class="circular"><img src="http://lorempixel.com/75/75/people/9" alt=""></div></div>
+              <div class="chip__copy">
+                  <span class="chip__title">Tara Posteroza</span>                   
+              </div>
+            </a>
+          </div>
+            
+          </div><!--end #blog-->
         </article>        
     </div><!--end container-->
   </main>

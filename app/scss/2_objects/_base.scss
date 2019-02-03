@@ -1,11 +1,14 @@
+// NAVIGATIONAL OBJECTS
 @import "navList";
-@import "container";
+@import "chip";
+@import "tile";
 @import "hamburger";
-@import "pagination";
+
+// STRUCTURAL OBJECTS
+@import "container";
 @import "alerts";
 @import "media";
 @import "slider";
 @import "modal";
 @import "accordian"; 
 @import "tabNav";
-@import "chip";

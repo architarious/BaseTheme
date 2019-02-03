@@ -23,6 +23,7 @@
             <li><a href="/views/styleguide.html">Styleguide</a></li>
             <li><a href="/views/objects.html">Objects</a></li>
             <li><a href="/views/blocks.html">Blocks</a></li>
+            <li><a href="/views/modules.html">Modules</a></li>
           </ul>
         </nav>
         <a href="#primaryNav" class="b-primaryNav__trigger m-navbar__trigger" id="nav-toggle">
@@ -45,8 +46,9 @@
   </section> 
   <main class="s-main">
     <div class="container">
-        <article>            
-            <h2 id="alerts" class="l-styleguide__title">Alerts</h2>   
+        <article>      
+            <div id="alerts" class="l-styleguide__section">   
+            <h2 id="alerts__title" class="l-styleguide__title">Alerts</h2>   
             <div class="alert">
                     Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio <a href="#">porttitor</a> sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
             </div>  
@@ -67,9 +69,13 @@
                     Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio <a href="#">porttitor</a> sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
             </div>
             <p><strong>Notice Alert: </strong><code>class="alert--notice"</code></p>     
-            
-            
-            <h2 id="chip" class="l-styleguide__title">Chips</h2>
+            </div><!--end #alerts-->
+
+
+
+
+            <div id="chip" class="l-styleguide__section">            
+            <h2 id="chip__title" class="l-styleguide__title">Chips</h2>
             <p>A chip is a simple snippet of component typically consisting of a title, a short message and an avatar. It's frequently wrapped in a link, but not always.</p>
             <div class="t-objects__chips">
                 <ul class="t-objects__chips_normal">
@@ -198,9 +204,30 @@
                     </code></pre>
                 </ul>
             </div>
+            </div><!--end #chip-->
 
 
-            <h2 id="mediaObjects" class="l-styleguide__title">Media Objects</h2>
+            <div id="tile" class="l-styleguide__section">
+                <h2 id="tiles__title" class="l-styleguide__title">Tiles</h2>
+                <a href="#" class="tile">
+                    <img class="tile__img" src="http://lorempixel.com/287/191/business/9" alt=""/>
+                    <span class="tile__title">Sed mattis nunc id lorem</span>
+                </a>
+                <pre style="width:100%; margin-top: 1em;"><code>
+a.tile 
+  img.tile__image INSERT IMAGE SRC HERE /.chip__image
+  .tile__title
+    .chip__title INSERT TITLE HERE 
+  /.tile__title
+/.tile  
+                </code></pre>
+            </div><!--end #tile-->
+
+
+
+
+            <div id="mediaObjects" class="l-styleguide__section">
+            <h2 id="mediaObjects__title" class="l-styleguide__title">Media Objects</h2>
             <p><span class="lede">Media objects are frequently used to link to blog posts or other items elsewhere in the site</span></p>
             <h3 id="media_spotlight" class="l-styleguide__subtitle">Spotlights</h3>
             <ul class="row">
@@ -416,10 +443,12 @@ div class="blurb"
   /div
 /div
             </code></pre>
+            </div><!--end #mediaObjects-->
+
 
   
-
-            <h2 id="navList" class="l-styleguide__title">Navigation Lists</h2>
+            <div id="navList" class="l-styleguide__section">
+            <h2 id="navList__title" class="l-styleguide__title">Navigation Lists</h2>
             <p>Four different variations of navigational lists exist for a variety of different purposes. In order to recolor them use the <code>navList--recolor($textColor, $shadowColor, $lightColor)</code> mixin within the UL styles of your navList.</p>
             <h3 id="navList__horizontal" class="l-styleguide__subtitle">Nav. List: Horizontal</h3>
             <ul class="navList">
@@ -536,9 +565,12 @@ div class="navList--condensed"
   /ul
 /div
             </code></pre>
+            </div><!--end #navlist-->
 
 
-            <h2 id="slider" class="l-styleguide__title">Image Sliders</h2>
+
+            <div id="slider" class="l-styleguide__section">
+            <h2 id="slider__title" class="l-styleguide__title">Image Sliders</h2>
             
 
             <h3 id="slider__slick" class="l-styleguide__subtitle" >Slick Slider</h3>
@@ -781,8 +813,11 @@ div class="autoSlider"
   /div
 /div               
             </code></pre>
+            </div><!--end #slider-->
             
-            <h2 id="modal" class="l-styleguide__title">Modal</h2>
+
+            <div id="modal" class="l-styleguide__section">
+            <h2 id="modal__title" class="l-styleguide__title">Modal</h2>
             <button id="modal-1_btn" class="modal_btn">Open Modal</button>
             <div id="modal-1" class="modal">
                 <div class="modal__content">
@@ -846,8 +881,10 @@ div id="modal-1" class="modal"
 ::JAVASCRIPT::
 modal("#modal-1_btn", "#modal-1");
             </code></pre>
-            
-            <h2 id="accordian" class="l-styleguide__title">Accordian</h2>
+            </div><!--end #modal-->
+
+            <div id="accordian" class="l-styleguide__section">
+            <h2 id="accordian__title" class="l-styleguide__title">Accordian</h2>
             <h3 id="accordian__default" class="l-styleguide__subtitle">Default Accordian</h3>
             <dl class="accordian" id="accordian-1">
               <dt class="accordian__title"><a href="" class="accordian__trigger">Title 1</a></dt>
@@ -934,8 +971,11 @@ accordian("#accordian-1");
             </dl>
             <p style="max-width: 100%;">To implement the dark variant simply add accordian--dark after accordian within the first elements class attribute.</p>
             <p style="max-width: 100%;">To style different variations of the accordian, use the <code>accordian--custom(<strong>$background-color, $text-color, $copy-color, $cta-color, $active-color, $shadow, $light, $font-size, $uppercase</strong>)</code> mixin</p>
+            </div><!--end #accordian-->
 
-            <h2 id="tabs" class="l-styleguide__title">Tabs</h2>
+
+            <div id="tabs" class="l-styleguide__section">
+            <h2 id="tabs__title" class="l-styleguide__title">Tabs</h2>
             <div id="tabNav-1" class="tabNav">
                 <ul class="tabNav__tabs">
                     <li><a href="panel-1">Panel #1</a></li>
@@ -982,32 +1022,8 @@ div id="tabNav-1" class="tabNav"
 ::JAVASCRIPT::
 tabNav("#tabNav-1");
             </code></pre>
+            </div><!--end #tabs-->
             
-            <h2 id="pagination" class="l-styleguide__title">Pagination</h2>
-            <ul class="pagination">
-                <li><span class="button disabled">Prev</span></li>
-                <li><a href="#" class="page active">1</a></li>
-                <li><a href="#" class="page">2</a></li>
-                <li><a href="#" class="page">3</a></li>
-                <li><span>&hellip;</span></li>
-                <li><a href="#" class="page">8</a></li>
-                <li><a href="#" class="page">9</a></li>
-                <li><a href="#" class="page">10</a></li>
-                <li><a href="#" class="button">Next</a></li>
-            </ul>
-            <pre><code>
-ul class="pagination"
-  li a class="button" Prev /a /li
-  li a class="page" 1 /a /li
-  li a class="page" 2 /a /li
-  li a class="page" 3 /a /li
-  li ... /li
-  li a class="page" 8 /a /li
-  li a class="page" 9 /a /li
-  li a class="page" 10 /a /li
-  li a class="button" Next /a /li 
-/ul 
-            </code></pre>
         </article>        
     </div><!--end container-->
   </main>

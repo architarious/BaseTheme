@@ -1,5 +1,7 @@
-.m-navbar{
-	width:100%; float:left;	
+@mixin m-navbar(){
+
+
+	width:100%; 
 	display:flex;
 	flex-flow:row nowrap;
   .b-siteName{ 
@@ -25,5 +27,8 @@
 		.m-navbar__trigger{}//end m-navbar__trigger
 
 	}//end mobile breakpoint
-}//end m-navbar
 
+}
+.m-navbar, %m-navbar{
+  @include m-navbar();
+}//end m-navbar
