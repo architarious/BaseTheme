@@ -6,7 +6,8 @@
   $light: $dbg--light
 ){
   width:100%;
-  float:left;
+  display:flex;
+  flex-flow: column nowrap;
 
   .container{ 
       padding-top: vr(1);

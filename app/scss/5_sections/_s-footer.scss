@@ -8,7 +8,7 @@
   .s-footer{  
     background:$bgColor; 
     width:100%;
-    float:left;
+    display:flex;
     box-shadow: inset 0 ms(-9) ms(-5) ms(-8) $shadow;
     font-size: $font-size-small-2;
     padding: vr(2) 0;

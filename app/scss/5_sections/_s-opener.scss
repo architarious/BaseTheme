@@ -1,6 +1,7 @@
 .s-opener{
   width:100%;
-  float:left;
+  display: flex;
+  flex-flow: column nowrap;
   padding: 3em 0;  
   background: linear-gradient(90deg, $primary, mix($primary, $secondary, 60%));
   background-size: 400% 400%;
