@@ -1,0 +1,75 @@
+@mixin m-post(
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    display: flex;
+    flex-flow: column nowrap;    
+    .m-post__header{
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        .b-title--mini{
+            text-decoration: none; 
+           
+            .b-title__title{ 
+                color: $primary; 
+                transition: color 0.2s ease-in-out; 
+            } 
+            &:hover, &:focus, &:active{
+                .b-title__title{ color: $ctaColor;}
+            }
+        }
+        .b-published{ 
+            border-left: 1px solid $shadow;
+            box-shadow: inset 2px 0 0 0 $light;
+            min-width: 11.5em;
+            width: 33%;
+            align-items: flex-end;
+            justify-content: center;
+            padding-left: $pad-half;
+            margin-lefT: $pad-half;
+        }        
+    }//end m-post__header
+    .m-post__body{
+        padding: $pad 0;
+    }//end m-post__body
+    .m-post__image{
+        @extend %image;
+        width:100%;
+        
+    }//end m-post__image
+    .m-post__copy{}//end m-post__copy
+    .m-post__footer{
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }//end m-post__footer
+    .m-post__cta{
+        display:flex;
+        flex-flow: row nowrap;
+    }//end m-post__cta
+
+    @include breakpoint($bp-mobile1-1 $bp-tablet-1){
+       .m-post__header{
+           flex-flow: column nowrap;
+           .b-published{
+               flex-flow: row nowrap;
+               padding: 0; margin: 0;
+               width: 100%;
+               border-left:0;
+               box-shadow: none;
+               justify-content: space-between;
+               align-items: center;                           
+           }
+       }//end m-post__header 
+    }
+    @include breakpoint($bp-mobile1-1 $bp-mobile2-2){
+        .m-post__footer{ 
+            flex-flow: column nowrap;
+            .b-metaInfo{ margin: $pad 0;}
+        }
+    }
+}
+.m-post, %m-post{ @include m-post(); }

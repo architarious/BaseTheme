@@ -34,6 +34,7 @@
         .m-display__body, .m-display__footer{
             flex-flow: column nowrap;
         }
+        .m-display__copy{ width:100%;}
         .m-display__sidebar{ 
             max-width:100%; width: 100%; 
             margin-left: 0;
@@ -43,4 +44,12 @@
 }
 .m-display, %m-display{
     @include m-display();
+}
+
+.m-display--cols, %m-display--triptych{
+    @extend %m-display;
+    .m-display__body{
+        @extend %row;
+        .m-display__copy{ padding-right: $pad;}
+    }//end m-display__body
 }
