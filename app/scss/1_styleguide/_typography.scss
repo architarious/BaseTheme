@@ -485,36 +485,36 @@ $typi:(
   )
 );
 @include typi-init;
-h1{
+h1, %h1{
   @include typi('h1');
   margin: vr(4) 0;
 }
-h2{
+h2, %h2{
   @include typi('h2');
   margin: vr(3) 0;
 }
-h3{
+h3, %h3{
   @include typi('h3');
   margin: vr(2) 0;
 }
-h4{ 
+h4, %h4{ 
   @include typi('h4');
   margin: vr(1) 0;
 }
-h5, h6{
+h5, h6, %h5, %h6{
   @include typi('h5');
   margin: vr(0.75) 0;
 }
-h6{ margin:vr(0.25) 0;}
+h6, %h6{ margin:vr(0.25) 0;}
 p, li{
   @include typi('p');
   margin: vr(1) 0;
 }
-.headline{ 
+.headline, %headline{ 
   @include typi('headline');
   padding-top: vr(1.618);
 }
-.subHeadline{
+.subHeadline, %subHeadline{
   @include typi('subHeadline');
   padding-bottom: vr(1.618);
 }

@@ -22,3 +22,18 @@
   }
 
 */
+
+@mixin animatedGradient(
+  $color1: $primary,
+  $color2: set-hue($color1, 20)
+){
+  background: linear-gradient(90deg, $color1, mix($color1, $color2, 40%), $color2);
+  background-size: 400% 400%;
+  animation: open 40s ease-in-out infinite;
+  @keyframes open { 
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+  }//end keyframes
+}
+.animatedGradient, %animatedGradient{ @include animatedGradient();}
