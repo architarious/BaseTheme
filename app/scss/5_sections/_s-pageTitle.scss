@@ -1,0 +1,59 @@
+@mixin s-pageTitle(
+  $bgColor: $lbg,
+  $accentColor: $gray-light-2,
+  $titleColor: $primary,
+  $textColor: $gray-dark-3
+){
+    width:100%;
+    position:relative;
+    display: flex;
+    @include b-title--recolor($titleColor, $textColor);
+    padding: $pad-double 0;
+    @include breakpoint($bp-desktop2-1){
+        padding: $pad-triple 0;
+    }
+    @include breakpoint($bp-desktop2-1){
+        padding: $pad-quadruple 0;
+    }
+    .container{padding: 0;}
+    .b-title{
+        font-size: ms(0);
+        margin:0;
+    }
+    .b-title__title{padding-top: 0;}
+    .b-title__subtitle{ padding-bottom: 0;}
+    .s-pageTitle__background{
+        width:100%; 
+        height: 100%;
+        position: absolute; 
+        z-index: -1;
+        overflow: hidden;
+        top:0;
+        background-color: $bgColor;
+        pattern{ fill: $accentColor;}
+        img{width: 100%; height: auto;}
+    }
+}.s-pageTitle, %s-pageTitle{ @include s-pageTitle();}
+
+
+
+@mixin s-pageTitle--alt(
+  $bgColor: $primary,
+  $textBG: $lbg,
+  $accentColor: $primary,
+  $titleColor: $primary,
+  $textColor: $gray-dark-4,
+){
+    @extend %s-pageTitle;
+    @include b-title--recolor($titleColor, $textColor);
+    .b-title{ 
+        @extend %box;
+        box-sizing: border-box;
+        background-color: set-alpha($textBG, 0.90); 
+        box-shadow: 0 5px 20px -5px darken($bgColor, 20);
+    }
+    .s-pageTitle__background{
+        @include animatedGradient($bgColor);
+        pattern{ fill: $accentColor;}
+    }
+}.s-pageTitle--alt, %s-pageTitle--alt{ @include s-pageTitle--alt(); }

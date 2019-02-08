@@ -3,8 +3,7 @@
     $txtColor: $black,
     $ctaColor: $tertiary,
     $boxColor: $gray-light-2,
-    $borderColor: $gray-light-3,
-    $shadow: $lbg--shadow
+    $borderColor: $gray-light-3
 ){
     @include form--recolor($txtColor, $ctaColor, $boxColor, $borderColor);
 
@@ -41,10 +40,10 @@
        width:100%;        
        
        input{
-           @include button--recolor($ctaColor, $bgColor, $shadow);
+           @include button--recolor($ctaColor, $bgColor);
            &[type="submit"]{}//end input[type="submit"]
            &[type="reset"]{
-            @include button--recolor($ctaColor, $ctaColor, $shadow); 
+            @include button--recolor($ctaColor, $ctaColor); 
             background-color: transparent;
             &:hover, &:focus, &:active, &:visited{ 
               background-color: transparent;

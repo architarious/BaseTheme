@@ -36,7 +36,7 @@
       </div>
     </div><!--end container-->
   </header>
-  <section class="s-pageTitle--animated">
+  <section class="s-pageTitle--alt">
 	  <div class="container">
       <div class="b-title">
         <h1 class="b-title__title">Sections</h1>
@@ -93,7 +93,7 @@
     </header>
     <div class="container">
         <article>          
-            <h3 id="common__main" class="l-styleguide__subtitle">.s-main</h3>      
+            <h3 id="common__main" class="l-styleguide__subtitle" style="padding-top: 3em;">.s-main</h3>      
         </article>        
     </div><!--end container-->
     <main class="s-main">
@@ -127,7 +127,7 @@
     </main>
     <div class="container">
         <article>          
-            <h3 id="common__footer" class="l-styleguide__subtitle">.s-footer</h3>      
+            <h3 id="common__footer" class="l-styleguide__subtitle" style="padding-top: 3em;">.s-footer</h3>      
         </article>        
     </div><!--end container-->
     <footer class="s-footer">
@@ -193,12 +193,12 @@
         </section> 
         <div class="container">
             <article>          
-                <h3 id="pageHeadings__pageTitle" class="l-styleguide__subtitle">.s-pageTitle</h3>      
+                <h3 id="pageHeadings__pageTitle-alt" class="l-styleguide__subtitle" style="padding-top: 3em;">.s-pageTitle--alt</h3>      
             </article>        
         </div><!--end container-->
-        <section class="s-pageTitle--animated">
+        <section class="s-pageTitle--alt">
           <div class="container">
-            <div class="b-title">
+            <div class="b-title"> 
               <h1 class="b-title__title">Page Title</h1>
               <p class="b-title__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam architecto voluptatum quis ab saepe accusantium repellendus sapiente labore necessitatibus esse?</p>
             </div>
@@ -215,6 +215,53 @@
           </div>
         </section> 
     </div><!--end #pageHeadings-->
+    <div id="cta" class="l-styleguide__section">
+        <div class="container">
+            <article>          
+                <h2 class="l-styleguide__title" id="cta__title">Calls to Action</h2>
+                <h3 id="cta__jumbotron" class="l-styleguide__subtitle">.s-jumbotron</h3>      
+            </article>        
+        </div><!--end container-->
+        <section class="s-jumbotron">
+            <div class="container">
+                <h2 class="s-jumbotron__headline">Jumbotron Headline</h2>
+                <p class="s-jumbotron__lede">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, minus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, fugit!</p>
+                <div class="s-jumbotron__cta">
+                    <a href="#" class="button">Primary call to action</a>
+                    <p>Here is a secondary <a href="#">call to action</a></p>
+                </div>
+            </div>
+            <div class="s-jumbotron__background">
+                <svg width="100%" height="100%" >
+                    <defs>                    
+                        <pattern id="wiggles"  viewBox="0 0 52 26" width="52" height="26" patternUnits="userSpaceOnUse" fill-rule="evenodd">                
+                            <path d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z" />
+                        </pattern>
+                    </defs>
+                    <rect x="0" y="0" width="100%" height="100%" fill="url(#wiggles)"></rect>
+                </svg>
+            </div>
+        </section>
+        <div class="container">
+                <article >          
+                    <h3 id="cta__hero" class="l-styleguide__subtitle" style="padding-top: 3em;">.s-hero</h3>      
+                </article>        
+            </div><!--end container-->
+            <section class="s-hero">
+                <div class="container">
+                    <h2 class="s-hero__headline">Hero Headline</h2>
+                    <p class="s-hero__lede">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, minus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, fugit!</p>
+                    <div class="s-hero__cta">
+                        <a href="#" class="button">Primary call to action</a>
+                        <p>Here is a secondary <a href="#">call to action</a></p>
+                    </div>
+                </div>
+                <div class="s-hero__background">
+                    <img src="http://lorempixel.com/1620/700/transport/3" >
+                </div>
+            </section>
+    </div><!--end #cta-->
+        
   </main>
   <footer class="s-footer">
     <div class="container">

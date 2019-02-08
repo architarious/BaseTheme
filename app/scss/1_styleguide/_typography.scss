@@ -465,6 +465,15 @@ $typi:(
     desktop2: ($font-size-xxxlarge),
     desktop3: ($font-size-xxxlarge-2)
   ),
+  headline-2:(
+    null: ( $font-size-xxlarge, 1),
+    mobile1: ($font-size-xlarge-2),
+    mobile2: ($font-size-xlarge-2),
+    tablet: ($font-size-xxlarge),
+    desktop1: ($font-size-xxlarge),
+    desktop2: ($font-size-xxlarge-2),
+    desktop3: ($font-size-xxxlarge)
+  ),
   subHeadline:(
     null: ( $font-size-large-2, 1.168),
     mobile1: ($font-size-large),

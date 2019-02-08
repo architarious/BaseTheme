@@ -1,7 +1,6 @@
 @mixin button(
   $buttonColor: $tertiary,
-  $txtColor: $lbg,
-  $shadow: $lbg--shadow
+  $txtColor: $lbg
 ){
   
   padding:0.618em;
@@ -48,10 +47,9 @@
 
 @mixin button--outline(
   $buttonColor: $tertiary,
-  $txtColor: $black,
-  $shadow: $lbg--shadow
+  $txtColor: $black
 ){
-  @include button($buttonColor, $buttonColor, $shadow);
+  @include button($buttonColor, $buttonColor);
     background-color: transparent;
     &:hover, &:focus, &:active, &:visited{ 
       background-color: transparent;
@@ -60,8 +58,7 @@
 
 @mixin button--recolor(
   $buttonColor: $tertiary,
-  $txtColor: $lbg,
-  $shadow: $lbg--shadow
+  $txtColor: $lbg
 ){
   background-color: $buttonColor;
   color:$txtColor;  

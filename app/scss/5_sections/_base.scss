@@ -1,5 +1,12 @@
 @import "s-opener";  
+//Common Sections
 @import "s-footer"; 
 @import "s-header";     
 @import "s-main";
+
+//Page Headings
 @import "s-pageTitle";
+
+//Calls to Action
+@import "s-jumbotron";
+@import "s-hero";
