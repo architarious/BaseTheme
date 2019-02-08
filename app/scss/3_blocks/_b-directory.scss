@@ -1,0 +1,82 @@
+@mixin b-directory(
+    $textColor: $gray-dark-2,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    display: flex;
+    flex-flow: column nowrap;
+    padding:0;
+    margin:0;
+    list-style: none;
+    font-size: 1rem !important;    
+    margin: $pad-quarter 0 !important;
+    width:100%;
+
+    .b-directory__item, & > li{
+        display: flex;
+        flex-flow: row nowrap;
+        list-style: none;
+        padding: $pad-half 0; 
+        line-height: ms(0);
+        margin:0 0 $pad-quarter 0;
+        width:100%; max-width: 100% !important;
+        border-bottom: 1px solid $shadow;
+        box-shadow: 0 1px 0 0 $light;
+        &:last-child{ border-bottom:0; box-shadow: none;}
+
+        & > div{ 
+            width: 20%;
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: $textColor;
+            padding-left: $pad-half;
+            box-sizing: display;
+            font-size:$font-size-small-2;
+        }
+        .icon:before{ 
+            padding-right: $pad-quarter/2; 
+            min-width: ms(1);
+            float:left;
+            text-align: center;
+        }
+
+        a{
+            color:$textColor;
+            &:hover, &:focus, &:active{
+                color: $ctaColor;
+            }
+        }
+
+        .b-directory__chip{
+            width: 30%;
+        }//end b-directory__chip
+        .b-directory__phone{
+            width: 15%;
+        }//end b-directory__phone
+        .b-directory__email{}//end b-directory__email
+        .b-directory__website{
+            width: 15%;
+        }//end b-directory__website
+        .b-directory__social{}//end b-directory__social       
+
+    }//end b-directory__item
+
+    @include breakpoint($bp-mobile1-1 $bp-tablet-1){
+        flex-flow: row wrap;
+        .b-directory__item, & > li{ 
+            flex-flow: column nowrap; width: 50%; 
+            & > div{ width: 100% !important; font-size: $font-size-med; line-height: $font-size-med-2;}
+        }
+    }
+    @include breakpoint($bp-tablet-1 $bp-desktop1-1){
+        .b-directory__item, & > li > div{ font-size: $font-size-small-2;} 
+    }
+
+    
+  
+}
+.b-directory, %b-directory{
+    @include b-directory(); 
+}

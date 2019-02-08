@@ -1,0 +1,12 @@
+@mixin t-directory(
+    $bgColor: $lbg,
+    $titleColor: $gray-dark-3,
+    $subtitleColor: $gray-dark-4,
+    $accentColor: $primary,
+    $textColor: $black,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    .m-display__copy{ width: 100%;} 
+}.t-directory, %t-directory{ @include t-directory();}

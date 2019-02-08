@@ -8,6 +8,17 @@
     $shadow: $lbg--shadow,
     $light: $lbg--light
 ){
+    .s-header{
+        @include breakpoint($bp-tablet-1 $bp-desktop1-1){
+            .b-primaryNav__list li{ font-size: 12px}
+        }
+        @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
+            .b-primaryNav__list li{ font-size: 14px}
+        }
+        @include breakpoint($bp-desktop2-1 ){
+            .b-primaryNav__list li{ font-size: 16px}
+        }       
+    }//end s-header
 
 .l-styleguide__title{
     margin: vr(6) 0 vr(3) 0;
