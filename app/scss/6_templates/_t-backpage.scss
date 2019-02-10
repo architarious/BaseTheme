@@ -1,4 +1,4 @@
-@mixin t-directory(
+@mixin t-backpage(
     $bgColor: $lbg,
     $headerBG: $lbg,
     $titleColor: $primary,
@@ -16,4 +16,4 @@
         @include m-department--recolor($bgColor, $titleColor, $textColor, $ctaColor, $shadow, $light);
         .m-department ~ .m-department{padding-top: $pad-triple;}
     }//end s-main
-}.t-directory, %t-directory{ @include t-directory();}
+}.t-backpage, %t-backpage{ @include t-backpage();}

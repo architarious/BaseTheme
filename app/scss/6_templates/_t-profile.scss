@@ -1,0 +1,41 @@
+@mixin t-profile(
+    $bgColor: $lbg,
+    $headerBG: $lbg,
+    $titleColor: $primary,
+    $subtitleColor: $gray-dark-4,
+    $accentColor: $gray-light-2,
+    $textColor: $black,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    .s-pageTitle{
+        @include s-pageTitle--recolor($headerBG, $shadow, $titleColor, $subtitleColor);
+        .container{
+            display:flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            .b-title{ 
+                order: 2;
+                .b-title__meta > span{
+                    color:lighten($subtitleColor, 10);
+                    background: set-alpha($headerBG, 0.5);
+                    border-radius: 0.2em;
+                    padding: $pad-quarter $pad-half;
+                    width: auto;
+                    box-sizing: content-box;
+                }
+            }
+            
+            .s-pageTitle__image{
+                order:1;
+                padding-right: $pad;
+            }
+        }
+    }//end s-pageTitle
+    .s-main{
+        @include m-department--recolor($bgColor, $titleColor, $textColor, $ctaColor, $shadow, $light);
+        .m-department ~ .m-department{padding-top: $pad-triple;}
+        .m-display__sidebar .b-contactDetails__item{ font-size: $font-size-small-2 !important;}
+    }//end s-main
+}.t-profile, %t-profile{ @include t-profile();}

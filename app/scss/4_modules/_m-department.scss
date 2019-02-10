@@ -1,0 +1,114 @@
+@mixin m-department(
+    $bgColor: $lbg,
+    $titleColor: $primary,
+    $textColor: $gray-dark-3,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    display: flex;
+    flex-flow: column nowrap;    
+    transition: all 0.2s ease-in-out;
+    .m-department__header{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;       
+        .b-title--mini, .b-title{ 
+            padding:0;
+            @include b-title--recolor($titleColor, $textColor);
+            .b-title__subtitle{
+                font-family: $font-sans;
+                font-weight: 100;
+            }
+        }      
+    }//end m-department__header
+    .m-department__links{
+        display:flex;
+        flex-flow: column nowrap;
+    }//end m-department__links
+    .m-department__home{ 
+        .button{ @include button--recolor($ctaColor, $bgColor);}
+    }//end m-department__home
+    .m-department__social{
+        display:flex;
+        flex-flow: column nowrap;
+        @include typi("meta");
+        a{ 
+            padding-top: $pad-quarter; 
+            color: $textColor; 
+            &:hover, &:focus{
+                color: $ctaColor;
+            }
+            &:before{ padding-right: $pad-quarter;}
+        }//end a
+    }//end m-department__social
+    .m-department__body{
+        //display:flex;
+        //flex-flow: row nowrap;
+        //justify-content: space-between;
+        padding: $pad 0;
+    }//end m-department__body
+    .m-department__copy{ 
+        .b-department{ @include b-directory--recolor($textColor, $ctaColor, $shadow, $light);}
+    }//end m-department__copy
+    .m-department__sidebar{
+        max-width: 33%;
+        min-width: 20%;
+        margin-left: $pad;
+        //justify-self: flex-end;
+    }//end m-department__sidebar
+    .m-department__footer{
+        border-top:1px solid $shadow;
+        box-shadow: inset 0 1px 0 0 $light;
+        padding: $pad 0;
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }//end m-department__footer
+
+    @include breakpoint($bp-mobile1-1 $bp-tablet-1){
+        .m-department__body, .m-department__footer,.m-department__header{
+            flex-flow: column nowrap;
+        }
+        .m-department__header{ justify-content: center; text-align: center;}
+        .m-department__links{ flex-flow: row wrap; align-items: center; justify-content: center;}
+        .m-department__social{ padding-left: $pad; a:first-child{ padding-top: 0;}}
+        .m-department__copy{ width:100%;}
+        .m-department__sidebar{ 
+            max-width:100%; width: 100%; 
+            margin-left: 0;
+            margin-top: $pad;
+        }
+    }//end mobile styles
+}
+.m-department, %m-department{
+    @include m-department();
+}
+
+@mixin m-department--recolor(
+    $bgColor: $lbg,
+    $titleColor: $primary,
+    $textColor: $gray-dark-3,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light 
+){
+    .m-department__header{ 
+        .b-title, .b-title--mini{  @include b-title--recolor($titleColor, $textColor); }
+    }//end m-department__header
+    .m-department__home .button{ @include button--recolor($ctaColor, $bgColor); }//end m-department__home .button
+    .m-department__social a{        
+        color: $textColor; 
+        &:hover, &:focus{
+            color: $ctaColor;
+        }
+    }//end m-department__social a
+    .m-department__copy .b-department{ @include b-directory--recolor($textColor, $ctaColor, $shadow, $light);}//end m-department__copy
+    .m-department__footer{
+        border-top-color: $shadow;
+        box-shadow: inset 0 1px 0 0 $light;
+     }
+
+}

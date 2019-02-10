@@ -6,7 +6,7 @@
     
     
 </head>
-<body class="l-default t-default">
+<body class="l-default t-profile">
   <header class="s-header">
     <div class="container">      
         <div class="m-navbar" id="nav-container">
@@ -35,11 +35,15 @@
     </div><!--end container-->
   </header>
   <section class="s-pageTitle">
-	  <div class="container">
+	  <div class="container">        
       <div class="b-title">
-        <h1 class="b-title__title">Default template</h1>
-        <p class="b-title__subtitle">A brief page description goes here.</p>
+        <div class="b-title__meta"><span>Department Name</span></div>
+        <h1 class="b-title__title">Cassie Redleaf</h1>
+        <p class="b-title__subtitle">Professional Technologist</p>
       </div>
+      <div class="s-pageTitle__image">
+            <div class="circular"><img src="http://lorempixel.com/275/275/people/9" alt=""></div>
+      </div>  
     </div>
     <div class="s-pageTitle__background">
       <svg width="100%" height="100%" >
@@ -57,25 +61,36 @@
         <article class="m-display">
             <div class="m-display__body">
                 <div class="m-display__copy">
-                    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                    <h2>Background</h2>
                     <p class="lede">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione laudantium placeat non!</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis recusandae sapiente dolores illo excepturi ullam. Id expedita illum natus fuga impedit architecto optio, itaque dicta, eligendi quasi cumque facere totam?</p>
-                    <p>Possimus sit eligendi eos tempore! Iusto in et voluptate natus est vel! Optio, numquam deleniti totam rem maxime hic a accusamus animi? Perspiciatis, est pariatur impedit necessitatibus id recusandae sint?</p>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, beatae.</h3>
+                    <p>Possimus sit eligendi eos tempore! Iusto in et voluptate natus est vel! Optio, numquam deleniti totam rem maxime hic a accusamus animi? Perspiciatis, est pariatur impedit necessitatibus id recusandae sint?</p>                    
                     <p>Esse, atque, exercitationem fuga modi cupiditate quaerat itaque natus beatae veritatis ab perspiciatis veniam accusamus impedit earum labore placeat. Vero perferendis consequatur expedita nesciunt suscipit, ex eius molestiae facere totam.</p>
                     <p>Impedit corporis suscipit soluta maiores tenetur expedita aliquid ipsum provident iste ea ab, alias, ad dolorem odit architecto sequi quidem dolorum repellat nostrum officiis odio, recusandae sit ipsam! Est, reiciendis!</p>
-                    <p>Eos dolores ipsum iusto. Facilis totam natus obcaecati deserunt minima, nam iusto explicabo quod aspernatur sed maiores sunt est nihil velit accusantium quo nemo omnis consectetur vero. A, quia culpa!</p>
+                    <h3>Education</h3>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Sit necessitatibus quo odio placeat!</li>
+                        <li>Cupiditate numquam odio ipsum sequi.</li>
+                    </ul>
+                    <h3>Interests</h3>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quibusdam, minima earum ea rem voluptate quae vel a molestiae soluta.</li>
+                        <li>Ducimus nostrum quos soluta corporis repellat laudantium quisquam, porro maiores quibusdam eligendi esse maxime omnis at facilis in alias natus?</li>
+                        <li>Exercitationem magni explicabo excepturi fugiat est facere, fugit similique doloremque obcaecati aperiam officia animi accusamus quibusdam blanditiis quidem nemo quae.</li>
+                        <li>Corrupti esse sunt sint expedita repudiandae, mollitia magnam odit, perspiciatis commodi quidem minus corporis doloremque. Consequuntur, incidunt. Eaque, voluptatem quae.</li>
+                        <li>Optio harum magnam aliquam eius doloribus architecto tenetur dignissimos mollitia expedita, doloremque veritatis placeat totam aliquid quo dolorem repellat ratione?</li>
+                    </ul>
                 </div>
                 <aside class="m-display__sidebar">
-                    <nav class="b-secondaryNav">
-                        <ul class="navList">
-                            <li><a href="#">Lorem, ipsum dolor.</a></li>
-                            <li><a href="#">Cupiditate, nostrum! Ut!</a></li>
-                            <li><a href="#">Sequi, asperiores modi.</a></li>
-                            <li><a href="#">Impedit, itaque ipsa?</a></li>
-                            <li><a href="#">Non, totam animi.</a></li>
-                        </ul>
-                    </nav>
+                    <ul class="b-contactDetails">
+                        <li class="b-contactDetails__item"><a class="icon fa-phone" href="@tel:#">555-555-5555</a><br/></li>
+                        <li class="b-contactDetails__item"><a class="icon fa-envelope" href="@mail:#">Readleaf@emailaddress.com</a><br/></li>
+                        <li class="b-contactDetails__item"><span class="icon fa-map-marker">123 Readleaf Street, WV 12345</span><br/></li>
+                        <li class="b-contactDetails__item"><a class="icon fa-twitter" href="@twitter:#">@Readleaf</a><br/></li>
+                        <li class="b-contactDetails__item"><a class="icon fa-link" href="#">ReadleafsWebsite.com</a><br/></li>
+                        <li class="b-contactDetails__item"><a class="icon fa-file-pdf-o" href="#">Download Cassies CV</a><br/></li>
+                    </ul>
                 </aside>
             </div>
         </article>
@@ -117,11 +132,11 @@
     </div><!--end container-->
   </footer>
     <!--<script src="../bower_components/eq.js/dist/eq.min.js"></script>-->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
     <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
-    <script src="../javascripts/vendor/slick.min.js"></script>
-    <script src="../javascripts/main.min.js"></script>
+    <script src="/javascripts/vendor/slick.min.js"></script>
+    <script src="/javascripts/main.min.js"></script>
     
 </body>
 

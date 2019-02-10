@@ -35,6 +35,19 @@
     }
 }.s-pageTitle, %s-pageTitle{ @include s-pageTitle();}
 
+@mixin s-pageTitle--recolor(
+  $bgColor: $lbg,
+  $accentColor: $gray-light-2,
+  $titleColor: $primary,
+  $textColor: $gray-dark-3
+){
+    @include b-title--recolor($titleColor, $textColor);
+    .s-pageTitle__background{
+        background-color: $bgColor;
+        pattern{ fill: $accentColor;}
+    }
+}
+
 
 
 @mixin s-pageTitle--alt(
@@ -57,3 +70,22 @@
         pattern{ fill: $accentColor;}
     }
 }.s-pageTitle--alt, %s-pageTitle--alt{ @include s-pageTitle--alt(); }
+
+
+@mixin s-pageTitle--alt--recolor(
+  $bgColor: $lbg,
+  $accentColor: $gray-light-2,
+  $titleColor: $primary,
+  $textColor: $gray-dark-3
+){
+    @include b-title--recolor($titleColor, $textColor);
+    .b-title{
+        background-color: set-alpha($textBG, 0.90); 
+        box-shadow: 0 5px 20px -5px darken($bgColor, 20);
+    }
+    .s-pageTitle__background{
+        background-color: $bgColor;
+        @include animatedGradient($bgColor);
+        pattern{ fill: $accentColor;}
+    }
+}

@@ -80,3 +80,20 @@
 .b-directory, %b-directory{
     @include b-directory(); 
 }
+
+@mixin b-directory--recolor(
+    $textColor: $gray-dark-2,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    .b-directory__item, & > li{
+        & > div, a{ color: $textColor;}
+        a:hover, a:focus, a:active{ color: $ctaColor;}
+    }
+    .b-directory__item, & > li{
+        border-bottom-color:$shadow;
+        box-shadow: 0 1px 0 0 $light;
+        &:last-child{ box-shadow: none;}
+    }
+}
