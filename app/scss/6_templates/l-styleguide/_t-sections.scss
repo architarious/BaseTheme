@@ -1,0 +1,18 @@
+@mixin t-blocks(
+    $bgColor: $lbg,
+    $titleColor: $gray-dark-3,
+    $subtitleColor: $gray-dark-4,
+    $accentColor: $primary,
+    $textColor: $black,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+.s-main{
+    .b-address{
+        @include b-address--recolor($textColor, $ctaColor)
+    }
+    .b-social{ @include b-social--recolor($subtitleColor, $ctaColor, $shadow); }
+}
+
+}.t-blocks{ @include t-blocks();}

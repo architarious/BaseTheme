@@ -87,6 +87,7 @@
     form, .b-search__form{
       @extend %box;
       padding: $pad-double;
+      margin:0;
     }
 }
 @mixin b-search--inline(

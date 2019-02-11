@@ -8,21 +8,24 @@
     padding: $pad 0;  
     display: flex;
     flex-flow: column nowrap;
+    padding: $pad 0;
  
     .b-title__title{
       order: 2;
       @extend %headline;
       color: $titleColor;
+      padding-top:0;
     }//end b-title__title
     .b-title__subtitle{
       order: 3;
       @extend %subHeadline;
       color: $subColor;
       padding-top: $pad-half;
+      padding-bottom:0;
     }//end b-title__subtitle
     .b-title__meta{
       @include typi(p);
-      padding-bottom: $pad-half;
+      padding-bottom: $pad-quarter;
       order: 1;
       text-transform: uppercase;
       color: $metaColor

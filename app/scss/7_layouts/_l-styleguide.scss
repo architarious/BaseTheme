@@ -46,6 +46,7 @@
 .l-styleguide__section{
     margin-top: vr(3);
     .l-styleguide__subtitle:first-of-type{margin-top:0;}
+    & > .container{ margin-top: vr(3);}
 }//endl-styleguide__section
 
 

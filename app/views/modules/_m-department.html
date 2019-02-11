@@ -1,0 +1,22 @@
+<article class="m-department">
+    <header class="m-department__header">
+        @@include('blocks/_b-title--mini.html',{
+            "meta": "",
+            "title": "Department Name",
+            "subtitle": "A breif description of this department"
+        })
+        <div class="m-department__links">
+            <div class="m-department__home"><a href="#" class="button small">Department Homepage</a></div>
+            <div class="m-department__social">
+                <a target="_blank" href="http://twitter.com" class="icon fa-slack">@departmentName</a>
+                <a target="_blank" href="http://linkedin.com" class="icon fa-linkedin">/departmentName</a>
+            </div>
+            
+        </div>
+    </header>
+    <div class="m-department__body">
+        <div class="m-department__copy">
+            @@include('blocks/_b-directory.html');
+        </div>
+    </div>
+</article>

@@ -1,0 +1,54 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" >
+    
+    <title>Basetheme: Templates</title>    
+    
+</head>
+<body class="l-styleguide t-templates">
+  @@include('sections/l-styleguide/_s-header.html') 
+  @@include('sections/l-styleguide/_s-pageTitle--templates.html')  
+  <main class="s-main" >
+    <div class="container">
+        <article id="default" class="l-styleguide__section">
+            <h2 id="default__title" class="l-styleguide__title">Default templates</h2>
+            <h3 id="default__bp" class="l-styleguide__subtitle">.t-backpage</h3>            
+            <button id="modal-bp_btn" class="modal_btn">View .t-backpage</button>
+            <div id="modal-bp" class="modal">
+                <div class="modal__content">
+                    <span class="close">X</span>
+                    @@include('templates/t-backpage.html')
+                </div>
+            </div>           
+        </article>
+        <article id="personnel" class="l-styleguide__section">
+            <h2 id="personnel__title" class="l-styleguide__title">Personnel templates</h2>
+            <h3 id="personnel__directory" class="l-styleguide__subtitle">t-directory</h3>            
+            <button id="modal-directory_btn" class="modal_btn">View .t-directory</button>
+            <div id="modal-directory" class="modal">
+                <div class="modal__content">
+                    <span class="close">X</span>
+                    @@include('templates/l-personnel/t-directory.html')
+                </div>
+            </div>           
+        </article>           
+    </div><!--end #container-->
+
+  </main>
+  @@include('sections/l-styleguide/_s-footer.html') 
+  
+    <!--<script src="../bower_components/eq.js/dist/eq.min.js"></script>-->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <script src="/javascripts/main.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        modal("#modal-bp_btn","#modal-bp");
+        modal("#modal-directory_btn","#modal-directory");
+    });
+    </script>
+    
+</body>
+
+</html>

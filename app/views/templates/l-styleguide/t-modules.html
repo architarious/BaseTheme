@@ -1,0 +1,53 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" >
+    
+    <title>Basetheme: Modules</title>    
+    
+</head>
+<body class="l-styleguide t-modules">
+  @@include('sections/l-styleguide/_s-header.html') 
+  @@include('sections/l-styleguide/_s-pageTitle--modules.html')  
+  <main class="s-main" >
+    <div class="container">
+        <article id="navigation" class="l-styleguide__section">
+            <h2 id="navigation__title" class="l-styleguide__title">Navigation Modules</h2>
+            <h3 id="contact__address" class="l-styleguide__subtitle">m-navbar</h3>
+            @@include('modules/_m-navbar.html')
+        </article>
+        <article id="display" class="l-styleguide__section">
+            <h2 id="display__title" class="l-styleguide__title">Display Modules</h2>
+            <p class="lede">Display modules are used to format articles and other layouts within sections.</p>
+            <h3 id="display__default" class="l-styleguide__subtitle">.m-display</h3>
+            <div class="box">
+                @@include('modules/_m-display.html')
+            </div>
+            <h3 id="display__default" class="l-styleguide__subtitle">.m-display--cols</h3>
+            <div class="box">
+                @@include('modules/_m-display--cols.html')
+            </div>
+            <h3 id="display__post" class="l-styleguide__subtitle">.m-post</h3>
+            <div class="box">
+                @@include('modules/_m-post.html', {
+                    "title": "Lorem ipsum dolor sit amet.",
+                    "subtitle": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, exercitationem.",
+                    "image": "http://lorempixel.com/600/200/transport/3",
+                    "copy": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias natus totam quae voluptatibus molestias, cum voluptatem voluptatum. Illum qui quia ipsam, voluptatem sit explicabo ducimus, molestiae quas quod ea repudiandae.</p>"
+                })
+            </div>
+        </article>
+    </div><!--end #container-->
+
+  </main>
+  @@include('sections/l-styleguide/_s-footer.html') 
+  
+    <!--<script src="../bower_components/eq.js/dist/eq.min.js"></script>-->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <script src="/javascripts/vendor/slick.min.js"></script>
+    <script src="/javascripts/main.min.js"></script>
+    
+</body>
+
+</html>

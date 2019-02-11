@@ -18,11 +18,14 @@ const rename = require("gulp-rename");
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
+const fileinclude = require('gulp-file-include');
 
 /**************************************************************
 * IO paths - stored in config.json
 */
 const templateDir = config.templates.dir;
+const appTemplates = config.templates.appTemplates;
+const prodTemplates = config.templates.prodTemplates;
 const html_in = config.templates.html;
 const proxy = config.proxy;
 const css_in = config.css.src; 
@@ -148,7 +151,21 @@ function scripts() {
 		.pipe(browsersync.stream())
 	);
 }
-  
+
+/**************************************************************
+ * HTML Templating tasks
+ */
+
+function fileIncluder(){
+	return gulp
+	.src([appTemplates])
+	.pipe(plumber())
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: 'app/views'
+	}))
+	.pipe(gulp.dest(prodTemplates));
+}
 
 
 /**************************************************************
@@ -157,7 +174,7 @@ function scripts() {
 function watchFiles() {
 	gulp.watch(css_in, css);
 	gulp.watch(js_in, scripts);
-	gulp.watch(html_in, browserSyncReload);
+	gulp.watch(appTemplates, html);
 	gulp.watch(img_in, images);
 } 
   
@@ -165,7 +182,8 @@ function watchFiles() {
 
 /**************************************************************
  * Complex tasks
- */  
+ */ 
+const html = gulp.series(fileIncluder, browserSyncReload); 
 const js = gulp.series(scriptsLint, scripts);
 const build = gulp.parallel(css, images, js);
 const watch = gulp.parallel(watchFiles, browserSync);
@@ -176,6 +194,7 @@ const watch = gulp.parallel(watchFiles, browserSync);
 /**************************************************************
  * EXPORT TASKS
  */
+exports.templates = html;
 exports.js = scripts;
 exports.images = images;
 exports.css = css;

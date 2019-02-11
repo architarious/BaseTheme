@@ -1,0 +1,125 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" >
+    
+    <title>Basetheme: Blocks</title>    
+    
+</head>
+<body class="l-styleguide t-blocks">
+  @@include('sections/l-styleguide/_s-header.html') 
+  @@include('sections/l-styleguide/_s-pageTitle--blocks.html')  
+  <main class="s-main" >
+    <div class="container">
+        <article id="contact" class="l-styleguide__section">    
+          <h2 id="contact__title" class="l-styleguide__title">Contact Blocks</h2>
+          <h3 id="contact__address" class="l-styleguide__subtitle">b-address</h3>
+          @@include('blocks/_b-address.html')
+          <h3 id="contact__details" class="l-styleguide__subtitle">b-contactDetails</h3>
+          @@include('blocks/_b-contactDetails.html')
+          <h3 id="contact__directory" class="l-styleguide__subtitle">b-directory</h3>
+          @@include('blocks/_b-directory.html')
+          <h3 id="contact__form" class="l-styleguide__subtitle">b-contactForm</h3>
+          @@include('blocks/_b-contactForm.html')
+        </article><!--end #contact-->
+        <article id="navigation" class="l-styleguide__section">
+          <h2 id="navigation__title" class="l-styleguide__title">Navigation Blocks</h2>
+          <h3 id="navigation__primaryNav" class="l-styleguide__subtitle">b-primaryNav</h3>
+          @@include('blocks/_b-primaryNav.html')
+          <h3 id="navigation__secondaryNav" class="l-styleguide__subtitle">b-secondaryNav</h3>
+          <div class="row">
+            <div class="col--half">
+              <h4>Default</h4>
+              @@include('blocks/_b-secondaryNav.html')</div>
+            <div class="col--half">
+              <h4>With subtexts</h4>
+              @@include('blocks/_b-secondaryNav--subs.html')
+            </div>
+          </div>
+          <h3 id="navigation__searchBar" class="l-styleguide__subtitle">b-search</h3>  
+          <div class="row">
+            <div class="col--half">
+              <h4>Block format</h4>
+              @@include('blocks/_b-search.html')
+            </div>
+            <div class="col--half">
+              <h4>Inline format</h4>
+              @@include('blocks/_b-search--inline.html')
+            </div>
+          </div>
+        </article><!--end #navigation-->
+        <article id="sitAware" class="l-styleguide__section">
+          <h2 id="sitAware__title" class="l-styleguide__title">Situational Awareness Blocks</h2>
+          <h3 id="sitAware__siteName" class="l-styleguide__subtitle">b-siteName</h3>
+          @@include('blocks/_b-siteName.html')
+          <h3 id="sitAware__title" class="l-styleguide__subtitle">b-title</h3>
+          @@include('blocks/_b-title.html',{
+            "meta": "meta info here about subject, date or location",
+            "title": "Title of a page or section",
+            "subtitle": "A brief description of what is yet to come."
+          })
+          <h3 id="sitAware__title" class="l-styleguide__subtitle">b-title--mini</h3>
+          @@include('blocks/_b-title--mini.html',{
+            "meta": "meta info here about subject, date or location",
+            "title": "Title of a page or section",
+            "subtitle": "A brief description of what is yet to come."
+          })
+          <h3 id="sitAware__breadcrumbs" class="l-styleguide__subtitle">b-breadcrumbs</h3>
+          @@include('blocks/_b-breadcrumbs.html')
+          <pre><code>
+ul class="b-breadcrumbs"
+  li a Home /a /li
+  li a Pictures /a /li
+  li a Summer 18 /a /li
+  li Osolo /li
+/ul
+          </code></pre>
+          <h3 id="sitAware__pagination" class="l-styleguide__subtitle">b-pagination</h3>
+          @@include('blocks/_b-pagination.html')
+          <pre><code>
+ul class="b-pagination"
+  li a class="button" Prev /a /li
+  li a class="page" 1 /a /li
+  li a class="page" 2 /a /li
+  li a class="page" 3 /a /li
+  li ... /li
+  li a class="page" 8 /a /li
+  li a class="page" 9 /a /li
+  li a class="page" 10 /a /li
+  li a class="button" Next /a /li 
+/ul 
+          </code></pre>
+          <h3 class="l-styleguide__subtitle">.b-metaInfo</h3>
+          @@include('blocks/_b-metaInfo.html')
+          <pre style="margin-top: 1em;"><code>
+.b-metaInfo 
+  .b-metaInfo__tags 
+    a #TAG 1 /a 
+    a #TAG 2 /a 
+  //.b-metaInfo__tags
+  .b-metaInfo__likes 
+    a NumberOfLikes /a
+  //.b-metaInfo__likes
+  .b-metaInfo__comments 
+    a NumberOfcomments /a
+  //.b-metaInfo__comments
+//.b-metaInfo
+          </code></pre>
+          <h3 class="l-styleguide__subtitle">.b-published</h3>
+          @@include('blocks/_b-published.html')
+
+        </article><!--end #navigation-->
+    </div><!--end #container-->
+
+  </main>
+  @@include('sections/l-styleguide/_s-footer.html') 
+  
+    <!--<script src="../bower_components/eq.js/dist/eq.min.js"></script>-->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <script src="/javascripts/vendor/slick.min.js"></script>
+    <script src="/javascripts/main.min.js"></script>
+    
+</body>
+
+</html>

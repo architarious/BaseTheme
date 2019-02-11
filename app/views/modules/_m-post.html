@@ -1,0 +1,19 @@
+<article class="m-post">
+    <header class="m-post__header">
+        <a class="b-title--mini" href="#">
+            <h3 class="b-title__title">@@title</h3>
+            <p class="b-title__subtitle">@@subtitle</p>
+        </a>
+        @@include('blocks/_b-published.html')
+    </header>
+    <div class="m-post__body">
+      <div class="m-post__image"><img src="@@image"></div>                      
+      <div class="m-post__copy">
+          @@copy
+      </div>
+    </div>
+    <footer class="m-post__footer">
+      <div class="m-post__cta"><a href="#" class="button">Continue reading</a></div>
+      @@include('blocks/_b-metaInfo.html')
+    </footer>
+</article>

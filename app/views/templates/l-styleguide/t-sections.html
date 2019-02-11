@@ -1,0 +1,69 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" >
+    
+    <title>Basetheme: Sections</title>    
+    
+</head>
+<body class="l-styleguide t-sections">
+  @@include('sections/l-styleguide/_s-header.html') 
+  @@include('sections/l-styleguide/_s-pageTitle--sections.html')  
+  <main class="s-main" >
+    <article id="common" class="l-styleguide__section">
+        <div class="container">
+            <h2 id="common__title" class="l-styleguide__title">Common Sections</h2>
+            <p>These sections are generally found on every page and aren't specific to a certain template or layout.</p>
+            <h3 id="common__header" class="l-styleguide__subtitle">.s-header</h3>     
+        </div>
+        @@include('sections/_s-header.html')
+        <div class="container">
+            <h3 id="common__main" class="l-styleguide__subtitle">.s-main</h3>     
+        </div>
+        @@include('sections/t-backpage/_s-main.html')
+        <div class="container">
+            <h3 id="common__footer" class="l-styleguide__subtitle">.s-footer</h3>     
+        </div>
+        @@include('sections/_s-footer.html') 
+    </article>
+    <article id="pageHeadings" class="l-styleguide__section">
+        <div class="container">
+            <h2 class="l-styleguide__title" id="pageHeadings__title">Page Headings</h2>
+            <h3 id="pageHeadings__pageTitle" class="l-styleguide__subtitle">.s-pageTitle</h3>     
+        </div>
+        @@include('sections/_s-pageTitle.html')
+        <div class="container">
+            <h3 id="pageHeadings__pageTitle-alt" class="l-styleguide__subtitle" style="padding-top: 3em;">.s-pageTitle--alt</h3>
+        </div>
+        @@include('sections/_s-pageTitle--alt.html')
+    </article>
+    <article id="cta" class="l-styleguide__section">
+        <div class="container">
+            <h2 class="l-styleguide__title" id="cta__title">Calls to Action</h2>
+            <h3 id="cta__jumbotron" class="l-styleguide__subtitle">.s-jumbotron</h3>  
+        </div>
+        @@include('sections/_s-jumbotron.html',{
+            "title": "Jumbotron Headline",
+            "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, minus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, fugit!"            
+        })
+        <div class="container">
+            <h3 id="cta__hero" class="l-styleguide__subtitle" style="padding-top: 3em;">.s-hero</h3>   
+        </div>
+        @@include('sections/_s-hero.html',{
+            "title": "Hero Headline",
+            "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, minus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, fugit!"            
+        })
+    </article>
+
+  </main>
+  @@include('sections/l-styleguide/_s-footer.html') 
+  
+    <!--<script src="../bower_components/eq.js/dist/eq.min.js"></script>-->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <script src="/javascripts/vendor/slick.min.js"></script>
+    <script src="/javascripts/main.min.js"></script>
+    
+</body>
+
+</html>
