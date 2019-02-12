@@ -1,14 +1,18 @@
 @mixin s-header(
-  $backround: $lbg,
-  $text: $black,
-  $cta: $tertiary,
-  $shadow: $lbg--shadow,
-  $light: $lbg--light
+  $bgColor: $primary,
+  $textColor: $lbg,
+  $ctaColor: $secondary,
+  $shadow: $primary--shadow,
+  $light: $primary--light
 ){
-  .s-header{  
     width:100%;
     display:flex;
     flex-flow: column nowrap;
+    background: $bgColor;
+
+    .b-siteName{ @include b-siteName--recolor($textColor, $ctaColor, lighten($ctaColor, 10))}
+    .b-primaryNav__list{ @include navList--recolor($ctaColor, $light, $shadow);     }
+    .b-primaryNav__trigger{ @include hamburger($bgColor, $textColor, $ctaColor, $shadow, $light);}
   /*
     @include breakpoint($bp-mobile1-1, $bp-tablet-1){
       //.b-siteName{ float:none; width:100%; margin:0 auto; padding:ms(0) 0; }
@@ -30,6 +34,5 @@
       //.b-primaryNav{ padding:0; @include grid-span(12,5);}
     }
   */   
-    }//end s-header
-}//@include s-header();
+} .s-header, %s-header{ @include s-header(); }
 

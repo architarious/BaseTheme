@@ -1,6 +1,6 @@
 @mixin t-profile(
     $bgColor: $lbg,
-    $headerBG: $lbg,
+    $headerBG: $secondary,
     $titleColor: $primary,
     $subtitleColor: $gray-dark-4,
     $accentColor: $gray-light-2,
@@ -10,7 +10,7 @@
     $light: $lbg--light
 ){
     .s-pageTitle{
-        @include s-pageTitle--recolor($headerBG, $shadow, $titleColor, $subtitleColor);
+        @include s-pageTitle--recolor($headerBG, $accentColor, $titleColor, $subtitleColor);
         .container{
             display:flex;
             flex-flow: row nowrap;

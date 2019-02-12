@@ -1,8 +1,8 @@
 @mixin s-jumbotron(
   $bgColor: $secondary,
   $accentColor: saturate($secondary--shadow,20),
-  $titleColor: $black,
-  $textColor: $gray-dark-3,
+  $titleColor: $primary,
+  $textColor: $primary,
   $ctaColor: $tertiary,
   $ctaTextColor: $lbg
 ){

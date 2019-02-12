@@ -1,5 +1,21 @@
-@import 'https://fonts.googleapis.com/css?family=Crete+Round|Open+Sans';
+$helvetica-neue-font-stack: 'HelveticaNeueW01-55Roma', 'Helvetica Neue', Helvetica, 'Helvetica LT Std', 'Helvetica CY', Arial, 'Lucida Grande', sans-serif !default;
+$helvetica-neue-light: 'HelveticaNeueW01-45Ligh', $helvetica-neue-font-stack !default;
+$helvetica-neue-bold: 'Helvetica Neue LT W01_75 Bold', $helvetica-neue-font-stack !default;
+$helvetica-neue-condensed-black: 'HelveticaNeueW01-97Blac', $helvetica-neue-font-stack !default;
 
-$font-serif: 'Crete Round', Georgia, 'Times New Roman', Times, serif;
-$font-sans: 'Open Sans', Arial, Helvetica, sans-serif;
+$iowan-old-style: 'IowanOldStyleW01-Roman', Georgia, Times, serif !default;
+$iowan-old-style-italic: 'IowanOldStyleW01-Italic1120392', Georgia, Times, serif !default;
+$iowan-old-style-black: 'IowanOldStyleW01-Black' !default;
+$iowan-old-style-black-italic: 'IowanOldStyleW01-BlackI', Georgia, Times, serif !default;
+
+$font-sans: $helvetica-neue-font-stack;
+$font-sans--light: $helvetica-neue-light;
+$font-sans--bold: $helvetica-neue-bold;
+$font-sans--black: $helvetica-neue-condensed-black;
+
+$font-serif: $iowan-old-style;
+$font-serif--italic: $iowan-old-style-italic;
+$font-serif--black: $iowan-old-style-black;
+$font-serif--blackItalic: $iowan-old-style-black-italic;
+
 $font-mono: 'Courier New', Courier, monospace;

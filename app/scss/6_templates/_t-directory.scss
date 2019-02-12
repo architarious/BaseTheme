@@ -10,7 +10,7 @@
     $light: $lbg--light
 ){
     .s-pageTitle{
-        @include s-pageTitle--recolor($headerBG, $shadow, $titleColor, $subtitleColor);
+        @include s-pageTitle--recolor($headerBG, $accentColor, $titleColor, $subtitleColor);
     }//end s-pageTitle
     .s-main{
         @include m-department--recolor($bgColor, $titleColor, $textColor, $ctaColor, $shadow, $light);

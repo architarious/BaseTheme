@@ -62,3 +62,6 @@ body{background-color: $lbg;}
 //Calls to Action SECTIONS
 @import "../5_sections/s-jumbotron";
 @import "../5_sections/s-hero";
+
+
+.s-footer{ @include s-footer--recolor(darken($lbg--shadow,10), $black, $tertiary, darken($lbg--shadow, 15), $lbg--light);}

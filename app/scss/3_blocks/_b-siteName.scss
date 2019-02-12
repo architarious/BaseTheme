@@ -1,16 +1,14 @@
 @mixin b-siteName(
   $textColor: $black,
   $ctaColor: $primary,
-  $ctaColor--hover: $tertiary,
-  $shadow: $lbg--shadow,
-  $light: $lbg--light
+  $ctaColor--hover: $tertiary
 ){
 
   display:block;
   text-decoration: none;
   position: relative;
   margin: vr(1) 0;
-  padding-left: ms(5);
+  //padding-left: ms(5);
   color: $textColor;
   transition: color 0.2s ease-in-out; 
   @include typi(p);
@@ -28,7 +26,8 @@
     @include typi(h2); 
     color: $ctaColor;
     margin:0; padding:0 0 0 $pad-quarter;
-    font-family: $font-serif;
+    font-family: $font-sans--black;
+    text-transform: uppercase;
   }//end b-siteName__title
   .b-siteName__subtitle{
     @include typi(p);
@@ -57,3 +56,20 @@
 
 
 }.b-siteName, %b-siteName{ @include b-siteName(); }
+
+@mixin b-siteName--recolor(
+  $textColor: $black,
+  $ctaColor: $primary,
+  $ctaColor--hover: $tertiary
+){
+  color: $textColor;
+  &:hover, &:focus, &:active{
+    color: $ctaColor--hover;
+    .b-siteName__title{ color: $ctaColor--hover; }
+    .b-siteName__logo path{ fill: $ctaColor--hover; }
+    .b-siteName__subtitle{ color: $textColor;}    
+  }
+  .b-siteName__title{ color: $ctaColor; }
+  .b-siteName__subtitle{ color: $textColor; }
+  .b-siteName__logo path{ fill: $ctaColor; }
+}

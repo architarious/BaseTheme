@@ -3,6 +3,7 @@
     $titleColor: $gray-dark-3,
     $subtitleColor: $gray-dark-4,
     $accentColor: $primary,
+    $accentColor2: $secondary,
     $textColor: $black,
     $ctaColor: $tertiary,
     $shadow: $lbg--shadow,
@@ -19,6 +20,10 @@
             .b-primaryNav__list li{ font-size: 16px}
         }       
     }//end s-header
+
+    .s-pageTitle--alt{ 
+        @include s-pageTitle--alt--recolor($accentColor2, $bgColor, $accentColor2, $accentColor, $textColor); 
+    } 
 
 .l-styleguide__title{
     margin: vr(6) 0 vr(3) 0;

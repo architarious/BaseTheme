@@ -25,9 +25,9 @@
 
 @mixin animatedGradient(
   $color1: $primary,
-  $color2: set-hue($color1, 20)
+  $color2: set-hue($color1, 10)
 ){
-  background: linear-gradient(90deg, $color1, mix($color1, $color2, 40%), $color2);
+  background: linear-gradient(90deg, $color1, mix($color1, $color2, 40%));
   background-size: 400% 400%;
   animation: open 40s ease-in-out infinite;
   @keyframes open { 

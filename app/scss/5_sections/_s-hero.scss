@@ -4,6 +4,7 @@
   $titleColor: $white,
   $textColor: $gray-light-2,
   $ctaColor: $tertiary,
+  $ctaColor2: $secondary,
   $ctaTextColor: $lbg
 ){
     width:100%;
@@ -51,8 +52,8 @@
           padding: $pad-quarter;
           border-radius: 0.2em;
             a{
-                color: mix($ctaColor, $textColor, 70); 
-                &:hover, &:active{color: lighten(mix($ctaColor, $textColor, 70), 10);}
+                color: mix($ctaColor2, $textColor, 70); 
+                &:hover, &:active{color: lighten(mix($ctaColor2, $textColor, 70), 10);}
             }
         }//end p
     }//end s-hero__cta

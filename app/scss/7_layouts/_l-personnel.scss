@@ -1,9 +1,9 @@
 @mixin l-personnel(
     $bgColor: $lbg,
     $headerBG: $secondary,
-    $titleColor: $quinary,
-    $subtitleColor: $gray-dark-4,
-    $accentColor: $gray-light-2,
+    $titleColor: $primary,
+    $subtitleColor: $black,
+    $accentColor: lighten($secondary, 10),
     $textColor: $black,
     $ctaColor: $tertiary,
     $shadow: $lbg--shadow,

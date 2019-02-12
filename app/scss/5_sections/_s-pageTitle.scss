@@ -41,7 +41,7 @@
   $titleColor: $primary,
   $textColor: $gray-dark-3
 ){
-    @include b-title--recolor($titleColor, $textColor);
+    @include b-title--recolor($titleColor, $textColor, lighten($textColor, 10));
     .s-pageTitle__background{
         background-color: $bgColor;
         pattern{ fill: $accentColor;}
@@ -58,7 +58,7 @@
   $textColor: $gray-dark-4,
 ){
     @extend %s-pageTitle;
-    @include b-title--recolor($titleColor, $textColor);
+    @include b-title--recolor($titleColor, $textColor, lighten($textColor, 10));
     .b-title{ 
         @extend %box;
         box-sizing: border-box;
@@ -74,6 +74,7 @@
 
 @mixin s-pageTitle--alt--recolor(
   $bgColor: $lbg,
+  $textBG: $lbg,
   $accentColor: $gray-light-2,
   $titleColor: $primary,
   $textColor: $gray-dark-3

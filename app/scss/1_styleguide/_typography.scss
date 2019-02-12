@@ -91,8 +91,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 //------------------------------------------
 
 h1, h2, h3, h4, h5, h6, .heading{
-  font-family: $font-serif;
-  font-weight: normal;
+  font-family: $font-sans--bold;
+  font-weight: bold;
   color: $primary;
   max-width: 30em;
 }
@@ -167,18 +167,19 @@ u, .underline{
 
 .headline, %headline{
   font-size: $font-size-xxlarge-2;
-  font-family: $font-serif;
+  font-family: $font-sans--black;
   font-weight: 900;
   line-height: 0.99em;
   width:100%;
   display:block;
   max-width: 100%;
   padding:0; margin:0;
+  text-transform: uppercase;
 }
 .subHeadline, %subHeadline{
   font-size: $font-size-large-2;
-  font-family: $font-serif;
-  font-weight: 100;
+  font-family: $font-sans--bold;
+  font-weight: bold;
   line-height: 1.168em;
   width:100%;
   display:block;
