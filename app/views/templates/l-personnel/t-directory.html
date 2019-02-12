@@ -2,18 +2,25 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" >
     
-    <title>Basetheme: Directory</title>    
+    <title>Basetheme: Directory</title>     
     
 </head>
-<body class="l-default t-backpage">
+<body class="l-personnel t-directory">
+<div class="l-personnel t-directory"><!--remove after iframe fix--> 
+
+
   @@include('sections/_s-header.html') 
   @@include('sections/l-personnel/_s-pageTitle.html')
   <main class="s-main">
       <div class="container">
           @@include('modules/_m-department.html')
+          @@include('modules/_m-department.html')
+          @@include('modules/_m-department.html')
       </div>
   </main>
   @@include('sections/_s-footer.html')     
+
+</div><!--remove after iframe fix-->
 </body>
 
 </html>

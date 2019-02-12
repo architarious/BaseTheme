@@ -13,6 +13,8 @@
     }//end m-display__body
     .m-display__copy{
         p, li{ max-width: 40em;}
+        h2:first-of-type{ margin-top: $pad;}
+        
     }//end m-display__copy
     .m-display__sidebar{
         max-width: 33%;

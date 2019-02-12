@@ -1,0 +1,36 @@
+@mixin t-blogIndex(
+    $bgColor: $lbg,
+    $headerBG: $lbg,
+    $titleColor: $primary,
+    $subtitleColor: $gray-dark-4,
+    $accentColor: $gray-light-2,
+    $textColor: $black,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    .s-main{
+        .container{ @extend %row;}
+        .t-blogIndex__articleList{
+            padding: 0; margin:0;
+            @extend %col--twoThirds;
+            & > li { list-style: none;}
+            .m-post, & > article{
+                & ~ .m-post, & ~ article{
+                    margin: $pad-double 0 $pad 0;
+                    padding-top: $pad;
+                    border-top: 1px solid $shadow;
+                    box-shadow: inset 1px 0 0 0 $light;
+                }
+            }
+        }//end .t-blogIndex__articleList
+        .m-blogSidebar{
+            padding:0; margin:0;
+            @extend %col--third;
+            .m-blogSidebar__list{
+                padding:0; margin:0;
+                list-style:none;
+            }
+        }
+    }//end .s-main
+}.t-blogIndex, %t-blogIndex{@include t-blogIndex();}

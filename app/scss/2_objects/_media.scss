@@ -179,8 +179,19 @@
 
 }.miniCard, %miniCard{ @include miniCard();}
 
+@mixin miniCard--recolor(    
+  $titleColor: $gray-dark-2,
+  $textColor: $gray-dark-4,
+  $ctaColor: $tertiary 
+){
+    .miniCard__title{color: $titleColor;}
+    .miniCard__subtitle{ color: $textColor;}
+    &:hover, &:focus{
+        .miniCard__title{ color: $ctaColor;}
+    }
+}
+
 @mixin blurb(
-  $bgColor: $lbg,
   $textColor: $gray-dark-4,
   $titleColor: $gray-dark-2,
   $shadow: $lbg--shadow,
@@ -219,3 +230,15 @@
     }
 
 }.blurb{@include blurb();} 
+
+@mixin blurb--recolor(
+  $textColor: $gray-dark-4,
+  $titleColor: $gray-dark-2,
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+){
+  border-color:$shadow;
+  box-shadow: 0 1px 1px 0 $light, inset 0 1px 1px 0 $light;
+  .blurb__title{ color: $titleColor; }
+  .blurb__body{ color: $textColor; }
+}

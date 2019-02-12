@@ -101,6 +101,14 @@ h3{ color: mix($primary, $black, 70);}
 h4{ color: mix($primary, $black, 60);}  
 h5{ color: mix($primary, $black, 50);}
 h6{ color: tint(mix($primary, $black, 40), 40);}
+
+@mixin headers--recolor($newColor: $secondary){
+h1, h2{ color :$newColor;}  
+h3{ color: mix($newColor, $black, 70);} 
+h4{ color: mix($newColor, $black, 60);}  
+h5{ color: mix($newColor, $black, 50);}
+h6{ color: tint(mix($newColor, $black, 40), 40);}
+}
 body, p, li{
   font-family: $font-sans;
   color:$black;
@@ -248,7 +256,7 @@ ul, ol{
   & > ul, & > ol{ 
     padding: 0.1rem 1em;
   }
-  li{line-height: 1rem; margin: vr(0.5) 0;}
+  li{line-height: 1.2rem; margin: vr(0.5) 0;}
 }
 ol {
   & > ol{ list-style-type: upper-alpha;}

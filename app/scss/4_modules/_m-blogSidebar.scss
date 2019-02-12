@@ -1,0 +1,49 @@
+@mixin m-blogSidebar(
+    $bgColor: $lbg,
+    $titleColor: $gray-dark-5,
+    $titleColor2: $black,
+    $textColor: $gray-dark-3,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    display: flex;
+    flex-flow: column nowrap;    
+    transition: all 0.2s ease-in-out;
+    padding:0; margin:0;
+    .m-blogSidebar__list{
+        padding:0; margin:0;
+        list-style:none;
+        & > li, .m-blogSidebar__item{
+            list-style:none; 
+        }
+    }
+    .blurb{
+        
+        margin-top:0;
+        @include blurb--recolor($textColor, $titleColor, $shadow, $light);
+        .blurb__title{ font-weight: 100;}
+        .blurb__body{ margin-bottom:0;}
+    }
+    .b-postListing{
+        @include b-postListing--recolor($titleColor, $titleColor2, $textColor, $ctaColor);
+    }
+
+    @include breakpoint($bp-mobile1-1 $bp-tablet-1){
+    }//end mobile styles
+}
+.m-blogSidebar, %m-blogSidebar{
+    @include m-blogSidebar();
+}
+
+@mixin m-blogSidebar--recolor(
+    $bgColor: $lbg,
+    $titleColor: $primary,
+    $textColor: $gray-dark-3,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light 
+){
+    
+
+}

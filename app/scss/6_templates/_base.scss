@@ -1,7 +1,15 @@
+//Default templates
+@import "t-backpage";
+
+//Personnel Templates
+@import "t-directory";
+@import "t-profile";
+
+//Blog Templates
+@import "t-blogIndex";
+
+
+//Styleguide templates
 @import "t-styleguide";
 @import "t-objects";
 @import "t-blocks";
-
-@import "t-backpage";
-@import "t-directory";
-@import "t-profile";

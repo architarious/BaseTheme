@@ -34,8 +34,9 @@
         }
     }//end s-pageTitle
     .s-main{
-        @include m-department--recolor($bgColor, $titleColor, $textColor, $ctaColor, $shadow, $light);
-        .m-department ~ .m-department{padding-top: $pad-triple;}
+        .m-display__copy{
+            @include headers--recolor($titleColor);
+        }
         .m-display__sidebar .b-contactDetails__item{ font-size: $font-size-small-2 !important;}
     }//end s-main
 }.t-profile, %t-profile{ @include t-profile();}

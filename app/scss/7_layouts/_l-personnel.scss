@@ -1,0 +1,19 @@
+@mixin l-personnel(
+    $bgColor: $lbg,
+    $headerBG: $secondary,
+    $titleColor: $quinary,
+    $subtitleColor: $gray-dark-4,
+    $accentColor: $gray-light-2,
+    $textColor: $black,
+    $ctaColor: $tertiary,
+    $shadow: $lbg--shadow,
+    $light: $lbg--light
+){
+    &.t-profile{ 
+        @include t-profile($bgColor, $headerBG, $titleColor, $subtitleColor, $accentColor, $textColor, $ctaColor, $shadow, $light);     
+    }
+    &.t-directory{ 
+        @include t-directory($bgColor, $headerBG, $titleColor, $subtitleColor, $accentColor, $textColor, $ctaColor, $shadow, $light);
+    }
+}
+.l-personnel, %l-personnel{ @include l-personnel();}

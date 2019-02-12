@@ -43,21 +43,25 @@
     max-width:100%;
   }
 
-  .col--half, .col--third, .col--quarter, .col--full{
+  .col--half, .col--third, .col--twoThirds, .col--quarter, .col--full,
+  %col--half, %col--third, %col--twoThirds, %col--quarter, %col--full{
     @extend %col;
     @include css-grid-span(12);    
   }
   @include breakpoint($bp-mobile2-3){
-    .col--half{
+    .col--half, %col--half{
       @include css-grid-span(6);    
     }
-    .col--third{
+    .col--third, %col--third{
       @include css-grid-span(4);      
     }
-    .col--quarter{
+    .col--twoThirds, %col--twoThirds{
+      @include css-grid-span(8);      
+    }
+    .col--quarter, %col--quarter{
       @include css-grid-span(3);
     }
-    .col--full{
+    .col--full, $col--full{
       @include css-grid-span(12);
     }  
   }

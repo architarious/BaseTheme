@@ -1,0 +1,47 @@
+@mixin b-postListing(
+  $titleColor: $gray-dark-2,
+  $titleColor2: $black,  
+  $textColor: $gray-dark-4,
+  $ctaColor: $tertiary
+){
+    list-style:none;
+    padding: 0;
+    margin:0;    
+    .b-postListing__title{
+        color: $titleColor;
+        padding: $pad 0; 
+        margin: 0;
+        @include typi(h4);
+        text-transform: uppercase;
+        font-family: $font-sans;
+        font-weight: 100;
+    }
+    .b-postListing__list, & > ul{
+        list-style: none;
+        padding: 0;
+    }//end b-postListing__list
+    .b-postListing__item, & > ul > li{
+        margin: $pad 0;
+        @include miniCard--recolor($titleColor2, $textColor, $ctaColor);
+        .miniCard__thumb{
+            width: 75px;
+            min-width: 75px;
+        }
+    }//end b-postListing__item
+    
+
+}.b-postListing, %b-postListing{ @include b-postListing();}
+
+@mixin b-postListing--recolor(
+  $titleColor: $gray-dark-2,
+  $titleColor2: $black,  
+  $textColor: $gray-dark-4,
+  $ctaColor: $tertiary
+){
+    .b-postListing__title{
+        color: $titleColor;
+    }
+    .b-postListing__item, & > ul > li{
+        @include miniCard--recolor($titleColor2, $textColor, $ctaColor);
+    }
+}
