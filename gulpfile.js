@@ -49,7 +49,7 @@ function browserSync(done) {
 	browsersync.init({
 	  server: {
 		baseDir: "./",
-		index: "views/index.html"
+		index: "views/prod/t-homepage.html"
 	  },
 	  //port: 3000,
 	  //proxy: proxyGoesHere

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" >
+    
+    <title>Basetheme: Home</title>    
+    
+</head>
+<body class="l-styleguide t-homepage">
+  
+  @@include('sections/l-styleguide/_s-header.html') 
+  <main>
+  @@include('sections/t-homepage/_s-pageTitle.html')
+  <section class="s-structures">
+    <div class="container">
+      <h2>Objective structures</h2>
+      <p class="lede">In structuation CSS, objective structures are the laws, algorithms, base elements and architectures that all web components are built from.</p>
+      <h3>Base</h3>
+      <p>The base level handles the importation of vendor function and mixin libraries. It's also where other frameworks like bootstrap would be loaded.</p>
+      <h3>Styleguide</h3>
+      <p>Branding, html element styling and variable declarations all happen on the styleguide level</p>
+      <h3>Objects</h3>
+      <p>Objects are fundamental UX component architectures that aren't tailored to a certain kind of content.</p>
+    </div>
+  </section>
+  </main>
+  @@include('sections/l-styleguide/_s-footer.html')    
+
+@@include('sections/_s-javascripts.html')  
+</body>
+
+</html>
