@@ -29,7 +29,7 @@
     }//end b-address__title
     .b-address__tel, .b-address__email{
       @extend %icon;
-      padding-top: ($pad-quarter)/2;
+      padding-top: math.div($pad-quarter,2);
       width: 100%;
       &:before{padding-right: $pad-quarter;}
     }//end b-address__tel, .b-address__email

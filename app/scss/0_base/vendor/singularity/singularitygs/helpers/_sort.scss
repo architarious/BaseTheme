@@ -10,7 +10,7 @@
 
   $QS-Length: length($list);
 
-  $QS-Seed: round($QS-Length / 2);
+  $QS-Seed: round(math.div($QS-Length , 2));
 
   @if $QS-Length > 1 {
     $QS-Seed: nth($list, $QS-Seed);

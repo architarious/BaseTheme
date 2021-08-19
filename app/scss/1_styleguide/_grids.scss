@@ -30,7 +30,7 @@
 
 @mixin grid-desktop2{
   @include add-grid(16);
-  @include add-gutter(1/3);
+  @include add-gutter(math.div(1,3));
   @include sgs-change('output', 'isolation');
 }
 

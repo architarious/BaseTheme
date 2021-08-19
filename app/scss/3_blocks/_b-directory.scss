@@ -36,7 +36,7 @@
             font-size:$font-size-small-2;
         }
         .icon:before{ 
-            padding-right: $pad-quarter/2; 
+            padding-right: math.div($pad-quarter,2); 
             min-width: ms(1);
             float:left;
             text-align: center;

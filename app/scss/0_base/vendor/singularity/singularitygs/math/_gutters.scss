@@ -12,5 +12,5 @@
   // Combine the columns and gutters
   $grid-and-gutters: column-sum($grid, $gutter, $gutter-style);
 
-  @return (nth($gutter, 1) / $grid-and-gutters) * 100%
+  @return (math.div(nth($gutter, 1) , $grid-and-gutters)) * 100% 
 }

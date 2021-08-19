@@ -22,7 +22,7 @@
   // Equal width grid are easy! Deal with them!
   @if type-of($grid) == 'number' or length($grid) == 1 {
     $span-and-gutters: $span + $gutter * ($span - 1);
-    @return $span-and-gutters / $grid-and-gutters * 100%;
+    @return math.div($span-and-gutters , $grid-and-gutters) * 100%;
   }
   // Asymmetric lists are harder, so we're going to treat them as their own grid
   @else if type-of($grid) == 'list' or length($grid) > 1 {
@@ -43,7 +43,7 @@
     }
     $span-and-gutters: $span-and-gutters - $gutter;
 
-    @return $span-and-gutters / $grid-and-gutters * 100%;
+    @return math.div($span-and-gutters , $grid-and-gutters * 100%);
   }
   @else {
     @warn "Can't find a working set of grid! That's terrible!";

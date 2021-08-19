@@ -26,12 +26,12 @@
     @if($ms-base > nth($base,1)) {
       // divide the value until it aligns with main base.
       @while($ms-base > nth($base,1)) {
-        $ms-base: $ms-base / $ratio;
+        $ms-base: math.div($ms-base , $ratio);
       }
       $ms-base: $ms-base * $ratio;
     }
     // If the base is smaller than the main base.
-    @elseif ($ms-base < nth($base,1)) {
+    @else if ($ms-base < nth($base,1)) {
       // pump up the value until it aligns with main base.
       @while $ms-base < nth($base,1) {
         $ms-base: $ms-base * $ratio;
@@ -45,9 +45,9 @@
   $ms-bases: ms-sort($ms-bases);
 
   // Find step to use in calculation
-  $vtep: floor($v / length($ms-bases));
+  $vtep: floor(math.div($v , length($ms-bases)));
   // Find base to use in calculation
-  $ms-base: round(($v / length($ms-bases) - $vtep) * length($ms-bases)) + 1;
+  $ms-base: round((math.div($v , length($ms-bases)) - $vtep) * length($ms-bases)) + 1;
 
   @return ms-round-px(ms-pow($ratio, $vtep) * nth($ms-bases,$ms-base));
 }

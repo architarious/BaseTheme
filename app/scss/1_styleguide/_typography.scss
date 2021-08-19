@@ -60,7 +60,7 @@ $space : 1em;
 $space-and-half : $space*1.5;
 $space-double : $space*2;
 $space-quad : $space*4;
-$space-half : $space/2;
+$space-half : math.div($space,2);
 
 $pad-quarter: vr(0.25);
 $pad-half: vr(0.5);
