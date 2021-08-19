@@ -1,32 +1,38 @@
+const{
+	src,
+	dest,
+	parallel,
+	series,
+	watch
+} = require('gulp');
 
-
-const gulp = require('gulp');
-const browsersync = require('browser-sync').create();
-const config = require('./config.json');
-
+//plugins
 const autoprefixer = require('autoprefixer');
 const cssnano = require("cssnano");
-const concat = require('gulp-concat');
-const del = require("del");
-const eslint = require("gulp-eslint");
-const imagemin = require('gulp-imagemin');
-const newer = require("gulp-newer");
-const normalize = require("postcss-normalize");
-const plumber = require("gulp-plumber");
-const postcss = require("gulp-postcss");
-const rename = require("gulp-rename");
-const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
+const purgecss = require('@fullhuman/postcss-purgecss');
+
 const uglify = require('gulp-uglify');
+const eslint = require("gulp-eslint");
+const rename = require('gulp-rename');
+const sass = require('gulp-sass')(require('sass'));
+const postcss = require("gulp-postcss");
+const concat = require('gulp-concat');
+const clean = require('gulp-clean');
+const imagemin = require('gulp-imagemin');
+const changed = require('gulp-changed');
+const plumber = require("gulp-plumber");
+const sourcemaps = require('gulp-sourcemaps');
 const fileinclude = require('gulp-file-include');
+
+const browsersync = require('browser-sync').create();
 
 /**************************************************************
 * IO paths - stored in config.json
 */
-const templateDir = config.templates.dir;
-const appTemplates = config.templates.appTemplates;
-const prodTemplates = config.templates.prodTemplates;
-const html_in = config.templates.html;
+const config = require('./config.json');
+
+const html_in = config.templates.src;
+const html_out = config.templates.dest;
 const proxy = config.proxy;
 const css_in = config.css.src; 
 const css_out = config.css.dest; 
@@ -42,14 +48,126 @@ const fonts_out = config.fonts.dest;
 
 
 /**************************************************************
+ * Clean Assets
+ */
+function clear() {
+    return src('./assets/*', {
+            read: false
+        })
+        .pipe(clean());
+}
+
+/**************************************************************
+ * Javascript functions
+ */  
+
+function js() {
+
+    return src(js_in)
+        .pipe(changed(js_in))
+        .pipe(concat('bundle.js'))
+		.pipe(eslint())
+		.pipe(eslint.format())
+        .pipe(uglify())
+        .pipe(rename({
+            extname: '.min.js'
+        }))
+        .pipe(dest(js_out))
+        .pipe(browsersync.stream());
+}
+
+/**************************************************************
+ * CSS functions
+ */
+
+function css() {
+
+    return src(css_in)
+        .pipe(changed(css_in))
+		.pipe(plumber())
+		.pipe(sourcemaps.init())
+        .pipe(sass({
+			outputStyle: "expanded",
+			errLogToConsole: true
+		}).on('error', sass.logError))
+        .pipe(rename({
+            extname: '.min.css'
+        }))
+		.pipe(postcss([
+			autoprefixer({
+				overrideBrowserslist: ['last 2 versions'],
+            	cascade: false
+			}), 
+		    cssnano(), 
+			purgecss({
+				content: ['./assets/views/templates/**/*.html']
+			  }),
+
+		]))
+		.pipe(sourcemaps.write())
+        .pipe(dest(css_out))
+        .pipe(browsersync.stream());
+}
+
+/**************************************************************
+ * Optimize images
+ */
+
+function img() {
+    return src(img_in)
+        .pipe(imagemin([
+			imagemin.gifsicle({ interlaced: true }),
+			imagemin.jpegtran({ progressive: true }),
+			imagemin.optipng({ optimizationLevel: 5 }),
+			imagemin.svgo({
+			  plugins: [
+				{
+				  removeViewBox: false,
+				  collapseGroups: true
+				}
+			  ]
+			})
+		  ]))
+        .pipe(dest(img_out))
+		.pipe(browsersync.stream());
+}
+
+/**************************************************************
+ *  Font tasks 
+ */
+
+function fontMover(){
+	return src(fonts_in)
+		.pipe(dest(fonts_out))
+		.pipe(browsersync.stream());
+}
+
+
+/**************************************************************
+ * HTML Templating tasks
+ */
+
+ function htmlCompiler(){
+	return src([html_in])
+	.pipe(plumber())
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: 'app/views'
+	}))
+	.pipe(dest(html_out))
+	.pipe(browsersync.stream());
+}
+
+
+/**************************************************************
  * BrowserSync Tasks
  */
 // BrowserSync
 function browserSync(done) {
 	browsersync.init({
 	  server: {
-		baseDir: "./",
-		index: "views/prod/t-homepage.html"
+		baseDir: "./assets/",
+		index: "views/templates/t-homepage.html"
 	  },
 	  //port: 3000,
 	  //proxy: proxyGoesHere
@@ -71,133 +189,18 @@ function browserSyncStream(done) {
 
 
 /**************************************************************
- * Optimize images
- */
-// Optimize Images
-function images() {
-	return gulp
-	  .src(img_in)
-	  .pipe(newer(img_out))
-	  .pipe(
-		imagemin([
-		  imagemin.gifsicle({ interlaced: true }),
-		  imagemin.jpegtran({ progressive: true }),
-		  imagemin.optipng({ optimizationLevel: 5 }),
-		  imagemin.svgo({
-			plugins: [
-			  {
-				removeViewBox: false,
-				collapseGroups: true
-			  }
-			]
-		  })
-		])
-	  )
-	  .pipe(gulp.dest(img_out));
-  }
-  
-
-
-/**************************************************************
- * CSS tasks
- */
-function css() {
-	return gulp
-	  .src(css_in)
-	  .pipe(plumber())
-	  .pipe(sourcemaps.init())
-	  .pipe(sass({ 
-		  outputStyle: "expanded",
-		  errLogToConsole: true
-		  //includePaths: css_libraries
-		}).on('error', sass.logError))
-	  .pipe(sourcemaps.write())
-		.pipe(gulp.dest(css_out))
-		.pipe(browsersync.stream())
-	  .pipe(rename({ suffix: ".min" }))
-	  .pipe(postcss([
-		  autoprefixer(), 
-		  cssnano(), 
-		  normalize()
-	    ]))
-		.pipe(gulp.dest(css_out))
-		.pipe(browsersync.stream())
-  }
-  
-
-
-/**************************************************************
- * Javascript tasks
- */  
-// Lint scripts
-function scriptsLint() {
-	return gulp
-	  .src(js_in)
-	  .pipe(plumber())
-	  .pipe(eslint())
-	  .pipe(eslint.format())
-	  .pipe(eslint.failAfterError());
-}
-  
-// Transpile, concatenate and minify scripts
-function scripts() {
-	return (
-	  gulp
-		.src(js_in)
-		.pipe(plumber())
-		.pipe(concat('main.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest(js_out))
-		.pipe(browsersync.stream())
-	);
-}
-
-/**************************************************************
- * HTML Templating tasks
+ * Watch Files
  */
 
-function fileIncluder(){
-	return gulp
-	.src([appTemplates])
-	.pipe(plumber())
-	.pipe(fileinclude({
-		prefix: '@@',
-		basepath: 'app/views'
-	}))
-	.pipe(gulp.dest(prodTemplates));
-}
-
-
-/**************************************************************
- * Watch tasks
- */    
 function watchFiles() {
-	gulp.watch(css_in, css);
-	gulp.watch(js_in, scripts);
-	gulp.watch(appTemplates, html);
-	gulp.watch(img_in, images);
-} 
-  
+    watch(css_in, css);
+    watch(js_in, js);
+    watch(img_in, img);
+	watch(html_in, htmlCompiler);
+}
 
 
-/**************************************************************
- * Complex tasks
- */ 
-const html = gulp.series(fileIncluder, browserSyncReload); 
-const js = gulp.series(scriptsLint, scripts);
-const build = gulp.parallel(css, images, js);
-const watch = gulp.parallel(watchFiles, browserSync);
-  
+// Tasks to define the execution of the functions simultaneously or in series
 
-
-
-/**************************************************************
- * EXPORT TASKS
- */
-exports.templates = html;
-exports.js = scripts;
-exports.images = images;
-exports.css = css;
-exports.build = build;
-exports.watch = watch;
-exports.default = build;
+exports.watch = parallel(watchFiles, browserSync);
+exports.default = series(clear, parallel(js, css, img, htmlCompiler, fontMover));

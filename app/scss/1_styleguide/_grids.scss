@@ -61,7 +61,7 @@
     .col--quarter, %col--quarter{
       @include css-grid-span(3);
     }
-    .col--full, $col--full{
+    .col--full, %col--full{
       @include css-grid-span(12);
     }  
   }

@@ -3,19 +3,15 @@
     "description": "A responsive and modular base theme",
     "proxy": "localhost/BaseTheme/views",
     "bowerDir": "./bower_components",
+    "assets": "./assets/*",
     "templates":{
-        "dir": "./views",
-        "html": "./views/**/*.*",
-        "appTemplates": "./app/views/templates/**/*.html", 
-        "prodTemplates": "./views/prod"
-
+        "src": "./app/views/**/*.html", 
+        "dest": "./assets/views"
     },
     "css":{
         "file" : "styles",
-        "src" : [
-            "./app/scss/**/*.scss"
-        ],
-        "dest" : "./stylesheets",
+        "src" : "./app/scss/**/*.scss",
+        "dest" : "./assets/stylesheets",
         "includePaths": [
             "./bower_components/typi/scss",
             "./bower_components/modular-scale/stylesheets",
@@ -30,22 +26,16 @@
         ]
     },
     "img" : {
-        "src" : [
-            "./app/img/*.*"
-        ],
-        "dest" : "./images"
+        "src" : "./app/img/**/*.*",
+        "dest" : "./assets/img"
     },
     "js" : {
-        "src" : [
-            "./app/js/**/*.js"
-        ],
-        "dest" : "./javascripts"
+        "src" : "./app/js/**/*.js",
+        "dest" : "./assets/js"
     },
     "fonts" : {
-        "src" : [
-            "./bower_components/font-awesome/fonts/**.*"
-        ],
-        "dest" : "./fonts"
+        "src" : "./app/fonts/**.*",
+        "dest" : "./assets/fonts"
     }
     
 

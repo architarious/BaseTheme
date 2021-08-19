@@ -1,0 +1,52 @@
+{
+  "name": "jcs-basetheme",
+  "version": "1.2.0",
+  "description": "A simple workflow with gulp, sass, browsersync and bower",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/architarious/BaseTheme.git"
+  },
+  "dependencies": {
+    "bower": "^1.8.4",
+    "gulp-cli": "^2.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.4",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.8",
+    "dart-sass": "^1.15.2",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "postcss-normalize": "^7.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 0.5%",
+    "Firefox ESR",
+    "ie 8-11",
+    "maintained node versions",
+    "not dead"
+  ],
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "author": "J. Cole Smith",
+  "license": "ISC"
+}

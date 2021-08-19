@@ -6,7 +6,7 @@
 function search(){
     var alert = document.getElementById('error');
     var button = document.querySelector('.b-search__button');
-    var input = document.getElementById('search');
+    var input = document.getElementById('search'); 
 
     button.addEventListener('click', checkInput);
 
