@@ -1,53 +1,66 @@
 @mixin l-styleguide(
-    $bgColor: $lbg,
-    $titleColor: $gray-dark-3,
-    $subtitleColor: $gray-dark-4,
-    $accentColor: $primary,
-    $textColor: $black,
-    $ctaColor: $tertiary,
-    $shadow: $lbg--shadow, 
-    $light: $lbg--light
-){
-    .s-header{
-        @include breakpoint($bp-tablet-1 $bp-desktop1-1){
-            .b-primaryNav__list li{ font-size: 12px}
-        }
-        @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
-            .b-primaryNav__list li{ font-size: 14px}
-        }
-        @include breakpoint($bp-desktop2-1 ){
-            .b-primaryNav__list li{ font-size: 16px}
-        }       
-    }//end s-header
+  $bgColor: $lbg,
+  $titleColor: $gray-dark-3,
+  $subtitleColor: $gray-dark-4,
+  $accentColor: $primary,
+  $textColor: $black,
+  $ctaColor: $tertiary,
+  $shadow: $lbg--shadow,
+  $light: $lbg--light
+) {
+  .s-header {
+    .b-primaryNav {
+      @include b-primaryNav--secNav();
+    }
 
-.l-styleguide__title{
+    @include breakpoint($bp-tablet-1 $bp-desktop1-1) {
+      //.b-primaryNav__list li{ font-size: 12px}
+    }
+    @include breakpoint($bp-desktop1-1 $bp-desktop2-1) {
+      //.b-primaryNav__list li{ font-size: 14px}
+    }
+    @include breakpoint($bp-desktop2-1) {
+      //.b-primaryNav__list li{ font-size: 16px}
+    }
+  } //end s-header
+
+  .l-styleguide__title {
     margin: vr(6) 0 vr(3) 0;
     padding-bottom: vr(1);
     border-bottom: solid 0.2em $accentColor;
     @include typi(h1);
     font-weight: 900;
-    max-width:100%;
+    max-width: 100%;
     color: $gray-dark-3;
     letter-spacing: 0.15em;
-    display:block;
-    &:first-child{margin-top:0;}
-}//end l-styleguide__title
-.l-styleguide__subtitle{
+    display: block;
+    &:first-child {
+      margin-top: 0;
+    }
+  } //end l-styleguide__title
+  .l-styleguide__subtitle {
     margin: vr(6) 0 vr(2) 0;
     padding-bottom: vr(0.25);
     border-bottom: solid 0.1em $shadow;
     letter-spacing: 0.1em;
-    max-width:100%;
+    max-width: 100%;
     color: $subtitleColor;
-    display:block;
-    &:first-child{ margin-top:0;}
-}//end l-styleguide__subtitle
+    display: block;
+    &:first-child {
+      margin-top: 0;
+    }
+  } //end l-styleguide__subtitle
 
-.l-styleguide__section{
+  .l-styleguide__section {
     margin-top: vr(3);
-    .l-styleguide__subtitle:first-of-type{margin-top:0;}
-    & > .container{ margin-top: vr(3);}
-}//endl-styleguide__section
-
-
-}.l-styleguide{ @include l-styleguide();}
+    .l-styleguide__subtitle:first-of-type {
+      margin-top: 0;
+    }
+    & > .container {
+      margin-top: vr(3);
+    }
+  } //endl-styleguide__section
+}
+.l-styleguide {
+  @include l-styleguide();
+}

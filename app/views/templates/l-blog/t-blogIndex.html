@@ -1,6 +1,6 @@
 <html>
 <head>
-  @@include('sections/_s-styles.html')
+    @@include('0_imports/_i-styles.html')
     
     <title>Basetheme: Blog Index</title>    
     
@@ -13,9 +13,9 @@
       <div class="container">
           <div class="t-blogIndex__articleList">            
             @@loop('modules/_m-post.html',[
-            {"title": "Important Subject Title", "subtitle": "Somewhat vague description of important subject", "image": "http://lorempixel.com/1024/300/business/8", "copy": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptatibus delectus veniam molestiae vitae exercitationem voluptates assumenda autem reiciendis provident.</p>"},
-            {"title": "Another Subject Title", "subtitle": "Somewhat clear description of subject", "image": "http://lorempixel.com/1024/300/nightlife/4", "copy": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio fugiat iure assumenda eius ut ex.</p>"},
-            {"title": "Ahh, a headline!", "subtitle": "Complete and utter clickbait", "image": "http://lorempixel.com/1024/300/nightlife/6", "copy": "<p>Consectetur culpa odit tempore dolore perspiciatis, non facilis, corporis iure soluta atque assumenda doloribus sapiente?</p>"}                                    
+            {"url": "t-blogArticle.html", "title": "Important Subject Title", "subtitle": "Somewhat vague description of important subject", "image": "http://lorempixel.com/1024/300/business/8", "copy": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptatibus delectus veniam molestiae vitae exercitationem voluptates assumenda autem reiciendis provident.</p>"},
+            {"url": "t-blogArticle.html", "title": "Another Subject Title", "subtitle": "Somewhat clear description of subject", "image": "http://lorempixel.com/1024/300/nightlife/4", "copy": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio fugiat iure assumenda eius ut ex.</p>"},
+            {"url": "t-blogArticle.html", "title": "Ahh, a headline!", "subtitle": "Complete and utter clickbait", "image": "http://lorempixel.com/1024/300/nightlife/6", "copy": "<p>Consectetur culpa odit tempore dolore perspiciatis, non facilis, corporis iure soluta atque assumenda doloribus sapiente?</p>"}                                    
             ])
           </div>
           @@include('modules/_m-blogSidebar.html')
@@ -23,6 +23,6 @@
   </main>
   @@include('sections/_s-footer.html')     
 </div><!--remove after iframe fix-->
+@@include('0_imports/_i-javascripts.html')
 </body>
-
 </html>

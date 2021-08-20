@@ -3,80 +3,91 @@
   $textColor: $dbg,
   $light: lighten($bgColor, 10),
   $shadow: shade($bgColor, 10)
-){
-    @extend %icon;
-    background: $lbg;
-    border: 1px solid $shadow;
-    margin: vr(2) 0;
-    padding: $pad;
-    padding-left: 3rem;
+) {
+  @extend %icon;
+  background: $lbg;
+  border: 1px solid $shadow;
+  margin: vr(2) 0;
+  padding: $pad;
+  padding-left: 3rem;
+  color: $textColor;
+  font-size: $font-size-med;
+  line-height: 1.618em;
+  border-radius: 0.2em;
+  max-width: 100%;
+  position: relative;
+  a {
     color: $textColor;
-    font-size: $font-size-med;
-    line-height: 1.618em;
-    border-radius: 0.2em;
-    max-width:100%;
-    position: relative;
-    a{
-        color: $textColor;
-        &:hover, &:focus{
-            color: tint($textColor, 10);
-        }
-        &:active{
-            color: shade($textColor, 10);
-        }
-    }//end
-    &:before{ 
-        position: absolute;
-        margin-left: -2rem;
-        content: $fa-var-star-o;
-        font-size: 1.618em;
-        //padding: $pad-half $pad-half $pad-half 0;
-    }//end before
+    &:hover,
+    &:focus {
+      color: tint($textColor, 10);
+    }
+    &:active {
+      color: shade($textColor, 10);
+    }
+  } //end
+  &:before {
+    position: absolute;
+    margin-left: -2rem;
+    content: $fa-var-star-o;
+    font-size: 1.618em;
+    //padding: $pad-half $pad-half $pad-half 0;
+  } //end before
 }
 
 @mixin alert-colors(
   $bgColor: $lbg,
   $textColor: $dbg,
   $shadow: shade($bgColor, 10)
-){
-    background: $bgColor; 
+) {
+  background: $bgColor;
+  color: $textColor;
+  border: 1px solid $shadow;
+  a {
     color: $textColor;
-    border: 1px solid $shadow;
-    a{
-        color: $textColor;
-        &:hover, &:focus{
-            color: tint($textColor, 10);
-        }
-        &:active{
-            color: shade($textColor, 10);
-        }
-    }//end a   
+    &:hover,
+    &:focus {
+      color: tint($textColor, 10);
+    }
+    &:active {
+      color: shade($textColor, 10);
+    }
+  } //end a
 }
 
-.alert, %alert{ 
-    @include alert();
-    &--warning{
-        $alert-red: mix(red, $white, 20); 
-        @extend %alert;
-        @include alert-colors( $alert-red, mix(red, $black, 50) );
-        &:before{ content: $fa-var-exclamation-triangle;}
-    }//end warning
-    &--success{
-        $alert-green: mix(green, $white, 20); 
-        @extend %alert;
-        @include alert-colors( $alert-green, mix(green, $black, 50) );
-        &:before{  content: $fa-var-thumbs-o-up;}
-    }//end warning
-    &--notice{
-        $alert-yellow: mix(yellow, $white, 20); 
-        @extend %alert;
-        @include alert-colors( $alert-yellow, mix(yellow, $black, 30));
-        &:before{  content: $fa-var-exclamation-circle;}
-    }//end warning
-    &--info{
-        $alert-blue: mix(lightblue, $white, 20); 
-        @extend %alert;
-        @include alert-colors( $alert-blue, mix(lightblue, $black, 20) );
-        &:before{  content: $fa-var-info-circle;}
-    }//end warning
-} 
+.alert,
+%alert {
+  @include alert();
+  &--warning {
+    $alert-red: mix(red, $white, 20);
+    @extend %alert;
+    @include alert-colors($alert-red, mix(red, $black, 50));
+    &:before {
+      content: $fa-var-exclamation-triangle;
+    }
+  } //end warning
+  &--success {
+    $alert-green: mix(green, $white, 20);
+    @extend %alert;
+    @include alert-colors($alert-green, mix(green, $black, 50));
+    &:before {
+      content: $fa-var-thumbs-o-up;
+    }
+  } //end success
+  &--notice {
+    $alert-yellow: mix(yellow, $white, 20);
+    @extend %alert;
+    @include alert-colors($alert-yellow, mix(yellow, $black, 30));
+    &:before {
+      content: $fa-var-exclamation-circle;
+    }
+  } //end notice
+  &--info {
+    $alert-blue: mix(lightblue, $white, 20);
+    @extend %alert;
+    @include alert-colors($alert-blue, mix(lightblue, $black, 20));
+    &:before {
+      content: $fa-var-info-circle;
+    }
+  } //end info
+}

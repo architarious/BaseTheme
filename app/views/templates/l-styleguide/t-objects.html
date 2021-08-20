@@ -1,0 +1,89 @@
+<html>
+<head>
+    @@include('0_imports/_i-styles.html')
+    
+    <title>Basetheme: Objects</title>    
+    
+</head>
+<body class="l-styleguide t-objects">
+  @@include('sections/l-styleguide/_s-header.html') 
+  @@include('sections/l-styleguide/_s-pageTitle--objects.html')  
+  <main class="s-main" >
+    <div class="container">
+        <article id="alerts" class="l-styleguide__section">
+            <h2 id="alerts__title" class="l-styleguide__title">Alerts</h2>
+            @@include('objects/_alerts.html')            
+        </article>
+
+        <article id="chip" class="l-styleguide__section">
+            <h2 id="chip__title" class="l-styleguide__title">Chips</h2>
+            <p>A chip is a simple snippet of component typically consisting of a title, a short message and an avatar. It's
+                frequently wrapped in a link, but not always.</p>
+            <div class="t-objects__chips">
+                <div  class="t-objects__chips_normal">
+                    <h3 class="l-styleguide__subtitle">Normal Chips</h3>
+                    @@include('objects/_chip.html')                 
+                </div>
+                <div class="t-objects__chips_alt">
+                    <h3 class="l-styleguide__subtitle">Alt Chips</h3>
+                    @@include('objects/_chip--alt.html')
+                </div>
+                <div class="t-objects__chips_vert">
+                    <h3 class="l-styleguide__subtitle">Vertical Chips</h3>
+                    @@include('objects/_chip--vert.html')
+                </div>
+            </div>           
+        </article>
+
+        <article id="tile" class="l-styleguide__section">
+            <h2 id="tiles__title" class="l-styleguide__title">Tiles</h2>
+            @@include('objects/_tile.html')
+        </article>
+
+        <article id="mediaObjects" class="l-styleguide__section">
+            <h2 id="mediaObjects__title" class="l-styleguide__title">Media Objects</h2>
+            <p><span class="lede">Media objects are frequently used to link to blog posts or other items elsewhere in the site</span></p>
+            <h3 id="media_spotlight" class="l-styleguide__subtitle">Spotlights</h3>
+            <ul class="row">
+                    @@loop('objects/_spotlight.html',[
+                    {"title": "Interdum adipiscing gravida", "copy": "Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.", "img": "/img/spotlight-350-nature.jpg"},
+                    {"title": "Sed mattis nunc id", "copy": "Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Vivamus porttitor magna enim, ac accumsan tortorcursus at.", "img": "/img/spotlight-350-transport.jpg"},
+                    {"title": "Vivamus porttitor magna enim", "copy": "Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.", "img": "/img/spotlight-350-nightlife.jpg"}
+                    ])      
+            </ul>
+<pre><code>                            
+div class="spotlight"
+  div class="spotlight__body"
+    h3 class="spotlight__title" HEADER TEXT HERE /h3
+    div class="spotlight__copy" BODY COPY GOES HERE /div
+  /div 
+  div class="spotlight__image"
+    INSERT IMAGE HERE
+  /div  
+  div class="spotlight__cta"
+    a class="button primary" PRIMARY BUTTON TEXT /a
+    a class="button" SECONDARY BUTTON TEXT /a
+  /div
+/div
+</code></pre>
+        </article> 
+
+
+
+       
+    </div><!--end #container-->
+
+  </main>
+  @@include('sections/l-styleguide/_s-footer.html') 
+  
+    <!--<script src="../bower_components/eq.js/dist/eq.min.js"></script>-->
+    <!--<script src="/bower_components/jquery/dist/jquery.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <!--<script src="/javascripts/vendor/slick.min.js"></script>-->
+    <!--<script src="/javascripts/main.min.js"></script>-->
+    @@include('0_imports/_i-javascripts.html')
+    
+</body>
+
+</html>

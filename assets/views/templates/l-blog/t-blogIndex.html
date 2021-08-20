@@ -1,6 +1,6 @@
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.min.css" >
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.min.css" >
     
     <title>Basetheme: Blog Index</title>    
     
@@ -21,7 +21,7 @@
       <li><a href="/views/templates/t-backpage.html">Backpage</a></li>
       <li><a href="/views/templates/l-personnel/t-directory.html">Directory</a></li> 
       <li><a href="/views/templates/l-blog/t-blogIndex.html">Blog</a></li> 
-      <li><a href="/views/templates/l-styleguide/t-blocks.html">Styleguide</a></li>   
+      <li><a href="/views/templates/l-styleguide/t-homepage.html">Patterns</a></li>   
     </ul>
   </nav>
   <a href="#primaryNav" class="b-primaryNav__trigger m-navbar__trigger" id="nav-toggle">
@@ -58,7 +58,7 @@
           <div class="t-blogIndex__articleList">            
             <article class="m-post">
     <header class="m-post__header">
-        <a class="b-title--mini" href="#">
+        <a class="b-title--mini" href="t-blogArticle.html">
             <h3 class="b-title__title">Important Subject Title</h3>
             <p class="b-title__subtitle">Somewhat vague description of important subject</p>
         </a>
@@ -79,7 +79,7 @@
       </div>
     </div>
     <footer class="m-post__footer">
-      <div class="m-post__cta"><a href="#" class="button">Continue reading</a></div>
+      <div class="m-post__cta"><a href="t-blogArticle.html" class="button">Continue reading</a></div>
       <div class="b-metaInfo">
   <div class="b-metaInfo__tags">
     <a href="#">#Tag1</a>
@@ -91,7 +91,7 @@
     </footer>
 </article><article class="m-post">
     <header class="m-post__header">
-        <a class="b-title--mini" href="#">
+        <a class="b-title--mini" href="t-blogArticle.html">
             <h3 class="b-title__title">Another Subject Title</h3>
             <p class="b-title__subtitle">Somewhat clear description of subject</p>
         </a>
@@ -112,7 +112,7 @@
       </div>
     </div>
     <footer class="m-post__footer">
-      <div class="m-post__cta"><a href="#" class="button">Continue reading</a></div>
+      <div class="m-post__cta"><a href="t-blogArticle.html" class="button">Continue reading</a></div>
       <div class="b-metaInfo">
   <div class="b-metaInfo__tags">
     <a href="#">#Tag1</a>
@@ -124,7 +124,7 @@
     </footer>
 </article><article class="m-post">
     <header class="m-post__header">
-        <a class="b-title--mini" href="#">
+        <a class="b-title--mini" href="t-blogArticle.html">
             <h3 class="b-title__title">Ahh, a headline!</h3>
             <p class="b-title__subtitle">Complete and utter clickbait</p>
         </a>
@@ -145,7 +145,7 @@
       </div>
     </div>
     <footer class="m-post__footer">
-      <div class="m-post__cta"><a href="#" class="button">Continue reading</a></div>
+      <div class="m-post__cta"><a href="t-blogArticle.html" class="button">Continue reading</a></div>
       <div class="b-metaInfo">
   <div class="b-metaInfo__tags">
     <a href="#">#Tag1</a>
@@ -247,10 +247,11 @@
     <div class="s-footer__cta">
       <nav class="b-primaryNav">
   <ul class="b-primaryNav__list">
-   <li><a href="#">Services</a></li>
-   <li><a href="#">Products</a></li>
-   <li><a href="#">About</a></li>
-   <li><a href="#">Contact</a></li>
+  <li><a href="/views/templates/t-homepage.html">Home</a></li>
+  <li><a href="/views/templates/t-backpage.html">Backpage</a></li>
+  <li><a href="/views/templates/l-personnel/t-directory.html">Directory</a></li>
+  <li><a href="/views/templates/l-blog/t-blogIndex.html">Blog</a></li>
+  <li><a href="/views/templates/l-styleguide/t-homepage.html">Patterns</a></li>
   </ul>
 </nav>
       <div class="b-social">
@@ -270,6 +271,11 @@
   </div><!--end container-->
 </footer>     
 </div><!--remove after iframe fix-->
+<!--<script src="/bower_components/jquery/dist/jquery.min.js"></script>-->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+<!--<script src="/javascripts/vendor/slick.min.js"></script>-->
+<!--<script src="/javascripts/main.min.js"></script>-->
+<script type="text/javascript" src="/js/bundle.min.js"></script>
 </body>
-
 </html>
