@@ -1,100 +1,106 @@
-img{
+img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+.image,
+%image {
+  border-radius: ms(-5);
+  border: 0;
+  display: inline-block;
+  position: relative;
+
+  &.fit {
     display: block;
-    margin: 0;
-    width: 100%; 
-    height:auto;
-}
-.image, %image{
+    margin: 0 0 2em 0;
+    width: 100%;
+  }
+
+  img {
     border-radius: ms(-5);
-    border: 0;
-    display: inline-block;
-    position: relative;
+  }
 
-    &.fit{
-        display:block;
-        margin: 0 0 2em 0;
-        width:100%;
-    }
+  &.left,
+  &.right {
+    max-width: 40%;
+  }
+  &.left {
+    float: left;
+    padding: 0 1.5em 1em 0;
+    top: 0.25em;
+  }
+  &.right {
+    float: right;
+    padding: 0 0 1em 1.5em;
+    top: 0.25em;
+  }
+} //end .image
 
-    img{
-        border-radius: ms(-5);
-    }
+.circular,
+%circular {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
 
-    &.left, &.right{ max-width: 40%}
-    &.left{
-        float:left; 
-        padding: 0 1.5em 1em 0;
-        top: 0.25em;
+  &--landscape {
+    @extend %circular;
+    img {
+      width: auto;
+      height: 100%;
     }
-    &.right{
-        float:right; 
-        padding: 0 0 1em 1.5em;
-        top: 0.25em;
-    }
-}//end .image
+  }
 
-.circular, %circular{
-    border-radius: 50%; 
-    overflow: hidden;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background:none;
- 
-    &--landscape{
-     @extend %circular;
-     img{
-         width: auto;
-         height: 100%;
-     }
+  &--portrait {
+    @extend %circular;
+    img {
+      width: 100%;
+      height: auto;
     }
- 
-    &--portrait{
-     @extend %circular;
-     img{
-         width: 100%;
-         height: auto;
-     }
-    }
-}
- 
-
-.thumbnail, %thumbnail{
-    @extend %image;
-    border-radius: 0; 
-    width:100px; 
-    height:100px;
-    img{
-        width: auto;
-        height: 100%;
-        margin: 0 auto;
-        border-radius:0;
-    }
-
-    &--50{
-        @extend %thumbnail; 
-        width:50px;
-        height:50px;
-    } 
-    
-    &--75{
-        @extend %thumbnail; 
-        width:75px;
-        height:75px;
-    }
-
-    &--125{
-        @extend %thumbnail; 
-        width:125px;
-        height:125px;
-    } 
-    
-    &--150{
-        @extend %thumbnail; 
-        width:150px;
-        height:150px;
-    }
+  }
 }
 
+.thumbnail,
+%thumbnail {
+  @extend %image;
+  border-radius: 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+  }
 
+  &--50 {
+    @extend %thumbnail;
+    width: 50px;
+    height: 50px;
+  }
 
+  &--75 {
+    @extend %thumbnail;
+    width: 75px;
+    height: 75px;
+  }
+
+  &--125 {
+    @extend %thumbnail;
+    width: 125px;
+    height: 125px;
+  }
+
+  &--150 {
+    @extend %thumbnail;
+    width: 150px;
+    height: 150px;
+  }
+}

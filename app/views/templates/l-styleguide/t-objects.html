@@ -12,24 +12,25 @@
     <div class="container">
         <article id="alerts" class="l-styleguide__section">
             <h2 id="alerts__title" class="l-styleguide__title">Alerts</h2>
+            <p class="lede">Alerts are simple components often posted at the tops of pages. They're often used to highlight interaction results or crucial information.</p>
             @@include('objects/_alerts.html')            
         </article>
 
         <article id="chip" class="l-styleguide__section">
             <h2 id="chip__title" class="l-styleguide__title">Chips</h2>
-            <p>A chip is a simple snippet of component typically consisting of a title, a short message and an avatar. It's
-                frequently wrapped in a link, but not always.</p>
+            <p class="lede">A chip is a simple component typically consisting of a title, a short message and an avatar. It's
+                frequently wrapped in a link, but not always. You generally see them used to reference individuals.</p>
             <div class="t-objects__chips">
                 <div  class="t-objects__chips_normal">
-                    <h3 class="l-styleguide__subtitle">Normal Chips</h3>
+                    <h3 class="l-styleguide__subtitle">chip</h3>
                     @@include('objects/_chip.html')                 
                 </div>
                 <div class="t-objects__chips_alt">
-                    <h3 class="l-styleguide__subtitle">Alt Chips</h3>
+                    <h3 class="l-styleguide__subtitle">chip--alt</h3>
                     @@include('objects/_chip--alt.html')
                 </div>
                 <div class="t-objects__chips_vert">
-                    <h3 class="l-styleguide__subtitle">Vertical Chips</h3>
+                    <h3 class="l-styleguide__subtitle">chip--vert</h3>
                     @@include('objects/_chip--vert.html')
                 </div>
             </div>           
@@ -37,13 +38,16 @@
 
         <article id="tile" class="l-styleguide__section">
             <h2 id="tiles__title" class="l-styleguide__title">Tiles</h2>
+            <p class="lede">A tile is similar to a thumbnail, but different in that it only contains a brief string of text that functions as a CTA. They are often displayed in sidebars, scrollers and grids.</p>
             @@include('objects/_tile.html')
         </article>
 
         <article id="mediaObjects" class="l-styleguide__section">
             <h2 id="mediaObjects__title" class="l-styleguide__title">Media Objects</h2>
-            <p><span class="lede">Media objects are frequently used to link to blog posts or other items elsewhere in the site</span></p>
-            <h3 id="media_spotlight" class="l-styleguide__subtitle">Spotlights</h3>
+            <p class="lede">Media objects are a collection of components that are used to give context to featured content links. You often see them used to reference blog posts or important promotions. Think of them as a chip, but with meta content.</p>
+            
+            <h3 id="media_spotlight" class="l-styleguide__subtitle">.spotlight</h3>
+            <p class="lede">Spotlights are often used to highlight featured content with multiple calls to action. You often see them displayed as a row on a homepage, but they can also be used in column formats on a backpage. </p>
             <ul class="row">
                     @@loop('objects/_spotlight.html',[
                     {"title": "Interdum adipiscing gravida", "copy": "Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.", "img": "/img/spotlight-350-nature.jpg"},
@@ -51,22 +55,63 @@
                     {"title": "Vivamus porttitor magna enim", "copy": "Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.", "img": "/img/spotlight-350-nightlife.jpg"}
                     ])      
             </ul>
-<pre><code>                            
-div class="spotlight"
-  div class="spotlight__body"
-    h3 class="spotlight__title" HEADER TEXT HERE /h3
-    div class="spotlight__copy" BODY COPY GOES HERE /div
-  /div 
-  div class="spotlight__image"
-    INSERT IMAGE HERE
-  /div  
-  div class="spotlight__cta"
-    a class="button primary" PRIMARY BUTTON TEXT /a
-    a class="button" SECONDARY BUTTON TEXT /a
-  /div
-/div
-</code></pre>
+            @@include('objects/psuedo/_spotlight.html')
+
+
+            <h3 id="media_card" class="l-styleguide__subtitle">.card</h3>
+            <p class="lede">Cards often contain a multiple calls to action, meta info and can have multiple links. They are often intended to stand out from the background more than other media objects. They're often used in sidebars and in grid formations.</p> 
+            <ul class="row">
+                @@loop('objects/_card.html',[
+                {"title": "Phasellus sed ultricies", "date": "October 23, 2024",  "img": "/img/card-420-business.jpg", "thumbnail": "/img/thumb-100-people.jpg"},
+                {"title": "Vivamus porttitor enim", "date": "October 22, 2019",  "img": "/img/card-420-food.jpg", "thumbnail": "/img/thumb-100-people-2.jpg"},
+                {"title": "Phasellus sed magna", "date": "November 4, 2018",  "img": "/img/card-420-nature.jpg", "thumbnail": "/img/thumb-100-cat.jpg"},
+                {"title": "Mauris neque quam", "date": "April 2, 2016", "img": "/img/card-420-sports.jpg", "thumbnail": "/img/thumb-100-people-3.jpg"}
+                ])
+            </ul>
+            @@include('objects/psuedo/_card.html')
+
+            <h3 id="media_miniCard" class="l-styleguide__subtitle">.miniCard</h3>
+            <p class="lede">Minicards are single call to action components that often used to highlight related articles in a list.</p>
+            <ul class="row">
+                @@loop('objects/_miniCard.html',[
+                {"title": "Phasellus sed ultricies fermentum ut", "date": "October 23, 2020", "thumbnail": "/img/thumb-100-nature.jpg"},
+                {"title": "Vivamus porttitor enim, convallis maxiumus", "date": "October 22, 2019", "thumbnail": "/img/thumb-100-nature-2.jpg"},
+                {"title": "Nisl vitea convallis phasellus sed magna", "date": "November 4, 2019", "thumbnail": "/img/thumb-100-nature-3.jpg"}
+                ])
+            </ul>
+            @@include('objects/psuedo/_miniCard.html')
+
+            <h3 id="media_miniCard" class="l-styleguide__subtitle">.blurb</h3>
+            <p class="lede">Blurbs are simple factoids, often presented in a sidebar, with at least one call to action. Use them to provide clarity on a topic or link to an about page.</p>
+            @@include('objects/_blurb.html')
+            @@include('objects/psuedo/_blurb.html')
         </article> 
+
+        <article id="navList" class="l-styleguide__section">
+            <h2 id="navList__title" class="l-styleguide__title">Navigation Lists</h2>
+            <p class="lede">Four different variations of navigational lists exist for a variety of different purposes. In order to recolor them
+                use the <code>navList--recolor($textColor, $shadowColor, $lightColor)</code> mixin within the UL styles of your
+                navList.</p>
+            <h3 id="navlist__horizontal" class="l-styleguide__subtitle">.navList</h3>
+            <p class="lede">Use the standard <code>.navList</code> class when you need any horizontal navigation.</p>
+            @@include('objects/_navlist.html')
+            @@include('objects/psuedo/_navlist.html')
+
+            <h3 id="navlist__vertical" class="l-styleguide__subtitle">.navList--vertical</h3>
+            <p class="lede">Use the <code>.navList--vertical</code> component for secondary navigations or any navigation with multiple levels of hierarchy.</p>
+            @@include('objects/_navlist--vertical.html')
+            @@include('objects/psuedo/_navlist--vertical.html')
+
+            <h3 id="navlist__simple" class="l-styleguide__subtitle">.navList--simple</h3>
+            <p class="lede">Use the <code>.navList--simple</code> class when you need a secondary navigation but don't want the extra lines and padding present in <code>.navlist--vertical</code>.</p>
+            @@include('objects/_navlist--simple.html')
+            @@include('objects/psuedo/_navlist--simple.html')
+
+            <h3 id="navlist__condensed" class="l-styleguide__subtitle">.navList--condensed</h3>
+            <p class="lede">Use the <code>.navList--condensed</code> class when you need a hierarchical navigation list in a tight spot; like in a footer.</p>
+            @@include('objects/_navlist--condensed.html')
+            @@include('objects/psuedo/_navlist--condensed.html')
+        </article>
 
 
 

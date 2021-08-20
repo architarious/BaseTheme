@@ -65,6 +65,7 @@
     <div class="container">
         <article id="alerts" class="l-styleguide__section">
             <h2 id="alerts__title" class="l-styleguide__title">Alerts</h2>
+            <p class="lede">Alerts are simple components often posted at the tops of pages. They're often used to highlight interaction results or crucial information.</p>
             <h3 id="alerts__default" class="l-styleguide__subtitle">.alert</h3>
 <div class="alert">
     Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio <a href="#">porttitor</a> sem non mi integer
@@ -99,11 +100,11 @@
 
         <article id="chip" class="l-styleguide__section">
             <h2 id="chip__title" class="l-styleguide__title">Chips</h2>
-            <p>A chip is a simple snippet of component typically consisting of a title, a short message and an avatar. It's
-                frequently wrapped in a link, but not always.</p>
+            <p class="lede">A chip is a simple component typically consisting of a title, a short message and an avatar. It's
+                frequently wrapped in a link, but not always. You generally see them used to reference individuals.</p>
             <div class="t-objects__chips">
                 <div  class="t-objects__chips_normal">
-                    <h3 class="l-styleguide__subtitle">Normal Chips</h3>
+                    <h3 class="l-styleguide__subtitle">chip</h3>
                     <ul>   
     <li>
         <a href="#" class="chip">
@@ -151,7 +152,7 @@
 </code></pre>                 
                 </div>
                 <div class="t-objects__chips_alt">
-                    <h3 class="l-styleguide__subtitle">Alt Chips</h3>
+                    <h3 class="l-styleguide__subtitle">chip--alt</h3>
                     <ul>   
     <li>
         <a href="#" class="chip--alt">
@@ -199,7 +200,7 @@
 </code></pre>
                 </div>
                 <div class="t-objects__chips_vert">
-                    <h3 class="l-styleguide__subtitle">Vertical Chips</h3>
+                    <h3 class="l-styleguide__subtitle">chip--vert</h3>
                     <ul>   
     <li>
         <a href="#" class="chip--vert">
@@ -276,6 +277,7 @@
 
         <article id="tile" class="l-styleguide__section">
             <h2 id="tiles__title" class="l-styleguide__title">Tiles</h2>
+            <p class="lede">A tile is similar to a thumbnail, but different in that it only contains a brief string of text that functions as a CTA. They are often displayed in sidebars, scrollers and grids.</p>
             <a href="#" class="tile">
     <img class="tile__img" src="http://lorempixel.com/287/191/business/9" alt=""/>
     <span class="tile__title">Sed mattis nunc id lorem</span>
@@ -292,8 +294,10 @@ a.tile
 
         <article id="mediaObjects" class="l-styleguide__section">
             <h2 id="mediaObjects__title" class="l-styleguide__title">Media Objects</h2>
-            <p><span class="lede">Media objects are frequently used to link to blog posts or other items elsewhere in the site</span></p>
-            <h3 id="media_spotlight" class="l-styleguide__subtitle">Spotlights</h3>
+            <p class="lede">Media objects are a collection of components that are used to give context to featured content links. You often see them used to reference blog posts or important promotions. Think of them as a chip, but with meta content.</p>
+            
+            <h3 id="media_spotlight" class="l-styleguide__subtitle">.spotlight</h3>
+            <p class="lede">Spotlights are often used to highlight featured content with multiple calls to action. You often see them displayed as a row on a homepage, but they can also be used in column formats on a backpage. </p>
             <ul class="row">
                     <li class="col col--third spotlight">
 <div class="spotlight__body">
@@ -339,22 +343,295 @@ a.tile
 </div>
 </li>      
             </ul>
-<pre><code>                            
-div class="spotlight"
-  div class="spotlight__body"
-    h3 class="spotlight__title" HEADER TEXT HERE /h3
-    div class="spotlight__copy" BODY COPY GOES HERE /div
-  /div 
-  div class="spotlight__image"
-    INSERT IMAGE HERE
-  /div  
-  div class="spotlight__cta"
-    a class="button primary" PRIMARY BUTTON TEXT /a
-    a class="button" SECONDARY BUTTON TEXT /a
-  /div
-/div
+            <pre><code>                            
+.spotlight
+  .spotlight__body
+    h3.spotlight__title TITLE TEXT  /h3
+    p.spotlight__copy BODY COPY /p
+  /.spotlight__body
+  .spotlight__image IMG TAG  /.spotlight__image  
+  .spotlight__cta
+    a.button.primary PRIMARY BUTTON  /a
+    a.button  SECONDARY BUTTON  /a
+  /.spotlight__cta
+/.spotlight
+</code></pre>
+
+
+            <h3 id="media_card" class="l-styleguide__subtitle">.card</h3>
+            <p class="lede">Cards often contain a multiple calls to action, meta info and can have multiple links. They are often intended to stand out from the background more than other media objects. They're often used in sidebars and in grid formations.</p> 
+            <ul class="row">
+                <li class="col col--quarter">
+    <div class="card">
+        <div class="card__body">
+          <div class="card__copy">
+            <h4 class="card__title">Phasellus sed ultricies</h4>
+            <time class="card__subtitle" datetime="2019-10-23">October 23, 2024</time>
+          </div>
+          <a href="#" class="card__thumb">
+            <img src="/img/thumb-100-people.jpg" alt=""/>
+          </a>
+        </div>
+        <a class="card__image" href="#">
+            <img src="/img/card-420-business.jpg" alt=""/>
+        </a>
+    </div>
+</li><li class="col col--quarter">
+    <div class="card">
+        <div class="card__body">
+          <div class="card__copy">
+            <h4 class="card__title">Vivamus porttitor enim</h4>
+            <time class="card__subtitle" datetime="2019-10-23">October 22, 2019</time>
+          </div>
+          <a href="#" class="card__thumb">
+            <img src="/img/thumb-100-people-2.jpg" alt=""/>
+          </a>
+        </div>
+        <a class="card__image" href="#">
+            <img src="/img/card-420-food.jpg" alt=""/>
+        </a>
+    </div>
+</li><li class="col col--quarter">
+    <div class="card">
+        <div class="card__body">
+          <div class="card__copy">
+            <h4 class="card__title">Phasellus sed magna</h4>
+            <time class="card__subtitle" datetime="2019-10-23">November 4, 2018</time>
+          </div>
+          <a href="#" class="card__thumb">
+            <img src="/img/thumb-100-cat.jpg" alt=""/>
+          </a>
+        </div>
+        <a class="card__image" href="#">
+            <img src="/img/card-420-nature.jpg" alt=""/>
+        </a>
+    </div>
+</li><li class="col col--quarter">
+    <div class="card">
+        <div class="card__body">
+          <div class="card__copy">
+            <h4 class="card__title">Mauris neque quam</h4>
+            <time class="card__subtitle" datetime="2019-10-23">April 2, 2016</time>
+          </div>
+          <a href="#" class="card__thumb">
+            <img src="/img/thumb-100-people-3.jpg" alt=""/>
+          </a>
+        </div>
+        <a class="card__image" href="#">
+            <img src="/img/card-420-sports.jpg" alt=""/>
+        </a>
+    </div>
+</li>
+            </ul>
+            <pre><code>                            
+.card
+  .card__body
+      .card__copy
+        span.card__title TITLE TEXT /span
+        span.card__subtitle SUBTITLE TEXT /span
+      /.card__copy
+      a.card__thumb THUMBNAIL IMAGE /a
+  /.card__body
+  a.card__image INSERT MAIN IMAGE /a 
+/.card
+</code></pre>
+
+            <h3 id="media_miniCard" class="l-styleguide__subtitle">.miniCard</h3>
+            <p class="lede">Minicards are single call to action components that often used to highlight related articles in a list.</p>
+            <ul class="row">
+                <li class="col col--third">
+    <a href="#" class="miniCard">
+        <div class="miniCard__body">
+            <h4 class="miniCard__title">Phasellus sed ultricies fermentum ut</h4>
+            <time class="miniCard__subtitle" datetime="2019-10-23">October 23, 2020</time>
+        </div>
+        <div class="miniCard__thumb">
+            <img src="/img/thumb-100-nature.jpg" alt="" />
+        </div>
+    </a>
+</li><li class="col col--third">
+    <a href="#" class="miniCard">
+        <div class="miniCard__body">
+            <h4 class="miniCard__title">Vivamus porttitor enim, convallis maxiumus</h4>
+            <time class="miniCard__subtitle" datetime="2019-10-23">October 22, 2019</time>
+        </div>
+        <div class="miniCard__thumb">
+            <img src="/img/thumb-100-nature-2.jpg" alt="" />
+        </div>
+    </a>
+</li><li class="col col--third">
+    <a href="#" class="miniCard">
+        <div class="miniCard__body">
+            <h4 class="miniCard__title">Nisl vitea convallis phasellus sed magna</h4>
+            <time class="miniCard__subtitle" datetime="2019-10-23">November 4, 2019</time>
+        </div>
+        <div class="miniCard__thumb">
+            <img src="/img/thumb-100-nature-3.jpg" alt="" />
+        </div>
+    </a>
+</li>
+            </ul>
+            <pre><code>                            
+a.miniCard
+  .miniCard__body
+    span.miniCard__title  TITLE TEXT /span
+    span.miniCard__subtitle  SUBTITLE TEXT /span
+  /.miniCard__body
+  .miniCard__thumb
+    THUMBNAIL IMAGE
+  /.miniCard__thumb
+/a
+</code></pre>
+
+            <h3 id="media_miniCard" class="l-styleguide__subtitle">.blurb</h3>
+            <p class="lede">Blurbs are simple factoids, often presented in a sidebar, with at least one call to action. Use them to provide clarity on a topic or link to an about page.</p>
+            <div class="blurb">
+    <h4 class="blurb__title">About this blurb</h4>
+    <p class="blurb__body">A blurb is just a short paragraph of content that is frequently located within a sidebar or footer. Sometimes it ends with a link to read more and sometimes it has specific links at the bottom. Aenean eu massa quam. Fusce ut dui at elit ornare ultrices. Nunc non convallis velit. Morbi luctus viverra nunc. Morbi blandit blandit eleifend. Curabitur egestas ullamcorper laoreet. <a href="#" class="blurb__readMore">Read more...</a></a></p>
+    <div class="blurb__cta">
+    <a href="#" class="button primary">Important Info</a>
+    <a href="#" class="button">Less Important Info</a>
+    </div>
+</div>
+            <pre><code>                            
+.blurb
+  h2.blurb__title  INSERT TITLE HERE /h2
+  p.blurb__body  INSERT BODY HERE /p
+  .blurb__cta
+    a.button.primary PRIMARY BUTTON TEXT  /a
+    a.button BUTTON TEXT  /a 
+  /.blurb__cta
+/.blurb
 </code></pre>
         </article> 
+
+        <article id="navList" class="l-styleguide__section">
+            <h2 id="navList__title" class="l-styleguide__title">Navigation Lists</h2>
+            <p class="lede">Four different variations of navigational lists exist for a variety of different purposes. In order to recolor them
+                use the <code>navList--recolor($textColor, $shadowColor, $lightColor)</code> mixin within the UL styles of your
+                navList.</p>
+            <h3 id="navlist__horizontal" class="l-styleguide__subtitle">.navList</h3>
+            <p class="lede">Use the standard <code>.navList</code> class when you need any horizontal navigation.</p>
+            <ul class="navList">
+    <li><a href="#">First Link</a></li>
+    <li><a href="#">Second Link</a></li>
+    <li><a href="#" class="active">Third Link</a></li>
+    <li><a href="#">Fourth Link</a></li>
+</ul>
+            <pre style="margin-top: 2em;"><code>                            
+ul.navlist
+  li a LINK ITEM 1 /a /li
+  li a LINK ITEM 2 /a /li
+  li a.active LINK ITEM 3 /a /li
+  li a LINK ITEM 4 /a /li
+/ul
+</code></pre>
+
+            <h3 id="navlist__vertical" class="l-styleguide__subtitle">.navList--vertical</h3>
+            <p class="lede">Use the <code>.navList--vertical</code> component for secondary navigations or any navigation with multiple levels of hierarchy.</p>
+            <div class="navList--vertical">
+    <h4 class="navList__title">Title for navlist</h4>
+    <ul class="navList">
+        <li><a href="#">First Link</a></li>
+        <li><a href="#">Second Link</a></li>
+        <li><a href="#" class="open">Third Link (.open)</a>
+            <ul>
+                <li><a href="#">First Third Link</a></li>
+                <li><a href="#">Second Third Link</a></li>
+                <li><a href="#" class="active">Third Third Link (.active)</a></li>
+                <li><a href="#">Fourth Third Link</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Fourth Link</a></li>
+    </ul>
+</div>
+            <pre style="margin-top:2em"><code>
+.navList--vertical
+  h2.navList__title NAV TITLE /h2 (optional)                           
+  ul.navlist
+    li a LINK ITEM 1 /a /li
+    li a LINK ITEM 2 /a /li
+    li a.open LINK ITEM 3 /a 
+      li a LINK ITEM 3.1 /a /li
+      li a LINK ITEM 3.2 /a /li
+      li a.active LIST ITEM 3.3 /a /li
+      li a LINK ITEM 3.4 /a /li
+    /li
+    li a LINK ITEM 4 /a /li
+  /ul
+/.navList--vertical
+</code></pre>
+
+            <h3 id="navlist__simple" class="l-styleguide__subtitle">.navList--simple</h3>
+            <p class="lede">Use the <code>.navList--simple</code> class when you need a secondary navigation but don't want the extra lines and padding present in <code>.navlist--vertical</code>.</p>
+            <div class="navList--simple">
+    <h4 class="navList__title">Title for navlist</h4>
+    <ul class="navList">
+        <li><a href="#">First Link</a></li>
+        <li><a href="#">Second Link</a></li>
+        <li><a href="#" class="open">Third Link (.open)</a>
+            <ul>
+                <li><a href="#">First Link</a></li>
+                <li><a href="#">Second Link</a></li>
+                <li><a href="#" class="active">Third Link (.active)</a></li>
+                <li><a href="#">Fourth Link</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Fourth Link</a></li>
+    </ul>
+</div>
+            <pre style="margin-top:2em"><code>
+.navList--simple
+  h2.navList__title NAV TITLE /h2 (optional)                           
+  ul.navList
+    li a LINK ITEM 1 /a /li
+    li a LINK ITEM 2 /a /li
+    li a.open LINK ITEM 3 /a 
+      li a LINK ITEM 3.1 /a /li
+      li a LINK ITEM 3.2 /a /li
+      li a.active LIST ITEM 3.3 /a /li
+      li a LINK ITEM 3.4 /a /li
+    /li
+    li a LINK ITEM 4 /a /li
+  /ul
+/.navList--simple
+</code></pre>
+
+            <h3 id="navlist__condensed" class="l-styleguide__subtitle">.navList--condensed</h3>
+            <p class="lede">Use the <code>.navList--condensed</code> class when you need a hierarchical navigation list in a tight spot; like in a footer.</p>
+            <div class="navList--condensed">
+    <h4 class="navList__title">Title for navlist</h4>
+    <ul class="navList">
+        <li><a href="#">First Link</a></li>
+        <li><a href="#">Second Link</a></li>
+        <li><a href="#" class="open">Third Link (.open)</a>
+            <ul>
+                <li><a href="#">First Link</a></li>
+                <li><a href="#">Second Link</a></li>
+                <li><a href="#" class="active">Third Link (.active)</a></li>
+                <li><a href="#">Fourth Link</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Fourth Link</a></li>
+    </ul>
+</div>
+            <pre style="margin-top:2em"><code>
+.navList--condensed
+  h2.navList__title NAV TITLE /h2 (optional)                           
+  ul.navList
+    li a LINK ITEM 1 /a /li
+    li a LINK ITEM 2 /a /li
+    li a.open LINK ITEM 3 /a 
+      li a LINK ITEM 3.1 /a /li
+      li a LINK ITEM 3.2 /a /li
+      li a.active LIST ITEM 3.3 /a /li
+      li a LINK ITEM 3.4 /a /li
+    /li
+    li a LINK ITEM 4 /a /li
+  /ul
+/.navList--condensed
+</code></pre>
+        </article>
 
 
 
