@@ -1,11 +1,19 @@
 $white: #fffefb;
 $black: #27273a; 
-$primary:  #f26157;   //Sunset Orange
+$primary: #f26157;   //Sunset Orange
 $secondary: #bee9e8; //Light Seafoam //#f1a66a; //Sandy Brown
 $tertiary: darken($primary, 20);  
 $quaternary: #f7db0c;  //Sizzling Sunrise
 $quinary: #0033a0;
-
+/*
+$primary: #08415C; //#f26157;   //Sunset Orange
+$secondary: #6B818C; //#bee9e8; //Light Seafoam //#f1a66a; //Sandy Brown
+$tertiary: #CC2936; //darken($primary, 20);  
+$quaternary: #F1BF98; //#f7db0c;  //Sizzling Sunrise
+$quinary: #EEE5E9; //#0033a0;
+$white: lighten(tint($secondary, 50), 22);
+$black: darken(shade($secondary, 50), 8); 
+*/
 
 
 $primary--shadow: darken($primary, 4);

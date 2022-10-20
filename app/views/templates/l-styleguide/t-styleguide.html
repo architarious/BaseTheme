@@ -1,0 +1,230 @@
+<html>
+<head>
+    @@include('0_imports/_i-styles.html')
+    
+    <title>Basetheme: Styleguide</title>    
+    
+</head>
+<body class="l-styleguide t-styleguide">
+  @@include('sections/l-styleguide/_s-header.html') 
+  @@include('sections/l-styleguide/_s-pageTitle--styleguide.html')  
+  <main class="s-main" >
+    <div class="container">
+        <article id="colors" class="l-styleguide__section">
+            <h2 id="colors__title" class="l-styleguide__title">Colors</h2>
+            <h3 class="l-styleguide__subtitle">Color Palette</h3>            
+            <div class="t-styleguide__colors">
+                @@include('1_styleguide/_colors__palette.html')
+            </div>
+            <h3 class="l-styleguide__subtitle">Mono colors</h3>
+            <div class="t-styleguide__colors">
+                @@include('1_styleguide/_colors__mono.html')
+                
+            </div>
+        </article>
+
+        <article id="typography" class="l-styleguide__section">         
+        
+
+            <h2 id="typography__title" class="l-styleguide__title">Typography</h2>
+            <h3 id="type_preview" class="l-styleguide__subtitle">Style hierarchy</h3>
+            <div>
+                @@include('1_styleguide/_typography__preview.html')
+            </div>
+       
+
+            <!--<h3 id="type_sampleContent" class="l-styleguide__subtitle">Sample Content</h3>
+            <div>
+                @@include('1_styleguide/_typography__sample.html')
+            </div>-->
+            
+            
+            
+            <h3 id="type_inline" class="l-styleguide__subtitle">Inline text elements</h3>
+            <div>
+                @@include('1_styleguide/_typography__inline.html')
+            </div>
+        
+            
+            
+            <h3 id="type_headings" class="l-styleguide__subtitle">Headings</h3>
+            <div>
+                @@include('1_styleguide/_typography__headings.html')
+            </div>
+            
+            
+            
+            <h3 id="type_lists" class="l-styleguide__subtitle">Lists</h3>
+            <div class="row col--lines">
+                <div class="col--third">
+                    <h4>Unordered list</h4>
+                    @@include('1_styleguide/_typography__ul.html')
+                </div>
+                <div class="col--third">
+                    <h4>Ordered list</h4>
+                    @@include('1_styleguide/_typography__ol.html')
+                </div>
+                <div class="col--third">
+                    <h4>Definition list</h4>
+                    @@include('1_styleguide/_typography__dl.html')
+                </div>
+            </div>
+            
+            <h3 id="type_blockquote" class="l-styleguide__subtitle">Blockquote</h3>
+            <div>
+                @@include('1_styleguide/_typography__blockquote.html')
+            </div>
+            
+            <h3 id="type_figure" class="l-styleguide__subtitle">Figures</h3>
+            <div>
+                @@include('1_styleguide/_typography__figures.html')
+            </div>
+            
+            <h3 id="type_table" class="l-styleguide__subtitle">Table</h3>
+            <div>
+                @@include('1_styleguide/_typography__table.html')
+            </div>
+            
+            <h3 id="type_box" class="l-styleguide__subtitle">Box</h3>
+            <div>
+                @@include('1_styleguide/_typography__box.html')
+            </div>
+            
+            <h3 id="type_preformatted" class="l-styleguide__subtitle">Preformatted code</h3>
+            <div>
+                @@include('1_styleguide/_typography__pre-code.html')
+            </div>
+            
+        </article>
+
+
+        <article id="grids" class="l-styleguide__section">
+            <h2 id="grids__title" class="l-styleguide__title">Grids</h2>
+            <p>This theme uses <a href="https://github.com/at-import/Singularity">Singularity</a> for rapid development of
+                responsive grids that use CSS Grid, but still work in IE and other browsers that don't yet support css-grid.</p>
+            <p>A small number of grid utility classes have also been created to assist with theme development when singularity
+                mixins can't be formally coded. All utility grid classes snap back to single column on viewports below 640px.</p>
+            <h3 id="grids_twoColumns" class="l-styleguide__subtitle">Two columns</h3>      
+            <div>
+                @@include('1_styleguide/_grid__halfs.html')
+            </div>
+            <div>
+                @@include('1_styleguide/psuedo/_grid__halfs.html') 
+            </div>
+            
+            
+            <h3 id="grids_threeColumns" class="l-styleguide__subtitle">Three columns</h3>
+            <div>
+                @@include('1_styleguide/_grid__thirds.html')
+            </div>
+            <div>
+                @@include('1_styleguide/psuedo/_grid__thirds.html')
+            </div>
+            
+            
+            <h3 id="grids_fourColumns" class="l-styleguide__subtitle">Four columns</h3>
+            <div>
+                @@include('1_styleguide/_grid__quarters.html')
+            </div>
+            <div>
+                @@include('1_styleguide/psuedo/_grid__quarters.html')
+            </div>
+            
+        </article>
+
+        <article id="images" class="l-styleguide__section">
+            <h2 id="images__title" class="l-styleguide__title">Image</h2>
+            <h3 id="images_fit" class="l-styleguide__subtitle">Fitted images</h3>
+            <span class="image fit"><img src="/img/hero-1620-airport.jpg" alt="" /></span>
+            <p style="max-width: 100%;"><strong>Fitted Image:</strong> <code>span class="image fit"</code></p>
+            <h3 id="images_fit" class="l-styleguide__subtitle">Gallery</h3>
+            <div>
+                @@include('1_styleguide/_photo__gallery--thirds.html')
+            </div>
+            <div>
+                @@include('1_styleguide/psuedo/_photo__gallery--thirds.html')
+            </div>
+           
+            
+            <h3 id="images_thumbnails" class="l-styleguide__subtitle">Thumbnails</h3>
+            <p>Thumbnails require images that are cropped to square proportions.</p>
+            <div>
+                @@include('1_styleguide/_photo__thumbnails.html')
+            </div>
+            
+            <h3 id="images_circular" class="l-styleguide__subtitle">Circular images</h3>
+            <p>By default, circular images are configured for square images but landscape and portrait options are available.</p>
+            <div>
+                @@include('1_styleguide/_photo__circleCrop.html')
+            </div>          
+            
+            <h3 id="images_inline" class="l-styleguide__subtitle">Left &amp; right aligned inline images</h3>
+            <div>
+                @@include('1_styleguide/_photo__inline.html')
+            </div>
+            
+
+        </article>
+
+        <article id="buttons" class="l-styleguide__section">
+            <h2 id="buttons__title" class="l-styleguide__title">Buttons</h2>
+            <h3 id="buttons_default" class="l-styleguide__subtitle">Default</h3>
+            <div>
+                @@include('1_styleguide/_buttons__default.html')
+            </div>
+            <div>
+                @@include('1_styleguide/psuedo/_buttons__default.html')
+            </div>
+           
+            <h3 id="buttons_icons" class="l-styleguide__subtitle">Buttons with icons</h3>
+            <div>
+                @@include('1_styleguide/_buttons__icons.html')
+            </div>
+            <div>
+                @@include('1_styleguide/psuedo/_buttons__icons.html')
+            </div>
+            
+            <h3 id="buttons_disabled" class="l-styleguide__subtitle">Disabled buttons</h3>
+            <div>
+                @@include('1_styleguide/_buttons__disabled.html')
+            </div>
+            <div>
+                @@include('1_styleguide/psuedo/_buttons__disabled.html')
+            </div>
+
+            <h3 id="buttons_icons" class="l-styleguide__subtitle">Dynamically fitting buttons</h3>
+            <div>
+                @@include('1_styleguide/_buttons__fitted.html')
+            </div>
+            <div>
+                @@include('1_styleguide/psuedo/_buttons__fitted.html')
+            </div>
+        </article>
+
+
+        <article id="forms" class="l-styleguide__section">
+            <h2 id="forms" class="l-styleguide__title">Forms</h2>
+            <div>
+                @@include('1_styleguide/_form__default.html')
+            </div>            
+        </article>
+
+
+
+       
+    </div><!--end #container-->
+
+  </main>
+  @@include('sections/l-styleguide/_s-footer.html') 
+  
+    <!--<script src="../bower_components/eq.js/dist/eq.min.js"></script>-->
+    <!--<script src="/bower_components/jquery/dist/jquery.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <!--<script src="/javascripts/vendor/slick.min.js"></script>-->
+    <!--<script src="/javascripts/main.min.js"></script>-->
+    @@include('0_imports/_i-javascripts.html')
+    
+</body>
+
+</html>

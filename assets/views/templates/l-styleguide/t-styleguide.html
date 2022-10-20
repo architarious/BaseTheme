@@ -1,0 +1,883 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.min.css" >
+    
+    <title>Basetheme: Styleguide</title>    
+    
+</head>
+<body class="l-styleguide t-styleguide">
+  <header class="s-header">
+  <div class="container">      
+      <div class="m-navbar" id="nav-container">
+  <a href="/views/index.html" class="b-siteName" >
+    <h1 class="b-siteName__title">Base Theme</h1>
+    <span class="b-siteName__subtitle">A solid starting point</span>
+    <svg class="b-siteName__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path d="M512 11.52C235.59 11.52 11.52 235.59 11.52 512S235.59 1012.48 512 1012.48 1012.48 788.41 1012.48 512 788.41 11.52 512 11.52zm208.21 835.67c-21.14 12.24-42.84 22.45-65.1 30.6-22.26 8.17-45.45 14.29-69.55 18.36-24.11 4.07-50.27 6.12-78.45 6.12-51.93 0-99.59-9.46-142.99-28.38-43.4-18.92-80.68-45.62-111.83-80.12-31.16-34.49-55.47-75.84-72.89-124.07-17.44-48.21-26.15-101.26-26.15-159.12 0-63.79 10.57-119.43 31.71-166.91 21.14-47.47 48.96-87.16 83.46-119.07 34.49-31.88 74-55.64 118.51-71.22 44.51-15.58 90.5-23.37 137.98-23.37 46.74 0 89.2 4.84 127.41 14.47 38.2 9.65 78.06 24.12 119.62 43.4-5.94 25.98-9.46 53.41-10.57 82.34-1.11 28.93-1.67 58.98-1.67 90.13-9.65 3.72-18.92 6.31-27.82 7.79-8.9 1.49-19.3 2.23-31.16 2.23-1.5-39.32-6.31-71.58-14.47-96.81-8.17-25.21-19.47-45.07-33.94-59.53-14.47-14.47-31.71-24.48-51.74-30.05-20.03-5.56-42.29-8.34-66.77-8.34-46.73 0-86.79 8.53-120.18 25.59-33.38 17.08-60.65 39.88-81.79 68.43-21.14 28.57-36.72 61.2-46.73 97.92-10.02 36.72-15.02 74.38-15.02 112.95 0 49.71 6.48 96.08 19.47 139.1 12.97 43.03 31.52 80.5 55.64 112.39 24.1 31.91 53.78 56.94 89.02 75.12 35.22 18.18 75.11 27.26 119.62 27.26 35.61 0 71.95-5.93 109.05-17.8 37.09-11.86 71.22-27.82 102.37-47.85 4.45 3.72 8.71 9.1 12.8 16.14 4.07 7.06 6.48 13.18 7.23 18.36-22.23 17.05-43.93 31.69-65.07 43.94zM609.68 591.6c-11.23-13.66-25.26-25.5-42.1-35.51-16.84-10-35.14-19.51-54.91-28.55-19.77-9.02-38.07-19.77-54.91-32.21-16.84-12.45-30.87-27.93-42.1-46.49-11.23-18.54-16.84-42.7-16.84-72.48 0-19.04 3.29-36.48 9.88-52.35 6.59-15.86 15.74-29.53 27.45-41 11.71-11.46 25.74-20.24 42.1-26.35 16.34-6.1 34.52-9.15 54.54-9.15 27.33 0 50.75 3.29 70.28 9.88 19.51 6.59 34.41 14.03 44.66 22.33 0 14.16.24 30.51.73 49.05.48 18.55 1.71 34.41 3.66 47.59-5.37 2.45-11.84 4.15-19.4 5.12-7.57.99-14.77 1.46-21.6 1.46-3.91-20.98-8.31-38.18-13.18-51.61-4.88-13.42-10.62-23.91-17.2-31.48-6.59-7.56-13.91-12.81-21.96-15.74-8.05-2.92-16.72-4.39-25.99-4.39-21.96 0-39.3 6.35-51.98 19.04-12.7 12.7-19.04 30.75-19.04 54.18 0 21.48 5.6 39.05 16.84 52.71 11.22 13.67 25.26 25.88 42.1 36.6 16.84 10.74 35.02 20.87 54.54 30.39 19.51 9.52 37.7 20.49 54.54 32.94 16.84 12.45 30.86 27.46 42.09 45.03 11.22 17.57 16.84 39.78 16.84 66.62 0 18.56-3.79 36.24-11.35 53.08-7.57 16.84-17.94 31.61-31.11 44.29-13.18 12.7-28.81 22.69-46.86 30.01-18.06 7.32-37.83 10.98-59.3 10.98-17.09 0-32.1-.86-45.03-2.56-12.94-1.72-24.89-4.4-35.87-8.06-10.98-3.66-21.96-8.42-32.95-14.27-10.98-5.86-23.31-13.18-36.97-21.97 2.93-18.55 4.76-37.08 5.49-55.64.74-18.55 1.1-34.65 1.1-48.32 5.37-1.47 11.71-2.56 19.04-3.3 7.32-.73 14.15-1.1 20.5-1.1.97 18.55 3.41 35.15 7.32 49.79 3.9 14.64 9.88 27.21 17.94 37.7 8.05 10.5 18.78 18.55 32.21 24.16 13.42 5.62 30.39 8.42 50.88 8.42 13.66 0 25.62-2.07 35.87-6.23 10.25-4.14 18.78-9.63 25.62-16.47 6.83-6.83 12.08-14.76 15.74-23.79s5.49-18.67 5.49-28.92c.04-21.95-5.57-39.76-16.8-53.43z" /></svg>              
+  </a>
+  <nav class="b-primaryNav b-primaryNav--subNav m-navbar__fullscreen " role="navigation" id="primaryNav nav-fullscreen">
+  <ul class="navList b-primaryNav__list">
+    <li><a href="/views/templates/t-homepage.html">Home</a></li>
+    <li><a href="/views/templates/t-backpage.html">Backpage</a></li>
+    <li><a href="/views/templates/l-personnel/t-directory.html">Directory</a></li>
+    <li><a href="/views/templates/l-blog/t-blogIndex.html">Blog</a></li>
+    <li><a class="active" href="/views/templates/l-styleguide/t-homepage.html">Patterns</a></li>
+  </ul>
+    <ul class="navList b-primaryNav__list">
+      <li><a href="/views/templates/l-styleguide/t-styleguide.html">Styleguide</a></li>
+      <li><a href="/views/templates/l-styleguide/t-objects.html">Objects</a></li>
+      <li><a href="/views/templates/l-styleguide/t-blocks.html">Blocks</a></li>
+      <li><a href="/views/templates/l-styleguide/t-modules.html">Modules</a></li>
+      <li><a href="/views/templates/l-styleguide/t-sections.html">Sections</a></li>
+      <li><a href="/views/templates/l-styleguide/t-templates.html">Templates</a></li>
+    </ul>
+  </nav>
+  <a href="#primaryNav" class="b-primaryNav__trigger m-navbar__trigger" id="nav-toggle">
+    <span class="hamburger">
+      <span class="hamburger__line" ></span>
+      <span class="hamburger__line" ></span>
+      <span class="hamburger__line" ></span>
+    </span>
+  </a>
+</div>  
+  </div><!--end container-->
+</header> 
+  <section class="s-pageTitle--alt">
+	  <div class="container">
+    <div class="b-title">
+  <span class="b-title__meta"></span>
+  <h1 class="b-title__title">Styleguide</h1>
+  <p class="b-title__subtitle">Where branding meets production.</p>
+</div>
+  </div>
+  <div class="s-pageTitle__background">
+    <svg width="100%" height="100%">
+        <defs>
+            <pattern id="texture" viewBox="0 0 4 4" width="4" height="4" patternUnits="userSpaceOnUse">
+                <path d="M1 3h1v1H1V3zm2-2h1v1H3V1z"></path>
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#texture)"></rect>
+    </svg>
+  </div>
+</section>   
+  <main class="s-main" >
+    <div class="container">
+        <article id="colors" class="l-styleguide__section">
+            <h2 id="colors__title" class="l-styleguide__title">Colors</h2>
+            <h3 class="l-styleguide__subtitle">Color Palette</h3>            
+            <div class="t-styleguide__colors">
+                <div class="t-styleguide__colors--primary"></div>
+<div class="t-styleguide__colors--secondary"></div>
+<div class="t-styleguide__colors--tertiary"></div>
+<div class="t-styleguide__colors--quaternary"></div>
+<div class="t-styleguide__colors--quinary"></div>
+            </div>
+            <h3 class="l-styleguide__subtitle">Mono colors</h3>
+            <div class="t-styleguide__colors">
+                <div class="t-styleguide__colors--white"></div>
+<div class="t-styleguide__colors--gray-light-1"></div>
+<div class="t-styleguide__colors--gray-light-2"></div>
+<div class="t-styleguide__colors--gray-light-3"></div>
+<div class="t-styleguide__colors--gray-light-4"></div>
+<div class="t-styleguide__colors--gray-light-5"></div>
+<div class="t-styleguide__colors--gray"></div>
+<div class="t-styleguide__colors--gray-dark-5"></div>
+<div class="t-styleguide__colors--gray-dark-4"></div>
+<div class="t-styleguide__colors--gray-dark-3"></div>
+<div class="t-styleguide__colors--gray-dark-2"></div>
+<div class="t-styleguide__colors--gray-dark-1"></div>
+<div class="t-styleguide__colors--black"></div>
+<div class="t-styleguide__colors--black-dark-1"></div>
+<div class="t-styleguide__colors--black-dark-2"></div>
+<div class="t-styleguide__colors--black-dark-3"></div>
+                
+            </div>
+        </article>
+
+        <article id="typography" class="l-styleguide__section">         
+        
+
+            <h2 id="typography__title" class="l-styleguide__title">Typography</h2>
+            <h3 id="type_preview" class="l-styleguide__subtitle">Style hierarchy</h3>
+            <div>
+                <div class="typography__preview">
+<span class="headline">This is a headline</span>
+<span class="subHeadline">This text would frequently be used as a subheadline.</span>
+<p><span class="lede">Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor. Ante
+        commodo blandit adipiscing integer semper orci eget.</span></p>
+<p>This is body copy. Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi
+    integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a
+    lorem in integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+    Semper adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+<p class="caption">This is caption text. Semper adipiscing varius montes viverra nibh in adipiscing blandit tempus
+    accumsan.</p>
+<p style="padding-top:1em; max-width:100%;"><strong>Headlines: <code>class="headline"</code></strong> |
+    <strong>Subheadlines: <code>class="subHeadline"</code></strong> | <strong>Lede text:
+    </strong><code>span class="lede"</code></p>
+</div>
+            </div>
+       
+
+            <!--<h3 id="type_sampleContent" class="l-styleguide__subtitle">Sample Content</h3>
+            <div>
+                <h2 id="content">Sample Content</h2>
+<p>
+    <span class="lede">Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc.</span>
+</p>
+<p>Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna
+    tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus
+    praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem
+    ipsum dolor sit amet nullam veroeros adipiscing.</p>
+<div class="row">
+    <div class="col--half">
+        <h3>Sem turpis amet semper</h3>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in
+            integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac. Semper
+            adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+    </div>
+    <div class="col--half">
+        <h3>Magna odio tempus commodo</h3>
+        <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis
+            commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper
+            orci eget. Faucibus commodo adipiscing mi eu nullam accumsan morbi arcu ornare odio mi adipiscing nascetur
+            lacus ac interdum morbi accumsan vis mi accumsan.</p>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col--third bounceIn">
+        <h3>Interdum sapien gravida</h3>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius
+            montes viverra nibh in adipiscing blandit.</p>
+    </div>
+    <div class="col--third">
+        <h3>Faucibus consequat lorem</h3>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius
+            montes viverra nibh in adipiscing blandit.</p>
+    </div>
+    <div class="col--third">
+        <h3>Accumsan montes viverra</h3>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius
+            montes viverra nibh in adipiscing blandit.</p>
+    </div>
+</div>
+            </div>-->
+            
+            
+            
+            <h3 id="type_inline" class="l-styleguide__subtitle">Inline text elements</h3>
+            <div>
+                <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+    This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+    This is <u>underlined</u>, this is <cite>cite</cite> and this is code: <code>for (;;) { ... }</code>.
+    Finally, this is a <a href="#">link</a>.</p>
+            </div>
+        
+            
+            
+            <h3 id="type_headings" class="l-styleguide__subtitle">Headings</h3>
+            <div>
+                <h2>Heading Level 2</h2>
+<h3>Heading Level 3</h3>
+<h4>Heading Level 4</h4>
+<h5>Heading Level 5</h5>
+<h6>Heading Level 6</h6>
+            </div>
+            
+            
+            
+            <h3 id="type_lists" class="l-styleguide__subtitle">Lists</h3>
+            <div class="row col--lines">
+                <div class="col--third">
+                    <h4>Unordered list</h4>
+                    <ul>
+    <li>Dolor etiam magna etiam.</li>
+    <li>Sagittis lorem eleifend.</li>
+    <ul>
+        <li>Dolor magna etiam.</li>
+        <li>Sagittis lorem.</li>
+        <ul>
+            <li>Sagittis lorem.</li>
+            <li>Dolore viverra.</li>
+        </ul>
+        <li>Dolore viverra.</li>
+    </ul>
+    <li>Felis dolore viverra.</li>
+</ul>
+<h4>Alternate</h4>
+<code>class="alt"</code>
+<ul class="alt">
+    <li>Dolor etiam magna etiam.</li>
+    <li>Sagittis lorem eleifend.</li>
+    <li>Felis feugiat viverra.</li>
+</ul>
+                </div>
+                <div class="col--third">
+                    <h4>Ordered list</h4>
+                    <ol>
+    <li>Dolor etiam magna etiam.</li>
+    <li>Etiam vel lorem sed viverra.</li>
+    <li>Felis dolore viverra.</li>
+    <ol>
+        <li>Dolor magna etiam.</li>
+        <li>Sagittis lorem.</li>
+        <ol>
+            <li>Sagittis lorem.</li>
+            <li>Dolore viverra.</li>
+        </ol>
+        <li>Dolore viverra.</li>
+    </ol>
+    <li>Dolor etiam magna etiam.</li>
+    <li>Etiam vel lorem sed viverra.</li>
+    <li>Felis dolore viverra.</li>
+</ol>
+                </div>
+                <div class="col--third">
+                    <h4>Definition list</h4>
+                    <dl>
+    <dt>Item1</dt>
+    <dd>
+        <p>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis
+            iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum
+            dolor.</p>
+    </dd>
+    <dt>Item2</dt>
+    <dd>
+        <p>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis
+            iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum
+            dolor.</p>
+    </dd>
+    <dt>Item3</dt>
+    <dd>
+        <p>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis
+            iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum
+            dolor.</p>
+    </dd>
+</dl>
+                </div>
+            </div>
+            
+            <h3 id="type_blockquote" class="l-styleguide__subtitle">Blockquote</h3>
+            <div>
+                <blockquote>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis
+    volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor. Lorem ipsum dolor
+    vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+    accumsan eu faucibus.</blockquote>
+            </div>
+            
+            <h3 id="type_figure" class="l-styleguide__subtitle">Figures</h3>
+            <div>
+                <h4>Figure image</h4>
+<figure>
+    <img src="/img/hero-1620-desert.jpg" alt="" />
+    <figcaption>Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.</figcaption>
+</figure>
+
+<h4>Figure blockquote</h4>
+<figure>
+    <blockquote>
+        Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis
+        volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor.
+    </blockquote>
+    <figcaption>
+        Vestibulum Ante, in <cite>Ante psum primis in faucibus vestibulum</cite>, eu felis <cite>Volutpat ac
+            Adipiscing</cite>, adipiscing accumsan eu integer.
+    </figcaption>
+</figure>
+
+<h4>Figure list</h4>
+<figure>
+    <figcaption class="figureTitle">Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
+        Integer ac pellentesque praesent.</figcaption>
+    <ol>
+        <li>Dolor etiam magna etiam.</li>
+        <li>Etiam vel lorem sed viverra.</li>
+        <li>Felis dolore viverra.</li>
+    </ol>
+</figure>
+            </div>
+            
+            <h3 id="type_table" class="l-styleguide__subtitle">Table</h3>
+            <div>
+                <h4>Default</h4>
+<div class="table-wrapper">
+    <table>
+        <caption>Caption for default table</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Item1</td>
+                <td>Ante turpis integer aliquet porttitor.</td>
+                <td>29.99</td>
+            </tr>
+            <tr>
+                <td>Item2</td>
+                <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                <td>19.99</td>
+            </tr>
+            <tr>
+                <td>Item3</td>
+                <td> Morbi faucibus arcu accumsan lorem.</td>
+                <td>29.99</td>
+            </tr>
+            <tr>
+                <td>Item4</td>
+                <td>Vitae integer tempus condimentum.</td>
+                <td>19.99</td>
+            </tr>
+            <tr>
+                <td>Item5</td>
+                <td>Ante turpis integer aliquet porttitor.</td>
+                <td>29.99</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"></td>
+                <td>100.00</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<h4>Alternate</h4>
+<code>class="alt"</code>
+<div class="table-wrapper">
+    <table class="alt">
+        <caption>Caption for alternate table</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Item1</td>
+                <td>Ante turpis integer aliquet porttitor.</td>
+                <td>29.99</td>
+            </tr>
+            <tr>
+                <td>Item2</td>
+                <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                <td>19.99</td>
+            </tr>
+            <tr>
+                <td>Item3</td>
+                <td> Morbi faucibus arcu accumsan lorem.</td>
+                <td>29.99</td>
+            </tr>
+            <tr>
+                <td>Item4</td>
+                <td>Vitae integer tempus condimentum.</td>
+                <td>19.99</td>
+            </tr>
+            <tr>
+                <td>Item5</td>
+                <td>Ante turpis integer aliquet porttitor.</td>
+                <td>29.99</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"></td>
+                <td>100.00</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+            </div>
+            
+            <h3 id="type_box" class="l-styleguide__subtitle">Box</h3>
+            <div>
+                <code>class="box"</code>
+<div class="box">
+    <p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac
+        adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
+        Magna sed etiam ante ipsum primis in faucibus vestibulum.</p>
+</div>
+            </div>
+            
+            <h3 id="type_preformatted" class="l-styleguide__subtitle">Preformatted code</h3>
+            <div>
+                <pre><code>
+i = 0;
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';
+</code></pre>
+            </div>
+            
+        </article>
+
+
+        <article id="grids" class="l-styleguide__section">
+            <h2 id="grids__title" class="l-styleguide__title">Grids</h2>
+            <p>This theme uses <a href="https://github.com/at-import/Singularity">Singularity</a> for rapid development of
+                responsive grids that use CSS Grid, but still work in IE and other browsers that don't yet support css-grid.</p>
+            <p>A small number of grid utility classes have also been created to assist with theme development when singularity
+                mixins can't be formally coded. All utility grid classes snap back to single column on viewports below 640px.</p>
+            <h3 id="grids_twoColumns" class="l-styleguide__subtitle">Two columns</h3>      
+            <div>
+                <div class="row">
+    <div class="col--half">
+        <h4>Sem turpis amet semper</h4>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed ante lacinia. Sapien a lorem in
+            integer ornare praesent commodo adipiscing arcu in massa commodo lorem accumsan at odio massa ac ac. Semper
+            adipiscing varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+    </div>
+    <div class="col--half">
+        <h4>Magna odio tempus commodo</h4>
+        <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis
+            commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper
+            orci eget. Faucibus commodo adipiscing mi eu nullam accumsan morbi arcu ornare odio mi adipiscing nascetur
+            lacus ac interdum morbi accumsan vis mi accumsan.</p>
+    </div>
+</div>
+            </div>
+            <div>
+                <pre><code>
+div class="row"
+    div class="col--half"
+        CONTENT GOES HERE
+    /div
+    div class="col--half"
+        CONTENT GOES HERE
+    /div
+/div
+</code></pre> 
+            </div>
+            
+            
+            <h3 id="grids_threeColumns" class="l-styleguide__subtitle">Three columns</h3>
+            <div>
+                <div class="row">
+    <div class="col--third bounceIn">
+        <h4>Interdum sapien gravida</h4>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius
+            montes viverra nibh in adipiscing blandit.</p>
+    </div>
+    <div class="col--third">
+        <h4>Faucibus consequat lorem</h4>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius
+            montes viverra nibh in adipiscing blandit.</p>
+    </div>
+    <div class="col--third">
+        <h4>Accumsan montes viverra</h4>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius
+            montes viverra nibh in adipiscing blandit.</p>
+    </div>
+</div>
+            </div>
+            <div>
+                <pre><code>
+div class="row"
+    div class="col--third"
+        CONTENT GOES HERE
+    /div
+    div class="col--third"
+        CONTENT GOES HERE
+    /div
+    div class="col--third"
+        CONTENT GOES HERE
+    /div
+/div
+</code></pre>
+            </div>
+            
+            
+            <h3 id="grids_fourColumns" class="l-styleguide__subtitle">Four columns</h3>
+            <div>
+                <div class="row">
+    <div class="col--quarter">
+        <h4>Cum sociis natoque</h4>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius
+            montes viverra nibh in adipiscing blandit.</p>
+    </div>
+    <div class="col--quarter">
+        <h4>Nascetur ridiculus</h4>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius
+            montes viverra nibh in adipiscing blandit.</p>
+    </div>
+    <div class="col--quarter">
+        <h4>et magnis disparturien</h4>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius
+            montes viverra nibh in adipiscing blandit.</p>
+    </div>
+    <div class="col--quarter">
+        <h4>Interdum adipiscing</h4>
+        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non
+            faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius
+            montes viverra nibh in adipiscing blandit.</p>
+    </div>
+</div>
+            </div>
+            <div>
+                <pre><code>
+div class="row"
+    div class="col--fourth"
+        CONTENT GOES HERE
+    /div
+    div class="col--fourth"
+        CONTENT GOES HERE
+    /div
+    div class="col--fourth"
+        CONTENT GOES HERE
+    /div
+    div class="col--fourth"
+        CONTENT GOES HERE
+    /div
+/div
+</code></pre>
+            </div>
+            
+        </article>
+
+        <article id="images" class="l-styleguide__section">
+            <h2 id="images__title" class="l-styleguide__title">Image</h2>
+            <h3 id="images_fit" class="l-styleguide__subtitle">Fitted images</h3>
+            <span class="image fit"><img src="/img/hero-1620-airport.jpg" alt="" /></span>
+            <p style="max-width: 100%;"><strong>Fitted Image:</strong> <code>span class="image fit"</code></p>
+            <h3 id="images_fit" class="l-styleguide__subtitle">Gallery</h3>
+            <div>
+                <div class="box alt">
+    <div class="row">
+        <div class="col--third">
+            <span class="image fit">
+                <img src="/img/card-420-abstractbw.jpg" alt="" />
+            </span>
+        </div>
+        <div class="col--third">
+            <span class="image fit">
+                <img src="/img/card-420-business.jpg" alt="" />
+            </span>
+        </div>
+        <div class="col--third">
+            <span class="image fit">
+                <img src="/img/card-420-food.jpg" alt="" />
+            </span>
+        </div>
+        <div class="col--third">
+            <span class="image fit">
+                <img src="/img/card-420-gift.jpg" alt="" />
+            </span>
+        </div>
+        <div class="col--third">
+            <span class="image fit">
+                <img src="/img/card-420-lakeField.jpg" alt="" />
+            </span>
+        </div>
+        <div class="col--third">
+            <span class="image fit">
+                <img src="/img/card-420-library.jpg" alt="" />
+            </span>
+        </div>
+        <div class="col--third">
+            <span class="image fit" style="margin-bottom:0;">
+                <img src="/img/card-420-motox.jpg" alt="" />
+            </span>
+        </div>
+        <div class="col--third">
+            <span class="image fit" style="margin-bottom:0;">
+                <img src="/img/card-420-mtnClouds.jpg" alt="" />
+            </span>
+        </div>
+        <div class="col--third">
+            <span class="image fit" style="margin-bottom:0;">
+                <img src="/img/card-420-haybail.jpg" alt="" />
+            </span>
+        </div>
+    </div>
+</div>
+            </div>
+            <div>
+                <pre><code>
+div class="box alt"
+  div class="row"
+    div class="col--third"
+      span class="image fit"
+        img #1
+      /span
+    /div
+    div class="col--third"
+      span class="image fit"
+        img #2
+      /span
+    /div
+    div class="col--third"
+      span class="image fit"
+        img #3
+      /span
+    /div
+/div
+</code></pre>
+            </div>
+           
+            
+            <h3 id="images_thumbnails" class="l-styleguide__subtitle">Thumbnails</h3>
+            <p>Thumbnails require images that are cropped to square proportions.</p>
+            <div>
+                 <ul class="t-styleguide__thumbnails">
+    <li><a href="#" class="thumbnail--150"><img src="/img/thumb-200-tea.jpg" alt=""></a></li>
+    <li><a href="#" class="thumbnail--125"><img src="/img/thumb-200-traintracks.jpg" alt=""></a></li>
+    <li><a href="#" class="thumbnail"><img src="/img/thumb-200-beach.jpg" alt=""></a></li>
+    <li><a href="#" class="thumbnail--75"><img src="/img/thumb-200-arctic.jpg" alt=""></a></li>
+    <li><a href="#" class="thumbnail--50"><img src="/img/thumb-200-seahorizon.jpg" alt=""></a></li>
+</ul>
+            </div>
+            
+            <h3 id="images_circular" class="l-styleguide__subtitle">Circular images</h3>
+            <p>By default, circular images are configured for square images but landscape and portrait options are available.</p>
+            <div>
+                <ul class="t-styleguide__circular">
+    <li>
+        <a href="#" style="width:150px; height: 150px;" class="circular">
+            <img src="/img/thumb-360-cat.jpg" alt="">
+        </a>
+    </li>
+    <li>
+        <a href="#" style="width:150px; height: 150px;" class="circular--landscape">
+            <img src="/img/landscape-582-360-cat.jpg" alt="">
+        </a>
+    </li>
+    <li>
+        <a href="#" style="width:150px; height: 150px;" class="circular--portrait">
+            <img src="/img/portrait-360-582-cat.jpg" alt="">
+        </a>
+    </li>
+</ul>
+            </div>          
+            
+            <h3 id="images_inline" class="l-styleguide__subtitle">Left &amp; right aligned inline images</h3>
+            <div>
+                <p><span class="image left"><img src="/img/card-420-vertigo.jpg" alt="" /></span>Lorem ipsum dolor sit
+    accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus
+    vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque
+    praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod.
+    Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+    accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+<p><span class="image right"><img src="/img/card-420-teacup.jpg" alt="" /></span>Lorem ipsum dolor sit
+    accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus
+    vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque
+    praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod.
+    Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+    accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+<p style="max-width:100%"><strong>Left or right Images:</strong> <code>class="image left"</code> or
+    <code>class="image right"</code>
+</p>
+            </div>
+            
+
+        </article>
+
+        <article id="buttons" class="l-styleguide__section">
+            <h2 id="buttons__title" class="l-styleguide__title">Buttons</h2>
+            <h3 id="buttons_default" class="l-styleguide__subtitle">Default</h3>
+            <div>
+                <ul class="actions">
+    <li><a href="#" class="button primary">Primary</a></li>
+    <li><a href="#" class="button">Default</a></li>
+    <li><a href="#" class="button large">Large</a></li>
+    <li><a href="#" class="button small">Small</a></li>
+</ul>
+            </div>
+            <div>
+                <p style="max-width:100%"><strong>Primary:</strong> <code>class="button primary"</code> | <strong>Default:</strong>
+  <code>class="button"</code> | <strong>Large:</strong> <code>class="button large"</code> | <strong>Small:</strong>
+  <code>class="button small"</code>
+</p>
+            </div>
+           
+            <h3 id="buttons_icons" class="l-styleguide__subtitle">Buttons with icons</h3>
+            <div>
+                <ul class="actions">
+    <li><a href="#" class="button primary icon fa-search">Icon</a></li>
+    <li><a href="#" class="button icon fa-download">Icon</a></li>
+</ul>
+            </div>
+            <div>
+                <p style="max-width:100%">
+    <strong>Primary Icon:</strong> <code>class="button primary icon fa-search"</code> | <strong>Default Icon:</strong>
+    <code>class="button icon fa-download"</code>
+</p>
+            </div>
+            
+            <h3 id="buttons_disabled" class="l-styleguide__subtitle">Disabled buttons</h3>
+            <div>
+                <ul class="actions">
+    <li><span class="button primary disabled">Disabled</span></li>
+    <li><span class="button disabled">Disabled</span></li>
+</ul>
+            </div>
+            <div>
+                <p style="max-width:100%">
+    <strong>Primary Disabled:</strong> <code>class="button primary disabled"</code> | <strong>Default Disabled:</strong>
+    <code>class="button disabled"</code>
+</p>
+            </div>
+
+            <h3 id="buttons_icons" class="l-styleguide__subtitle">Dynamically fitting buttons</h3>
+            <div>
+                <ul class="actions fit">
+    <li><a href="#" class="button primary fit">Fit + Primary</a></li>
+    <li><a href="#" class="button fit small">Fit + Small</a></li>
+    <li><a href="#" class="button fit icon fa-external-link">Fit</a></li>
+</ul>
+            </div>
+            <div>
+                <pre><code>
+ul class="actions fit"
+  li a class="button primary fit" /li
+  li a class="button fit small" /li
+  li a class="button icon fa-external-link" /li 
+/ul 
+</code></pre>
+            </div>
+        </article>
+
+
+        <article id="forms" class="l-styleguide__section">
+            <h2 id="forms" class="l-styleguide__title">Forms</h2>
+            <div>
+                <form method="post" action="#">
+    <div class="row">
+        <div class="col col--half">
+            <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+        </div>
+        <div class="col col--half">
+            <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+        </div>
+
+        <div class="col col--full">
+            <select name="demo-category" id="demo-category">
+                <option value="">- Category -</option>
+                <option value="1">Manufacturing</option>
+                <option value="1">Shipping</option>
+                <option value="1">Administration</option>
+                <option value="1">Human Resources</option>
+            </select>
+        </div>
+
+        <div class="col col--third">
+            <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+            <label for="demo-priority-low">Low</label>
+        </div>
+        <div class="col col--third">
+            <input type="radio" id="demo-priority-normal" name="demo-priority">
+            <label for="demo-priority-normal">Normal</label>
+        </div>
+        <div class="col col--third">
+            <input type="radio" id="demo-priority-high" name="demo-priority">
+            <label for="demo-priority-high">High</label>
+        </div>
+
+        <div class="col col--half">
+            <input type="checkbox" id="demo-copy" name="demo-copy">
+            <label for="demo-copy">Email me a copy</label>
+        </div>
+        <div class="col col--half">
+            <input type="checkbox" id="demo-human" name="demo-human" checked>
+            <label for="demo-human">I am a human</label>
+        </div>
+
+        <div class="col col--full">
+            <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+        </div>
+
+        <div class="col col--full">
+            <ul class="actions">
+                <li><input type="submit" value="Send Message" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+            </ul>
+        </div>
+    </div>
+</form>
+            </div>            
+        </article>
+
+
+
+       
+    </div><!--end #container-->
+
+  </main>
+  <footer class="s-footer">
+  <div class="container">
+    <div class="s-footer__contact">
+      <div class="b-address">
+  <h2 class="b-address__title">Cole Smith</h2> 
+  <address class="b-address__body">
+    123 SomethingLane, <br/> 
+    Morgantown, WV 26501 <br/>
+  </address>
+  <a href="tel:1-888-888-8888" class="b-address__tel"> 1-888-888-8888</a>
+  <a href="mailto:#" class="b-address__email">something@somewhere.com</a>
+</div>
+    </div><!--end s-footer__contact-->
+    <div class="s-footer__cta">
+      <nav class="b-primaryNav" role="navigation" >          
+    <ul class="navList b-primaryNav__list">
+      <li><a href="/views/styleguide.html">Styleguide</a></li>
+      <li><a href="/views/objects.html">Objects</a></li>
+      <li><a href="/views/prod/l-styleguide/t-blocks.html">Blocks</a></li>
+      <li><a href="/views/prod/l-styleguide/t-modules.html">Modules</a></li>
+      <li><a href="/views/prod/l-styleguide/t-sections.html">Sections</a></li>
+      <li><a href="/views/prod/l-styleguide/t-templates.html">Templates</a></li>
+    </ul>
+  </nav>
+
+      <div class="b-social">
+  <span class="b-social__title">Connect:</span>           
+  <ul>                
+    <li><a target="_blank" href="http://facebook.com" class="icon fa-facebook">facebook</a></li>
+    <li><a target="_blank" href="http://github.com" class="icon fa-github">github</a></li>
+    <li><a target="_blank" href="http://twitter.com" class="icon fa-twitter">twitter</a></li>
+    <li><a target="_blank" href="http://linkedin.com" class="icon fa-linkedin">linkedin</a></li>
+    <li><a target="_blank" href="http://stackoverflow.com" class="icon fa-stack-overflow">stackoverflow</a></li>
+    <li><a target="_blank" href="http://behance.com" class="icon fa-behance">behance</a></li>
+    <li><a target="_blank" href="http://deviantart.com" class="icon fa-deviantart">deviantart</a></li>
+    <li><a target="_blank" href="http://youtube.com" class="icon fa-youtube">youtube</a></li>
+  </ul>
+</div>
+    </div><!--end s-footer__cta-->
+  </div><!--end container-->
+</footer> 
+  
+    <!--<script src="../bower_components/eq.js/dist/eq.min.js"></script>-->
+    <!--<script src="/bower_components/jquery/dist/jquery.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <!--<script src="/javascripts/vendor/slick.min.js"></script>-->
+    <!--<script src="/javascripts/main.min.js"></script>-->
+    <!--<script src="/bower_components/jquery/dist/jquery.min.js"></script>-->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+<!--<script src="/javascripts/vendor/slick.min.js"></script>-->
+<!--<script src="/javascripts/main.min.js"></script>-->
+<script type="text/javascript" src="/js/bundle.min.js"></script>
+    
+</body>
+
+</html>

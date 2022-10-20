@@ -8,6 +8,7 @@
     $shadow: $lbg--shadow,
     $light: $lbg--light
 ){
+  
   .t-styleguide__colors{
       width: 100%; 
       display:flex;
@@ -46,7 +47,7 @@
       &--black-dark-3{  background: $black-dark-3; &:before{ content: "$black-dark-3: #{$black-dark-3}";}} 
      
   }//end .t-styleguide__colors
-  .t-styleguide__typography{}//end t-styleguide__typography
+  //.t-styleguide__typography{}//end t-styleguide__typography
 
   .t-styleguide__thumbnails, %t-styleguide__thumbnails{
       list-style:none;      

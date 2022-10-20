@@ -6,6 +6,10 @@
     "type": "git",
     "url": "git://github.com/architarious/BaseTheme.git"
   },
+  "engines": {
+    "node": ">=16.8.0",
+    "npm": ">=7.21.0"
+  },
   "dependencies": {
     "bower": "^1.8.12"
   },
